@@ -39,33 +39,26 @@ cause errors in the statistical comparison of the two datasets
 
 \subsection{Coupled Model Data}
 
+\paragraph{CMIP5}
 For the analysis of CGCMs we used all available pre-industrial control runs from 
 the CMIP5 datasets \citep{Taylor2012}, see Table \ref{tab:cmip5}. 100 years from 
 each of the 35 models was used, and anomalies were defined seperately for each 
 model relative to its climatology. The multi-model mean of the CMIP5 data was 
 calculated using the anomalous (relative to each model’s climatology) timeseries 
 from each model, these were combined end-to-end to generate a 3500 year 
-timeseries. The sensitivity experiments were performed with the UK 
-Meteorological Office Unified Model AGCM with HadGEM2 atmospheric physics 
-(\citet{Davies2005}; \citet{Martin2010}; \citet{Bellouin2011}) at an atmospheric 
-resolution of N48 ($3.75^{\circ} \times 
-2.5^{\circ}$). This was forced with prescribed SSTs or a slab ocean. The slab
-ocean assumes a constant mixed layer depth of 50 metres and is forced by flux 
-correction terms to have on average the HadISST 1950--2010 SST climatology 
-\citep{Wang2014}. A constant mixed layer was chosen in part for simplicity as 
-this model setup is intended to be of intermediate complexity, between a simple 
-prescribed SST run and a fully coupled dynamic ocean. We use a slab ocean as 
-simple way of modelling SST variability, and while we would expect that the 
-response time of the remote oceans would scale with mixed layer depth 
-(\citealt{Su2005a}, \citealt{Lintner2007}), the constant 
-50 metre assumption gives a first order but realistic response.
-
+timeseries. 
 %-----------------------------------
 %	SUBSECTION 3
 %-----------------------------------
 
 \subsection{Reanalysis Data}
 
+\paragraph{NCEP Data}
+\begin{itemize}
+	\item What data, temporal, spatial limits
+	\item Used in initial investigations as alternative to Hadley centre 
+		observations.
+\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -82,7 +75,23 @@ each model.
 
 \subsection{ACCESS Model}
 
+\paragraph{Description of ACCESS}
+The sensitivity experiments were performed with the UK Meteorological Office 
+Unified Model AGCM with HadGEM2 atmospheric physics (\citet{Davies2005}; 
+\citet{Martin2010}; \citet{Bellouin2011}) at an atmospheric resolution of N48 
+($3.75^{\circ} \times 
+2.5^{\circ}$). This was forced with prescribed SSTs or a slab ocean. The slab
+ocean assumes a constant mixed layer depth of 50 metres and is forced by flux 
+correction terms to have on average the HadISST 1950--2010 SST climatology 
+\citep{Wang2014}. A constant mixed layer was chosen in part for simplicity as 
+this model setup is intended to be of intermediate complexity, between a simple 
+prescribed SST run and a fully coupled dynamic ocean. We use a slab ocean as 
+simple way of modelling SST variability, and while we would expect that the 
+response time of the remote oceans would scale with mixed layer depth 
+(\citealt{Su2005a}, \citealt{Lintner2007}), the constant 
+50 metre assumption gives a first order but realistic response.
 
+\paragraph{AMIP Run}
 Three primary types of experiments were conducted: AMIP-type; sensitivity to 
 mean SST increases; and El Ni{\~n}o pattern forcing experiments, see Table 
 \ref{tab:senseexp}. The latter being similar to a `pacemaker' experiment, as 
@@ -101,6 +110,7 @@ get more statistics. In the statistical analysis of observed SST vs. land the
 errors in the observed SST do matter as they no longer co-vary with the land, so 
 we cannot use the early SST and Tland values. 
 
+\paragraph{Half-AMIP/Half-1K experiments}
 Simulations forced with idealised SST patterns used a 12 month climatology of 
 the HadISST data from 1950-2010 as the reference control climate. The division 
 between tropics and extra-tropics for these experiments was chosen to be 
@@ -108,30 +118,63 @@ $28^{\circ}$N/S, with the tropical forcing applied to the oceans in the zonal
 band bordered by $28^{\circ}$N/S, and the extra-tropical forcing applied from 
 $28^{\circ}$N/S to the poles. For the model resolution used this most closely 
 divides the oceans in half by area, with slightly more area in the 
-extra-tropics. For the El Nino pattern forcing experiments a canonical El Nino 
-pattern was generated using HadISST monthly mean data from a linear regression 
-between NINO3 and SSTs, as shown in Figure 1. This pattern was imposed in the 
-tropical Pacific between $30^{\circ}$N/S and $155^{\circ}$E to the eastern 
-boundary of the Pacific, on to monthly climatological SSTs (i.e. a repeating 12 
-month seasonal cycle).  The values of the anomaly was based on the regression 
-values, with a maximum temperature anomaly of 1.41K.  The pattern was oscillated 
-with a period of 4 years, peaking in January.  Outside of the tropical Pacific 
-there were two scenarios; fixed SSTs using the HadISST 1950-2010 climatology, 
-and the slab ocean. 
+extra-tropics.
+
+\paragraph{Pacemaker experiment}
+For the El Nino pattern forcing experiments a canonical El Nino pattern was 
+generated using HadISST monthly mean data from a linear regression between NINO3 
+and SSTs, as shown in Figure 1. This pattern was imposed in the tropical Pacific 
+between $30^{\circ}$N/S and $155^{\circ}$E to the eastern boundary of the 
+Pacific, on to monthly climatological SSTs (i.e. a repeating 12 month seasonal 
+cycle).  The values of the anomaly was based on the regression values, with a 
+maximum temperature anomaly of 1.41K.  The pattern was oscillated with a period 
+of 4 years, peaking in January.  Outside of the tropical Pacific there were two 
+scenarios; fixed SSTs using the HadISST 1950-2010 climatology, and the slab 
+ocean. 
 
 
 %-----------------------------------
 %	SUBSECTION 2
 %-----------------------------------
 
-\subsection{Two-Dimensional Radiative Convection Model}
+\subsection{One and Two-Dimensional Radiative Convection Model}
 
+\paragraph{Model Description}
+\begin{itemize}
+	\item MIT model, references
+\end{itemize}
+
+\paragraph{Model Setups}
+\begin{itemize}
+	\item 1D, WTG setup
+	\item 2D, SST forced
+	\item 2D, CO2 forced
+\end{itemize}
+
+\paragraph{Experiments}
+\begin{itemize}
+	\item 1D, WTG setup
+	\item 2D, SST forced
+	\item 2D, CO2 forced
+\end{itemize}
 
 %-----------------------------------
 %	SUBSECTION 3
 %-----------------------------------
 
 \subsection{Globally Resolved Energy Balance Model}
+
+\paragraph{Model Description}
+\begin{itemize}
+	\item GREB model, references
+\end{itemize}
+
+
+\paragraph{Experiments}
+\begin{itemize}
+	\item AMIP Forcings
+	\item Pacemaker forcings
+\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 3
@@ -141,9 +184,6 @@ and the slab ocean.
 
 This section will describe the statistical methods applied to the data
 
-%-----------------------------------
-%	SUBSECTION 1
-%-----------------------------------
 
 \subsection{Regression of land/ocean}
 
