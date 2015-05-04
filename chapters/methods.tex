@@ -1,0 +1,177 @@
+\chapter{Data and Methods} % Main chapter title
+
+\label{methods} % Change X to a consecutive number; for referencing this chapter 
+% elsewhere, use \ref{ChapterX}
+
+\lhead{Chapter 2. \emph{Data and Methods}} % Change X to a consecutive number; 
+% this is for the header on each page - perhaps a shortened title
+
+This chapter will discuss the observational and model data, the models and the 
+experiments conducted with them, and some of the statistical methods applied to 
+the data.
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Data}
+
+This section will outline the data used for this thesis, including processing 
+performed, a discussion of uncertainties for each data set and any inherent 
+limitations.
+%-----------------------------------
+%	SUBSECTION 1
+%-----------------------------------
+
+\subsection{Observational Data}
+
+The observational surface temperature datasets used were the Climatic Research 
+Unit Temperature data set, version 4 (CRUTEM4) \citep{Brohan2006} for $T_{land}$ 
+and the Hadley Centre SST data set, version 2 (HadSST2) \citep{Rayner2006}for 
+the SST, $T_{ocean}$.  Temperature data previous to 1950 was excluded in the 
+analysis of the land/sea interactions as the smaller data coverage area can 
+cause errors in the statistical comparison of the two datasets 
+\citep{Dommenget2009}. 
+
+%-----------------------------------
+%	SUBSECTION 2
+%-----------------------------------
+
+\subsection{Coupled Model Data}
+
+For the analysis of CGCMs we used all available pre-industrial control runs from 
+the CMIP5 datasets \citep{Taylor2012}, see Table \ref{tab:cmip5}. 100 years from 
+each of the 35 models was used, and anomalies were defined seperately for each 
+model relative to its climatology. The multi-model mean of the CMIP5 data was 
+calculated using the anomalous (relative to each model’s climatology) timeseries 
+from each model, these were combined end-to-end to generate a 3500 year 
+timeseries. The sensitivity experiments were performed with the UK 
+Meteorological Office Unified Model AGCM with HadGEM2 atmospheric physics 
+(\citet{Davies2005}; \citet{Martin2010}; \citet{Bellouin2011}) at an atmospheric 
+resolution of N48 ($3.75^{\circ} \times 
+2.5^{\circ}$). This was forced with prescribed SSTs or a slab ocean. The slab
+ocean assumes a constant mixed layer depth of 50 metres and is forced by flux 
+correction terms to have on average the HadISST 1950--2010 SST climatology 
+\citep{Wang2014}. A constant mixed layer was chosen in part for simplicity as 
+this model setup is intended to be of intermediate complexity, between a simple 
+prescribed SST run and a fully coupled dynamic ocean. We use a slab ocean as 
+simple way of modelling SST variability, and while we would expect that the 
+response time of the remote oceans would scale with mixed layer depth 
+(\citealt{Su2005a}, \citealt{Lintner2007}), the constant 
+50 metre assumption gives a first order but realistic response.
+
+%-----------------------------------
+%	SUBSECTION 3
+%-----------------------------------
+
+\subsection{Reanalysis Data}
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+
+\section{Model Experiments}
+
+This section will describe the models used, and the experiments performed with 
+each model.
+
+%-----------------------------------
+%	SUBSECTION 1
+%-----------------------------------
+
+\subsection{ACCESS Model}
+
+
+Three primary types of experiments were conducted: AMIP-type; sensitivity to 
+mean SST increases; and El Ni{\~n}o pattern forcing experiments, see Table 
+\ref{tab:senseexp}. The latter being similar to a `pacemaker' experiment, as 
+described by ~\citealt{Alexander1992}, ~\citealt{Alexander1992a}, 
+~\citealt{Lau2000} and ~\citealt{Lu2011}. The AMIP type runs used HadISST from 
+1870 to 2010. While it was determined that HadSST2 data was only suitable
+from 1950 for calculating statistics relating to the observational value of the 
+land/sea contrast, the HadISST data was used from 1870. The reason is that the 
+HadISST SSTs were primarily used as a representation of realistic interannual 
+variability with which to force the atmospheric model.  In the AMIP runs the SST 
+and $T_{land}$ are consistent because $T_{land}$ responds to the prescribed SST.  
+Whether or not these were the true SST values in the real world is not that 
+important in the context of this study.  We use the early SST values from 
+HadISST to generate realistic SST variability; thus we use the earlier period to 
+get more statistics. In the statistical analysis of observed SST vs. land the 
+errors in the observed SST do matter as they no longer co-vary with the land, so 
+we cannot use the early SST and Tland values. 
+
+Simulations forced with idealised SST patterns used a 12 month climatology of 
+the HadISST data from 1950-2010 as the reference control climate. The division 
+between tropics and extra-tropics for these experiments was chosen to be 
+$28^{\circ}$N/S, with the tropical forcing applied to the oceans in the zonal 
+band bordered by $28^{\circ}$N/S, and the extra-tropical forcing applied from 
+$28^{\circ}$N/S to the poles. For the model resolution used this most closely 
+divides the oceans in half by area, with slightly more area in the 
+extra-tropics. For the El Nino pattern forcing experiments a canonical El Nino 
+pattern was generated using HadISST monthly mean data from a linear regression 
+between NINO3 and SSTs, as shown in Figure 1. This pattern was imposed in the 
+tropical Pacific between $30^{\circ}$N/S and $155^{\circ}$E to the eastern 
+boundary of the Pacific, on to monthly climatological SSTs (i.e. a repeating 12 
+month seasonal cycle).  The values of the anomaly was based on the regression 
+values, with a maximum temperature anomaly of 1.41K.  The pattern was oscillated 
+with a period of 4 years, peaking in January.  Outside of the tropical Pacific 
+there were two scenarios; fixed SSTs using the HadISST 1950-2010 climatology, 
+and the slab ocean. 
+
+
+%-----------------------------------
+%	SUBSECTION 2
+%-----------------------------------
+
+\subsection{Two-Dimensional Radiative Convection Model}
+
+
+%-----------------------------------
+%	SUBSECTION 3
+%-----------------------------------
+
+\subsection{Globally Resolved Energy Balance Model}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 3
+%----------------------------------------------------------------------------------------
+
+\section{Statistical methods}
+
+This section will describe the statistical methods applied to the data
+
+%-----------------------------------
+%	SUBSECTION 1
+%-----------------------------------
+
+\subsection{Regression of land/ocean}
+
+
+All further analysis is based on annual mean anomalies with one exception in 
+Section 4.2, which is based on monthly mean anomalies for monthly mean lag-lead
+correlations. The land/sea contrast, $R_{L/S}$, is defined by the following 
+regression model;
+
+\begin{equation}
+T_{land} = R_{L/S} \cdot T_{ocean}
+\end{equation}
+where
+\begin{equation}
+	R_{L/S} = \rho_{land,ocean}\cdot \frac{\sigma_{land}}{\sigma_{ocean}}
+\end{equation}
+
+With $T_{land}$ and $T_{ocean}$ as the annual mean surface temperature anomalies 
+of areal-averaged land and ice-free oceans (global or zonal average), 
+respectively, $\rho_{land,ocean}$ is the correlation coefficient between 
+$T_{land}$ and $T_{ocean}$, and $\sigma_{land}, \sigma_{ocean}$ are the standard 
+deviations of $T_{land}, T_{ocean}$. While regression coefficients are often 
+used to measure co-variability, $R_{L/S}$ can also be thought of as an 
+amplification factor; how much is the temperature of land amplified compared to 
+the SST. A simple ratio, as for the land/sea contrast in global warming, is 
+unsuitable as we are dealing with anomalies varying around zero. As a simple 
+example, if the anomalous SSTs are +1K the first year and -1K the second, and 
+the land temperature is +1.5K then -1.5K respectively, we have a value of 
+$R_{L/S} = 1.5$. In this way we consider the regression coefficient an 
+appropriate measure of the land/sea temperature contrast in interannual 
+variability.
