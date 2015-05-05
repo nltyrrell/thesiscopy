@@ -20,21 +20,30 @@ This section will outline the data used for this thesis, including processing
 performed, a discussion of uncertainties for each data set and any inherent 
 limitations.
 %-----------------------------------
-%	SUBSECTION 1
+%	SUBSECTION OBSERVATIONS
 %-----------------------------------
 
 \subsection{Observational Data}
 
+\paragraph{Hadley Centre Data - Crutemp, Hadsst, Hadisst}
 The observational surface temperature datasets used were the Climatic Research 
 Unit Temperature data set, version 4 (CRUTEM4) \citep{Brohan2006} for $T_{land}$ 
 and the Hadley Centre SST data set, version 2 (HadSST2) \citep{Rayner2006}for 
 the SST, $T_{ocean}$.  Temperature data previous to 1950 was excluded in the 
 analysis of the land/sea interactions as the smaller data coverage area can 
 cause errors in the statistical comparison of the two datasets 
-\citep{Dommenget2009}. 
+\citep{Dommenget2009}.  
+
+\paragraph{Microwave Sounding Unit}
+\begin{itemize}
+	\item Description, references
+	\item Temporal, areal coverage
+	\item Known issues.
+\end{itemize}
+
 
 %-----------------------------------
-%	SUBSECTION 2
+%	SUBSECTION CMIP
 %-----------------------------------
 
 \subsection{Coupled Model Data}
@@ -47,8 +56,21 @@ model relative to its climatology. The multi-model mean of the CMIP5 data was
 calculated using the anomalous (relative to each model’s climatology) timeseries 
 from each model, these were combined end-to-end to generate a 3500 year 
 timeseries. 
+
 %-----------------------------------
-%	SUBSECTION 3
+%	SUBSECTION AMIP
+%-----------------------------------
+
+\subsection{Atmosphere only Model Data}
+
+\paragraph{AMIP}
+\begin{itemize}
+	\item Outline amip experiments
+	\item What was used
+\end{itemize}
+
+%-----------------------------------
+%	SUBSECTION NCEP
 %-----------------------------------
 
 \subsection{Reanalysis Data}
@@ -70,7 +92,7 @@ This section will describe the models used, and the experiments performed with
 each model.
 
 %-----------------------------------
-%	SUBSECTION 1
+%	SUBSECTION ACCESS
 %-----------------------------------
 
 \subsection{ACCESS Model}
@@ -134,10 +156,10 @@ ocean.
 
 
 %-----------------------------------
-%	SUBSECTION 2
+%	SUBSECTION RCM
 %-----------------------------------
 
-\subsection{One and Two-Dimensional Radiative Convection Model}
+\subsection{Radiative Convection Model}
 
 \paragraph{Model Description}
 \begin{itemize}
@@ -156,10 +178,15 @@ ocean.
 	\item 1D, WTG setup
 	\item 2D, SST forced
 	\item 2D, CO2 forced
+	\item Parameter experiments
+\begin{itemize}
+	\item Surface properties
+	\item Interactive Clouds
+\end{itemize}
 \end{itemize}
 
 %-----------------------------------
-%	SUBSECTION 3
+%	SUBSECTION GREB
 %-----------------------------------
 
 \subsection{Globally Resolved Energy Balance Model}
@@ -177,7 +204,7 @@ ocean.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
-%	SECTION 3
+%	SECTION STATS
 %----------------------------------------------------------------------------------------
 
 \section{Statistical methods}
