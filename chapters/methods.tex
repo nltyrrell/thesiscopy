@@ -11,7 +11,7 @@ experiments conducted with them, and some of the statistical methods applied to
 the data.
 
 %----------------------------------------------------------------------------------------
-%	DATA
+%	SECTION 1
 %----------------------------------------------------------------------------------------
 
 \section{Data}
@@ -20,68 +20,30 @@ This section will outline the data used for this thesis, including processing
 performed, a discussion of uncertainties for each data set and any inherent 
 limitations.
 %-----------------------------------
-%	OBSERVATIONS
+%	SUBSECTION OBSERVATIONS
 %-----------------------------------
 
 \subsection{Observational Data}
 
 \paragraph{Hadley Centre Data - Crutemp, Hadsst, Hadisst}
-FROM PAPER: The observational surface temperature datasets used were the 
-Climatic Research Unit Temperature data set, version 4 (CRUTEM4) 
-\citep{Brohan2006} for $T_{land}$ and the Hadley Centre SST data set, version 2 
-(HadSST2) \citep{Rayner2006}for the SST, $T_{ocean}$.  Temperature data previous 
-to 1950 was excluded in the analysis of the land/sea interactions as the smaller 
-data coverage area can cause errors in the statistical comparison of the two 
-datasets \citep{Dommenget2009}.
-
-\begin{itemize}
-	\item Three data products were used from the Hadley centre for surface 
-		temperatures;
-	\item Hadisst, hadsst2, Crutemp (need version numbers here)
-	\item Hadsst2
-	\begin{itemize}
-		\item Global gridded SST dataset based on observations
-		\item Data coverage decreases with time.
-		\item Prior to 1950 data coverage is too sparse to allow strong 
-			statistical conclusions \citep{Dommenget2009} when compared with 
-			Crutemp.
-		\item This dataset, along with Crutemp, was used for observations as it 
-			was considered the truest representation, as there is no 
-			interpolation or processing done on the data; other than that to 
-			correct inconsistencies.
-		\item Data coverage:
-	\end{itemize}
-	\item Crutemp
-	\begin{itemize}
-		\item Global gridded land temperature dataset based on observations
-		\item Data coverage: Large areas without data in the tropics, particularly Africa and South America.
-		\item GCM experiments show that these areas tend to be important in 
-	terms of the land response to tropical SST perturbations. The effect of this 
-	missing data is investigated further in Chapter 5.
-	\end{itemize}
-	\item Hadisst
-	\begin{itemize}
-		\item Global gridded SST dataset based on observations, and interpolated in regions without data.
-		\item Data coverage decreases with time.
-		\item The data prior to 1950 is still used for AMIP runs because even 
-			though it is unsuitable for comparing the land and ocean timeseries	
-			it is suitable as a representation of realistic SST variability. For 
-			the AMIP runs we want to see how the land surface responds to SST 
-			variability and the interpolated SST data is suitable for this.
-	\end{itemize}
-\end{itemize}
+The observational surface temperature datasets used were the Climatic Research 
+Unit Temperature data set, version 4 (CRUTEM4) \citep{Brohan2006} for $T_{land}$ 
+and the Hadley Centre SST data set, version 2 (HadSST2) \citep{Rayner2006}for 
+the SST, $T_{ocean}$.  Temperature data previous to 1950 was excluded in the 
+analysis of the land/sea interactions as the smaller data coverage area can 
+cause errors in the statistical comparison of the two datasets 
+\citep{Dommenget2009}.  
 
 \paragraph{Microwave Sounding Unit}
 \begin{itemize}
 	\item Description, references
 	\item Temporal, areal coverage
 	\item Known issues.
-	\item Reason for use, relationship to l/o contrast
 \end{itemize}
 
 
 %-----------------------------------
-%	CMIP
+%	SUBSECTION CMIP
 %-----------------------------------
 
 \subsection{Coupled Model Data}
@@ -95,23 +57,33 @@ calculated using the anomalous (relative to each model’s climatology) timeseri
 from each model, these were combined end-to-end to generate a 3500 year 
 timeseries. 
 
+%-----------------------------------
+%	SUBSECTION AMIP
+%-----------------------------------
+
+\subsection{Atmosphere only Model Data}
+
+\paragraph{AMIP}
+\begin{itemize}
+	\item Outline amip experiments
+	\item What was used
+\end{itemize}
 
 %-----------------------------------
-%	NCEP
+%	SUBSECTION NCEP
 %-----------------------------------
 
 \subsection{Reanalysis Data}
 
 \paragraph{NCEP Data}
 \begin{itemize}
-	\item Forecast model that assimilates past observational data.
-	\item Length is limited to satellite era, post 1979.
+	\item What data, temporal, spatial limits
 	\item Used in initial investigations as alternative to Hadley centre 
 		observations.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
-%	MODEL EXPERIMENTS
+%	SECTION 2
 %----------------------------------------------------------------------------------------
 
 \section{Model Experiments}
@@ -196,9 +168,9 @@ ocean.
 
 \paragraph{Model Setups}
 \begin{itemize}
-	\item Geometry, 1D, 2D
-	\item Forcing options; SST, CO2, WTG
-	\item Parameter options; land surface, model levels, interactive clouds
+	\item 1D, WTG setup
+	\item 2D, SST forced
+	\item 2D, CO2 forced
 \end{itemize}
 
 \paragraph{Experiments}
