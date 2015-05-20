@@ -14,10 +14,10 @@ We start the analysis with a look at the observations and the CMIP5 CGCM
 simulations. We then focus on AMIP-type simulations, in which the SST is given 
 as the forcing and the $T_{land}$ are responding, which allows us to draw some 
 conclusions about the potential of the SST variability as the driving mechanism 
-of $T_{land}$ variability.
+of $T_{land}$ variability. Simplified models will then be discussed.
 
 %----------------------------------------------------------------------------------------
-%	SECTION 1
+%	Observations
 %----------------------------------------------------------------------------------------
 
 \section{Observations}
@@ -39,7 +39,7 @@ variability in surface temperature that is co-variant between the land and the
 oceans is  about 43\% larger in amplitude over land than over oceans.
 
 %-----------------------------------
-%	SUBSECTION 1
+%	Zonal bands
 %-----------------------------------
 
 \subsection{Zonal Bands...}
@@ -108,8 +108,67 @@ oceans. In particular in the tropics there is a strong link between $T_{land}$
 and $T_{ocean}$ variability, whereas in the extra-tropical regions of the 
 Northern Hemisphere the link appears to be much weaker.
 
+\begin{center}
+	\begin{table}[h]
+		\caption{Annual mean $T_{land}$ and $T_{ocean}$ used to calculate land/sea 
+			contrast, ratio of land/sea standard deviations and correlation 
+			coefficient between land and sea. Observation data is detrended 
+			HadSST2 and CruTEMP4 data. CMIP5 is combined pre-industrial control 
+			runs from 35 models, showing one standard deviation between the 
+		individual models.  AMIP run was forced with HadISST and detrended.  
+	ENSO-like run forced with oscillating canonical ENSO pattern in the tropical 
+Pacific, slab ocean elsewhere.}
+		\label{tab:allstats}
+		\scriptsize
+	\begin{tabular}{ l  c  c  c }
+		\textit{Data set and region}		& L/S contrast  & L/S correlation & Ratio 
+		Std Dev\\ \hline
+		\textbf{Observations}\\%\hline
+	Global  					& 1.43  & 0.58 & 2.45\\ %\hline
+	Tropical  				& 1.19  & 0.81 & 1.48\\ %\hline
+	NH Extra-tropics  & 1.00  & 0.61 & 1.64\\ %\hline
+	SH Extra-tropics  & 0.22  & 0.10 & 2.28\\ \hline
+		\textbf{CMIP5, multi-model mean values}\\%\hline
+		Global				& $1.26 \pm 0.23$ & $0.64 \pm 0.13$ & $1.97 \pm 0.26$ \\
+		Tropics 			& $1.35 \pm 0.16$ & $0.87 \pm 0.06$ & $1.55 \pm 0.15$ \\ NH 
+		extra-tropics & $0.32 \pm 0.30$ & $0.19 \pm 0.18$ & $1.63 \pm 0.29$ \\ SH 
+		extra-tropics & $0.03 \pm 0.68$ & $0.01 \pm 0.20$ & $3.41 \pm 0.70$ \\\hline 
+		\textbf{AMIP run}\\%\hline
+	Global  					& 1.27 & 0.74 & 1.72\\ %\hline
+	Tropical  				& 1.26 & 0.88 & 1.43\\ %\hline
+	NH Extra-tropics  & 0.53 & 0.34 & 1.59\\ %\hline
+	SH Extra-tropics  & 0.64 & 0.16 & 2.41   %\hline
+		\\\hline \textbf{ENSO-Slab}\\%\hline
+	Global  					& 1.50 & 0.71 & 2.13 \\ %\hline
+	Tropical  				& 1.17 & 0.85 & 1.37 \\ %\hline
+	NH Extra-tropics  & 0.57 & 0.28 & 2.08 \\ %\hline
+	SH Extra-tropics  &-0.42 &-0.11 & 3.69 \\ \hline
+	\end{tabular}
+	\end{table}
+\end{center}
+
 %----------------------------------------------------------------------------------------
-%	SECTION 2
+%	NCEP
+%----------------------------------------------------------------------------------------
+
+\section{Reanalysis Data (NCEP/NCAR)}
+
+\paragraph{No sig Rl/o, discuss reasons}
+\begin{itemize}
+	\item Reanalysis looked at in addition to observations.
+	\item For tropical, extra-tropical and global regions no significant value 
+		of $R_{l/o}$ was found for interannual variability.
+	\item Possible reasons; limited data available - temporal and spatial
+	\item i.e. Short timeseries. If ENSO events are a major source of 
+		variability at a period of about 4 years that only give 5-6 significant 
+		events.
+	\item Check: global warming in ncep? L/o?
+	\item Check: tropical tropospheric response to interannual var.
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	CMIP5
 %----------------------------------------------------------------------------------------
 
 \section{Coupled General Circulation Model Simulations (CMIP5)}
@@ -201,9 +260,26 @@ extra-tropics, especially the Northern Hemisphere. These results indicate that
 the physical processes controlling these metrics are well represented by the 
 models in the tropics but may not be as well simulated in the extra-tropics.
 
+\begin{center}
+	\begin{table}[h]
+	\caption{Correlation coefficient of annual mean $T_{land}$ and $T_{ocean}$ 
+	between regions, all data detrended}
+		\label{tab:crossrel}
+	\begin{tabular}{ l  c  c  c}
+		\textit{Regions}		&  Observations  & CMIP5 & AMIP \\ \hline
+		Global Ocean - Tropical Ocean & 0.81 & 0.92 & 0.90 \\
+		Global Ocean - N Hemis ExTr. Ocean & 0.37 & 0.09 & 0.36 \\
+		Tropical Ocean - N Hemis ExTr. Ocean & 0.15 & -0.16  & 0.02 \\
+		Tropical Ocean- Tropical Land & 0.81 & 0.87 & 0.88 \\
+		Tropical Ocean- Global Land & 0.40 & 0.66 & 0.78 \\
+		Gobal Land - N Hemis. ExTr. Land & 0.95 & 0.74 & 0.78\\
+	\end{tabular}
+	\end{table}
+\end{center}
+
 
 %----------------------------------------------------------------------------------------
-%	SECTION 3
+%	AMIP
 %----------------------------------------------------------------------------------------
 
 \section{AMIP simulations}
@@ -281,23 +357,32 @@ from the different CMIP5 simulations. However, this is beyond the scope of this
 study.
 
 %----------------------------------------------------------------------------------------
-%	SECTION 3
+%	RCM
 %----------------------------------------------------------------------------------------
 
-\section{Simplified Models}
+\section{Radiative Convective Model}
+
+\subsection{Single-Column Model}
+
+\paragraph{WTG Mode, control tropos temp over land leads to Rl/o$<$1}
+\begin{itemize}
+	\item Single column, not usually used for l/s contrast!
+	\item WTG mode allows SST forcing, replicate interannual var.
+	\item Land responds to SST var with inc. var.
+	\item Rl/o depends primarily on evap fraction.
+\end{itemize}
+
+\begin{figure}[H]
+% 		\includegraphics[width=0.45\textwidth]{{}.eps}
+	\caption{Show land/sea contrast in SCM}
+\label{fig:SCM_Rlo}
+\end{figure}
 
 %-----------------------------------
-%	SUBSECTION 1
+%	GREB
 %-----------------------------------
 
-\subsection{Two-D Radiative Convective Model}
-
-
-%-----------------------------------
-%	SUBSECTION 2
-%-----------------------------------
-
-\subsection{GREB Model}
+\section{GREB Model}
 
 
 %-----------------------------------
