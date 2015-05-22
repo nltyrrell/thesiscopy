@@ -1,5 +1,6 @@
 *.swp
 main.pdf
+figures/
 ignore/
 *-eps-converted-to.pdf
 
