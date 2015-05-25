@@ -8,23 +8,20 @@
 \paragraph{Discuss GW theories, relevance to interannual var.}
 
 %----------------------------------------------------------------------------------------
-%	Direct influence of SSTs on Continental temps
+%	influence of SSTs on Continental temps
 %----------------------------------------------------------------------------------------
 
-\section{Influence of Tropical Oceans on Land}
+\section{The Influence of Tropical Oceans on Land}
 
 \paragraph{Strong land/ocean connection in tropics}
 
-%-----------------------------------
-%	+1K Experiments
-%-----------------------------------
-\subsection{+1K experiments}
+\subsection{1K Experiments}
 
 Figure \ref{fig:1K} shows the surface temperature response (control removed) 
-from the +1K experiments; where +1K was added to the oceans in the tropics, 
+from the 1K experiments; where 1K was added to the oceans in the tropics, 
 extra-tropics or globally. In response to a tropical SST perturbation there is a 
 large tropical response, greatest over equatorial South America and Africa, 
-India and the maritime continent (Fig.\ref{fig:1K} a). The tropical +1K ocean 
+India and the maritime continent (Fig.\ref{fig:1K} a). The tropical 1K ocean 
 perturbation leads to $T_{land}>+1$K in most tropical areas. Thus the SST 
 forcing is amplified. The extra-tropical land the response to the tropical 
 forcing is not significant everywhere, but some regions also show an amplified 
@@ -47,9 +44,6 @@ superposition of the tropical and extra-tropical forcing (comparing
 Fig.\ref{fig:1K} c and d).  This again indirectly suggests that the 
 extra-tropical SST forcing does lead to a significant land response.
 
-%-----------------------------------
-% Tropical Troposphere
-%-----------------------------------
 
 \subsection{Tropical Troposphere}
 \begin{itemize}
@@ -64,10 +58,7 @@ extra-tropical SST forcing does lead to a significant land response.
 	\item Increase in variability due to ocean forcing.
 \end{itemize}
 
-%-----------------------------------
-%	Half-AMIP
-%-----------------------------------
-\subsection{Half-AMIP}
+\subsection{Half-AMIP Experiments}
 
 In Figure \ref{fig:ftest} f-tests are used to measure the increase in annual 
 temperature variability due to SST variability at the surface and at the 300hPa 
@@ -92,8 +83,11 @@ In summary the AMIP experiments suggest a clear tropical SST forcing to the
 atmospheric and land surface temperatures, but a much weaker or no forcing from 
 the extra-tropical SST.
 
+%----------------------------------------------------------------------------------------
+%	LAPSE RATE
+%----------------------------------------------------------------------------------------
 
-\subsection{Lapse Rate}
+\section{The Lapse Rate Mechanism}
 \begin{itemize}
 	\item Forcing regions over tropical oceans show large amplification in upper 
 		troposphere due to moist convection.
@@ -103,7 +97,7 @@ the extra-tropical SST.
 \end{itemize}
 
 
-\subsection{Weak Temperature Gradient}
+\subsection{The Weak Temperature Gradient Approximation}
 \begin{itemize}
 	\item What is WTG.
 	\item Approximation of tropical dynamics
@@ -112,7 +106,7 @@ the extra-tropical SST.
 	\item ...
 \end{itemize}
 
-\subsection{Single-Column Model}
+\subsection{Experiments with a Single-Column Model}
 \paragraph{explain setup}
 \begin{itemize}
 	\item WTG assumption
@@ -128,11 +122,8 @@ the extra-tropical SST.
 \paragraph{Atmospheric profiles}
 \paragraph{Variability and instability - Role of convection}
 
-%----------------------------------------------------------------------------------------
-%	RCM - Two Column
-%----------------------------------------------------------------------------------------
 
-\subsection{Radiative Convective Model - Two-Dimensional Configuration}
+\subsection{Experiments with a Two-Dimensional Model}
 
 \paragraph{explain setup}
 \begin{itemize}
@@ -149,7 +140,7 @@ the extra-tropical SST.
 \paragraph{Variability and instability - Role of convection and clouds}
 \paragraph{Circulation response}
 
-\subsection{Comparison of RCM and GCM results}
+\subsection{Comparison of Simplified Models and GCM results}
 
 \paragraph{Generation of suitable l/s contrast at varying latitudes/evap fraction}
 \paragraph{Mapping results}
@@ -178,6 +169,55 @@ the extra-tropical SST.
 		tropics.
 \end{itemize}
 
+\subsection{Pacemaker Experiments}
+
+
+On inter-annual timescales ENSO is the most significant global climate driver. 
+It is therefore remarkable that in the analysis of the CMIP5 model simulations 
+the NINO3 region did not show up with a high correlation to global $T_{land}$ 
+(see Fig.\ref{fig:cmip_cormap}). The ENSO region in the tropical Pacific has a 
+lower correlation with $T_{land}$ than adjacent regions and the other ocean 
+basins. Using the combined monthly mean CMIP5 surface temperature anomalies, 
+Fig.\ref{fig:xcor} e) shows the lagged correlations between NINO3 SST and global 
+$T_{land}$. The NINO3 region is seen to lead global land by 4 months.  Typically 
+land has a fast response time to forcings, which would not result in a 
+4 month delay, so this result suggests that the full land response is not 
+directly forced by the NINO3 SST but is most likely caused by something else. 
+This other forcing may be delayed to the ENSO variability by about 4 months. 
+Since we have seen in Fig.\ref{fig:cmip_cormap} that global $T_{land}$ is highly 
+correlated to other tropical ocean SST, it seems likely that $T_{land}$ is 
+linked to the slower ocean response in the remote tropical oceans and not 
+directly to the NINO3 region.
+
+To address this question we conducted a series of idealised ENSO-response 
+experiments. In the first experiment we prescribe an oscillating ENSO pattern (a 
+regression between NINO3 and SSTs shown in Fig.\ref{fig:regpat}) in the tropical 
+Pacific and fixed SST climatologies elsewhere.  The oscillation period of the 
+ENSO signal is 4 years, peaking in January. In the second experiment we allow 
+SST variability outside the tropical Pacific simulated by a simple slab ocean 
+model.  Thus, in the second experiment the global ocean SSTs can respond to the 
+oscillating ENSO pattern forcing.
+
+Figure \ref{fig:xcor} (i-l) shows cross-correlations from the ENSO-FIXSST and 
+ENSO-Slab forcing experiments. In i) and j) we see that for the fixed SST 
+experiment the global and tropical land responds to the ENSO-like forcing (red 
+line), and does so without the delay seen in Figure \ref{fig:xcor} e). When a 
+slab ocean is introduced the land responds with a realistic delay of around 4 
+months.  The peak slab ocean response is at 6 months, implying that the land is 
+responding immediately to the initial Pacific ocean forcing and then 
+subsequently to the delayed slab ocean response. The delayed land response is 
+also associated with a higher correlation to the NINO3 region. Comparing the 
+global and tropical averages, the main difference is the magnitude of the peak 
+correlation, but in the tropics the slab ocean also results in the peak land 
+correlation being higher than the peak ocean correlation. So the delayed 
+response of the remote tropical oceans to a Pacific ocean forcing explains both 
+the delayed land response and some part of the amplification of the oceanic 
+temperature signal over land. In the extra-tropics there is only a very weak 
+influence of the ENSO forcing on land temperatures in the sensitivity 
+experiments (Fig.  \ref{fig:xcor} g, h), and the tropical Pacific has little 
+influence on the slab ocean in the extra-tropics. The observations and CMIP5 
+models also don't show a significant relationship between the extra-tropics and 
+NINO3.
 
 %----------------------------------------------------------------------------------------
 %	Extra-Tropics
@@ -195,7 +235,7 @@ the extra-tropical SST.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
-%	Regional Response
+%	Regional Response / GREB
 %----------------------------------------------------------------------------------------
 
 \section{Regional Response}
@@ -212,3 +252,31 @@ the extra-tropical SST.
 		cloud cover, energy transport by winds, soil moisture changes.
 	\item Regional importance of these discussed...
 \end{itemize}
+
+
+\subsection{GREB Model}
+
+\subsection{Deconstructing the GCM response}
+\paragraph{motivation}
+\paragraph{Discuss variables used/available}
+\paragraph{Response of pacemaker exp.}
+\paragraph{Response of amip exp.}
+
+
+\subsection{Results - Pacemaker}
+\paragraph{u, v winds}
+\paragraph{Cloud cover}
+\paragraph{Soil Moisture}
+\paragraph{SST}
+\paragraph{Combined response}
+
+
+\subsection{AMIP Experiments}
+
+\paragraph{u, v winds}
+\paragraph{Cloud cover}
+\paragraph{Soil Moisture}
+\paragraph{SST}
+\paragraph{Combined response}
+
+
