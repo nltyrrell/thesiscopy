@@ -38,7 +38,7 @@ ratio in standard deviations leads to the global mean $R_{L/S} =1.43$. Thus the
 variability in surface temperature that is co-variant between the land and the 
 oceans is  about 43\% larger in amplitude over land than over oceans.
 
-\begin{figure*}[H]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.45\textwidth]{{crut4sst.gl.dt}.eps}
 	\includegraphics[width=0.45\textwidth]{{crut4sst.tr.dt}.eps}
@@ -48,13 +48,13 @@ oceans is  about 43\% larger in amplitude over land than over oceans.
 	\caption{Observational annual mean $T_{land}$ and $T_{ocean}$ using detrended 
 	HadSST2 and CruTEMP4 data}
 	\label{fig:hadcrut}
-\end{figure*}
+\end{figure}
 
 %-----------------------------------
 %	Zonal bands
 %-----------------------------------
-
 \subsection{Zonal Bands...}
+
 
 In the next step we look at different zonal bands. We split the globe into a 
 tropical band ($30^o$N/S round the equator) and two extra-tropical bands 
@@ -197,10 +197,10 @@ taken from each model. The multi-model ensemble was constructed by combining the
 anomalous surface temperature timeseries from each model to make a single, 3500 
 year long timeseries, which was used for all further analysis and statistics. 
 
-In analog to the analysis of the observations (e.g. Fig. 1 and Table 
-\ref{tab:allstats}) we summarise the statistics of the land/sea contrast from 
-all models for the global, tropical and the two extra-tropical hemispheres in 
-Table \ref{tab:allstats} and \ref{tab:crossrel}. The CMIP5 simulations multi 
+In analog to the analysis of the observations (e.g. Fig. \ref{fig:hadcrut} and 
+Table \ref{tab:allstats}) we summarise the statistics of the land/sea contrast 
+from all models for the global, tropical and the two extra-tropical hemispheres 
+in Table \ref{tab:allstats} and \ref{tab:crossrel}. The CMIP5 simulations multi 
 model mean shows a very similar land/sea contrast in both $R_{L/S}$ and the 
 correlation value for both global and tropical means. They also have a very weak 
 connection between Southern Hemispheric extra-tropical land and ocean. However, 
@@ -222,6 +222,19 @@ the extra-tropical values in both $R_{L/S}$ and the correlation values are much
 larger than in the tropics.  This suggests that the CMIP5 models disagree much 
 more on the extra-tropical land/ocean interactions than they do in the tropics. 
 
+\begin{figure*}[H]
+	\centering
+	\includegraphics[width=\textwidth]{{subscatter_t}.eps}
+	\includegraphics[width=\textwidth]{{subscatter_m}.eps}
+	\includegraphics[width=\textwidth]{{subscatter_b}.eps}
+	\caption{Scatter plot with CMIP5 models showing relationship between global 
+	and tropical (top row) and global and extra-tropical (bottom row) values of 
+the land/sea contrast (a,d,g), land/sea correlation (b,e,h) and ratio standard 
+deviations (c,f,i).}
+	\label{fig:cmip5_scatter}
+\end{figure*}
+
+
 The results suggest that tropical values of the land/sea correlation are more 
 important in determining the global value, and tropical processes connecting 
 ocean and land surface temperatures on these timescales are unrelated to the 
@@ -242,6 +255,16 @@ in Dommenget [2009] (Fig. 3a) for observations.  The CMIP5 model results are
 largely similar to the observations as shown in Dommenget [2009], but due to the 
 much larger database the emerging pattern is much less noisy and more details 
 can be seen.
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{{land.cmip5.cormap}.eps}\\
+	\caption{Correlation between $T_{surf}$ at each grid point and globally 
+	averaged timeseries of $T_{land}$. Data is the annual mean temperature 
+anomalies from 35 CMIP5 pre-industrial control runs, 100 years from each model 
+combined end-to-end to generate a 3500 year timeseries.}
+	\label{fig:cmip_cormap}
+\end{figure}
+
 
 The CMIP5 models show a strong relationship between global $T_{land}$ and 
 tropical ocean and land temperatures. All the tropical land masses are highly 
@@ -292,6 +315,7 @@ models in the tropics but may not be as well simulated in the extra-tropics.
 \end{center}
 
 
+
 %----------------------------------------------------------------------------------------
 %	AMIP
 %----------------------------------------------------------------------------------------
@@ -319,9 +343,18 @@ a direct, strong connection from ocean to land. For both the tropical and global
 mean the values of land/sea contrast are larger than unity, indicating that the 
 SST forcing is amplified over the continents.
 
-%-----------------------------------
-%	SUBSECTION 1
-%-----------------------------------
+\begin{figure*}[H]
+	\centering
+	\includegraphics[width=0.45\textwidth]{{amip.global.dt}.eps}
+	\includegraphics[width=0.45\textwidth]{{amip.tropics.dt}.eps}\\
+	\includegraphics[width=0.45\textwidth]{{amip.NHextr.dt}.eps}
+	\includegraphics[width=0.45\textwidth]{{amip.SHextr.dt}.eps}
+	\caption{Annual mean $T_{land}$ and $T_{ocean}$ for a) global b) tropical c) 
+	Northern Hemisphere extra-tropical d) Southern Hemisphere extra-tropical.  
+Detrended AMIP run forced with HadISST.}
+\label{fig:amip}
+\end{figure*}
+
 
 \subsection{Extra-Tropics}
 
