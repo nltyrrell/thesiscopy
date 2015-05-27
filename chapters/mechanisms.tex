@@ -107,10 +107,10 @@ the extra-tropical SST.
 \setcounter{figure}{0}
 \begin{figure}[H]
 	\includegraphics[width=1.0\textwidth, trim={8.5cm 5cm 11cm 
-	1cm},clip=true]{{ftest.sub.sfc}.pdf}
+	1cm},clip=true]{{ftest_sub_sfc}.pdf}
 	%\vspace{-1.8cm}
 	\includegraphics[width=1.0\textwidth, trim={8.5cm 5cm 11cm 
-	1cm},clip=true]{{ftest.sub.300}.pdf}
+	1cm},clip=true]{{ftest_sub_300}.pdf}
 	\caption{F-test of annual mean temperature for AMIP-type runs. Surface 
 		temperature response on top row, 300hPa response on bottom row.	a),d) AMIP 
 		run with detrended HadISST used globally b),e) AMIP-type run with detrended 
@@ -120,71 +120,6 @@ the extra-tropical SST.
 	ocean with SST variability.}
 	\label{fig:ftest}
 \end{figure}
-
-
-%----------------------------------------------------------------------------------------
-%	LAPSE RATE
-%----------------------------------------------------------------------------------------
-
-\section{The Lapse Rate Mechanism}
-\begin{itemize}
-	\item Forcing regions over tropical oceans show large amplification in upper 
-		troposphere due to moist convection.
-	\item Responding tropical areas - both land and over ocean - similar, i.e.  
-		regresion profile figure.
-	\item Continental lapse rate more variable due to lower mean humidity.
-\end{itemize}
-
-
-\subsection{The Weak Temperature Gradient Approximation}
-\begin{itemize}
-	\item What is WTG.
-	\item Approximation of tropical dynamics
-	\item Useful for understanding convection, roll of moisture.
-	\item Application to land/ocean contrast.
-	\item ...
-\end{itemize}
-
-\subsection{Experiments with a Single-Column Model}
-\paragraph{explain setup}
-\begin{itemize}
-	\item WTG assumption
-	\item Generation of atmospheric profiles
-	\item Parameter values;
-		\begin{itemize}
-			\item Land surface - Evaporative fraction
-			\item WTG - pressure level of fixed temp profile
-			\item Interactive clouds
-		\end{itemize}
-\end{itemize}
-\paragraph{Values of l/s contrast for varying land/tropos parameters}
-\paragraph{Atmospheric profiles}
-\paragraph{Variability and instability - Role of convection}
-
-
-\subsection{Experiments with a Two-Dimensional Model}
-
-\paragraph{explain setup}
-\begin{itemize}
-	\item Land/Ocean column configurations
-	\item Parameter values;
-		\begin{itemize}
-			\item Land surface - Evaporative fraction
-			\item Interactive clouds
-		\end{itemize}
-\end{itemize}
-
-\paragraph{Values of l/s contrast for varying land parameters}
-\paragraph{Atmospheric profiles in temp, RH, etc}
-\paragraph{Variability and instability - Role of convection and clouds}
-\paragraph{Circulation response}
-
-\subsection{Comparison of Simplified Models and GCM results}
-
-\paragraph{Generation of suitable l/s contrast at varying latitudes/evap fraction}
-\paragraph{Mapping results}
-\paragraph{Differences/Similarities between GCM/RCM}
-
 
 %----------------------------------------------------------------------------------------
 %	ENSO
@@ -237,6 +172,13 @@ SST variability outside the tropical Pacific simulated by a simple slab ocean
 model.  Thus, in the second experiment the global ocean SSTs can respond to the 
 oscillating ENSO pattern forcing.
 
+\begin{figure}[H]
+	\includegraphics[width=\textwidth]{{regpat}.eps}\\
+	\caption{Pattern used in ENSO experiments. Result of regression between NINO3 
+	and global SST.}
+	\label{fig:regpat}
+\end{figure}
+
 Figure \ref{fig:xcor} (i-l) shows cross-correlations from the ENSO-FIXSST and 
 ENSO-Slab forcing experiments. In i) and j) we see that for the fixed SST 
 experiment the global and tropical land responds to the ENSO-like forcing (red 
@@ -257,6 +199,100 @@ experiments (Fig.  \ref{fig:xcor} g, h), and the tropical Pacific has little
 influence on the slab ocean in the extra-tropics. The observations and CMIP5 
 models also don't show a significant relationship between the extra-tropics and 
 NINO3.
+
+\begin{figure}[H]
+	\includegraphics[width=\textwidth, trim={5cm -1cm 5cm 
+	-0.5cm},clip=true]{{xcor_sub_obs}.eps}
+	\includegraphics[width=\textwidth, trim={5cm -1cm 5cm 
+	-0.5cm},clip=true]{{xcor_sub_cmip5}.eps}
+	\includegraphics[width=\textwidth, trim={5cm -1cm 5cm 
+	-0.5cm},clip=true]{{xcor_sub_enso}.eps}
+\caption{Cross-correlations between the NINO3 region and land and ocean.  
+	Observations (top row), combined CMIP5 models (middle row), Two sensitivity 
+	experiments (bottom row);  Atmospheric model forced with ENSO-like oscillation 
+	in tropical Pacific and fixed SSTs elsewhere (red line), slab ocean elsewhere 
+	(green, blue lines).  Global land and ocean (a,e,i), tropical land and ocean 
+	(b,f,j), NH extra-tropical land and ocean (c,g,k) and SH extra-tropical land 
+	and ocean (d,h,l).  NINO3 autocorrelation included for reference (black dashed 
+line).}
+	\label{fig:xcor}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	LAPSE RATE
+%----------------------------------------------------------------------------------------
+
+\section{The Lapse Rate Mechanism}
+\begin{itemize}
+	\item Forcing regions over tropical oceans show large amplification in upper 
+		troposphere due to moist convection.
+	\item Responding tropical areas - both land and over ocean - similar, i.e.  
+		regresion profile figure.
+	\item Continental lapse rate more variable due to lower mean humidity.
+\end{itemize}
+
+\begin{figure}[H]
+		\includegraphics[width=0.45\textwidth]{{linreg_land_profile}.eps}
+		\includegraphics[width=0.45\textwidth]{{linreg_ocean_sans_profile}.eps}\\
+	\caption{Linear regression coefficients for temperature above tropical land 
+	and ocean as linear model of a) $T_{land}$ (1000hPa surface) and b) 
+$T_{ocean}$, for forced run (solid) and control run (dashed). i.e.  
+$T_{plv,land} = a T_{sfc,land} + b$, and $T_{plv,ocean} = a T_{sfc,land} + b$}
+\label{fig:linreg_plev}
+\end{figure}
+
+
+\subsection{The Weak Temperature Gradient Approximation}
+\begin{itemize}
+	\item What is WTG.
+	\item Approximation of tropical dynamics
+	\item Useful for understanding convection, roll of moisture.
+	\item Application to land/ocean contrast.
+	\item ...
+\end{itemize}
+
+\subsection{Experiments with a Single-Column Model}
+\paragraph{explain setup}
+\begin{itemize}
+	\item WTG assumption
+	\item Generation of atmospheric profiles
+	\item Parameter values;
+		\begin{itemize}
+			\item Land surface - Evaporative fraction
+			\item WTG - pressure level of fixed temp profile
+			\item Interactive clouds
+		\end{itemize}
+\end{itemize}
+\paragraph{Values of l/s contrast for varying land/tropos parameters}
+\paragraph{Atmospheric profiles}
+\paragraph{Variability and instability - Role of convection}
+
+
+\subsection{Experiments with a Two-Dimensional Model}
+
+\paragraph{explain setup}
+\begin{itemize}
+	\item Land/Ocean column configurations
+	\item Parameter values;
+		\begin{itemize}
+			\item Land surface - Evaporative fraction
+			\item Interactive clouds
+		\end{itemize}
+\end{itemize}
+
+\paragraph{Values of l/s contrast for varying land parameters}
+\paragraph{Atmospheric profiles in temp, RH, etc}
+\paragraph{Variability and instability - Role of convection and clouds}
+\paragraph{Circulation response}
+
+\subsection{Comparison of Simplified Models and GCM results}
+
+\paragraph{Generation of suitable l/s contrast at varying latitudes/evap fraction}
+\paragraph{Mapping results}
+\paragraph{Differences/Similarities between GCM/RCM}
+
+
+
 
 %----------------------------------------------------------------------------------------
 %	Extra-Tropics
