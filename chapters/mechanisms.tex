@@ -46,10 +46,25 @@ Fig.\ref{fig:1K} c and d).  This again indirectly suggests that the
 extra-tropical SST forcing does lead to a significant land response.
 
 \begin{figure}[H]
-% 		\includegraphics[width=0.45\textwidth]{{}.eps}
-	\caption{Show land/sea contrast in SCM}
-\label{fig:SCM_Rlo}
+	\centering
+	\includegraphics[width=0.45\textwidth]{{meantemp.trop}.eps}
+	\includegraphics[width=0.45\textwidth]{{meantemp.trop.DJF}.eps}\\
+\vspace{-0.9cm}
+	\includegraphics[width=0.45\textwidth]{{meantemp.extr}.eps}
+	\includegraphics[width=0.45\textwidth]{{meantemp.extr.DJF}.eps}\\
+\vspace{-0.9cm}
+	\includegraphics[width=0.45\textwidth]{{meantemp.glob}.eps}
+	\includegraphics[width=0.45\textwidth]{{meantemp.glob.DJF}.eps}\\
+\vspace{-0.5cm}
+	\includegraphics[width=0.45\textwidth]{{meantemp.addt}.eps}
+	\includegraphics[width=0.45\textwidth]{{meantemp.addt.DJF}.eps}\\
+\caption{Mean $T_{surf}$ response for sensitivity experiments  a) 1K added to 
+	tropical oceans b) 1K added to extra-tropical oceans c) 1K added to global 
+	oceans d) Combined response of tropical 1K oceans plus extra-tropical 1K 
+	ocean. Masked at 95\% confidence levels.}
+\label{fig:1K}
 \end{figure}
+
 
 \subsection{Tropical Troposphere}
 \begin{itemize}
@@ -88,6 +103,24 @@ forcing does play a role, although it is much smaller than the tropical forcing.
 In summary the AMIP experiments suggest a clear tropical SST forcing to the 
 atmospheric and land surface temperatures, but a much weaker or no forcing from 
 the extra-tropical SST.
+
+\setcounter{figure}{0}
+\begin{figure}[H]
+	\includegraphics[width=1.0\textwidth, trim={8.5cm 5cm 11cm 
+	1cm},clip=true]{{ftest.sub.sfc}.pdf}
+	%\vspace{-1.8cm}
+	\includegraphics[width=1.0\textwidth, trim={8.5cm 5cm 11cm 
+	1cm},clip=true]{{ftest.sub.300}.pdf}
+	\caption{F-test of annual mean temperature for AMIP-type runs. Surface 
+		temperature response on top row, 300hPa response on bottom row.	a),d) AMIP 
+		run with detrended HadISST used globally b),e) AMIP-type run with detrended 
+		HadISST in extra-tropics, climatological SSTs elsewhere c),f) AMIP-type run 
+		with detrended HadISST in tropics, climatological SSTs elsewhere tropics.  
+		All values masked at 90\% confidence levels. Hatching indicates areas of 
+	ocean with SST variability.}
+	\label{fig:ftest}
+\end{figure}
+
 
 %----------------------------------------------------------------------------------------
 %	LAPSE RATE
@@ -287,4 +320,5 @@ NINO3.
 
 
 \processdelayedfloats
-
+\setcounter{postfig}{0}
+\setcounter{posttbl}{0}
