@@ -30,12 +30,16 @@
 \graphicspath{{figures/}} % Specifies the directory where pictures are stored
 
 \usepackage[square, numbers, comma, sort&compress]{natbib} % Use the natbib 
+\usepackage[]{afterpage} % Use the natbib 
 % reference package - read up on this to edit the reference style; if you want 
 % text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), 
 % remove 'numbers'
-\usepackage[nolists]{endfloat}
-\renewcommand{\theposttable}{\arabic{chapter}.\arabic{posttbl}}
-\renewcommand{\thepostfigure}{\arabic{chapter}.\arabic{postfig}}
+
+% FIGURES - Uncomment these three lines to have figures pushed to end of 
+% chapters
+% \usepackage[nolists]{endfloat}
+% \renewcommand{\theposttable}{\arabic{chapter}.\arabic{posttbl}}
+% \renewcommand{\thepostfigure}{\arabic{chapter}.\arabic{postfig}}
 
 \hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change 
 % to black if annoying
@@ -266,6 +270,29 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
 
+% FIGURES - Uncomment these 20 lines to push figures to end of chapter
+% \input{chapters/introduction}
+% \processdelayedfloats
+% \setcounter{postfig}{0}
+% \setcounter{posttbl}{0}
+% \input{chapters/methods}
+% \processdelayedfloats
+% \setcounter{postfig}{0}
+% \setcounter{posttbl}{0}
+% \input{chapters/evidence}
+% \processdelayedfloats
+% \setcounter{postfig}{0}
+% \setcounter{posttbl}{0}
+% \input{chapters/mechanisms}
+% \processdelayedfloats
+% \setcounter{postfig}{0}
+% \setcounter{posttbl}{0}
+% \input{chapters/conclusion} 
+% \processdelayedfloats
+% \setcounter{postfig}{0}
+% \setcounter{posttbl}{0}
+
+% FIGURE PLACEMENT - uncomment these to have figure in text
 \input{chapters/introduction}
 \input{chapters/methods}
 \input{chapters/evidence}
