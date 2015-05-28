@@ -199,6 +199,7 @@ influence on the slab ocean in the extra-tropics. The observations and CMIP5
 models also don't show a significant relationship between the extra-tropics and 
 NINO3.
 
+\clearpage
 \begin{figure}[h]
 	\includegraphics[width=\textwidth, trim={5cm -1cm 5cm 
 	-0.5cm},clip=true]{{xcor_sub_obs}.eps}
@@ -265,6 +266,39 @@ $T_{plv,land} = a T_{sfc,land} + b$, and $T_{plv,ocean} = a T_{sfc,land} + b$}
 \paragraph{Values of l/s contrast for varying land/tropos parameters}
 \paragraph{Atmospheric profiles}
 \paragraph{Variability and instability - Role of convection}
+
+\begin{figure}[h]
+\includegraphics[width=0.6\textwidth]{{land_thetaprof_e3_p600}.eps}
+\includegraphics[width=0.6\textwidth]{{land_deltatheta_e3_p600}.eps}
+\caption{Profiles of theta (left), absolute change in theta from median theta 
+value (right) - Should show that extreme values (positive and negative) change 
+most.}
+\label{fig:scmthprof}
+\end{figure}
+
+\begin{center}
+	\begin{table}[h]
+		\caption{Land/Ocean contrast in single column model, using WTG over lad 
+		surfaces}
+		\label{tab:scmphi}
+		\scriptsize
+	\begin{tabular}{ l  c  c  c }
+		\textit{Evap Fraction}		& 0.3   & 0.5  & 0.7 \\ \hline
+		\textbf{PFixT 800hPa}\\%\hline
+	Phi  							& 1.41  & 1.43 & 1.18\\ %\hline
+	Corr.							& 0.57  & 0.78 & 0.64\\ %\hline
+	Ratio STD           			& 2.48  & 1.84 & 1.60\\ \hline
+		\textbf{PFixT 700hPa}\\%\hline
+	Phi  							& 1.39  & 1.30 & 1.38\\ %\hline
+	Corr.							& 0.50  & 0.77 & 0.05\\ %\hline
+	Ratio STD           			& 2.76  & 1.68 & 7.71\\ \hline
+		\textbf{PFixT 600hPa}\\%\hline
+	Phi  							& 1.63  & 1.25 & 1.11\\ %\hline
+	Corr.							& 0.70  & 0.79 & 0.78\\ %\hline
+	Ratio STD           			& 2.35  & 1.58 & 1.42\\ \hline
+	\end{tabular}
+	\end{table}
+\end{center}
 
 
 \subsection{Experiments with a Two-Dimensional Model}
