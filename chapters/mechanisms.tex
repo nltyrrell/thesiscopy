@@ -264,18 +264,6 @@ $T_{plv,land} = a T_{sfc,land} + b$, and $T_{plv,ocean} = a T_{sfc,land} + b$}
 		\end{itemize}
 \end{itemize}
 \paragraph{Values of l/s contrast for varying land/tropos parameters}
-\paragraph{Atmospheric profiles}
-\paragraph{Variability and instability - Role of convection}
-
-\begin{figure}[h]
-\includegraphics[width=0.6\textwidth]{{land_thetaprof_e3_p600}.eps}
-\includegraphics[width=0.6\textwidth]{{land_deltatheta_e3_p600}.eps}
-\caption{Profiles of theta (left), absolute change in theta from median theta 
-value (right) - Should show that extreme values (positive and negative) change 
-most.}
-\label{fig:scmthprof}
-\end{figure}
-
 \begin{center}
 	\begin{table}[h]
 		\caption{Land/Ocean contrast in single column model, using WTG over lad 
@@ -299,7 +287,26 @@ most.}
 	\end{tabular}
 	\end{table}
 \end{center}
+\paragraph{Atmospheric profiles}
 
+\begin{figure}[h]
+\includegraphics[width=0.6\textwidth]{{land_thetaprof_e3_p600}.eps}
+\includegraphics[width=0.6\textwidth]{{land_deltatheta_e3_p600}.eps}
+\caption{Profiles of theta (left), absolute change in theta from median theta 
+value (right) - Should show that extreme values (positive and negative) change 
+most.}
+\label{fig:scmthprof}
+\end{figure}
+
+\paragraph{Variability and instability - Role of convection}
+\begin{figure}[h]
+\includegraphics[width=0.5\textwidth]{land_Tsurf_05_m1_h350.eps}
+\caption{Timeseries of Tsurf in SCM forced with tropospheric temperature 
+profile.}
+\label{fig:scmts}
+\end{figure}
+
+\pagebreak
 
 \subsection{Experiments with a Two-Dimensional Model}
 
@@ -313,18 +320,42 @@ most.}
 		\end{itemize}
 \end{itemize}
 
+\subsubsection{Atmospheric profiles in temp, RH, etc}
+
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{{l3o1_prof_rh_ef0.05_close}.eps}
+	\includegraphics[width=0.5\textwidth]{{l3o1_prof_rh_ef0.05}.eps}
+	\includegraphics[width=0.5\textwidth]{{l3o1_prof_theta_ef0.05_close}.eps}
+	\includegraphics[width=0.5\textwidth]{{l3o1_prof_theta_ef0.05}.eps}
+	\caption{Land/sea contrast in TCM}
+\label{fig:TCM_prof}
+\end{figure}
+
+
+\subsubsection{Circulation response}
+\begin{figure}[h]
+	\includegraphics[width=0.5\textwidth]{{l3o1_omegal_ef0.05_meansst}.eps}
+	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.05_meansst}.eps}
+	\caption{Circulatoon response, omega, phi}
+	\label{fig:TCM_circ}
+\end{figure}
+
+\subsubsection{Variability and instability - Role of convection and clouds}
+
+\subsubsection{Values of l/s contrast for varying land parameters}
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{{isstcosz}.eps}
 	\caption{Land/sea contrast in TCM}
 \label{fig:TCM_Rlo}
 \end{figure}
 
-\paragraph{Values of l/s contrast for varying land parameters}
-\paragraph{Atmospheric profiles in temp, RH, etc}
-\paragraph{Variability and instability - Role of convection and clouds}
-\paragraph{Circulation response}
-
 \subsection{Comparison of Simplified Models and GCM results}
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{{fsstreg_prof_ocensfc_e0.05}.eps}
+	\includegraphics[width=\textwidth]{{l85co2reg_prof_ocensfc_e0.05}.eps}
+	\caption{Land/sea contrast in TCM}
+\label{fig:TCM_regprof}
+\end{figure}
 
 \paragraph{Generation of suitable l/s contrast at varying latitudes/evap fraction}
 \paragraph{Mapping results}
