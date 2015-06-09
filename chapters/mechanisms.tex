@@ -45,7 +45,7 @@ superposition of the tropical and extra-tropical forcing (comparing
 Fig.\ref{fig:1K} c and d).  This again indirectly suggests that the 
 extra-tropical SST forcing does lead to a significant land response.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.45\textwidth]{{meantemp.trop}.eps}
 	\includegraphics[width=0.45\textwidth]{{meantemp.trop.DJF}.eps}\\
@@ -104,7 +104,7 @@ In summary the AMIP experiments suggest a clear tropical SST forcing to the
 atmospheric and land surface temperatures, but a much weaker or no forcing from 
 the extra-tropical SST.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\includegraphics[width=1.0\textwidth, trim={8.5cm 5cm 11cm 
 	1cm},clip=true]{{ftest_sub_sfc}.pdf}
 	%\vspace{-1.8cm}
@@ -171,7 +171,7 @@ SST variability outside the tropical Pacific simulated by a simple slab ocean
 model.  Thus, in the second experiment the global ocean SSTs can respond to the 
 oscillating ENSO pattern forcing.
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\includegraphics[width=\textwidth]{{regpat}.eps}\\
 	\caption{Pattern used in ENSO experiments. Result of regression between NINO3 
 	and global SST.}
@@ -200,7 +200,7 @@ models also don't show a significant relationship between the extra-tropics and
 NINO3.
 
 \clearpage
-\begin{figure}[h]
+\begin{figure}[ht]
 	\includegraphics[width=\textwidth, trim={5cm -1cm 5cm 
 	-0.5cm},clip=true]{{xcor_sub_obs}.eps}
 	\includegraphics[width=\textwidth, trim={5cm -1cm 5cm 
@@ -231,7 +231,7 @@ line).}
 	\item Continental lapse rate more variable due to lower mean humidity.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 		\includegraphics[width=0.45\textwidth]{{linreg_land_profile}.eps}
 		\includegraphics[width=0.45\textwidth]{{linreg_ocean_sans_profile}.eps}\\
 	\caption{Linear regression coefficients for temperature above tropical land 
@@ -265,7 +265,7 @@ $T_{plv,land} = a T_{sfc,land} + b$, and $T_{plv,ocean} = a T_{sfc,land} + b$}
 \end{itemize}
 \paragraph{Values of l/s contrast for varying land/tropos parameters}
 \begin{center}
-	\begin{table}[h]
+	\begin{table}[ht]
 		\caption{Land/Ocean contrast in single column model, using WTG over lad 
 		surfaces}
 		\label{tab:scmphi}
@@ -289,7 +289,7 @@ $T_{plv,land} = a T_{sfc,land} + b$, and $T_{plv,ocean} = a T_{sfc,land} + b$}
 \end{center}
 \paragraph{Atmospheric profiles}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \includegraphics[width=0.6\textwidth]{{land_thetaprof_e3_p600}.eps}
 \includegraphics[width=0.6\textwidth]{{land_deltatheta_e3_p600}.eps}
 \caption{Profiles of theta (left), absolute change in theta from median theta 
@@ -300,7 +300,7 @@ most.}
 
 \clearpage
 \paragraph{Variability and instability - Role of convection}
-\begin{figure}[h]
+\begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{land_Tsurf_05_m1_h350.eps}
 \caption{Timeseries of Tsurf in SCM forced with tropospheric temperature 
 profile.}
@@ -323,7 +323,7 @@ profile.}
 
 \subsubsection{Atmospheric profiles in temp, RH, etc}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{l3o1_prof_rh_ef0.05_close}.eps}
 	\includegraphics[width=0.5\textwidth]{{l3o1_prof_rh_ef0.05}.eps}
 	\includegraphics[width=0.5\textwidth]{{l3o1_prof_theta_ef0.05_close}.eps}
@@ -335,7 +335,7 @@ profile.}
 
 \clearpage
 \subsubsection{Circulation response}
-\begin{figure}[h]
+\begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{l3o1_omegal_ef0.05_meansst}.eps}
 	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.05_meansst}.eps}
 	\caption{Circulatoon response, omega, phi}
@@ -346,14 +346,14 @@ profile.}
 \clearpage
 
 \subsubsection{Values of l/s contrast for varying land parameters}
-\begin{figure}[h]
+\begin{figure}[ht]
 	\includegraphics[width=0.6\textwidth]{{isstcosz}.eps}
 	\caption{Land/sea contrast in TCM}
 \label{fig:TCM_Rlo}
 \end{figure}
 
 \subsubsection{Variability and instability - Role of convection and clouds}
-\begin{figure}[h]
+\begin{figure}[ht]
 	\includegraphics[width=0.6\textwidth]{{isstcosz_ic}.eps}
 	\caption{Land/sea contrast in TCM}
 \label{fig:TCM_Rlo}
@@ -362,14 +362,14 @@ profile.}
 \clearpage
 
 \subsection{Comparison of Simplified Models and GCM results}
-\begin{figure}[h]
+\begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{fsstreg_prof_ocensfc_e0.05}.eps}
 	\includegraphics[width=0.5\textwidth]{{l85co2reg_prof_ocensfc_e0.05}.eps}
 	\caption{Land/sea contrast in TCM}
 \label{fig:TCM_regprof}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{phi_trop_4ysl}.png}
 	\includegraphics[width=0.5\textwidth]{{phi_rcm_4ysl}.png}
 	\caption{Land/sea contrast in GCM vs TCM}
@@ -429,19 +429,53 @@ profile.}
 
 
 \subsection{Results - Pacemaker}
-\paragraph{u, v winds}
+\subsubsection{u, v winds}
 
-\begin{figure}[h]
-	\includegraphics[width=0.5\textwidth]{{phi_trop_4ysl}.png}
-	\includegraphics[width=0.5\textwidth]{{phi_rcm_4ysl}.png}
-	\caption{Land/sea contrast in GCM vs TCM}
-\label{fig:TCM_GCM_compare}
+\begin{figure}[ht]
+	\includegraphics[width=0.5\textwidth]{{t_surf.v_anom.pos.4ycomp.response}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.u_anom.pos.4ycomp.response}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.uv_anom.pos.4ycomp.response}.eps}
+	\caption{GREB TSurf response }
+\label{fig:GREB_ts_uv}
+\end{figure}
+\clearpage
+
+\subsubsection{Cloud cover}
+
+\begin{figure}[ht]
+	\includegraphics[width=0.5\textwidth]{{t_surf.cld.pos.4ycomp.response}.eps}
+	\caption{GREB TSurf response }
+\label{fig:GREB_ts_cld}
+\end{figure}
+\clearpage
+
+\subsubsection{Soil Moisture}
+\begin{figure}[ht]
+	\includegraphics[width=0.5\textwidth]{{t_surf.smc.pos.4ycomp.response}.eps}
+	\caption{GREB TSurf response }
+\label{fig:GREB_ts_smc}
 \end{figure}
 
-\paragraph{Cloud cover}
-\paragraph{Soil Moisture}
-\paragraph{SST}
-\paragraph{Combined response}
+\subsubsection{SST}
+\begin{figure}[ht]
+	\includegraphics[width=0.5\textwidth]{{t_surf.sst_anom.pos.4ycomp.response}.eps}
+	\caption{GREB TSurf response }
+\label{fig:GREB_ts_sst}
+\end{figure}
+
+\subsubsection{Combined response}
+\begin{figure}[ht]
+	\includegraphics[width=0.5\textwidth]{{t_surf.uv_sst.pos.4ycomp.response}.eps}
+	\caption{GREB TSurf response }
+\label{fig:GREB_ts_uvsst}
+\end{figure}
+
+\begin{figure}[ht]
+	\includegraphics[width=0.5\textwidth]{{t_surf.all.pos.4ycomp.response}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.all_sst.pos.4ycomp.response}.eps}
+	\caption{GREB TSurf response }
+\label{fig:GREB_ts_all}
+\end{figure}
 
 
 \subsection{AMIP Experiments}
