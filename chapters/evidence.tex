@@ -434,8 +434,35 @@ the profile, but as we were interested in variability the anomalous values of
 land and SST were used. To compare the SCM with previous models and observations 
 we calculate the value of $R_{l/o}$. The model was run to equilibrium for each 
 temperature profile and the average over the last 100 days of each simulation 
-was taken as the equivalent
+was taken to be equivalent to an annually averaged value of a global model or 
+observations. $R_{l/o}$ was then calculated as described in section 
+\ref{ssec:rlo}, using the correlation between the SST used to generate a given 
+temperature profile, and the land surface temperature resulting from the profile 
+being imposed in the free troposphere. 
 
+Figure \ref{fig:SCM_Rlo} shows the relationship between the SST and land surface 
+for a range of experiments varying SST from 25.00C to 26.50C, for land 
+evaporative fractions of 0.3, 0.5 and 0.7 and with the free tropospheric 
+temperature fixed above 600hPa.  A notable feature is the large differences in 
+the land temperature response to small changes in the SST forcing, this will be 
+further discussed shortly. The regression lines for all three evaporative 
+fractions are all above unity, indicating that in the mean the land response is 
+amplified compared to the SST forcing. There is also a relationship between the 
+evaporative fraction of the land and $R_{l/o}$
+
+\begin{center}
+	\begin{table}[ht]
+		\caption{Land/Ocean contrast in single column model, using WTG over land 
+		surfaces}
+		\label{tab:scm_evidence}
+		\scriptsize
+	\begin{tabular}{ l  c  c  c }
+		\hline
+		\textit{Evap Fraction}		& 0.3   & 0.5  & 0.7 \\ %\hline
+	Phi  							& 1.63  & 1.25 & 1.11\\ \hline
+	\end{tabular}
+	\end{table}
+\end{center}
 
 \begin{itemize}
 	\item Single column, not usually used for l/s contrast!
@@ -446,12 +473,7 @@ was taken as the equivalent
 
 \begin{figure}[ht]
 	\includegraphics[width=0.6\textwidth]{{land_anom_intvar_tsurf_p600}.eps}
-	\caption{Show land/sea contrast in SCM.
-PfixT = 600\\
-Evap Fr. = 0.3 :  Phi = 1.63, corr. = 0.7, rs = 2.35\\
-Evap Fr. = 0.5 :  Phi = 1.25, corr. = 0.79, rs = 1.58\\
-Evap Fr. = 0.7 :  Phi = 1.11, corr. = 0.78, rs = 1.42\\
-}
+	\caption{Show land/sea contrast in SCM.}
 \label{fig:SCM_Rlo}
 \end{figure}
 
