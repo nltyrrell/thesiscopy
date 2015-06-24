@@ -411,7 +411,7 @@ study.
 
 \subsection{Single-Column Model}
 
-\paragraph{WTG Mode, control tropos temp above land leads to $R_{l/o}<1$}
+\paragraph{WTG Mode, control tropos temp above land leads to $R_{l/o}>1$}
 When investigating the land/ocean temperature contrast and the forcing of land 
 temperatures by the ocean, a single column model does not initially seem an 
 appropriate tool. By definition the surface properties must represent either 
@@ -452,9 +452,17 @@ between the evaporative fraction of the land and $R_{l/o}$; decreasing the
 evaporative fraction, which decreases the near surface humidity, increases the 
 value of $R_{l/o}$. This result is robust for a range of parameters, for example 
 in table \ref{tab:scmphi} the height at which the temperature profile is fixed 
-is varied between 850hPa and 600hPa. The relationship between $R_{l/o}$ and 
-evaporative fraction holds as long as the correlation between the SST and 
-$T_{land}$ holds.
+is varied between 850hPa and 600hPa. $R_{l/o}$ also scales with the evaporative 
+fraction of the land surface, with decreasing evaporative fraction leading to 
+increasing $R_{l/o}$, primarily due to the change in.  The correlation 
+between the SST and $T_{land}$ is not strongly affected by the evaporative 
+fraction, although a dry surface can lead to a reduced correlation.
+
+To summarise; by modelling interannual variability with small variations in SSTs 
+and then using the weak temperature gradient approximation to represent the 
+transport of tropospheric anomalies over land, we see a land/ocean contrast 
+emerge with values similar to observations, and the magnitude of the land/ocean 
+contrast is dependant on the evaporative fraction of the land surface.
 
 \begin{center}
 	\begin{table}[ht]
@@ -466,16 +474,12 @@ $T_{land}$ holds.
 		\hline
 		\textit{Evap Fraction}		& 0.3   & 0.5  & 0.7 \\ %\hline
 		Phi 						& 1.63  & 1.25 & 1.11\\ \hline
+		Corr.						& 0.70  & 0.79 & 0.78\\ %\hline
+		Ratio STD           		& 2.35  & 1.58 & 1.42\\ \hline
 	\end{tabular}
 	\end{table}
 \end{center}
 
-\begin{itemize}
-	\item Single column, not usually used for l/s contrast!
-	\item WTG mode allows SST forcing, replicate interannual var.
-	\item Land responds to SST var with inc. var.
-	\item Rl/o depends primarily on evap fraction.
-\end{itemize}
 
 \begin{figure}[ht]
 	\includegraphics[width=0.6\textwidth]{{land_anom_intvar_tsurf_p600}.eps}
