@@ -472,8 +472,8 @@ contrast is dependant on the evaporative fraction of the land surface.
 		\scriptsize
 	\begin{tabular}{ l  c  c  c }
 		\hline
-		\textit{Evap Fraction}		& 0.3   & 0.5  & 0.7 \\ %\hline
-		Phi 						& 1.63  & 1.25 & 1.11\\ \hline
+		\textit{Evap Fraction}		& 0.3   & 0.5  & 0.7 \\ \hline
+		Phi 						& 1.63  & 1.25 & 1.11\\ %\hline
 		Corr.						& 0.70  & 0.79 & 0.78\\ %\hline
 		Ratio STD           		& 2.35  & 1.58 & 1.42\\ \hline
 	\end{tabular}
@@ -492,8 +492,18 @@ contrast is dependant on the evaporative fraction of the land surface.
 \paragraph{SST forcing, dependance on evap frac, lat}
 As with the single-column model, the two-dimensional setup of the radiative 
 convective model doesn't have inherent interannual variability. Variability was 
-represented with imposed SSTs. The SSTs were varied around a mean value for a 
-given latitude to create anomalies on the order of 1-2K. A number of different g
+represented with imposed SSTs. To create anomalies on the order of 1-2K, SSTs 
+were varied around a mean value, chosen to represent a given latitude. In 
+addition to controlling the SSTs and land evaporative fraction, a number of 
+different geometries of land and ocean columns were investigated.  The model 
+domain can be orientated zonally or meridionally, and the number of ocean and 
+land points can be altered. For each imposed SST anomaly the model was run to 
+equilibrium and the resulting land temperature was campared with the forcing 
+SST. The results for a domain with three ocean columns and three land columns is 
+shown in figure \ref{fig:tdm_Rlo} with the values shown in table 
+\ref{tab:tdm_Rlo}. The results are similar to the single-column model in 
+weak-temperature gradient mode; with the value of $R_{l/o}$ dependant on the 
+evaporative fraction.
 
 \begin{itemize}
 	\item SST forcing, simulate variability.
@@ -504,14 +514,36 @@ given latitude to create anomalies on the order of 1-2K. A number of different g
 \begin{figure}[ht]
 	\includegraphics[width=0.6\textwidth]{{landoc_scatter_l3o3}.eps}
 	\caption{Show land/sea contrast in TDM.}
-\label{fig:TDM_Rlo}
+\label{fig:tdm_Rlo}
 \end{figure}
 
-\noindent Evap Fr. = 0.05 :  Phi = 1.16, corr. = 1.0, rs = 1.16\\
-Evap Fr. = 0.10 :  Phi = 1.11, corr. = 1.0, rs = 1.11\\
-Evap Fr. = 0.20 :  Phi = 1.0, corr. = 1.0, rs = 1.0\\
-Evap Fr. = 0.50 :  Phi = 0.96, corr. = 1.0, rs = 0.96\\
-Evap Fr. = 0.70 :  Phi = 0.91, corr. = 1.0, rs = 0.91\\
+\begin{center}
+	\begin{table}[ht]
+		\caption{Land/Ocean contrast in two dimensional model}
+		\label{tab:tdm_Rlo}
+		\scriptsize
+	\begin{tabular}{ l  c  c  c  c  c }
+		\hline
+		\textit{Evap Fraction}	& 0.05  & 0.10 & 0.30  & 0.50  & 0.70 \\ \hline
+		\textbf{1 Ocean, 1 Land}\\
+		Phi 					& -     & -    & 1.03  & 1.05 & 1.00\\ %\hline
+		Corr.					& -     & -    & 1.00  & 1.00 & 1.00\\ %\hline
+		Ratio STD          		& -     & -    & 1.03  & 1.05 & 1.00\\ \hline
+		\textbf{3 Ocean, 1 Land}\\
+		Phi 					& -     & -    & 0.70  & 0.67 & 0.67\\ %\hline
+		Corr.					& -     & -    & 1.00  & 1.00 & 1.00\\ %\hline
+		Ratio STD          		& -     & -    & 0.70  & 0.68 & 0.67\\ \hline
+		\textbf{1 Ocean, 3 Land}\\
+		Phi 					& 1.13  & 1.10 & 1.02  & 0.94 & 0.86\\ %\hline
+		Corr.					& 1.00  & 1.00 & 1.00  & 1.00 & 1.00\\ %\hline
+		Ratio STD          		& 1.13  & 1.10 & 1.02  & 0.94 & 0.86\\ \hline
+		\textbf{3 Ocean, 3 Land}\\
+		Phi 					& 1.16  & 1.11 & 1.00  & 0.96 & 0.91\\ %\hline
+		Corr.					& 1.00  & 1.00 & 1.00  & 1.00 & 1.00\\ %\hline
+		Ratio STD          		& 1.16  & 1.11 & 1.00  & 0.96 & 0.91\\ \hline
+	\end{tabular}
+	\end{table}
+\end{center}
 
 
 %-----------------------------------
