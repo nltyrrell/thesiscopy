@@ -503,12 +503,9 @@ SST. The results for a domain with three ocean columns and three land columns is
 shown in figure \ref{fig:tdm_Rlo} with the values shown in table 
 \ref{tab:tdm_Rlo}. The results are similar to the single-column model in 
 weak-temperature gradient mode; the value of $R_{l/o}$ is dependant primarily on 
-the evaporative fraction. The domain setup also influences $R_{l/o}$ as it can 
-affect the near surface humidity. When the model is run with three ocean and 
-just one land column the land response is suppressed relative to the SST 
-forcing, leading to values of $R_{l/o}$ of around 0.7. $R_{l/o}$ is also 
-sensitive to the mean SST value and latitude. As the mean SST and latitude 
-decreases so too does $R_{l/o}$.
+the evaporative fraction. The domain setup doesn't greatly influences $R_{l/o}$ 
+even though it can affect the near surface humidity. The 
+
 
 
 \begin{figure}[ht]
@@ -526,13 +523,13 @@ decreases so too does $R_{l/o}$.
 		\hline
 		\textit{Evap Fraction}	& 0.05  & 0.10 & 0.30  & 0.50  & 0.70 \\ \hline
 		\textbf{1 Ocean, 1 Land}\\
-		Phi 					& -     & -    & 1.03  & 1.05 & 1.00\\ %\hline
-		Corr.					& -     & -    & 1.00  & 1.00 & 1.00\\ %\hline
-		Ratio STD          		& -     & -    & 1.03  & 1.05 & 1.00\\ \hline
+		Phi 					& 1.28  & 1.23 & 1.03  & 1.05 & 1.00\\ 
+		Corr.					& 0.98  & 1.00 & 1.00  & 1.00 & 1.00\\ %\hline
+		Ratio STD          		& 1.30  & 1.23 & 1.03  & 1.05 & 1.00\\ \hline
 		\textbf{3 Ocean, 1 Land}\\
-		Phi 					& -     & -    & 0.70  & 0.67 & 0.67\\ %\hline
-		Corr.					& -     & -    & 1.00  & 1.00 & 1.00\\ %\hline
-		Ratio STD          		& -     & -    & 0.70  & 0.68 & 0.67\\ \hline
+		Phi 					& 1.17  & 1.12 & 1.03  & 1.01 & 0.98\\ %\hline
+		Corr.					& 1.00  & 1.00 & 1.00  & 1.00 & 1.00\\ %\hline
+		Ratio STD          		& 1.17  & 1.12 & 1.03  & 1.01 & 0.98\\ \hline
 		\textbf{1 Ocean, 3 Land}\\
 		Phi 					& 1.13  & 1.10 & 1.02  & 0.94 & 0.86\\ %\hline
 		Corr.					& 1.00  & 1.00 & 1.00  & 1.00 & 1.00\\ %\hline
