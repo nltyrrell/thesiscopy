@@ -16,11 +16,15 @@
 
 \paragraph{Strong land/ocean connection in tropics}
 When looking at the relationship between $T_{land}$ and SSTs there is an 
-assymetry between the response of $T_{land}$ to tropical and extra-tropical 
+assymetry between the response of $T_{land}$ to tropical and extra-tropical SST 
 forcing. We investigate this assymetry and the importance of the tropical oceans 
 in regulating regional and global land surface temperatures using modelling 
-experiments where SST forcing is restricted into tropical or extra-tropical 
-regions as well as idealised ENSO-forcing experiments. 
+experiments. In the 1K experiments a constant +/-1K SST anomaly is applied to 
+tropical or extra-tropical regions, in the Half-AMIP experiments the same 
+regional restrictions are used but instead of a constant forcing, variability is 
+imposed using observed SST anomalies. The Pacemaker experiments are forced with 
+an idealised ENSO in the tropical Pacific and a slab ocean or fixed SSTs 
+elsewhere.
 
 \subsection{1K Experiments}
 
@@ -33,9 +37,9 @@ perturbation leads to $T_{land}>+1$K in most tropical areas. Thus the SST
 forcing is amplified. The extra-tropical land the response to the tropical 
 forcing is not significant everywhere, but some regions also show an amplified 
 response to the tropical SST forcing (e.g. central Asia and parts of Europe and 
-North America).  An extra-tropical $T_{land}$ response to tropical SST is seen 
+North America).  An extra-tropical $T_{land}$ response to tropical SSTs is seen 
 for seasonal averages in the winter months of each hemisphere, the Northen 
-Hemsiphere winter response is shown in Figure \ref{fig:1K}e.
+Hemsiphere winter response is shown in Figure \ref{fig:1K} e.
 
 When looking at the annual mean response of $T_{land}$ to extra-tropical SST 
 perturbations there is little significant response, however for seasonal 
@@ -72,18 +76,6 @@ extra-tropical SST forcing does lead to a significant land response.
 \end{figure}
 
 
-\subsection{Tropical Troposphere}
-\begin{itemize}
-	\item Strong land/ocean connection
-	\item Variability in SSTs lead to amplified temperature variation in 
-		troposphere.
-	\item Tropical tropospheric unable to sustain large temperature gradients.
-	\item Perturbations efficiently transported around tropical regions.
-	\item Uniform perturbations over land and ocean.
-	\item In the mean - response of surface temperature differs more over land 
-		and ocean.
-	\item Increase in variability due to ocean forcing.
-\end{itemize}
 
 \subsection{Half-AMIP Experiments}
 
@@ -98,10 +90,10 @@ significant in some regions.
 In order to separate the influence of the tropical SST variability from that of 
 the extra-tropical SST, we repeat the AMIP experiment forced with the historical 
 SST variability just in the tropics or just in the extra-tropical regions. The 
-impact of the tropical SST variability is similar to the global SST variability, 
-with a clear and strong impact in the tropical regions.  The AMIP simulation 
-with just the extra-tropical SST variability has only a very weak to no impact 
-on the regional (grid-box scale) atmospheric and surface temperature 
+impact of the tropical-only SST variability is similar to the global SST 
+variability, with a clear and strong impact in the tropical regions.  The AMIP 
+simulation with extra-tropical-only SST variability has only a very weak to no 
+impact on the regional (grid-box scale) atmospheric and surface temperature 
 variability.  However, if we compare the global AMIP versus the tropical only 
 AMIP run we still can see a somewhat larger increase in variance over land in 
 the global AMIP run. This indirectly suggests that the extra-tropical SST 
@@ -126,27 +118,31 @@ the extra-tropical SST.
 	\label{fig:ftest}
 \end{figure}
 
+\subsection{Tropical Troposphere}
+The Half-AMIP experiments demonstrate an important process in the strong 
+tropical land/ocean connection. Figures \ref{fig:ftest} d)--e) show the value of 
+an F-test on the 300hPa surface, measuring the increase (values above zero) in 
+temperature variability due to imposed SST variability. The results for global 
+and tropical AMIP runs are very similar, with the global AMIP having slightly 
+higher values in the tropics and some more variability in the extratropics.  
+There are very large values across the tropics, with the highest values above 
+the equatorial Pacific ocean
+
+\begin{itemize}
+	\item Strong land/ocean connection
+	\item Variability in SSTs lead to amplified temperature variation in 
+		troposphere.
+	\item Tropical tropospheric unable to sustain large temperature gradients.
+	\item Perturbations efficiently transported around tropical regions.
+	\item Uniform perturbations over land and ocean.
+	\item In the mean - response of surface temperature differs more over land 
+		and ocean.
+	\item Increase in variability due to ocean forcing.
+\end{itemize}
+
 %----------------------------------------------------------------------------------------
 %	ENSO
 %----------------------------------------------------------------------------------------
-
-\section{ENSO}
-\begin{itemize}
-	\item ENSO is source of tropical inter-annual variability.
-	\item Temperature anomaly seen throughout tropical troposphere
-	\item Land responds quickly - within a month - to initial anomaly.
-	\item Remote tropical oceans response is delayed by 3-4 months.
-	\item Timing of delay of remote tropical oceans is a function of mixed layer 
-		depth.
-	\item Land responds to the delayed forcing by remote trop oceans.
-	\item Mean land response appears to be delayed, i.e. when plotted with lag 
-		correlations.
-	\item Delayed land response is linear combination of initial response to 
-		Pacific ocean and response to delayed remote tropical oceans.
-	\item Land response is amplified due to previously discussed process.
-	\item The land response is further amplified by secondary response to remote 
-		tropics.
-\end{itemize}
 
 \subsection{Pacemaker Experiments}
 
@@ -223,6 +219,25 @@ NINO3.
 line).}
 	\label{fig:xcor}
 \end{figure}
+
+\section{ENSO}
+\begin{itemize}
+	\item ENSO is source of tropical inter-annual variability.
+	\item Temperature anomaly seen throughout tropical troposphere
+	\item Land responds quickly - within a month - to initial anomaly.
+	\item Remote tropical oceans response is delayed by 3-4 months.
+	\item Timing of delay of remote tropical oceans is a function of mixed layer 
+		depth.
+	\item Land responds to the delayed forcing by remote trop oceans.
+	\item Mean land response appears to be delayed, i.e. when plotted with lag 
+		correlations.
+	\item Delayed land response is linear combination of initial response to 
+		Pacific ocean and response to delayed remote tropical oceans.
+	\item Land response is amplified due to previously discussed process.
+	\item The land response is further amplified by secondary response to remote 
+		tropics.
+\end{itemize}
+
 
 %----------------------------------------------------------------------------------------
 %	LAPSE RATE
