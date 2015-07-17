@@ -200,7 +200,7 @@ influence of the ENSO forcing on land temperatures in the sensitivity
 experiments (Fig.  \ref{fig:xcor} g, h), and the tropical Pacific has little 
 influence on the slab ocean in the extra-tropics. The observations and CMIP5 
 models also don't show a significant relationship between the extra-tropics and 
-NINO3.
+NINO3 (Fig.\ref{fig:xcor} g,h,k,l).
 
 \clearpage
 \begin{figure}[ht]
@@ -221,23 +221,30 @@ line).}
 	\label{fig:xcor}
 \end{figure}
 
-\section{ENSO}
-\begin{itemize}
-	\item ENSO is source of tropical inter-annual variability.
-	\item Temperature anomaly seen throughout tropical troposphere
-	\item Land responds quickly - within a month - to initial anomaly.
-	\item Remote tropical oceans response is delayed by 3-4 months.
-	\item Timing of delay of remote tropical oceans is a function of mixed layer 
-		depth.
-	\item Land responds to the delayed forcing by remote trop oceans.
-	\item Mean land response appears to be delayed, i.e. when plotted with lag 
-		correlations.
-	\item Delayed land response is linear combination of initial response to 
-		Pacific ocean and response to delayed remote tropical oceans.
-	\item Land response is amplified due to previously discussed process.
-	\item The land response is further amplified by secondary response to remote 
-		tropics.
-\end{itemize}
+To summarise thus far; we see that tropical SSTs strongly influence tropical and 
+- to a lesser extent - extra-tropical continental temperatures; SST anomalies 
+are amplified in the tropical troposphere and efficiently transported over land; 
+ENSO is the dominant source of interannual variability and can influence land 
+surface temperatures via the troposphere. However we now wish to investigate the 
+process by which SST variability leads to amplified $T_{land}$ variability.  
+
+% \section{ENSO}
+% \begin{itemize}
+% 	\item ENSO is source of tropical inter-annual variability.
+% 	\item Temperature anomaly seen throughout tropical troposphere
+% 	\item Land responds quickly - within a month - to initial anomaly.
+% 	\item Remote tropical oceans response is delayed by 3-4 months.
+% 	\item Timing of delay of remote tropical oceans is a function of mixed layer 
+% 		depth.
+% 	\item Land responds to the delayed forcing by remote trop oceans.
+% 	\item Mean land response appears to be delayed, i.e. when plotted with lag 
+% 		correlations.
+% 	\item Delayed land response is linear combination of initial response to 
+% 		Pacific ocean and response to delayed remote tropical oceans.
+% 	\item Land response is amplified due to previously discussed process.
+% 	\item The land response is further amplified by secondary response to remote 
+% 		tropics.
+% \end{itemize}
 
 
 %----------------------------------------------------------------------------------------
@@ -245,6 +252,44 @@ line).}
 %----------------------------------------------------------------------------------------
 
 \section{The Lapse Rate Mechanism}
+
+We are now going to investigate the relationship between tropospheric anomalies 
+and the surface by looking at the warming lapse rate mechanism described by 
+\citet{Joshi2007} and \citet{Byrne2013a}, and testing it's validity for 
+interannual variability. 
+
+We first take a look at the vertical structure of the relationship between land 
+and ocean temperatures comparing the Pacemaker experiment with a climatology run 
+(i.e. no SST variability).  Using tropical averages above land and ocean points, 
+Figure \ref{fig:linreg_plev} shows regression values for the $T_{tropos}$ at 
+different pressure levels as a function of the surface temperature $T_{land}$ 
+(green lines) and $T_{ocean}$ (blue lines). In the simulation without any SST 
+variability (dashed lines) the higher level tropical temperatures over land 
+areas are not related to $T_{land}$ as the regression values between the surface 
+and tropospheric temperatures falls to zero above \SI{800}{\hecto\pascal}, 
+indicating that the atmospheric internal (independent of SST variability) 
+$T_{land}$ variability is limited to the near surface layers and is not strongly 
+related to the upper free $T_{tropos}$ (green dashed line in Fig.  
+\ref{fig:linreg_plev} a). In the simulation with SST variability the upper level 
+temperature shows a strong relationship with the surface $T_{land}$ variability 
+(solid green line in Fig.  \ref{fig:linreg_plev} a). In particular the relation 
+of $T_{land}$ with upper level temperatures over ocean areas shows a strong 
+increase with height, with values larger than unity between 500hPa to 200hPa 
+(solid blue line in Fig.  \ref{fig:linreg_plev} a). 
+
+Over ocean regions we see a clear increase in the relationship between the 
+surface $T_{ocean}$ and the 500hPa to 200hPa level temperature variability (blue 
+line in Fig. \ref{fig:linreg_plev} b). This is a well known signature of 
+moisture convection; for a unity warming at the surface the upper level 
+temperatures will warm more, due to the latent heat release by moist convection 
+(\citet{Joshi2007}, \citet{Byrne2013}, \citet{Dommenget2009}, etc.). This 
+signature appears to be transported to the land regions, which leads to the 
+similarity in the regressions between $T_{land}$ and $T_{ocean}$ with upper 
+level $T_{tropos}$ over ocean regions (compare solid blue lines in Fig.  
+\ref{fig:linreg_plev} a and b). 
+
+
+
 \begin{itemize}
 	\item Forcing regions over tropical oceans show large amplification in upper 
 		troposphere due to moist convection.
