@@ -263,26 +263,46 @@ and ocean temperatures comparing the Pacemaker experiment with a climatology run
 (i.e. no SST variability).  Using tropical averages, Figure 
 \ref{fig:linreg_plev} shows regression values for the $T_{tropos}$ at different 
 pressure levels as a function of the surface temperature $T_{land}$ (a) and 
-$T_{ocean}$ (b), with the green line for the column of air above land, and blue 
-for the column of air above ocean.  In the simulation without any SST 
-variability (dashed lines) the higher level tropical temperatures over land 
-areas are not related to $T_{land}$ as the regression values between the surface 
-and tropospheric temperatures falls to zero above \SI{800}{\hecto\pascal}, 
-indicating that the atmospheric internal $T_{land}$ variability (independent of 
-SST variability) is limited to the near surface layers and is not strongly 
-related to the upper free $T_{tropos}$. In the simulation with SST variability 
-the upper level temperature shows a strong relationship with the surface 
-$T_{land}$ variability. In particular the relation of $T_{land}$ with upper 
-level temperatures over ocean areas shows a strong increase with height, with 
-values larger than unity between 500hPa to 200hPa. 
+$T_{ocean}$ (b), with the green line for the column of air above tropical land, 
+blue for the column of air above tropical ocean, and the black line is the 
+column above the remote tropical ocean, essentially the tropical oceans with the 
+area of forcing removed.  Looking first at Figure \ref{fig:linreg_plev} a), in 
+the simulation without any SST variability (dashed lines) the higher level 
+tropical temperatures over land areas are not related to $T_{land}$ as the 
+regression values between the surface and tropospheric temperatures falls to 
+zero above \SI{800}{\hecto\pascal}, indicating that the atmospheric internal 
+$T_{land}$ variability (independent of SST variability) is limited to the near 
+surface layers and is not strongly related to the upper free $T_{tropos}$. In 
+the simulation with SST variability the tropospheric temperature shows a strong 
+relationship with the surface $T_{land}$ variability at all levels. 
 
-Over ocean regions we see a clear increase in the relationship between the 
-surface $T_{ocean}$ and the 500hPa to 200hPa level temperature variability (blue 
-line in Fig. \ref{fig:linreg_plev} b). This is a well known signature of 
-moisture convection; for a unity warming at the surface the upper level 
-temperatures will warm more, due to the latent heat release by moist convection 
-(\citet{Joshi2007}, \citet{Byrne2013}, \citet{Dommenget2009}, etc.). This 
-signature appears to be transported to the land regions, which leads to the 
+Now focusing on Figure \ref{fig:linreg_plev} b), a distinctive feature for the 
+troposphere above oceans (blue line) is the large increase in the regression 
+values in the upper troposphere. This is a well known signature of moist
+convection; a \SI{1}{\kelvin} anomaly at the surface corresponds to a 
+\SI{2}{\kelvin} anomaly in the upper level temperatures, due to the latent heat 
+release by moist convection (\citet{Joshi2007}, \citet{Byrne2013}, 
+\citet{Dommenget2009}, etc.). The anomalies above land regions don't reach the 
+same peak in the upper troposphere, however in the middle troposphere, around 
+the \SI{700}{\hecto\pascal} to \SI{500}{\hecto\pascal} level, the two lines 
+coincide. Similar to the level in the atmosphere described by \citet{Joshi2007} 
+where there is no land/ocean warming contrast. It's in the levels below 
+\SI{800}{\hecto\pascal} where the variability increases above land. This figure 
+would indicate a value of $R_{l/o}$ of around 1.2, as for a \SI{1}{\kelvin} 
+anomaly of $T_{ocean}$ we have a \SI{1.2}{\kelvin} response in $T_{land}$.  
+
+An advantage of Pacemaker experimental design is that the area of ocean forcing 
+is very well constrained. When looking at the response to an ENSO forcing from 
+the tropical Pacific the remote tropical oceans will also have their own, 
+potentially considerable, internal variabiltiy due to ocean dynamics. In the 
+Pacemaker experiment the remote -- slab -- oceans have no dynamics. In this way 
+we can consider the Pacific Ocean forcing as an external forcing, and measure 
+the seperate response of land and ocean. In Figure \ref{fig:linreg_plev} b) the 
+black line is such a measurement.
+
+
+level temperature variability (blue line in Fig.  \ref{fig:linreg_plev} b).  
+This signature appears to be transported to the land regions, which leads to the 
 similarity in the regressions between $T_{land}$ and $T_{ocean}$ with upper 
 level $T_{tropos}$ over ocean regions (compare solid blue lines in Fig.  
 \ref{fig:linreg_plev} a and b). 
@@ -298,7 +318,7 @@ level $T_{tropos}$ over ocean regions (compare solid blue lines in Fig.
 \end{itemize}
 
 \begin{figure}[ht]
-		\includegraphics[width=0.45\textwidth]{{linreg_land_sans_profile}.eps}
+		\includegraphics[width=0.45\textwidth]{{linreg_land_profile}.eps}
 		\includegraphics[width=0.45\textwidth]{{linreg_ocean_sans_profile}.eps}\\
 	\caption{Linear regression coefficients for temperature above tropical land 
 	and ocean as linear model of a) $T_{land}$ (1000hPa surface) and b) 
