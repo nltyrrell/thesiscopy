@@ -347,7 +347,26 @@ of the free tropospheric temperatures by (for example) Pacific ocean anomalies.
 
 \subsection{Experiments with a Single-Column Model}
 \label{sec:mech_scm}
-\paragraph{explain setup}
+We are interested in the land temperature response to a tropospheric forcing, a 
+single column model allows us to vary parameters controlling land surface 
+properties while keeping the forcing stable. We begin by generating the 
+temperature profiles above an ocean column with prescribed SSTs. As the focus is 
+interannual variabilty an SST value of \SI{26}{\degreeCelsius} was used as the 
+mean profile, then for the variability the SSTs were varied by either fractions 
+of a degree, to simulate the magnitude of interannual anomalies, or by many 
+degrees to clearly show the mean response.
+
+\begin{figure}[ht]
+\includegraphics[width=0.3\textwidth]{enso_prof_temp_Cy.eps}
+\includegraphics[width=0.3\textwidth]{enso_prof_ampratio_Cy.eps}
+\includegraphics[width=0.3\textwidth]{enso_prof_cq_anom_Cy.eps}
+\caption{Heating and temperature profiles for the SCM. a) Temperature anomaly 
+relative to \SI{26}{\degreeCelsius}, b) Amplification relative to 
+\SI{26}{\degreeCelsius}, c) Convective heating rates, anomaly from 
+\SI{26}{\degreeCelsius}}
+\label{fig:scmsstprof}
+\end{figure}
+
 \begin{itemize}
 	\item WTG assumption
 	\item Generation of atmospheric profiles
@@ -359,6 +378,7 @@ of the free tropospheric temperatures by (for example) Pacific ocean anomalies.
 		\end{itemize}
 \end{itemize}
 \paragraph{Values of l/s contrast for varying land/tropos parameters}
+
 \begin{center}
 	\begin{table}[ht]
 		\caption{Land/Ocean contrast in single column model, using WTG over lad 
