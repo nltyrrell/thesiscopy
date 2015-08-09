@@ -1,6 +1,7 @@
 *.swp
 main.pdf
 intro.pdf
+methods.pdf
 ignore/
 *-eps-converted-to.pdf
 test_ignore.txt

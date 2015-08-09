@@ -6,7 +6,7 @@
 \lhead{Chapter 2. \emph{Data and Methods}} % Change X to a consecutive number; 
 % this is for the header on each page - perhaps a shortened title
 
-This chapter will discuss the observational and model data, the models and the 
+In this chapter we discuss the observational and model data, the models and the 
 experiments conducted with them, and some of the statistical methods applied to 
 the data.
 
@@ -23,50 +23,47 @@ limitations.
 \subsection{Observational Data}
 
 \paragraph{Hadley Centre Data - Crutemp, Hadsst, Hadisst}
-FROM PAPER: The observational surface temperature datasets used were the 
-Climatic Research Unit Temperature data set, version 4 (CRUTEM4) 
-\citep{Brohan2006} for $T_{land}$ and the Hadley Centre SST data set, version 2 
-(HadSST2) \citep{Rayner2006}for the SST, $T_{ocean}$.  Temperature data previous 
-to 1950 was excluded in the analysis of the land/sea interactions as the smaller 
-data coverage area can cause errors in the statistical comparison of the two 
-datasets \citep{Dommenget2009}.
+FROM PAPER: The observational surface temperature datasets used were the .  
+Temperature data previous to 1950 was excluded in the analysis of the land/sea 
+interactions as the smaller data coverage area can cause errors in the 
+statistical comparison of the two datasets \citep{Dommenget2009}.
 
-\begin{itemize}
-	\item Three data products were used from the Hadley centre for surface 
-		temperatures;
-	\item Hadisst, hadsst2, Crutemp (need version numbers here)
-	\item Hadsst2
-	\begin{itemize}
-		\item Global gridded SST dataset based on observations
-		\item Data coverage decreases with time.
-		\item Prior to 1950 data coverage is too sparse to allow strong 
-			statistical conclusions \citep{Dommenget2009} when compared with 
-			Crutemp.
-		\item This dataset, along with Crutemp, was used for observations as it 
-			was considered the truest representation, as there is no 
-			interpolation or processing done on the data; other than that to 
-			correct inconsistencies.
-		\item Data coverage:
-	\end{itemize}
-	\item Crutemp
-	\begin{itemize}
-		\item Global gridded land temperature dataset based on observations
-		\item Data coverage: Large areas without data in the tropics, particularly Africa and South America.
-		\item GCM experiments show that these areas tend to be important in 
-	terms of the land response to tropical SST perturbations. The effect of this 
-	missing data is investigated further in Chapter 5.
-	\end{itemize}
-	\item Hadisst
-	\begin{itemize}
-		\item Global gridded SST dataset based on observations, and interpolated in regions without data.
-		\item Data coverage decreases with time.
-		\item The data prior to 1950 is still used for AMIP runs because even 
-			though it is unsuitable for comparing the land and ocean timeseries	
-			it is suitable as a representation of realistic SST variability. For 
-			the AMIP runs we want to see how the land surface responds to SST 
-			variability and the interpolated SST data is suitable for this.
-	\end{itemize}
-\end{itemize}
+Three data products from the UK Met Office Hadley centre and the University of 
+East Anglia Climatic Research Unit were used as surface temperatures 
+observations; Climatic Research Unit land Temperature data set, version 
+4 (CRUTEM4) \citep{Brohan2006}, the Hadley Centre SST data set,
+version 2 (HadSST2) \citep{Rayner2006} and the Hadle Centre global sea ice and 
+and SST, version 1 (HadISST) (ref).
+
+HadSST2 is global gridded SST dataset based on observations, with the data 
+coverage decreasing with time. Prior to 1950 data coverage is too sparse to 
+allow strong statistical conclusions \citep{Dommenget2009}, and measuring the 
+land/sea contrast by comparison with CRUTEM4 is not appropriate. This dataset, 
+along with CRUTEM4, was used for observations as it was considered the truest 
+representation, as there is no interpolation or processing done on the data; 
+other than that to correct inconsistencies. (Data coverage discussion?)
+
+CRUTEM4 is a global gridded land temperature dataset based on observations.  
+Regarding the data coverage; there are large areas without data in the tropics, 
+particularly in tropical Africa and Amazonian South America. Global climate 
+model experiments show that these areas may be important in terms of the land 
+response to tropical SST perturbations, as such the effect of this missing data 
+is investigated further in Chapter \ref{evidence} by masking the model results 
+to simulate the data coverage of the observations and testing the robustness of 
+the statistics used to measure the land/sea contrast. It is found the data 
+coverage issues may effect the magnitude of some results but not the 
+conclusions.
+
+HadISST1 is a global gridded SST dataset based on observations, and interpolated 
+in regions without data. It uses the same sources as HadSST2 but as missing data 
+points are interpolated there is no decreases in coverage with time. The 
+increased amount of interpolation means there is no increase in information so 
+the dataset is no more useful than HadSST2 when comparing to land temperatures.  
+Instead, the HadISST1 data is used as the input for model runs. The data prior 
+to 1950 is still used for AMIP runs because even though it is unsuitable for 
+comparing the land and ocean timeseries	it is suitable as a representation of 
+realistic SST variability. For the AMIP runs we want to see how the land surface 
+responds to SST variability and the interpolated SST data is suitable for this.
 
 \paragraph{Microwave Sounding Unit}
 \begin{itemize}
