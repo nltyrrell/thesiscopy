@@ -22,12 +22,6 @@ limitations.
 
 \subsection{Observational Data}
 
-\paragraph{Hadley Centre Data - Crutemp, Hadsst, Hadisst}
-FROM PAPER: The observational surface temperature datasets used were the .  
-Temperature data previous to 1950 was excluded in the analysis of the land/sea 
-interactions as the smaller data coverage area can cause errors in the 
-statistical comparison of the two datasets \citep{Dommenget2009}.
-
 Three data products from the UK Met Office Hadley centre and the University of 
 East Anglia Climatic Research Unit were used as surface temperatures 
 observations; Climatic Research Unit land Temperature data set, version 
@@ -38,10 +32,10 @@ and SST, version 1 (HadISST) (ref).
 HadSST2 is global gridded SST dataset based on observations, with the data 
 coverage decreasing with time. Prior to 1950 data coverage is too sparse to 
 allow strong statistical conclusions \citep{Dommenget2009}, and measuring the 
-land/sea contrast by comparison with CRUTEM4 is not appropriate. This dataset, 
-along with CRUTEM4, was used for observations as it was considered the truest 
-representation, as there is no interpolation or processing done on the data; 
-other than that to correct inconsistencies. (Data coverage discussion?)
+land/sea interactions by comparison with CRUTEM4 can lead to errors. This 
+dataset, along with CRUTEM4, was used for observations as it was considered the 
+truest representation, as there is no interpolation or processing done on the 
+data; other than that to correct inconsistencies. (Data coverage discussion?)
 
 CRUTEM4 is a global gridded land temperature dataset based on observations.  
 Regarding the data coverage; there are large areas without data in the tropics, 
@@ -87,7 +81,6 @@ responds to SST variability and the interpolated SST data is suitable for this.
 
 \subsection{Coupled Model Data}
 
-\paragraph{CMIP5}
 For the analysis of CGCMs we used all available pre-industrial control runs from 
 the CMIP5 datasets \citep{Taylor2012}, see Table \ref{tab:cmip5}. 100 years from 
 each of the 35 models was used, and anomalies were defined seperately for each 
@@ -96,6 +89,64 @@ calculated using the anomalous (relative to each model’s climatology) timeseri
 from each model, these were combined end-to-end to generate a 3500 year 
 timeseries. 
 
+\begin{center}
+	\begin{table}[h]
+	\caption{CMIP5 models used in this study. 100 years of the piControl run was 
+	used from each model.}
+		\label{tab:cmip5}
+		\tiny
+	\begin{tabular}{ l  l  l  l l}
+		Originating Group(s) & Country & Model \\ \hline
+		CSIRO and BOM & Australia & ACCESS1.0 \\
+Beijing Climate Center, China Meteorological Administration & China & BCC-CSM1.1 
+		 \\
+Beijing Climate Center, China Meteorological Administration & China & 
+		BCC-CSM1.1-m \\
+		GCESS, Beijing National University & China & BNU-ESM \\
+National Center for Atmospheric Research & USA & CCSM4 \\
+		National Center for Atmospheric Research  & USA & CESM1-BGC  \\
+		National Center for Atmospheric Research  & USA & CESM1-CAM5  \\
+		National Center for Atmospheric Research  & USA & CESM1-FASTCHEM \\
+		National Center for Atmospheric Research  & USA & CESM1-WACCM  \\
+		Centro Euro-Mediterraneo per i Cambiamenti & Italy & CMCC-CM \\
+		Centro Euro-Mediterraneo per i Cambiamenti & Italy & CMCC-CMS \\
+		CSIRO and QCCCE & Australia & CSIRO-Mk3-6-0 \\
+Meteo-France/Centre National de Recherches Meteorologiques & France & CNRM-CM5 
+		\\
+Canadian Centre for Climate Modelling and Analysis & Canada & CanESM2 \\
+		Institute of Atmospheric Physics and Chinese Academy of Sciences & China & 
+		FGOALS-g2 \\
+		Institute of Atmospheric Physics and Chinese Academy of Sciences & China & 
+		FGOALS-s2 \\
+		The First Institution of Oceanography & China & FIO-ESM \\
+
+Geophysical Fluid Dynamics Laboratory & USA & GFDL-CM3 \\
+Geophysical Fluid Dynamics Laboratory & USA & GFDL-ESM2G \\
+Geophysical Fluid Dynamics Laboratory & USA & GFDL-ESM2M \\
+NASA / Goddard Institute for Space Studies & USA & GISS-E2-H \\
+NASA / Goddard Institute for Space Studies & USA & GISS-E2-R \\
+Hadley Centre for Climate Prediction and Research/Met Office & UK & HadCM3 \\
+Hadley Centre for Climate Prediction and Research/Met Office & UK & HadGEM2-CC 
+ \\
+Hadley Centre for Climate Prediction and Research/Met Office & UK & HadGEM2-ES 
+ \\
+Institute for Numerical Mathematics & Russia & INM-CM4 \\
+Institut Pierre Simon Laplace & France & IPSL-CM5A-LR \\
+Institut Pierre Simon Laplace & France & IPSL-CM5A-MR \\
+Institut Pierre Simon Laplace & France & IPSL-CM5B-LR \\
+		Atmosphere and Ocean Research Institute (AORI),    & Japan & MIROC5 \\
+		\	National Institute for Environmental Studies (NIES) and  &&& \\
+		\	Japan Agency for Marine-Earth Science and Technology (JAMSTEC) && & \\
+AORI, NIES and JAMSTEC		& Japan & MIROC-ESM \\
+Max Planck Institute for Meteorology & Germany & MPI-ESM-LR \\
+Max Planck Institute for Meteorology & Germany & MPI-ESM-P \\
+Max Planck Institute for Meteorology & Germany & MPI-ESM-MR \\
+Meteorological Research Institute & Japan & MRI-CGCM3 \\
+Norwegian Climate Centre & Norway & NorESM1-M \\
+Norwegian Climate Centre & Norway & NorESM1-ME \\
+	\end{tabular}
+	\end{table}
+\end{center}
 
 
 %----------------------------------------------------------------------------------------
@@ -104,13 +155,13 @@ timeseries.
 
 \section{Model Experiments}
 
-This section will describe the models used, and the experiments performed with 
-each model.
+This section will describe the models that were used, and the core experiments 
+performed with each model.
 
 
 \subsection{ACCESS Model}
 
-\paragraph{Description of ACCESS}
+\subsubsection{Description of ACCESS}
 The sensitivity experiments were performed with the UK Meteorological Office 
 Unified Model AGCM with HadGEM2 atmospheric physics (\citet{Davies2005}; 
 \citet{Martin2010}; \citet{Bellouin2011}) at an atmospheric resolution of N48 
@@ -126,7 +177,7 @@ response time of the remote oceans would scale with mixed layer depth
 (\citealt{Su2005a}, \citealt{Lintner2007}), the constant 
 50 metre assumption gives a first order but realistic response.
 
-\paragraph{AMIP Run}
+\subsubsection{AMIP Run}
 Three primary types of experiments were conducted: AMIP-type; sensitivity to 
 mean SST increases; and El Ni{\~n}o pattern forcing experiments, see Table 
 \ref{tab:senseexp}. The latter being similar to a `pacemaker' experiment, as 
@@ -145,7 +196,7 @@ get more statistics. In the statistical analysis of observed SST vs. land the
 errors in the observed SST do matter as they no longer co-vary with the land, so 
 we cannot use the early SST and Tland values. 
 
-\paragraph{Half-AMIP/Half-1K experiments}
+\subsubsection{Half-AMIP/Half-1K experiments}
 Simulations forced with idealised SST patterns used a 12 month climatology of 
 the HadISST data from 1950-2010 as the reference control climate. The division 
 between tropics and extra-tropics for these experiments was chosen to be 
@@ -155,17 +206,17 @@ $28^{\circ}$N/S to the poles. For the model resolution used this most closely
 divides the oceans in half by area, with slightly more area in the 
 extra-tropics.
 
-\paragraph{Pacemaker experiment}
-For the El Ni{~n}o pattern forcing experiments a canonical El Ni{~n}o pattern was 
-generated using HadISST monthly mean data from a linear regression between NINO3 
-and SSTs, as shown in Figure 1. This pattern was imposed in the tropical Pacific 
-between $30^{\circ}$N/S and $155^{\circ}$E to the eastern boundary of the 
-Pacific, on to monthly climatological SSTs (i.e. a repeating 12 month seasonal 
-cycle).  The values of the anomaly was based on the regression values, with a 
-maximum temperature anomaly of 1.41K.  The pattern was oscillated with a period 
-of 4 years, peaking in January.  Outside of the tropical Pacific there were two 
-scenarios; fixed SSTs using the HadISST 1950-2010 climatology, and the slab 
-ocean. 
+\subsubsection{Pacemaker experiment}
+For the El Ni{\~n}o pattern forcing experiments a canonical El Ni{\~n}o pattern 
+was generated using HadISST monthly mean data from a linear regression between 
+NINO3 and SSTs, as shown in Figure 1. This pattern was imposed in the tropical 
+Pacific between $30^{\circ}$N/S and $155^{\circ}$E to the eastern boundary of 
+the Pacific, on to monthly climatological SSTs (i.e. a repeating 12 month 
+seasonal cycle).  The values of the anomaly was based on the regression values, 
+with a maximum temperature anomaly of 1.41K.  The pattern was oscillated with a 
+period of 4 years, peaking in January.  Outside of the tropical Pacific there 
+were two scenarios; fixed SSTs using the HadISST 1950-2010 climatology, and the 
+slab ocean. 
 
 
 
