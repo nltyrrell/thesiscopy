@@ -26,7 +26,7 @@ Three data products from the UK Met Office Hadley centre and the University of
 East Anglia Climatic Research Unit were used as surface temperatures 
 observations; Climatic Research Unit land Temperature data set, version 
 4 (CRUTEM4) \citep{Brohan2006}, the Hadley Centre SST data set,
-version 2 (HadSST2) \citep{Rayner2006} and the Hadle Centre global sea ice and 
+version 2 (HadSST2) \citep{Rayner2006} and the Hadley Centre global sea ice and 
 and SST, version 1 (HadISST) (ref).
 
 HadSST2 is global gridded SST dataset based on observations, with the data 
@@ -54,10 +54,19 @@ points are interpolated there is no decreases in coverage with time. The
 increased amount of interpolation means there is no increase in information so 
 the dataset is no more useful than HadSST2 when comparing to land temperatures.  
 Instead, the HadISST1 data is used as the input for model runs. The data prior 
-to 1950 is still used for AMIP runs because even though it is unsuitable for 
-comparing the land and ocean timeseries	it is suitable as a representation of 
-realistic SST variability. For the AMIP runs we want to see how the land surface 
-responds to SST variability and the interpolated SST data is suitable for this.
+to 1950 is still used for AMIP-type experiments (see \ref{methods:amip}) because 
+even though it is unsuitable for comparing the land and ocean timeseries	it 
+is suitable as a representation of realistic SST variability. For the AMIP runs 
+we want to see how the land surface responds to SST variability and the 
+interpolated SST data is suitable for this.
+
+All observational data was linearly detrended, as linear trends strongly 
+influence correlations and would lead to spurious results. However variability 
+on decadal timescales was not removed. The use of highpass filters on the data, 
+which could have the effect of removing decadal length oscillations, lead to 
+unrealistic results, and it was decided that simple linear detrend would be 
+sufficient to remove the long-term variability most affecting any correlations 
+and regressions with the least amount of processing.
 
 \paragraph{Microwave Sounding Unit}
 \begin{itemize}
@@ -70,24 +79,24 @@ responds to SST variability and the interpolated SST data is suitable for this.
 
 \subsection{Reanalysis Data}
 
-\paragraph{NCEP Data}
-\begin{itemize}
-	\item Forecast model that assimilates past observational data.
-	\item Length is limited to satellite era, post 1979.
-	\item Used in initial investigations as alternative to Hadley centre 
-		observations.
-\end{itemize}
-
+The NCEP-Reanalysis dataset uses a forecast model (ref, details) that 
+assimilates past observational data as boundary conditions. The result is a high 
+spatial and temporal resolution gridded dataset of surface and tropospheric 
+variables, as close to observations as possible.  Only satellite data is used 
+which mean the length is limited to satellite era, post 1979. The NCEP data was 
+Used in initial investigations as alternative to Hadley Centre observations.
 
 \subsection{Coupled Model Data}
 
 For the analysis of CGCMs we used all available pre-industrial control runs from 
-the CMIP5 datasets \citep{Taylor2012}, see Table \ref{tab:cmip5}. 100 years from 
-each of the 35 models was used, and anomalies were defined seperately for each 
-model relative to its climatology. The multi-model mean of the CMIP5 data was 
-calculated using the anomalous (relative to each model’s climatology) timeseries 
-from each model, these were combined end-to-end to generate a 3500 year 
-timeseries. 
+the CMIP5 datasets \citep{Taylor2012}, see Table \ref{tab:cmip5} for the full 
+list. The pre-industrial control runs, which lack any anthropogenic or natural 
+radiative forcings (i.e. no changes in $CO_2$, volcanoes, etc)  were chosen in 
+order to study the unforced internal variability. 100 years from each of the 35 
+models was used, and anomalies were defined seperately for each model relative 
+to its climatology. The multi-model mean of the CMIP5 data was calculated using 
+the anomalous (relative to each model’s climatology) timeseries from each model, 
+these were combined end-to-end to generate a 3500 year timeseries. 
 
 \begin{center}
 	\begin{table}[h]
@@ -165,36 +174,80 @@ performed with each model.
 The sensitivity experiments were performed with the UK Meteorological Office 
 Unified Model AGCM with HadGEM2 atmospheric physics (\citet{Davies2005}; 
 \citet{Martin2010}; \citet{Bellouin2011}) at an atmospheric resolution of N48 
-($3.75^{\circ} \times 
-2.5^{\circ}$). This was forced with prescribed SSTs or a slab ocean. The slab
-ocean assumes a constant mixed layer depth of 50 metres and is forced by flux 
-correction terms to have on average the HadISST 1950--2010 SST climatology 
-\citep{Wang2014}. A constant mixed layer was chosen in part for simplicity as 
-this model setup is intended to be of intermediate complexity, between a simple 
-prescribed SST run and a fully coupled dynamic ocean. We use a slab ocean as 
-simple way of modelling SST variability, and while we would expect that the 
-response time of the remote oceans would scale with mixed layer depth 
-(\citealt{Su2005a}, \citealt{Lintner2007}), the constant 
-50 metre assumption gives a first order but realistic response.
+($3.75^{\circ} \times 2.5^{\circ}$). The model was either forced with prescribed 
+SSTs or contained a slab ocean. 
 
-\subsubsection{AMIP Run}
 Three primary types of experiments were conducted: AMIP-type; sensitivity to 
-mean SST increases; and El Ni{\~n}o pattern forcing experiments, see Table 
-\ref{tab:senseexp}. The latter being similar to a `pacemaker' experiment, as 
-described by ~\citealt{Alexander1992}, ~\citealt{Alexander1992a}, 
-~\citealt{Lau2000} and ~\citealt{Lu2011}. The AMIP type runs used HadISST from 
-1870 to 2010. While it was determined that HadSST2 data was only suitable
-from 1950 for calculating statistics relating to the observational value of the 
-land/sea contrast, the HadISST data was used from 1870. The reason is that the 
-HadISST SSTs were primarily used as a representation of realistic interannual 
-variability with which to force the atmospheric model.  In the AMIP runs the SST 
-and $T_{land}$ are consistent because $T_{land}$ responds to the prescribed SST.  
-Whether or not these were the true SST values in the real world is not that 
-important in the context of this study.  We use the early SST values from 
-HadISST to generate realistic SST variability; thus we use the earlier period to 
-get more statistics. In the statistical analysis of observed SST vs. land the 
-errors in the observed SST do matter as they no longer co-vary with the land, so 
-we cannot use the early SST and Tland values. 
+mean SST increases or decreases; and El Ni{\~n}o pattern forcing experiments, 
+see Table \ref{tab:senseexp} for full details. The latter El Ni{\~n}o forcing 
+experiment is similar to a `pacemaker' experiment, as described by 
+~\citealt{Alexander1992}, ~\citealt{Alexander1992a}, ~\citealt{Lau2000} and 
+~\citealt{Lu2011}. 
+
+\begin{center}
+	\begin{table}[h]
+		\caption{Idealised model simulations discussed in this study. Atmospheric 
+		component was HadGEM2 at N48 resolution.}
+		\label{tab:senseexp}
+		\scriptsize
+	\begin{tabular}{ l  l  l  l l}
+		\textit{Name}		&  \textit{Ocean} & \textit{Time} &\textit{ Notes }\\ \hline
+	AMIP-global &    HadISST & 1870-2012 &  \\
+	AMIP-tropics	   & Tropics: HadISST & 1870-2012 & Climatological SSTs with \\
+		&Extra-tropics: FIXSST&& anomalies applied in tropics \\
+	AMIP-extra-tropics     & Extra-tropics: HadISST & 1870-2012 & 
+		Climatological SSTs with \\
+		& Tropics: FIXSST && anomalies applied in extra-tropics\\
+		FIXSST    & Climatology & 100 years & Climatological SSTs based  \\
+								  &&& on HadISST 1950-2013 \\
+		+1K Global    & FIXSST,  & 100 years & Climatology with \\
+												 & +1K && +1K added to global oceans \\
+		+1K Tropics     & FIXSST, & 100 years & Climatology with \\
+												 & +1K in Tropics && +1K added to 
+		tropical oceans \\
+		+1K Extra-tropics	   & FIXSST & 100 years &Climatology with \\
+											& +1K in Extra-tropics && +1K added to 
+		extra-tropical oceans \\
+	Slab 	   & 50m mixed layer ocean & 100 years & \\
+	ENSO-FIXSST    &  FIXSST, & 100 years & Climatology with \\
+											& El Ni{\~n}o pattern && oscillating 
+		pattern in tropical Pacific\\
+	ENSO-slab    & Slab,  & 100 years & 50m mixed layer ocean with \\
+											& El Ni{\~n}o pattern && oscillating 
+		pattern in tropical Pacific\\
+	\hline
+	\end{tabular}
+	\end{table}
+\end{center}
+
+
+\subsubsection{AMIP-Type experiments}\label{methods:amip}
+AMIP (Atmosphere-only Model Inter-comparison Project, (ref)), much like CMIP, is 
+a project to compare results from many modelling centres, except instead of 
+coupled ocean-atmosphere models the models are forced with observational SSTs.  
+Therefore an we consider an AMIP-type experiment one where a model is forced 
+with observational, or similar to observational SSTs. There are a few benefits 
+to this setup; it allows us to test the effect of a range of SST anomalies on 
+continental temperatures, it is computationally much cheaper than a coupled run 
+and doesn't require long spin up times, and the contained boundary conditions 
+stabilise the model and prevent drift. The key limitation of AMIP runs is the 
+loss of atmosphere to ocean feedbacks which are potentially important for the 
+eveolution of both systems. This downside is partially addressed with the use of 
+a mixed-layer slab ocean, discussed in section \ref{methods:pacemaker}.
+
+The AMIP type runs used HadISST from 1870 to 2010. While it was determined that 
+HadSST2 data was only suitable from 1950 for calculating statistics relating to 
+the observational value of the land/sea contrast, the HadISST data was used from 
+1870. The reason is that the HadISST SSTs were primarily used as a 
+representation of realistic interannual variability with which to force the 
+atmospheric model.  In the AMIP runs the SST and $T_{land}$ are consistent 
+because $T_{land}$ responds to the prescribed SST.  Whether or not these were 
+the true SST values in the real world is not important in the context of this 
+study.  We use the early SST values from HadISST to generate realistic SST 
+variability; thus we can use the earlier period to get more statistics. In the 
+statistical analysis of observed SST verse land the errors in the observed SST 
+do matter as they no longer co-vary with the land, so we cannot use the early 
+SST and $T_{land}$ values.
 
 \subsubsection{Half-AMIP/Half-1K experiments}
 Simulations forced with idealised SST patterns used a 12 month climatology of 
@@ -206,7 +259,7 @@ $28^{\circ}$N/S to the poles. For the model resolution used this most closely
 divides the oceans in half by area, with slightly more area in the 
 extra-tropics.
 
-\subsubsection{Pacemaker experiment}
+\subsubsection{Pacemaker experiment}\label{methods:pacemaker}
 For the El Ni{\~n}o pattern forcing experiments a canonical El Ni{\~n}o pattern 
 was generated using HadISST monthly mean data from a linear regression between 
 NINO3 and SSTs, as shown in Figure 1. This pattern was imposed in the tropical 
@@ -216,8 +269,18 @@ seasonal cycle).  The values of the anomaly was based on the regression values,
 with a maximum temperature anomaly of 1.41K.  The pattern was oscillated with a 
 period of 4 years, peaking in January.  Outside of the tropical Pacific there 
 were two scenarios; fixed SSTs using the HadISST 1950-2010 climatology, and the 
-slab ocean. 
+slab ocean.  
 
+The slab ocean is essentially a series of 1D ocean columns and assumes a 
+constant mixed layer depth of 50 metres. It is forced by flux correction terms 
+to have on average the HadISST 1950--2010 SST climatology \citep{Wang2014}. A 
+constant mixed layer was chosen in part for simplicity as this model setup is 
+intended to be of intermediate complexity, between a simple prescribed SST run 
+and a fully coupled dynamic ocean. We use a slab ocean as simple way of 
+modelling SST variability, and while we would expect that the response time of 
+the remote oceans to an external forcing would scale with mixed layer depth 
+(\citealt{Su2005a}, \citealt{Lintner2007}), the constant 50 metre assumption 
+gives a first order but realistic response.  
 
 
 \subsection{One and Two-Dimensional Radiative-Convective Model}
