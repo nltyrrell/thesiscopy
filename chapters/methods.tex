@@ -297,31 +297,41 @@ and the atmospheric sctuctural response to SSTs and boundary layer humidity
 surfaces (ref) and more recently with more realistic land representations 
 \citep{Rochetin2014}.
 
+\subsubsection{Model details}
 We utilised the Massachusetts Institute of Technology (MIT) RCE model. First 
 described by \citet{Renno1994} and updated in \citet{Bony2001}.  The convection 
 scheme was first described in \citet{Emanuel1991} and improved in 
-\citet{Emanuel1999}. Radiative transfer is split into a shortwave scheme  and 
-The model can be run as a single column or as a two dimensional model in a zonal 
-or meridional directions.  
+\citet{Emanuel1999}. The radiative transfer scheme is from the European Center 
+for Medium Range Weather Forecast (ECMWF) operational model, and is split into a 
+shortwave scheme as described in \citet{Fouquart1980} and the longwave scheme 
+from \citet{Morcrete1991a}. The fractional cloud scheme of \citet{Bony2001} is 
+coupled to the convection scheme and also controls the interaction of clouds and 
+radiation. The boundary layer is modeled with a dry adiabatic adjustment to all 
+variables. Surface fluxes are calculated with bulk aerodynamic formulas using a 
+specified wind speed.  The surface can be modelled as prescribed SSTs, a mixed 
+layer ocean or a simple land surface, the latter by specifying the evaporative 
+fraction and a shallow mixed layer depth. The model geometry can be set as a 
+single column (1D) or as a two dimensional (2D) model in a zonal or meridional 
+directions. The model can also be run in Weak Temperature Gradient mode (WTG 
+mode). This
 
+\subsubsection{Experiments}
+The low computing power required to run a simple model allows for many and 
+varied experiments, as well as efficient parameter testing. There were three key 
+groups of experiments performed with the MIT model; 1D prescribed SST-WTG 
+experiment; 2D prescribed SST land-ocean experiment; and 2D $CO_2$ forced 
+land-ocean experiment.
 
-\begin{itemize}
-	\item MIT model, references
-\end{itemize}
+\subsubsection{1D SST-WTG experiment}
+The 1D SST-WTG experiments consisted of two key parts; 
 
-\paragraph{Model Setups}
-\begin{itemize}
-	\item Geometry, 1D, 2D
-	\item Forcing options; SST, CO2, WTG
-	\item Parameter options; land surface, model levels, interactive clouds
-\end{itemize}
-
-\paragraph{Experiments}
 \begin{itemize}
 	\item 1D, WTG setup
 	\item 2D, SST forced
 	\item 2D, CO2 forced
 	\item Parameter experiments
+	\item Forcing options; SST, CO2, WTG
+	\item Parameter options; land surface, model levels, interactive clouds
 \begin{itemize}
 	\item Surface properties
 	\item Interactive Clouds
