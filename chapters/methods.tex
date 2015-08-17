@@ -91,7 +91,7 @@ Used in initial investigations as alternative to Hadley Centre observations.
 For the analysis of CGCMs we used all available pre-industrial control runs from 
 the CMIP5 datasets \citep{Taylor2012}, see Table \ref{tab:cmip5} for the full 
 list. The pre-industrial control runs, which lack any anthropogenic or natural 
-radiative forcings (i.e. no changes in $CO_2$, volcanoes, etc)  were chosen in 
+radiative forcings (i.e. no changes in CO$_2$, volcanoes, etc)  were chosen in 
 order to study the unforced internal variability. 100 years from each of the 35 
 models was used, and anomalies were defined seperately for each model relative 
 to its climatology. The multi-model mean of the CMIP5 data was calculated using 
@@ -290,7 +290,7 @@ relationship between SSTs, tropospheric temperatures and $T_{land}$ response we
 used a radiative-convective column model. A radiative-convective model is one 
 where the atmospheric heating by convection is balanced with radiative cooling 
 (ref Manabe, Wetherald 1967 etc) [extra details?] and have been used in a myriad 
-of studies, such as the equilibrium response to $CO_2$ (ref) and solar forcings 
+of studies, such as the equilibrium response to CO$_2$ (ref) and solar forcings 
 (ref) and climate sensitivity (ref), the organisation of deep convection (ref) 
 and the atmospheric sctuctural response to SSTs and boundary layer humidity 
 (hamish and adam, ref).  There have been studies using RCE over simple land 
@@ -313,7 +313,7 @@ layer ocean or a simple land surface, the latter by specifying the evaporative
 fraction and a shallow mixed layer depth. The model geometry can be set as a 
 single column (1D) or as a two dimensional (2D) model in a zonal or meridional 
 directions. The model can also be run in Weak Temperature Gradient mode (WTG 
-mode) as described in \citet{Sobel200}. For this setup, which relys on the WTG 
+mode) as described in \citet{Sobel200}. For this setup, which relies on the WTG 
 approximation as discussed in section \ref{intro:wtg}, the free tropospheric 
 temperature profile is specified and remains fixed, allowing the vertical 
 velocity and, hence precipation to be prognostic variables.
@@ -322,7 +322,7 @@ velocity and, hence precipation to be prognostic variables.
 The low computing power required to run a simple model allows for many and 
 varied experiments, as well as efficient parameter testing. There were three key 
 groups of experiments performed with the MIT model; 1D prescribed SST-WTG 
-experiment; 2D prescribed SST land-ocean experiment; and 2D $CO_2$ forced 
+experiment; 2D prescribed SST land-ocean experiment; and 2D CO$_2$ forced 
 land-ocean experiment.
 
 \subsubsection{1D SST-WTG experiment}
@@ -338,16 +338,22 @@ numbers of land and ocean columns, the simplest being two columns; one land, one
 ocean. These runs were forced by varying the SSTs around a mean value suitable 
 for the chosen latitude.
 
-\subsubsection{2D $CO_2$ forced land-ocean experiment}
+\subsubsection{2D CO$_2$ forced land-ocean experiment}
 The geometry of these experiments were similar to the 2D prescribed SST 
 experiments, but instead of forcing with SST changes it was forced through 
-changes in $CO_2$. Both the land and ocean columns able to respond to the 
-forcing. As this study primarily deals with natural variability a $CO_2$ forced 
+changes in CO$_2$. Both the land and ocean columns able to respond to the 
+forcing. As this study primarily deals with natural variability a CO$_2$ forced 
 experiment may seem unusual but it was useful as it allowed us to test our 
 assumptions about comparisons between global warming land/ocean thermal 
 contrast, and an understanding of the sensitivity of the modelled land and ocean 
 surfaces to an external forcing puts the other results in context.
 
+\begin{figure}[ht]
+	\includegraphics[width=1.0\textwidth]{{2007_Abbot.Emanuel_Fig1}.pdf}
+	\caption{Figure 1 from \citet{Abbot2007}, a schematic of the two-column 
+	model in zonal-height plane.}
+	\label{fig:ftest}
+\end{figure}
 
 \begin{itemize}
 	\item Parameter options; land surface, model levels, interactive clouds
@@ -357,21 +363,68 @@ surfaces to an external forcing puts the other results in context.
 
 
 \subsection{Globally Resolved Energy Balance Model}
+
 The final model that was used in this study is the Globally Resolved Energy 
-Balance (GREB) model. This is another simplified model, 
+Balance (GREB) model \citep{Dommenget2011}. Energy balance models have long been 
+used to measure global surface temperatures in equilibrium (ref) and the 
+response to external forcings (ref, ref). Early energy balance models were often 
+one dimensional and lacking many important processes, but despite this the 
+resutls were often realistic. For example, initial estimates of climate 
+sensitivity have proven remarkably robust - Arrhenius' estimation a global 
+temperature change of around \SI{5}{\celsius} for a doubling of CO$_2$ (ref) is 
+within the uncertainty limits of studies in the recent literature (ref).  From 
+the starting point of simple energy balance models, processes and feedbacks were 
+added and the models became more realistic, but the potential for non-linear 
+interaction between sytems increase.  This can inhibit our understanding of the 
+mechanisms causing a response in the model and hence, the climate 
+\citep{Dommenget2015}. 
 
+The GREB model is intended as a low complexity model to bridge the gap between 
+simple one-dimensional models and coupled-GCMs. It allows testing of the global 
+and regional response to external forcings and sensivity to changes in the mean 
+climate \citep{Dommenget2015}. The GREB model has a resolution of 
+\SI{3.75}{\degree} x \SI{3.75}{\degree} and three vertical levels; atmosphere, 
+surface and subsurface ocean. The circulation, clouds, soil moisture and ocean 
+mixed layer depth are all input as fixed boundary conditions using 12-month 
+climatologies.  The simplicity of the model means it cannot accurately represent 
+the mean climate without significant errors; hence the control climate has flux 
+corrections to push the mean $T_{land}$, $T_{ocean}$ and $q_{air}$ (the 
+atmospheric water vapour) to climatological values. The schematic in Figure 
+\ref{fig:schemgreb}, taken from \citet{Dommenget2011}, demonstrates which 
+physical processes are included in GREB. Despite its simplicity, GREB does a 
+good job of modelling key features of the regional response to CO$_2$ 
+\citep{Dommenget2015} including arctic amplification and the land/sea warming 
+contrast.
 
-\paragraph{Model Description}
-\begin{itemize}
-	\item GREB model, references
-\end{itemize}
+\begin{figure}[ht]
+	\includegraphics[width=1.0\textwidth]{{2011_DommengetFloter_Fig2}.pdf}
+	\caption{From \citet{Dommenget2011}, Figure 2, a schematic of the physical 
+	processes included in the GREB model}
+	\label{fig:schemgreb}
+\end{figure}
 
+The simplicity of the GREB model allows for experiments that test the 
+sensitivity of $T_{surf}$ to changes in the climatology of variables such as 
+wind, soil moisture, clouds or atmospheric moisture. Further, we can use the 
+GREB model in conjunction with the ACCESS model to understand the regional 
+$T_{land}$ response to oceanic forcing. Using two key experiments, the AMIP and 
+Pacemaker experiments, we take the response of certain atmospheric variables and 
+use them to perturb the GREB model to attempt to recreate the GCM response. For 
+example; the Pacemaker experiment has a constant 4 year cycle of forcing in the 
+tropical Pacific which allows for the creation of a composite of positive and 
+negative events by selecting the months corresponding to the maximum and minimum 
+forcing.  Using the composite we create four anomalous fields; meridional and 
+zonal winds, soil moisture and cloud cover. In addition to these we have the SST 
+anomalies.  Each of these fields is then used to perturb the GREB model, 
+initially as individual fields then in combinations. In this way we build an 
+understanding of the regional importance of different aspects of the atmospheric 
+response. While it is simple to create composites with the Pacemaker experiment, 
+this is not so for the AMIP experiments, as the realistic SST forcing is highly 
+variable in space and time.  In order to create anomalous fields from this 
+experiment we use regressions between continental surface temperatures and the 
+variable we are testing. Once again meridional and zonal winds, soil moisture, 
+cloud response and anomolous SSTs are used to perturb the GREB model.
 
-\paragraph{Experiments}
-\begin{itemize}
-	\item AMIP Forcings
-	\item Pacemaker forcings
-\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	SECTION STATS
@@ -379,16 +432,17 @@ Balance (GREB) model. This is another simplified model,
 
 \section{Statistical methods}
 
-This section will describe the statistical methods applied to the data
+This section will describe the statistical methods applied to the data and used 
+in the analysis.
 
 
 \subsection{Regression of land/ocean}\label{ssec:rlo}
 
 
-All further analysis is based on annual mean anomalies with one exception in 
-Section 4.2, which is based on monthly mean anomalies for monthly mean lag-lead
-correlations. The land/sea contrast, $R_{L/S}$, is defined by the following 
-regression model;
+The majority of the analysis is based on annual mean anomalies with the main 
+exception in Section \ref{pacemaker}, which is based on monthly mean anomalies 
+for monthly mean lag-lead correlations. The land/sea contrast, $R_{L/S}$, is 
+defined by the following regression model;
 
 \begin{equation}
 T_{land} = R_{L/S} \cdot T_{ocean}
