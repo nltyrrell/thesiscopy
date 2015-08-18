@@ -64,17 +64,17 @@ All observational data was linearly detrended, as linear trends strongly
 influence correlations and would lead to spurious results. However variability 
 on decadal timescales was not removed. The use of highpass filters on the data, 
 which could have the effect of removing decadal length oscillations, lead to 
-unrealistic results, and it was decided that simple linear detrend would be 
+some unrealistic results, and it was decided that simple linear detrend would be 
 sufficient to remove the long-term variability most affecting any correlations 
 and regressions with the least amount of processing.
 
-\paragraph{Microwave Sounding Unit}
-\begin{itemize}
-	\item Description, references
-	\item Temporal, areal coverage
-	\item Known issues.
-	\item Reason for use, relationship to l/o contrast
-\end{itemize}
+% \paragraph{Microwave Sounding Unit}
+% \begin{itemize}
+% 	\item Description, references
+% 	\item Temporal, areal coverage
+% 	\item Known issues.
+% 	\item Reason for use, relationship to l/o contrast
+% \end{itemize}
 
 
 \subsection{Reanalysis Data}
@@ -168,14 +168,14 @@ This section will describe the models that were used, and the core experiments
 performed with each model.
 
 
-\subsection{ACCESS Model}
+\subsection{ACCESS}
 
-Sensitivity experiments were performed with the UK Meteorological Office Unified 
-Model AGCM with HadGEM2 atmospheric physics (\citet{Davies2005}; 
-\citet{Martin2010}; \citet{Bellouin2011}) at an atmospheric resolution of N48 
-($3.75^{\circ} \times 2.5^{\circ}$). The model was either forced with prescribed 
-SSTs or contained a slab ocean (the slab ocean is described in section 
-\ref{methods:pacemaker}).
+ACCESS (Australian Community Climate and Earth System Simulator) Sensitivity 
+experiments were performed with the UK Meteorological Office Unified Model AGCM 
+with HadGEM2 atmospheric physics (\citet{Davies2005}; \citet{Martin2010}; 
+\citet{Bellouin2011}) at an atmospheric resolution of N48 ($3.75^{\circ} \times 
+2.5^{\circ}$). The model was either forced with prescribed SSTs or contained a 
+  slab ocean (the slab ocean is described in section \ref{methods:pacemaker}).
 
 Three primary types of experiments were conducted: AMIP-type; sensitivity to 
 mean SST increases or decreases; and El Ni{\~n}o pattern forcing experiments, 
@@ -284,23 +284,22 @@ gives a first order but realistic response.
 
 
 \subsection{One and Two-Dimensional Radiative-Convective Model}
-Simplified atmospheric models have long been used to elucidate the important 
-mechanisms of otherwise complicated problems (references?). To understand the 
+Simplified atmospheric models have long been used to elucidate the underlying 
+mechanisms of otherwise complicated problems (ref). To understand the 
 relationship between SSTs, tropospheric temperatures and $T_{land}$ response we 
 used a radiative-convective column model. A radiative-convective model is one 
 where the atmospheric heating by convection is balanced with radiative cooling 
-(ref Manabe, Wetherald 1967 etc) [extra details?] and have been used in a myriad 
-of studies, such as the equilibrium response to CO$_2$ (ref) and solar forcings 
-(ref) and climate sensitivity (ref), the organisation of deep convection (ref) 
-and the atmospheric sctuctural response to SSTs and boundary layer humidity 
-(hamish and adam, ref).  There have been studies using RCE over simple land 
-surfaces (ref) and more recently with more realistic land representations 
-\citep{Rochetin2014}.
+(ref Manabe, Wetherald 1967 etc) and have been used in a myriad of studies, such 
+as the equilibrium response to CO$_2$ (ref) and solar forcings (ref), climate 
+sensitivity (ref), the organisation of deep convection (ref) and the atmospheric 
+sctuctural response to SSTs and boundary layer humidity (hamish and adam, ref).  
+There have been studies using RCE over simple land surfaces (ref) and more 
+recently with more realistic land representations \citep{Rochetin2014}.
 
 \subsubsection{Model details}
-We utilised the Massachusetts Institute of Technology (MIT) RCE model. First 
-described by \citet{Renno1994} and updated in \citet{Bony2001}.  The convection 
-scheme was first described in \citet{Emanuel1991} and improved in 
+We utilised the Massachusetts Institute of Technology (MIT) radiative-convective 
+model.  First described by \citet{Renno1994} and updated in \citet{Bony2001}.  
+The convection scheme was first described in \citet{Emanuel1991} and improved in 
 \citet{Emanuel1999}. The radiative transfer scheme is from the European Center 
 for Medium Range Weather Forecast (ECMWF) operational model, and is split into a 
 shortwave scheme as described in \citet{Fouquart1980} and the longwave scheme 
