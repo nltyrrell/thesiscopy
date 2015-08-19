@@ -170,19 +170,21 @@ performed with each model.
 
 \subsection{ACCESS}
 
-ACCESS (Australian Community Climate and Earth System Simulator) Sensitivity 
-experiments were performed with the UK Meteorological Office Unified Model AGCM 
-with HadGEM2 atmospheric physics (\citet{Davies2005}; \citet{Martin2010}; 
-\citet{Bellouin2011}) at an atmospheric resolution of N48 ($3.75^{\circ} \times 
-2.5^{\circ}$). The model was either forced with prescribed SSTs or contained a 
-  slab ocean (the slab ocean is described in section \ref{methods:pacemaker}).
+The Australian Community Climate and Earth System Simulator (ACCESS) model 
+\citep{Bi2013} uses the UK Meteorological Office Unified Model with HadGEM2 
+atmospheric physics (\citet{Davies2005}; \citet{Martin2010}; 
+\citet{Bellouin2011}). We used a lo-res version with an atmospheric resolution 
+of N48 ($3.75^{\circ} \times 2.5^{\circ}$) as described in \citet{Frauen2014}.  
+The model was either forced with prescribed SSTs or coupled to a slab ocean (the 
+slab ocean is described in section \ref{methods:pacemaker}).
 
 Three primary types of experiments were conducted: AMIP-type; sensitivity to 
 mean SST increases or decreases; and El Ni{\~n}o pattern forcing experiments, 
-see Table \ref{tab:senseexp} for full details. The latter El Ni{\~n}o forcing 
-experiment is similar to a `pacemaker' experiment, as described by 
-~\citealt{Alexander1992}, ~\citealt{Alexander1992a}, ~\citealt{Lau2000} and 
-~\citealt{Lu2011}. 
+see Table \ref{tab:senseexp} for full details. In addition there were control 
+runs, one with a 12-month climatology of SSTs and one with a slab ocean.  The El 
+Ni{\~n}o forcing experiments are similar in style to `pacemaker' experiments, as 
+described by ~\citealt{Alexander1992}, ~\citealt{Alexander1992a}, 
+~\citealt{Lau2000} and ~\citealt{Lu2011}. 
 
 \begin{center}
 	\begin{table}[h]
@@ -191,30 +193,37 @@ experiment is similar to a `pacemaker' experiment, as described by
 		\label{tab:senseexp}
 		\scriptsize
 	\begin{tabular}{ l  l  l  l l}
-		\textit{Name}		&  \textit{Ocean} & \textit{Time} &\textit{ Notes }\\ \hline
+		\textit{Name}		&  \textit{Ocean} & \textit{Time} &\textit{ Notes 
+	}\\ 
+	\hline \hline
+
 	AMIP-global &    HadISST & 1870-2012 &  \\
 	AMIP-tropics	   & Tropics: HadISST & 1870-2012 & Climatological SSTs with \\
 		&Extra-tropics: FIXSST&& anomalies applied in tropics \\
 	AMIP-extra-tropics     & Extra-tropics: HadISST & 1870-2012 & 
 		Climatological SSTs with \\
-		& Tropics: FIXSST && anomalies applied in extra-tropics\\
-		FIXSST    & Climatology & 100 years & Climatological SSTs based  \\
-								  &&& on HadISST 1950-2013 \\
-		+1K Global    & FIXSST,  & 100 years & Climatology with \\
+		& Tropics: FIXSST && anomalies applied in extra-tropics  \\
+\hline
+	+1K Global    & FIXSST,  & 100 years & Climatology with \\
 												 & +1K && +1K added to global oceans \\
-		+1K Tropics     & FIXSST, & 100 years & Climatology with \\
+	+1K Tropics     & FIXSST, & 100 years & Climatology with \\
 												 & +1K in Tropics && +1K added to 
 		tropical oceans \\
-		+1K Extra-tropics	   & FIXSST & 100 years &Climatology with \\
+	+1K Extra-tropics	   & FIXSST & 100 years &Climatology with \\
 											& +1K in Extra-tropics && +1K added to 
 		extra-tropical oceans \\
-	Slab 	   & 50m mixed layer ocean & 100 years & \\
+\hline
 	ENSO-FIXSST    &  FIXSST, & 100 years & Climatology with \\
 											& El Ni{\~n}o pattern && oscillating 
 		pattern in tropical Pacific\\
 	ENSO-slab    & Slab,  & 100 years & 50m mixed layer ocean with \\
 											& El Ni{\~n}o pattern && oscillating 
 		pattern in tropical Pacific\\
+\hline
+	FIXSST    & Climatology & 100 years & Climatological SSTs based  \\
+								  &&& on HadISST 1950-2013 \\
+	Slab 	   & 50m mixed layer ocean & 100 years & Control run, no external 
+		forcings \\
 	\hline
 	\end{tabular}
 	\end{table}
@@ -223,17 +232,18 @@ experiment is similar to a `pacemaker' experiment, as described by
 
 \subsubsection{AMIP-Type experiments}\label{methods:amip}
 AMIP (Atmosphere-only Model Inter-comparison Project, (ref)), much like CMIP, is 
-a project to compare results from many modelling centres, except instead of 
-coupled ocean-atmosphere models the models are forced with observational SSTs.  
-Therefore an we consider an AMIP-type experiment one where a model is forced 
-with observational, or similar to observational SSTs. There are a few benefits 
-to this setup; it allows us to test the effect of a range of SST anomalies on 
-continental temperatures, it is computationally much cheaper than a coupled run 
-and doesn't require long spin up times, and the contained boundary conditions 
-stabilise the model and prevent drift. The key limitation of AMIP runs is the 
-loss of atmosphere to ocean feedbacks which are potentially important for the 
-eveolution of both systems. This downside is partially addressed with the use of 
-a mixed-layer slab ocean, discussed in section \ref{methods:pacemaker}.
+a project to compare results from many modelling centres, except instead of the 
+coupled ocean-atmosphere models from CMIP the models are forced with 
+observational SSTs.  Therefore an we consider an AMIP-type experiment one where 
+a model is forced with observational, or similar to observational SSTs. There 
+are a few benefits to this setup; it allows us to test the effect of a range of 
+SST anomalies on continental temperatures, it is computationally much cheaper 
+than a coupled run and doesn't require long spin up times, and the contained 
+boundary conditions stabilise the model and prevent drift. The key limitation of 
+AMIP runs is the loss of atmosphere to ocean feedbacks which are potentially 
+important for the eveolution of both systems. This downside is partially 
+addressed with the use of a mixed-layer slab ocean, discussed in section 
+\ref{methods:pacemaker}.
 
 The AMIP type runs used HadISST from 1870 to 2010. While it was determined that 
 HadSST2 data was only suitable from 1950 for calculating statistics relating to 
@@ -312,53 +322,62 @@ layer ocean or a simple land surface, the latter by specifying the evaporative
 fraction and a shallow mixed layer depth. The model geometry can be set as a 
 single column (1D) or as a two dimensional (2D) model in a zonal or meridional 
 directions. The model can also be run in Weak Temperature Gradient mode (WTG 
-mode) as described in \citet{Sobel200}. For this setup, which relies on the WTG 
+mode) as described in \citet{Sobel2000}. For this setup, which relies on the WTG 
 approximation as discussed in section \ref{intro:wtg}, the free tropospheric 
 temperature profile is specified and remains fixed, allowing the vertical 
 velocity and, hence precipation to be prognostic variables.
+The 2D model uses the same schemes for radiation and convection as the 1D model 
+with an additional linear dynamical scheme that is hydrostatic and non-rotating.  
+First described in \citet{Nilsson1999} the model we used was closer to the one 
+described in \citet{Abbot2007}, as the latter used land and ocean columns 
+instead of just ocean columns. The schematic in Figure \ref{fig:schem2d} shows 
+the processes modelled.
+
+\begin{figure}[ht]
+	\includegraphics[width=0.6\textwidth]{{2007_Abbot_Emanuel_Fig1}.pdf}
+	\caption{Figure 1 from \citet{Abbot2007}, a schematic of the two-column 
+	model in zonal-height plane.}
+	\label{fig:schem2d}
+\end{figure}
 
 \subsubsection{Experiments}
 The low computing power required to run a simple model allows for many and 
 varied experiments, as well as efficient parameter testing. There were three key 
 groups of experiments performed with the MIT model; 1D prescribed SST-WTG 
 experiment; 2D prescribed SST land-ocean experiment; and 2D CO$_2$ forced 
-land-ocean experiment.
+land-ocean experiment. In addition to the core experiments there were tests on 
+the model parameters controlling the land surface, boundary layer, the 
+interaction of clouds and radiation, and the sensitivity of the results to the 
+domain size and number of model levels.
 
 \subsubsection{1D SST-WTG experiment}
 The 1D SST-WTG experiments consisted of two key parts; initially the model was 
-run without invocation of the WTG mode and a range of temperature profiles were 
-generated by varying prescribed SSTs, then these generated free tropospheric 
-temperature profiles were imposed above a responsive land surface using the WTG 
-mode. 
+run without the WTG mode and a range of temperature profiles were generated by 
+varying prescribed SSTs. These generated free tropospheric temperature profiles 
+were then imposed above a responsive land surface using the WTG mode, with the 
+temperature below a set level able to vary. The model is run to equilibrium for 
+each profile and the resulting land surface temperature is compared with the SST 
+used to generate the profile.  In addition to the different temperature profiles 
+the evaporative fraction of the land can be varied, as well as the height below 
+which the temperature profile is fixed.
 
 \subsubsection{2D prescribed SST land-ocean experiment}
 For these experiments the model was aligned zonally or meridionally with various 
 numbers of land and ocean columns, the simplest being two columns; one land, one 
 ocean. These runs were forced by varying the SSTs around a mean value suitable 
-for the chosen latitude.
+for the chosen latitude. The model was run to equilibrium, and the SST values 
+compared with the resulting land surface temperatures.
 
 \subsubsection{2D CO$_2$ forced land-ocean experiment}
 The geometry of these experiments were similar to the 2D prescribed SST 
-experiments, but instead of forcing with SST changes it was forced through 
-changes in CO$_2$. Both the land and ocean columns able to respond to the 
-forcing. As this study primarily deals with natural variability a CO$_2$ forced 
-experiment may seem unusual but it was useful as it allowed us to test our 
-assumptions about comparisons between global warming land/ocean thermal 
+experiments, but instead of forcing with SST changes the model was forced 
+through changes in CO$_2$. Both the land and ocean columns able to respond to 
+the forcing. As this study primarily deals with natural variability a CO$_2$ 
+forced experiment may seem unusual but it was useful as it allowed us to test 
+our assumptions about comparisons between global warming land/ocean thermal 
 contrast, and an understanding of the sensitivity of the modelled land and ocean 
 surfaces to an external forcing puts the other results in context.
 
-\begin{figure}[ht]
-	\includegraphics[width=1.0\textwidth]{{2007_Abbot.Emanuel_Fig1}.pdf}
-	\caption{Figure 1 from \citet{Abbot2007}, a schematic of the two-column 
-	model in zonal-height plane.}
-	\label{fig:ftest}
-\end{figure}
-
-\begin{itemize}
-	\item Parameter options; land surface, model levels, interactive clouds
-	\item Surface properties
-	\item Interactive Clouds
-\end{itemize}
 
 
 \subsection{Globally Resolved Energy Balance Model}
@@ -378,6 +397,7 @@ interaction between sytems increase.  This can inhibit our understanding of the
 mechanisms causing a response in the model and hence, the climate 
 \citep{Dommenget2015}. 
 
+\subsubsection{Model Details}
 The GREB model is intended as a low complexity model to bridge the gap between 
 simple one-dimensional models and coupled-GCMs. It allows testing of the global 
 and regional response to external forcings and sensivity to changes in the mean 
@@ -402,6 +422,7 @@ contrast.
 	\label{fig:schemgreb}
 \end{figure}
 
+\subsubsection{Experiments}
 The simplicity of the GREB model allows for experiments that test the 
 sensitivity of $T_{surf}$ to changes in the climatology of variables such as 
 wind, soil moisture, clouds or atmospheric moisture. Further, we can use the 
