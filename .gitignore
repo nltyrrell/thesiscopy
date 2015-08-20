@@ -1,8 +1,8 @@
 *.swp
 main.pdf
 intro.pdf
-methods.pdf
-mechanisms.pdf
+meth.pdf
+mech.pdf
 ignore/
 *-eps-converted-to.pdf
 test_ignore.txt
