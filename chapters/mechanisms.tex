@@ -320,14 +320,20 @@ variability for this region is imposed via the Pacific ocean forcing.  The
 remote tropical response is similar to the land response in shape; it also lacks 
 the large amplification in the upper troposphere indicating that the upper 
 levels are responding to the Pacific forcing and not being driven by their own 
-moist convection.  At all levels the remote tropical response is less than the 
-land response which means there is no clear level where there is no land/ocean 
-contrast however the two lines diverge more near the surface, with the largest 
-difference in gradients below \SI{800}{\hecto\pascal}. In the global warming 
-lapse rate theory, the increased continental lapse rate is due to reduced 
-moisture availability and thus lower relative humidities. The vertical structure 
+moist convection.  At all levels the response above the remote tropical oceans 
+is damped when compared to the land response which means there is no clear level 
+where there is no land/ocean contrast however the two lines diverge more near 
+the surface, with the largest difference between the gradients of the 
+temperature profiles below \SI{800}{\hecto\pascal}.  In the global warming lapse 
+rate theory, the steeper near-surface continental lapse rate is due to reduced 
+moisture availability and thus lower relative humidities. It would appear that a 
+similar process is active on interannual timescales with an additional factor; 
+the tropospheric profile above a region of the ocean that is responding to an 
+external forcing -- or a forcing from a seperate ocean basin -- will be 
+potentially be damped throughout the entire troposphere.  The vertical structure 
 above land and ocean is further explored with a one and two-dimensional model.
-
+NOTE: further lapse rate analysis on pacemake in 
+~/project/pacemaker/figures/*profile*
 
 \begin{figure}[ht]
 		\includegraphics[width=0.45\textwidth]{{linreg_land_profile}.eps}
@@ -341,17 +347,21 @@ $T_{plv,land} = a T_{sfc,land} + b$, and $T_{plv,ocean} = a T_{sfc,land} + b$}
 
 
 \subsection{The Weak Temperature Gradient Approximation}
-As previously mentioned the [wtg bit moved to intro] It is in this context that 
-the WTG approximation is used in this study, as it allows us to model the 
-land/ocean contrast using a single column model. Temperature profiles can be 
-generated in a column above ocean, then those profile can be imposed above a 
-land surface.  The temperature profile is constant in the free troposphere and 
-allowed to vary near the surface, thereby simulating the control of the free 
-tropospheric temperatures by (for example) Pacific ocean anomalies.
+The Weak Temperature Gradient (WTG) approximation was introduced in 
+\ref{intro_wtg}, and it is use in the single column model as a way to parametize 
+the large scale circulation. Briefly, the WTG approximation states that as 
+temperature gradients ar removed by... If we consider the tropical tropospheric 
+temperature to be largely controlled by the ocean surface temperature we can use 
+a single column model to study the land/ocean temperature contrast.  Initially a 
+range of emperature profiles are generated in an ocean column with varying SSTs, 
+then those profile can be imposed above a land surface.  The temperature profile 
+is constant in the free troposphere and allowed to vary near the surface, 
+thereby simulating the control of the free tropospheric temperatures by (for 
+example) Pacific ocean anomalies.
 
 
 \subsection{Experiments with a Single-Column Model}
-\label{sec:mech_scm}
+\label{mech_scm}
 We are interested in the land temperature response to a tropospheric forcing, a 
 single column model allows us to vary parameters controlling land surface 
 properties while keeping the forcing stable. We begin by generating the 
@@ -577,9 +587,9 @@ profile.}
 \subsubsection{u, v winds}
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{t_surf.v_anom.pos.4ycomp.response}.eps}
-	\includegraphics[width=0.5\textwidth]{{t_surf.u_anom.pos.4ycomp.response}.eps}
-	\includegraphics[width=0.5\textwidth]{{t_surf.uv_anom.pos.4ycomp.response}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.v_anom.pos.4ycomp.response.thesis}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.u_anom.pos.4ycomp.response.thesis}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.uv_anom.pos.4ycomp.response.thesis}.eps}
 	\caption{GREB TSurf response }
 \label{fig:GREB_ts_uv}
 \end{figure}
@@ -588,7 +598,7 @@ profile.}
 \subsubsection{Cloud cover}
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{t_surf.cld.pos.4ycomp.response}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.cld.pos.4ycomp.response.thesis}.eps}
 	\caption{GREB TSurf response }
 \label{fig:GREB_ts_cld}
 \end{figure}
@@ -596,28 +606,28 @@ profile.}
 
 \subsubsection{Soil Moisture}
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{t_surf.smc.pos.4ycomp.response}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.smc.pos.4ycomp.response.thesis}.eps}
 	\caption{GREB TSurf response }
 \label{fig:GREB_ts_smc}
 \end{figure}
 
 \subsubsection{SST}
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{t_surf.sst_anom.pos.4ycomp.response}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.sst_anom.pos.4ycomp.response.thesis}.eps}
 	\caption{GREB TSurf response }
 \label{fig:GREB_ts_sst}
 \end{figure}
 
 \subsubsection{Combined response}
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{t_surf.uv_sst.pos.4ycomp.response}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.uv_sst.pos.4ycomp.response.thesis}.eps}
 	\caption{GREB TSurf response }
 \label{fig:GREB_ts_uvsst}
 \end{figure}
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{t_surf.all.pos.4ycomp.response}.eps}
-	\includegraphics[width=0.5\textwidth]{{t_surf.all_sst.pos.4ycomp.response}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.all.pos.4ycomp.response.thesis}.eps}
+	\includegraphics[width=0.5\textwidth]{{t_surf.all_sst.pos.4ycomp.response.thesis}.eps}
 	\caption{GREB TSurf response }
 \label{fig:GREB_ts_all}
 \end{figure}
