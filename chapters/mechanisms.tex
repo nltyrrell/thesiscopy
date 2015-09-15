@@ -357,11 +357,11 @@ the large scale circulation. Briefly, the WTG approximation states that as
 temperature gradients ar removed by... If we consider the tropical tropospheric 
 temperature to be largely controlled by the ocean surface temperature we can use 
 a single column model to study the land/ocean temperature contrast.  Initially a 
-range of emperature profiles are generated in an ocean column with varying SSTs, 
-then those profile can be imposed above a land surface.  The temperature profile 
-is constant in the free troposphere and allowed to vary near the surface, 
-thereby simulating the control of the free tropospheric temperatures by (for 
-example) Pacific ocean anomalies.
+range of temperature profiles are generated in an ocean column with varying 
+SSTs, then those profile can be imposed above a land surface.  The temperature 
+profile is held constant in the free troposphere and allowed to vary near the 
+surface, thereby simulating the control of the free tropospheric temperatures by 
+(for example) Pacific ocean anomalies.
 
 
 \subsection{Experiments with a Single-Column Model}
@@ -376,8 +376,8 @@ the mean profile -- which is appropriate for a tropical profile -- then the SST
 was varied by fractions of a degree above and below the mean value to simulate 
 the magnitude of interannual variability. At each value the model was run to 
 equilibrium.  In addition to these small SST changes the model was run with 
-\SI{1}{degreeCeclius} increments from \SI{19}{degreeCelcius} to 
-\SI{34}{degreeCelcius}, to test the response of the model over a wide range of 
+\SI{1}{\degreeCelsius} increments from \SI{19}{\degreeCelsius} to 
+\SI{34}{\degreeCelsius}, to test the response of the model over a wide range of 
 SSTs.
 
 The tropospheric response and the amplification of surface anomalies due to 
@@ -396,8 +396,9 @@ anomaly at that height.  It shows that positive and negative anomalies are
 amplified to a similar extant, although the tropopause is higher for the 
 positive anomalies leading to a discrepency around \SI{200}{\hecto\pascal}.  
 Figure \ref{fig:scmsstprof} c) demonstrates that the upper tropospheric 
-anomalies are a result of heating by moist convection.
-
+anomalies are a result of heating by moist convection. (Not shown) Plots of the 
+heating due to dry convection show uniform heating rate throughout the 
+troposphere.
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_prof_temp_mean.eps}
@@ -405,41 +406,75 @@ anomalies are a result of heating by moist convection.
 \includegraphics[width=0.5\textwidth]{sstinc_prof_temp_mean.eps}
 \includegraphics[width=0.5\textwidth]{enso_prof_cq_meananom.eps}
 \caption{Heating and temperature profiles for the SCM. a) Temperature anomaly 
-relative to \SI{26}{\degreeCelsius}, b) Amplification relative to the mean 
-profile c) Moist convective heating rates, anomaly from the mean profile.}
+	relative to mean profile for SSTs from \SI{19}{\degreeCelsius} to 
+	\SI{34}{\degreeCelsius} b) Amplification relative to the mean profile d) 
+	Temperature anomalies relative to mean profile c) Moist convective heating 
+rates, anomaly from the mean profile.}
 \label{fig:scmsstprof}
 \end{figure}
 
-\begin{itemize}
-	\item WTG assumption
-	\item Generation of atmospheric profiles
-	\item Parameter values;
-		\begin{itemize}
-			\item Land surface - Evaporative fraction
-			\item WTG - pressure level of fixed temp profile
-			\item Interactive clouds
-		\end{itemize}
-\end{itemize}
 \subsubsection{Values of l/s contrast for varying land/tropos parameters}
+
+Parameter testing was discussed in Chapter \ref{methods} in relation to the 
+stability of the model. Here we will discuss parameters affecting physical 
+processes, with some results shown in Table \ref{tab:scmrlo}. The simplicity of 
+the model means the properties of the land surface are primarily controlled by 
+the evaporative fraction. By considering the evaporative fraction as a measure 
+of soil moisture the results can be related back to observations and GCMs 
+results.  The evaporative fraction was found to be the strongest controlling 
+factor of the value of $R_{l/o}$, in all scenarios a decrease in evaporative 
+fraction lead to an increas in $R_{l/o}$. When using the model in WTG mode it is 
+possible to adjust the pressure at which the temperature profile remains fixed 
+(PFixT).  It would seem likely that this would influence the value of $R_{l/o}$; 
+as the pressure at which the profile remains fixed increases there is more 
+potential for the temperature below this to vary.  However it was found that 
+PFixT had no clear influence on $R_{l/o}$, implying the variation in temperature 
+below the level of the fixed temperature profile is not being significantly 
+impacted by the specifics of the model setup. This is a positive outcome, as a 
+dependance of $R_{l/o}$ on PFixT would indicate a dependance on a non-physical 
+model parameter. Instead we see that we can simulate control of the tropical 
+troposphere by tropical oceans and get robust values of $R_{l/o}$.
+
+Overall the values of $R_{l/o}$ are within a realistic range, from 1.1 to 1.6.
+Even for the very moist surface -- an evaporative fraction on 0.7 -- the values 
+are similar the tropical values from observations ($R_{l/o, obs} =1.19$), and 
+the ENSO-Slab run ($R_{l/o, enso} =1.17$), while the CMIP5 ($R_{l/o,cmip} 
+=1.35$) and the AMIP run ($R_{l/o, amip} =1.26$) tropical values are closer to 
+corresponding values for an evaporative fraction of 0.5. We can compare the 
+comparitave variability and co-variability of the land and ocean columns by 
+looking at the ratio of standard deviation and the correlation between the 
+columns. It is primarily the ratio of standard deviation which is causing the 
+increase in $R_{l/o}$ with decreasing evaporative fraction, as the correlation 
+between the land and ocean columns, which is around 0.7, doesn't change 
+significantly. Although we can't measure changes in the observation and GCM 
+values of the ratio of standard deviation or correlation with changing surface 
+moisture, we can see that the tropical values are similar to the single column 
+model, with correlation of around 0.8 and ratio of standard deviation of around 
+1.4.  The consistency of these statistics between the single column model and 
+  observations and GCMs are at least an indication that aspects of the 
+  relationship between the land and ocean are well represented by the single 
+  column model. The single column model results also indicate a strong 
+  dependance of the magnitude of $R_{l/o}$ on surface moisture availability.
+
 
 \begin{center}
 	\begin{table}[ht]
 		\caption{Land/Ocean contrast in single column model, using WTG over lad 
 		surfaces}
-		\label{tab:scmphi}
+		\label{tab:scmrlo}
 		\scriptsize
 	\begin{tabular}{ l  c  c  c }
 		\textit{Evap Fraction}		& 0.3   & 0.5  & 0.7 \\ \hline
 		\textbf{PFixT 800hPa}\\%\hline
-	Phi  							& 1.41  & 1.43 & 1.18\\ %\hline
+		$R_{l/o}$  							& 1.41  & 1.43 & 1.18\\ %\hline
 	Corr.							& 0.57  & 0.78 & 0.64\\ %\hline
 	Ratio STD           			& 2.48  & 1.84 & 1.60\\ \hline
 		\textbf{PFixT 700hPa}\\%\hline
-	Phi  							& 1.39  & 1.30 & 1.15\\ %\hline
+		$R_{l/o}$  							& 1.39  & 1.30 & 1.15\\ %\hline
 	Corr.							& 0.50  & 0.77 & 0.76\\ %\hline
 	Ratio STD           			& 2.76  & 1.68 & 1.52\\ \hline
 		\textbf{PFixT 600hPa}\\%\hline
-	Phi  							& 1.63  & 1.25 & 1.11\\ %\hline
+		$R_{l/o}$  							& 1.63  & 1.25 & 1.11\\ %\hline
 	Corr.							& 0.70  & 0.79 & 0.78\\ %\hline
 	Ratio STD           			& 2.35  & 1.58 & 1.42\\ \hline
 	\end{tabular}
@@ -449,14 +484,33 @@ profile c) Moist convective heating rates, anomaly from the mean profile.}
 % \clearpage
 
 \subsubsection{Atmospheric profiles}
+We will now look at the atmospheric temperature profiles, focusing on one set of 
+runs from the single column model. The run with a PFixT (pressure above which 
+the temperature profile remains fixed) of \SI{600}{\hecto\pascal} and 
+evaporative fraction of 0.3 was chosen because the low evaporative fraction 
+resulted in larger deviations between the temperature profiles of the land and 
+ocean columns. The results from other runs were similar but of different 
+magnitude. \\
+\citet{Byrne2013a} outline a mechanism for the global warming land/ocean 
+contrast based on the height of the lifting condensation level, as discussed in 
+Chapter \ref{sec:logw}. A schematic of the potential temperature ($\theta$) 
+profile is shown in the Figure \ref{fig:bo_fig1}, . the potential temperature  
+profile in Figure \ref{fig:scmthprof} a) 
+
+\begin{figure}[ht]
+\includegraphics[width=0.5\textwidth]{{byrne_ogorman_fig1}.png}\\
+\caption{Figure 1 from \citet{Byrne2013a}. A schematic of the potential 
+temperature}
+\label{fig:bo_fig1}
+\end{figure}
 
 \begin{figure}[ht]
 \includegraphics[width=0.9\textwidth]{{land_thetaprof_e3_p600}.eps}\\
 \includegraphics[width=0.5\textwidth]{{land_deltatheta_e3_p600}.eps}
 \includegraphics[width=0.5\textwidth]{{land_thetaprof_fifth_e3_p600}.eps}
-\caption{Profiles of theta (top), change in theta from mean theta value (left), 
-change in theta from mean, all profiles averaged into five bins. Shows that 
-extreme values (both positive and negative) change the most.}
+\caption{Profiles of theta (a), change in theta from mean theta value (b), 
+	change in theta from mean, all profiles averaged into five bins (c). Shows 
+that extreme values (both positive and negative) change the most.}
 \label{fig:scmthprof}
 \end{figure}
 
