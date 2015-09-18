@@ -544,12 +544,21 @@ that extreme values (both positive and negative) change the most.}
 \clearpage
 
 \subsubsection{Surface Temperature Relationships}
+To understand the factors controlling the land surface temperature $T_{land}$ of 
+the single column model we will look at relationships between $T_{land}$ and a 
+number of variables, beginning with $T_{land}$ verse the SST used to generate 
+the imposed temperature profile, shown in Figure \ref{fig:scm_tlandsst}. The 
+regression lines represent $R_{l/o}$ and show the increase of $R_{l/o}$ with 
+decreasing evaporative fraction. A large amount of variability is also evident, 
+this is a due to the interaction between clouds and radiation and is discussed 
+in Chapter \ref{instability}. Despite the variability, model runs with different 
+values of PFixT, domain size, vertical resolution and other parameters show 
+similar relationships between $T_{land}$, SST and evaporative fraction.
 
 \begin{figure}[ht]
 \includegraphics[width=0.6\textwidth]{{land_anom_intvar_tsurf_p600}.eps}
-\caption{Relationship between; relative humidity, longwave radiation, shortwave 
-radiation and precipitation, and land and ocean surface temperature}
-\label{fig:scmts}
+\caption{Relationship between $T_{land}$ and SSTs}
+\label{fig:scm_tlandsst}
 \end{figure}
 
 
@@ -566,7 +575,7 @@ radiation and precipitation, and land and ocean surface temperature}
 \clearpage
 
 \subsubsection{Variability and instability - Role of convection}
-
+\label{instability}
 Discuss chaotic results in SCM, show how cloud radiative effects cause this, 
 discuss literature of model runs not including cloud rad effects.
 
