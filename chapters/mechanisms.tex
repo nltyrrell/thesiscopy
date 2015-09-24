@@ -549,9 +549,10 @@ the single column model we will look at relationships between $T_{land}$ and a
 number of variables, beginning with $T_{land}$ verse the SST used to generate 
 the imposed temperature profile, shown in Figure \ref{fig:scm_tlandsst}. The 
 regression lines represent $R_{l/o}$ and show the increase of $R_{l/o}$ with 
-decreasing evaporative fraction. A large amount of variability is also evident, 
-this is a due to the interaction between clouds and radiation and is discussed 
-in Chapter \ref{instability}. Despite the variability, model runs with different 
+decreasing evaporative fraction. A large amount of variability is also evident 
+in the response of $T_{land}$ to the imposed temperature profile, this is a due 
+to the interaction between clouds and radiation and is discussed further in 
+Chapter \ref{instability}.  Despite the variability, model runs with different 
 values of PFixT, domain size, vertical resolution and other parameters show 
 similar relationships between $T_{land}$, SST and evaporative fraction.
 
@@ -561,26 +562,77 @@ similar relationships between $T_{land}$, SST and evaporative fraction.
 \label{fig:scm_tlandsst}
 \end{figure}
 
+Looking now at how the SST generated temperature profiles influence the 
+variables in the land column, and how those variables corelate with $T_{land}$; 
+Figure \ref{fig:scm_SSTVar} shows the anomalous SST plotted against the 
+anomalous values of relative humidity, longwave and shortwave radiation and 
+precipitation.  The SST is that used to generate the imposed temperature profile 
+and the variables are from the land column. There are few significant 
+relationships between the forcing SSTs and the land column variables. Table 
+\ref{tab:scm_SSTVar} shows that the relative humidity is partially related to 
+the SST forcing, although the highest correlation is still only -0.41, and no 
+other correlations are above 0.30. In contrast there are clear relationships 
+between the relative humidity, longwave and shortwave radiation and cloud 
+fraction and $T_{land}$. So we see that while the imposed temperature profiles 
+have a high correlation with the resultant surface temperatures in the mean 
+values, as shown in Table \ref{tab:scm_rlo}, variability in the convection 
+scheme has a large influence on surface temperatures leading to the variability 
+shown in Figure \ref{fig:scm_tlandsst}.
+
+\begin{center}
+	\begin{table}[ht]
+		\caption{Correlation between forcing SST values variables governing the 
+		land column surface response.}
+		\label{tab:scm_SSTVar}
+		\scriptsize
+	\begin{tabular}{ l  c  c  c }
+		\textit{Evap Fraction:}		& 0.3   & 0.5  & 0.7 \\ \hline
+		\textbf{Relative Humidity}\\%\hline
+	Corr.							& -0.41  & -0.33 & -0.26\\ %\hline
+		\textbf{Shortwave Radiation}\\%\hline
+	Corr.							& 0.17  & 0.28 & 0.28\\ %\hline
+		\textbf{Longwave Radiation}\\%\hline
+	Corr.							& 0.15  & 0.24 & 0.27\\ %\hline
+		\textbf{Cloud Fraction}\\%\hline
+	Corr.							& -0.14  & -0.00 & -0.06\\ %\hline
+	\end{tabular}
+	\end{table}
+\end{center}
 
 \begin{figure}[ht]
-\includegraphics[width=0.6\textwidth]{{land_anom_intvar_rh_p600}.eps}
-\includegraphics[width=0.6\textwidth]{{land_anom_intvar_lw_p600}.eps}
-\includegraphics[width=0.6\textwidth]{{land_anom_intvar_sw_p600}.eps}
-\includegraphics[width=0.6\textwidth]{{land_anom_intvar_precip_p600}.eps}
+\includegraphics[width=0.5\textwidth]{{land_anom_intvar_rh_p600}.eps}
+\includegraphics[width=0.5\textwidth]{{land_anom_intvar_lw_p600}.eps}
+\includegraphics[width=0.5\textwidth]{{land_anom_intvar_sw_p600}.eps}
+\includegraphics[width=0.5\textwidth]{{land_anom_intvar_clf_p600}.eps}
 \caption{Relationship between; relative humidity, longwave radiation, shortwave 
-radiation and precipitation, and land and ocean surface temperature}
-\label{fig:scmts}
+radiation and cloud fraction, and land and ocean surface temperature}
+\label{fig:scm_SSTVar}
 \end{figure}
 
 \clearpage
 
+
 \subsubsection{Variability and instability - Role of convection}
 \label{instability}
-Discuss chaotic results in SCM, show how cloud radiative effects cause this, 
-discuss literature of model runs not including cloud rad effects.
+Given the large variability in $T_{tropos}$ and the weak connection between the 
+imposed temperature profile and convection, a discussion of the stability of the 
+model is in order. The timeseries in Figure \ref{fig:scmts} a)-c) demonstrate a 
+range of chaotic behaviours. For many runs being forced with a cooler 
+temperature profile we see regular oscillations, it should be noted their is no 
+diurnal cycle in the model. For forcing with higher temperatures we see a 
+decoupling of the surface temperatures and the imposed temperature profile which 
+results in a lower surface temperature from a higher forcing temperature. The 
+oscillations and the instability are due to the interaction of clouds and 
+radiation. This is easily demonstrated as interaction between the convection and 
+radiation schemes in the model can be turned off. The resultant timeseries, 
+shown in Figure \ref{fig:scmts}, quickly reaches a stable equilibrium 
+temperature. 
 
 \begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{land_Tsurf_05_m1_h850.eps}
+\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m1_h850.eps}
+\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m2_h850.eps}\\
+\includegraphics[width=0.4\textwidth]{land_Tsurf_02_m2_h850.eps}
+\includegraphics[width=0.4\textwidth]{land_nir_Tsurf.eps}\\
 \caption{Timeseries of Tsurf in SCM forced with tropospheric temperature 
 profile.}
 \label{fig:scmts}
@@ -592,7 +644,22 @@ profile.}
 
 \subsection{Experiments with a Two-Dimensional Model}
 
-explain setup
+The single column model in weak temperature gradient mode offered a promising 
+and novel approach to understanding the land/sea contrast and the role of ocean 
+forcing. However, a few issues remained. The instability of the model under 
+certain conditions has the potential to lead to unrealistic results, and 
+disabling the interaction between the convection and radiation schemes damped  
+any land response. In addition, the assumptions of the WTG approximation are 
+only valid in the tropics, a limiting factor when attempting to explain the 
+regional differences in the land response. In order to continue using the column 
+model while avoiding these issues a multi column setup was used.\\
+The full description of the setup is outlined in Chapter \ref{methods}. To 
+reiterate, the model can be run with one or more ocean and one or more land 
+columns. A number of different geometries of land and ocean columns were tested.  
+The results presented below use a setup with one ocean and three land columns as 
+this avoided the land being purely a coastal point.
+
+
 
 \begin{itemize}
 	\item Land/Ocean column configurations
