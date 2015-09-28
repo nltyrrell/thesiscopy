@@ -763,29 +763,50 @@ what is happening we will look at the profiles of relative humidity
 \label{fig:tdm_dthdp}
 \end{figure}
 
-Regarding the warmer ocean/cooler profiles of relative humidity are quite 
-telling. For Figure \ref{fig:tdm_rhprof} a run with one ocean and three land 
-columns is shown, and just two SSTs are plotted as the results are similar for a 
-range of SSTs. From the surface we see the much higher relative humidity over 
+Regarding the warmer ocean/cooler land, the profiles of relative humidity are 
+quite telling. The relative humidity profile in Figure \ref{fig:tdm_rhprof} a) 
+is from the same run as Figure \ref{fig:tdm_prof}, it has one ocean and three 
+land columns, although just two SSTs are plotted as the results are similar for 
+a range of SSTs.  From the surface we see the much higher relative humidity over 
 the ocean column then a sudden drop at around \SI{970}{\hecto\pascal}, to the 
 extent that the ocean column becomes drier than the land columns. The dry 
-region, from \SIrange{940}{800}{\hecto\pascal} coincides with the steeper lapse 
-rate of $\theta$
+region, from \SIrange{940}{800}{\hecto\pascal} coincides with the steeper 
+$\theta$ lapse rate. To test whether the model setup with only one ocean column 
+is responsible for the dry region, we look at a run with three ocean and three 
+land columns. Figures \ref{fig:tdm_rhprof} b) c) and d) all show a similar 
+drying in the ocean column. It also shows that the amount of drying is largely 
+insensitive to the humidity and moisture of the land columns. The evaporative 
+fraction has a large influence on the relative humidity of the ocean columns, 
+for example comparing Figure \ref{fig:tdm_rhprof} b), c) and d) which have 
+evaporative fractions of 0.05, 0.10 and 0.20 respectively, the near surface 
+humidty changes from 45\% to 60\%, however the response of the ocean columns is 
+very similar. The difference in the dry region is at most 5\%.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{l3o1_prof_rh_ef0.05_close}.eps}
-	\includegraphics[width=0.5\textwidth]{{l3o1_prof_rh_ef0.05}.eps}
-	\caption{Atmospheric profiles in the 2D model}
+	\includegraphics[width=0.5\textwidth]{{l3o3_prof_rh_ef0.05_close}.eps}
+	\includegraphics[width=0.5\textwidth]{{l3o3_prof_rh_ef0.10_close}.eps}
+	\includegraphics[width=0.5\textwidth]{{l3o3_prof_rh_ef0.20_close}.eps}
+	\caption{Atmospheric profiles of relative humidity}
 \label{fig:tdm_rhprof}
 \end{figure}
 
-
-\clearpage
 \subsubsection{Circulation response}
+To see what is causing the drying in the ocean columns we look at the vertical 
+velocity, $\omega$ and circulation using the streamfunction $\psi$ of vertical 
+and zonal velocities.  For these variables we use the mean across a range of 
+SSTs, as there weren't any significant changes in circulation for varying SSTs.  
+The profiles of $\omega$ clearly shows the convection in the ocean columns 
+(positive values of $\omega$, which is balanced with sinking motion in the land 
+columns. The $\psi$ profile better demonstrates the flow in the model, and shows 
+a low level circulation response. Positive values of $\psi$ indicate clockwise 
+flow centered at \SI{850}{\hecto\pascal} in the ocean column nearest the land.  
+This circulation is responsible for transporting dry air from the land columns.
+
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{l3o1_omegal_ef0.05_meansst}.eps}
+	\includegraphics[width=0.5\textwidth]{{l3o3_omegal_ef0.05_meansst}.eps}
 	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.05_meansst}.eps}
-	\caption{Circulatoon response, omega, phi}
+	\caption{Circulation response, Omega, Psi}
 	\label{fig:TCM_circ}
 \end{figure}
 
