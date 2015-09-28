@@ -645,8 +645,8 @@ profile.}
 \subsection{Experiments with a Two-Dimensional Model}
 
 The single column model in weak temperature gradient mode offered a promising 
-and novel approach to understanding the land/sea contrast and the role of ocean 
-forcing. However, a few issues remained. The instability of the model under 
+and novel approach to investigating the land/sea contrast and the role of ocean 
+forcing.  However, a few issues remained; the instability of the model under 
 certain conditions has the potential to lead to unrealistic results, and 
 disabling the interaction between the convection and radiation schemes damped  
 any land response. In addition, the assumptions of the WTG approximation are 
@@ -655,30 +655,128 @@ regional differences in the land response. In order to continue using the column
 model while avoiding these issues a multi column setup was used.\\
 The full description of the setup is outlined in Chapter \ref{methods}. To 
 reiterate, the model can be run with one or more ocean and one or more land 
-columns. A number of different geometries of land and ocean columns were tested.  
-The results presented below use a setup with one ocean and three land columns as 
-this avoided the land being purely a coastal point.
+columns. A number of different geometries of land and ocean columns were tested, 
+with the resultant $R_{l/o}$ values shown in Table \ref{tab:tdm_Rlo}. Due to the 
+instability of the model, the interaction between clouds and radiation was 
+turned off for these runs. When the cloud/radiation interaction was switched off 
+in the single column model in WTG mode it lead to a strong damping of $R_{l/o}$.  
+In contrast, in the multi column model the imposed SSTs are still able to 
+strongly influence the land surface. The values of $R_{l/o}$  are lower than the 
+single column model and an amplification of the imposed SSTs is only seen for 
+evaporative fractions below 0.3, and once again they increase with decreasing 
+evaporative fraction.   
+
+\begin{center}
+	\begin{table}[ht]
+		\caption{Land/Ocean contrast in two dimensional model}
+		\label{tab:tdm_Rlo}
+		\scriptsize
+	\begin{tabular}{ l  c  c  c  c  c }
+		\hline
+		\textit{Evap Fraction}	& 0.05  & 0.10 & 0.30  & 0.50  & 0.70 \\ \hline
+		\textbf{1 Ocean, 1 Land}\\
+		$R_{l/o}$ 					& 1.28  & 1.23 & 1.03  & 1.05 & 1.00\\ 
+		Corr.					& 0.98  & 1.00 & 1.00  & 1.00 & 1.00\\ %\hline
+		Ratio STD          		& 1.30  & 1.23 & 1.03  & 1.05 & 1.00\\ \hline
+		\textbf{3 Ocean, 1 Land}\\
+		$R_{l/o}$ 					& 1.17  & 1.12 & 1.03  & 1.01 & 0.98\\ %\hline
+		Corr.					& 1.00  & 1.00 & 1.00  & 1.00 & 1.00\\ %\hline
+		Ratio STD          		& 1.17  & 1.12 & 1.03  & 1.01 & 0.98\\ \hline
+		\textbf{1 Ocean, 3 Land}\\
+		$R_{l/o}$ 					& 1.13  & 1.10 & 1.02  & 0.94 & 0.86\\ %\hline
+		Corr.					& 1.00  & 1.00 & 1.00  & 1.00 & 1.00\\ %\hline
+		Ratio STD          		& 1.13  & 1.10 & 1.02  & 0.94 & 0.86\\ \hline
+		\textbf{3 Ocean, 3 Land}\\
+		$R_{l/o}$ 					& 1.16  & 1.11 & 1.00  & 0.96 & 0.91\\ %\hline
+		Corr.					& 1.00  & 1.00 & 1.00  & 1.00 & 1.00\\ %\hline
+		Ratio STD          		& 1.16  & 1.11 & 1.00  & 0.96 & 0.91\\ \hline
+	\end{tabular}
+	\end{table}
+\end{center}
+
+The single and 2D column model was used with the purpose of understanding the 
+vertical structure of the land/ocean temperature contrast. We can see from Table 
+\ref{tab:tdm_Rlo} that -- when using small evaporative fractions -- we can 
+reproduce the magnitude of $R_{l/o}$ so now we will compare the vertical 
+structure with the GCM results. Using the same technique as with the GCM, we use 
+the regression coeffecient between the temperature at the surface and each model 
+level to plot the response to warming and cooling above ocean and land surfaces.  
+Figures \ref{fig:tdm_regprof} a) and b) have some key similarities and 
+differences; the ocean profiles are both very similar, they feature the large 
+amplification around \SIrange{200}{400}{\hecto\pascal} due to moist convection, 
+as well as a local maximum at the freezing level at \SI{600}{\hecto\pascal}.  
+Comparing the profiles above land we see a large difference above 
+\SI{500}{\hecto\pascal}. In the GCM the moist convective amplification is damped 
+above land whereas in the 2D column model the two profiles follow each other 
+closely. This doesn't necessarily imply the presence of moist convection in the 
+land columns, merely that the land and ocean are more tightly linked in the 2D 
+model. Allowing for this descrepency the GCM and column model are very similar.  
+In the area above \SI{800}{\hecto\pascal} the land/ocean contrast disappears and 
+below \SI{800}{\hecto\pascal} the land and ocean profiles diverge to give 
+similar values of $R_{l/o}$. From Figure \ref{fig:tdm_regprof} we can assume 
+that there will be difference in the land surface response in the GCM and 2D 
+column model due to the descrepency in the upper troposphere response, but 
+importantly the lower atmospheric response appears similar, making the 
+simplified model suitable for further investigation of the land/ocean 
+temperature contrast and the role of ocean forcing.
 
 
+\begin{figure}[ht]
+	\includegraphics[width=0.5\textwidth]{{presub_fsstreg_prof_ocensfc_e0.05}.eps}
+	\includegraphics[width=0.5\textwidth]{{linreg_ocean_profile}.eps}
+	\caption{Land/sea contrast in TCM}
+\label{fig:tdm_regprof}
+\end{figure}
 
-\begin{itemize}
-	\item Land/Ocean column configurations
-	\item Parameter values;
-		\begin{itemize}
-			\item Land surface - Evaporative fraction
-			\item Interactive clouds
-		\end{itemize}
-\end{itemize}
 
 \subsubsection{Atmospheric profiles in temp, RH, etc}
+
+The atmospheric profiles of $\theta$ for the single column indicated that a 
+changing LCL over land as well as a deviation between land and ocean lapse rates 
+above the LCL can lead to $R_{l/o}>1$. We will know look at profiles of $\theta$ 
+in the 2D model. The potential iportance of a changing LCL motivated an increase 
+in the vertical resolution of the model. The grid was non-uniform with 85 
+levels, and a resolution of \SI{5}{\hecto\pascal} between 
+\SIrange{980}{800}{\hecto\pascal} and \SI{10}{\hecto\pascal} between 
+\SIrange{800}{650}{\hecto\pascal}, with the fine resolution preventing step 
+changes in the height of the LCL.  Figure \ref{fig:tdm_prof} doesn't indicate 
+any large change in the LCL over land or ocean. Looking more closely at the 
+gradient of $\theta$, in Figure \ref{tdm_dthdp}, there is an indication that in 
+the ocean column the gradient of $\theta$ above the LCL does become more 
+negative with increasing SST, which is the expected result according to the 
+Byrne and O'Gorman theory. However, we do see an unusual feature; from 
+\SIrange{900}{800}{\hecto\pascal} the land profile is above, or cooler than, the 
+ocean profile. This region of warmer ocean/cooler land could have the effect of 
+dampening the value of $R_{l/o}$ and is not an expected feature. To understand 
+what is happening we will look at the profiles of relative humidity
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{l3o1_prof_theta_ef0.05_close}.eps}
 	\includegraphics[width=0.5\textwidth]{{l3o1_prof_theta_ef0.05}.eps}
+	\caption{Atmospheric profiles in the 2D model}
+\label{fig:tdm_prof}
+\end{figure}
+
+\begin{figure}[ht]
+	\includegraphics[width=0.5\textwidth]{{l3o1_prof_dthetadp_ef0.05_close}.eps}
+	\caption{Profiles of $D\theta/Dp$ in the 2D model}
+\label{fig:tdm_dthdp}
+\end{figure}
+
+Regarding the warmer ocean/cooler profiles of relative humidity are quite 
+telling. For Figure \ref{fig:tdm_rhprof} a run with one ocean and three land 
+columns is shown, and just two SSTs are plotted as the results are similar for a 
+range of SSTs. From the surface we see the much higher relative humidity over 
+the ocean column then a sudden drop at around \SI{970}{\hecto\pascal}, to the 
+extent that the ocean column becomes drier than the land columns. The dry 
+region, from \SIrange{940}{800}{\hecto\pascal} coincides with the steeper lapse 
+rate of $\theta$
+
+\begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{l3o1_prof_rh_ef0.05_close}.eps}
 	\includegraphics[width=0.5\textwidth]{{l3o1_prof_rh_ef0.05}.eps}
-	\caption{Land/sea contrast in TCM}
-\label{fig:TCM_prof}
+	\caption{Atmospheric profiles in the 2D model}
+\label{fig:tdm_rhprof}
 \end{figure}
 
 
@@ -706,12 +804,6 @@ this avoided the land being purely a coastal point.
 \clearpage
 
 \subsection{Comparison of Simplified Models and GCM results}
-\begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{presub_fsstreg_prof_ocensfc_e0.05}.eps}
-	\includegraphics[width=0.5\textwidth]{{linreg_ocean_profile}.eps}
-	\caption{Land/sea contrast in TCM}
-\label{fig:TCM_regprof}
-\end{figure}
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{phi_trop_4ysl}.png}
