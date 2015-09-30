@@ -779,7 +779,7 @@ insensitive to the humidity and moisture of the land columns. The evaporative
 fraction has a large influence on the relative humidity of the ocean columns, 
 for example comparing Figure \ref{fig:tdm_rhprof} b), c) and d) which have 
 evaporative fractions of 0.05, 0.10 and 0.20 respectively, the near surface 
-humidty changes from 45\% to 60\%, however the response of the ocean columns is 
+humidity changes from 45\% to 60\%, however the response of the ocean columns is 
 very similar. The difference in the dry region is at most 5\%.
 
 \begin{figure}[ht]
@@ -807,24 +807,109 @@ This circulation is responsible for transporting dry air from the land columns.
 	\includegraphics[width=0.5\textwidth]{{l3o3_omegal_ef0.05_meansst}.eps}
 	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.05_meansst}.eps}
 	\caption{Circulation response, Omega, Psi}
-	\label{fig:TCM_circ}
+	\label{fig:tdm_circ}
 \end{figure}
+
+This circulation appears to be significantly influencing the atmospheric 
+structure in the ocean column, but is it affecting the ocean's influence of the 
+land column, and thus the value of $R_{l/o}$? This drying of the atmosphere 
+above the ocean is not present in a large scale across the globe and therefore 
+ould be of concern when determining the suitability of this simplifed model.  
+Figure \ref{fig:tdm_psi} shows how the low level circulation scales with 
+evaporative fraction, such that the drier the land the stronger the low level 
+circulation.  Refering back to Table \ref{tab:tdm_Rlo}, $R_{l/o}$ increases with 
+decreasing evaporative fraction. If the value of $R_{l/o}$ is related to the 
+difference in lapse rates above land and ocean, which in turn is related to the 
+difference in humidity, then a drying of the ocean column may lead to a smaller 
+difference between the ocean and land columns.\\
+Instead, we see that the reduction in humidity is largely insensitive to the 
+evaporative fraction (Figure \ref{fig:tdm_rhprof}) and while the strength of the 
+low level circulation driving the reduced humidity increases with evaporative 
+fraction, the value of $R_{l/o}$ still increases, implying that the drying of 
+the ocean column is not significantly affecting the value of $R_{l/o}$, or more 
+importantly, the ability of the simplified model to simulate the land/sea 
+contrast.
+
+
+
+\begin{figure}[ht]
+	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.05_meansst}.eps}
+	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.10_meansst}.eps}
+	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.20_meansst}.eps}
+	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.30_meansst}.eps}
+	\caption{Circulation response, Psi}
+	\label{fig:tdm_psi}
+\end{figure}
+
+% \begin{figure}[ht]
+% 	\includegraphics[width=0.3\textwidth]{{psi_lats_0.0}.eps}
+% 	\includegraphics[width=0.3\textwidth]{{psi_lats_10.0}.eps}
+% 	\includegraphics[width=0.3\textwidth]{{psi_lats_20.0}.eps}\\
+% 	\includegraphics[width=0.3\textwidth]{{psi_lats_30.0}.eps}
+% 	\includegraphics[width=0.3\textwidth]{{psi_lats_40.0}.eps}
+% 	\includegraphics[width=0.3\textwidth]{{psi_lats_50.0}.eps}\\
+% 	\caption{Circulation response, Psi}
+% 	\label{fig:tdm_psi_lat}
+% \end{figure}
 
 
 \clearpage
 
 \subsubsection{Values of l/s contrast for varying land parameters}
+We have seen that while the two-dimensional model has a low level circulation 
+that dries the ocean column, it is still able to simulate aspects of the 
+land/ocean contrast we see in GCMs (i.e. Figure \ref{fig:tdm_regprof}), and it's 
+response to surface properties is expected from the lapse rate of theories of 
+\cite{Joshi2007} and \cite{Byrne2013a}. We now extend the range of evaporative 
+fractions and vary the latitudes to build a picture of the range of $R_{l/o}$ 
+values.\\
+The model had 3 ocean and 3 land columns and initially was run in a zonally 
+orientated domain. At each latitude an appropriate mean SST value, solar zenith 
+angle and coriolis parameter were used.  The model was forced with a range of 
+SSTs values which varied around the mean value for each latitude, and $R_{l/o}$ 
+was calculated for each parameter.	The results, in Figure \ref{fig:tdm_Rlo} 
+show the dependence of $R_{l/o}$ on evaporative fraction, but also a decrease 
+with latitude, excepting the increase from \SI{0}{\degree} and \SI{10}{\degree}.  
+The same experiments were also performed using a meridionally orientated domain, 
+where the prescribed SST columns were nearer to the "equator". The values of 
+$R_{l/o}$ for the meridional domain show the same tendencies but at first appear 
+lower than the zonal domain, however as each column spans \SI{5}{\degree} of 
+latitude, if we compare $R_{l/o}$ values of a specific column and compare it to 
+the corresponding latitude of the zonally orientated model we see they are quite 
+similar, i.e.  Figure \ref{fig:tdm_Rlo} d). The implication is that the 
+reduction in the ability of the ocean columns to control SST, and hence a 
+reduced $R_{l/o}$ with increasing latitude is due to a combination of lower 
+absolute SST values, and reduced transport across the domain. The latter is 
+evident in Figure \ref{fig:tdm_Rlo} c), which shows the mean relative humidity 
+in the land columns. The gradient due to evaporative fraction is clear, and 
+increasing relative humidity corresponds to decreasing $R_{l/o}$ as expected.  
+The relative humidity also decreases with increasing latitude -- due to reduced 
+transport of moisture from the ocean columns -- and for this gradient decreasing 
+relative humidity is associated with decreasing $R_{l/o}$.  This indicates that 
+the value of $R_{l/o}$ is a function of evaporative fraction and energy 
+transport.\\
+
+
 \begin{figure}[ht]
 	\includegraphics[width=0.6\textwidth]{{isstcosz}.eps}
+	\includegraphics[width=0.6\textwidth]{{coszmer_colall}.eps}\\
 	\includegraphics[width=0.6\textwidth]{{latbox_landrh}.eps}
+	\includegraphics[width=0.6\textwidth]{{coszmer_col1}.eps}
 	\caption{Land/sea contrast in TCM, and relative humidity}
-\label{fig:TCM_Rlo}
+\label{fig:tdm_Rlo}
 \end{figure}
 
 
 \clearpage
 
 \subsection{Comparison of Simplified Models and GCM results}
+The large range of $R_{l/o}$ values allows for a direct comparison to GCM 
+results. Using the pacemaker experiment we can calculate an $R_{l/o}$ value for 
+each idividual land grid box. We do this by comparing the gridbox surface 
+temperature of with either the; mean tropical SSTs, mean global SSTs, zonally 
+averages SSTs corresponding to the grid box. The latter may seem most 
+appropriate for comparing to the 2D model, however due to the tropical Pacific 
+forcing of the pacemaker runs.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{phi_trop_4ysl}.png}
@@ -846,7 +931,7 @@ This circulation is responsible for transporting dry air from the land columns.
 \begin{figure}[ht]
 	\includegraphics[width=0.6\textwidth]{{isstcosz_ic}.eps}
 	\caption{Land/sea contrast in TCM}
-\label{fig:TCM_Rlo}
+\label{fig:tdm_Rlo_ic}
 \end{figure}
 
 
