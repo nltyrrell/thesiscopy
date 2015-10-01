@@ -841,16 +841,16 @@ contrast.
 	\label{fig:tdm_psi}
 \end{figure}
 
-% \begin{figure}[ht]
-% 	\includegraphics[width=0.3\textwidth]{{psi_lats_0.0}.eps}
-% 	\includegraphics[width=0.3\textwidth]{{psi_lats_10.0}.eps}
-% 	\includegraphics[width=0.3\textwidth]{{psi_lats_20.0}.eps}\\
-% 	\includegraphics[width=0.3\textwidth]{{psi_lats_30.0}.eps}
-% 	\includegraphics[width=0.3\textwidth]{{psi_lats_40.0}.eps}
-% 	\includegraphics[width=0.3\textwidth]{{psi_lats_50.0}.eps}\\
-% 	\caption{Circulation response, Psi}
-% 	\label{fig:tdm_psi_lat}
-% \end{figure}
+\begin{figure}[ht]
+	\includegraphics[width=0.3\textwidth]{{psi_lats_0.0}.eps}
+	\includegraphics[width=0.3\textwidth]{{psi_lats_10.0}.eps}
+	\includegraphics[width=0.3\textwidth]{{psi_lats_20.0}.eps}\\
+	\includegraphics[width=0.3\textwidth]{{psi_lats_30.0}.eps}
+	\includegraphics[width=0.3\textwidth]{{psi_lats_40.0}.eps}
+	\includegraphics[width=0.3\textwidth]{{psi_lats_50.0}.eps}\\
+	\caption{Circulation response, Psi}
+	\label{fig:tdm_psi_lat}
+\end{figure}
 
 
 \clearpage
@@ -905,24 +905,31 @@ transport.\\
 \subsection{Comparison of Simplified Models and GCM results}
 The large range of $R_{l/o}$ values allows for a direct comparison to GCM 
 results. Using the pacemaker experiment we can calculate an $R_{l/o}$ value for 
-each idividual land grid box. We do this by comparing the gridbox surface 
-temperature of with either the; mean tropical SSTs, mean global SSTs, zonally 
-averages SSTs corresponding to the grid box. The latter may seem most 
-appropriate for comparing to the 2D model, however due to the tropical Pacific 
-forcing of the pacemaker runs.
+each individual land grid box. We do this by comparing the grid box surface 
+temperature of with either the mean tropical SSTs, mean global SSTs or zonally 
+averages SSTs corresponding to the latitude of the grid box. The latter may seem 
+most appropriate for comparing to the zonally orientated 2D model, however the 
+tropical Pacific forcing of the pacemaker experiment meant that a grid box 
+$R_{l/o}$ calculated using mean tropical SSTs gave the most reasonable 
+results.\\
+The next step is to generate a comparative map using the 2D column model 
+results. For each GCM grid box we find the latitude and evaporative fraction, 
+then we take the $R_{l/o}$ from the 2D model run with corresponding parameters. 
+For example, for a point in central Australia at a latitude of \SI{23}{\degree} 
+and evaporative fraction of 0.2 we use the $R_{l/o}$ from the 2D model at 
+latitude \SI{20}{\degree} and evaporative fraction 0.2 and assign that grid box 
+a value of 1.12.
+thereby building a global map of the expected land surface temperature response 
+based on the results of the two dimensional column model.
+
+
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{phi_trop_4ysl}.png}
-	\includegraphics[width=0.5\textwidth]{{phi_rcm_4ysl}.png}
+	\includegraphics[width=0.9\textwidth]{{phi_trop_4ysl}.png}\\
+	\includegraphics[width=0.9\textwidth]{{phi_rcm_4ysl}.png}
 	\caption{Land/sea contrast in GCM vs TCM}
 \label{fig:TCM_GCM_compare}
 \end{figure}
-
-\begin{itemize}
-\item{Generation of suitable l/s contrast at varying latitudes/evap fraction}
-\item{Mapping results}
-\item{Differences/Similarities between GCM/RCM}
-	\end{itemize}
 
 \clearpage
 
