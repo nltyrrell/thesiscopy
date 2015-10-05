@@ -841,17 +841,6 @@ contrast.
 	\label{fig:tdm_psi}
 \end{figure}
 
-\begin{figure}[ht]
-	\includegraphics[width=0.3\textwidth]{{psi_lats_0.0}.eps}
-	\includegraphics[width=0.3\textwidth]{{psi_lats_10.0}.eps}
-	\includegraphics[width=0.3\textwidth]{{psi_lats_20.0}.eps}\\
-	\includegraphics[width=0.3\textwidth]{{psi_lats_30.0}.eps}
-	\includegraphics[width=0.3\textwidth]{{psi_lats_40.0}.eps}
-	\includegraphics[width=0.3\textwidth]{{psi_lats_50.0}.eps}\\
-	\caption{Circulation response, Psi}
-	\label{fig:tdm_psi_lat}
-\end{figure}
-
 
 \clearpage
 
@@ -883,12 +872,12 @@ absolute SST values, and reduced transport across the domain. The latter is
 evident in Figure \ref{fig:tdm_Rlo} c), which shows the mean relative humidity 
 in the land columns. The gradient due to evaporative fraction is clear, and 
 increasing relative humidity corresponds to decreasing $R_{l/o}$ as expected.  
-The relative humidity also decreases with increasing latitude -- due to reduced 
-transport of moisture from the ocean columns -- and for this gradient decreasing 
-relative humidity is associated with decreasing $R_{l/o}$.  This indicates that 
-the value of $R_{l/o}$ is a function of evaporative fraction and energy 
-transport.\\
-
+The relative humidity also decreases with increasing latitude, due to reduced 
+transport of moisture from the ocean columns, further discussed below. For the 
+gradient of relative humidity across latitudes, decreasing relative humidity is 
+associated with decreasing $R_{l/o}$, the inverse of the relationship with a 
+constant latitude.  This indicates that the value of $R_{l/o}$ is a not only a 
+function of evaporative fraction but is also dependent on energy transport.\\
 
 \begin{figure}[ht]
 	\includegraphics[width=0.6\textwidth]{{isstcosz}.eps}
@@ -898,9 +887,6 @@ transport.\\
 	\caption{Land/sea contrast in TCM, and relative humidity}
 \label{fig:tdm_Rlo}
 \end{figure}
-
-
-\clearpage
 
 \subsection{Comparison of Simplified Models and GCM results}
 The large range of $R_{l/o}$ values allows for a direct comparison to GCM 
@@ -918,22 +904,55 @@ then we take the $R_{l/o}$ from the 2D model run with corresponding parameters.
 For example, for a point in central Australia at a latitude of \SI{23}{\degree} 
 and evaporative fraction of 0.2 we use the $R_{l/o}$ from the 2D model at 
 latitude \SI{20}{\degree} and evaporative fraction 0.2 and assign that grid box 
-a value of 1.12.
-thereby building a global map of the expected land surface temperature response 
-based on the results of the two dimensional column model.
-
-
+a value of 1.12, thereby building a global map of the expected land surface 
+temperature response based on the results of the two dimensional column model.\\
+The two-dimensional model required very low evaporative fractions to elicit an 
+$R_{l/o}>1$, lower than would be required from a GCM or expected from 
+observations. As such we wouldn't expect the magnitudes the generated $R_{l/o}$ 
+response map to perfectly match a similar GCM map. However, if the 2D model was 
+capturing a significant mechanism of the land/ocean temperature contrast, that 
+is, the oceans control the tropospheric temperature and the drier land surface 
+affects the mean lapse rate, then we might expect the broad patterns to be 
+similar between the 2D model and GCM results. It is clear that the two plots in 
+Figure \ref{fig:tdm_gcm_compare} share little resemblance in magnitude or 
+patterns.\\
+The only two large regions of the generated map with an $R_{l/o}>1$ are Saharan 
+Africa and central Australia, and yet in both these regions the pattern of the 
+land response differs from the GCM. For example, in Saharan Africa the generated 
+map shows a very consistent pattern from western coast of Africa to the Persian 
+gulf, as this region is of a similar dryness. In contrast, the GCM results only 
+have a $R_{l/o}>1$ for the western half of the region. Likewise in south-eastern 
+Australia the GCM has a higher $R_{l/o}$ whereas the 2D model has lower values 
+for that region. Another area of interest is tropical South America, here the 
+GCM has high $R_{l/o}$ values and a distinctive pattern with a very high "blob" 
+over the Amazon basin, none of which is present in the 2D model.\\
+This result may be seen as an indication that the simplified radiative 
+convective model is inadequate in modelling the land/sea contrast, but the model 
+does capture some theoretical aspects as expected. Therefore if we consider the 
+differences between the two maps in Figure \ref{fig:tdm_gcm_compare} as 
+indicative of the processes missing from the simple model, we can use this as a 
+guide to understanding the region response of the land surface to an ocean 
+forcing.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.9\textwidth]{{phi_trop_4ysl}.png}\\
 	\includegraphics[width=0.9\textwidth]{{phi_rcm_4ysl}.png}
 	\caption{Land/sea contrast in GCM vs TCM}
-\label{fig:TCM_GCM_compare}
+\label{fig:tcm_gcm_compare}
 \end{figure}
 
-\clearpage
-
-\subsection{Variability and instability - Role of convection and clouds}
+An obvious process missing from the 2D model results in Figure 
+\ref{fig:tdm_gcm_compare} is the interaction between clouds and radiation. This 
+can lead to chaotic results but clearly might still be important. The plot from 
+Figure \ref{fig:tdm_Rlo} was repeated but turning on the interaction between 
+clouds and radiation. The plot is broadly similar in terms of the evaporative 
+fraction, in that a drier surface tends to have a higher $R_{l/o}$. The tendency 
+of $R_{l/o}$ with latitude is different, we don't see a reduction with 
+increasing latitude. The main feature, however, is the randomness present in the 
+results.  It seems at certain latitudes the model behaves strangely, namely at 
+\SI{10}{\degree} where values are very low and \SI{40}{\degree} where they are 
+very high. It is clear that a map created using these results would contain 
+inconsistencies.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.6\textwidth]{{isstcosz_ic}.eps}
@@ -941,6 +960,20 @@ based on the results of the two dimensional column model.
 \label{fig:tdm_Rlo_ic}
 \end{figure}
 
+In Figure \ref{fig:tdm_Rlo} c) we saw that relative humidity decreased with 
+increasing latitude, and this was associated with a decreasing $R_{l/o}$. We 
+will now look
+
+\begin{figure}[ht]
+	\includegraphics[width=0.3\textwidth]{{psi_lats_0.0}.eps}
+	\includegraphics[width=0.3\textwidth]{{psi_lats_10.0}.eps}
+	\includegraphics[width=0.3\textwidth]{{psi_lats_20.0}.eps}\\
+	\includegraphics[width=0.3\textwidth]{{psi_lats_30.0}.eps}
+	\includegraphics[width=0.3\textwidth]{{psi_lats_40.0}.eps}
+	\includegraphics[width=0.3\textwidth]{{psi_lats_50.0}.eps}\\
+	\caption{Circulation response, Psi}
+	\label{fig:tdm_psi_lat}
+\end{figure}
 
 
 
@@ -953,7 +986,7 @@ based on the results of the two dimensional column model.
 \begin{itemize}
 	\item Lapse rate theory works well in the mean continental response over 
 		land.
-	\item According to theory it would be expected that dryer regions would have 
+	\item According to theory it would be expected that drier regions would have 
 		larger response, since difference in humidity is primary driver of the 
 		increased variability over land.
 	\item We see from regional response that the magnitude of variability is not 
