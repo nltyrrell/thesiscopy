@@ -267,17 +267,41 @@ process by which SST variability leads to amplified $T_{land}$ variability.
 %----------------------------------------------------------------------------------------
 %	LAPSE RATE
 %----------------------------------------------------------------------------------------
+\clearpage
 
 \section{The Lapse Rate Mechanism}
 
+\begin{itemize}
+	\item Intro
+	\item Detailed explanation of theory
+	\item ACCESS Pacemaker vertical structure
+	\item single column experiments
+	\item two column experiments
+\end{itemize}
+
 We are now going to investigate the relationship between tropospheric anomalies 
 and the surface by looking at the warming lapse rate mechanism described by 
-\citet{Joshi2007} and \citet{Byrne2013a}, and testing it's validity for 
-interannual variability. 
+\citet{Joshi2007} and \citet{Byrne2013a}, and testing the validity of the theory 
+in interannual variability. 
 
-We first take a look at the vertical structure of the relationship between land 
-and ocean temperatures comparing the Pacemaker experiment with a climatology run 
-(i.e. no SST variability).  Using tropical averages, Figure 
+We will begin by looking at the vertical structure of the atmosphere in ACCESS, 
+using the Pacemaker experiments. These results then motivate the use of a one 
+and two-dimensional column model. This model allows greater control of the 
+properties of the troposphere and the surface, such as imposing tropospheric 
+temperature profiles and testing the land surface response.
+
+\begin{itemize}
+	\item explain Joshi theory
+	\item explain Byrne O'Gorman theory
+	\item Explain differences
+\end{itemize}
+
+
+\subsection{The vertical structure of the Pacemaker Experiments}
+
+We first take a look at the vertical structure in ACCESS and the relationship 
+between land and ocean temperatures by comparing the Pacemaker experiment with a 
+climatology run (i.e. no SST variability).  Using tropical averages, Figure 
 \ref{fig:linreg_plev} shows regression values for the $T_{tropos}$ at different 
 pressure levels as a function of the surface temperature $T_{land}$ (a) and 
 $T_{ocean}$ (b), with the green line for the column of air above tropical land, 
@@ -336,8 +360,8 @@ the tropospheric profile above a region of the ocean that is responding to an
 external forcing -- or a forcing from a seperate ocean basin -- will be 
 potentially be damped throughout the entire troposphere.  The vertical structure 
 above land and ocean is further explored with a one and two-dimensional model.
-NOTE: further lapse rate analysis on pacemake in 
-~/project/pacemaker/figures/*profile*
+% NOTE: further lapse rate analysis on pacemake in 
+% ~/project/pacemaker/figures/*profile*
 
 \begin{figure}[ht]
 		\includegraphics[width=0.45\textwidth]{{linreg_land_profile}.eps}
@@ -349,11 +373,52 @@ $T_{plv,land} = a T_{sfc,land} + b$, and $T_{plv,ocean} = a T_{sfc,land} + b$}
 \label{fig:linreg_plev}
 \end{figure}
 
+\section{Experiments with a Single-Column Model}
+\label{mech_scm}
+\begin{itemize}
+	\item Why do we use a single column model?
+		\begin{itemize}
+			\item We can control tropospheric forcing
+			\item we can control land surface properties
+			\item High vertical resolution
+		\end{itemize}
+	\item How do we use it?
+	\item Generate tropospheric temp profiles above an ocean
+		\begin{itemize}
+			\item Use a mean value appropriate for the tropics
+			\item Vary SSTs above and below the mean value and run to 
+				equilibrium
+			\item Each SST value equivalent to an anomalous annual temperature
+			\end{itemize}
+		\item Use the weak temp gradient to impose generated profiles above land
+		\begin{itemize}
+			\item Fix the free tropospheric temperature profile above a set 
+			pressure level
+		\item Run model to equilibrium for each temperature profile
+		\item Allow near surface profile, and surface temperature, to 
+			respond to free tropospheric profile
+		\end{itemize}
+	\item Compare the land and ocean columns to calculate the land ocean 
+		temperature contrast.
+		\begin{itemize}
+			\item Compare the SST used to generate a profile, with the land 
+				surface temperature which results from imposing that profile 
+				above it.
+		\end{itemize}
+	\end{itemize}
+
+\begin{figure}[ht]
+\includegraphics[width=0.9\textwidth,trim={1cm 8cm 3cm 
+1cm},clip=true]{scm_schematic.pdf}
+\caption{Schematic of Single Column Model experimental setup}
+\label{fig:scmschem}
+\end{figure}
+
 
 \subsection{The Weak Temperature Gradient Approximation}
 If we consider the tropical tropospheric temperature to be largely controlled by 
-the ocean surface temperature we can use a single column model to study the 
-land/ocean temperature contrast using the Weak Temperature Gradient (WTG) 
+the ocean surface temperature then we can use a single column model to study the 
+land/ocean temperature contrast by utilising the Weak Temperature Gradient (WTG) 
 Approximation. The WTG approximation was introduced in Chapter \ref{intro_wtg}, 
 and it is use in the single column model as a way to parametize the large scale 
 circulation.
@@ -364,8 +429,22 @@ imposed profile in the free troposphere and allowed to vary near the surface,
 thereby simulating the control of the free tropospheric temperatures by, for 
 example, Pacific ocean anomalies.
 
-\subsection{Experiments with a Single-Column Model}
-\label{mech_scm}
+\subsection{Atmospheric profiles in an Ocean Column}
+\begin{itemize}
+	\item Look at ocean column temperature profiles
+	\item Does model show upper tropospheric amplification due to moist 
+		convection (i.e. moist adiabat)
+	\item Compare small and large anomalies
+	\item Large anomalies follow moist adiabat
+	\item Small anomalies show more variability in profiles
+	\item Quantify upper tropospheric amplification
+	\item Look at convective heating profile, which confirms upper trop 
+		amplification due to convective heating.
+	\item Summary: Single column model shows upper atmospheric amplification, 
+		due to moist convection (i.e. profiles are moist adiabatic), but show 
+		variability for small difference in SST.
+\end{itemize}
+
 In order to study the land surface temperature response to a tropospheric 
 forcing a single column model allows us to vary parameters of the land surface 
 properties while controlling the tropospheric forcing.  We begin by generating 
@@ -415,82 +494,21 @@ rates, anomaly from the mean profile.}
 \label{fig:scmsstprof}
 \end{figure}
 
-\subsubsection{Values of l/s contrast for varying land/tropos parameters}
+\subsection{Atmospheric profiles in a Land Column}
+\begin{itemize}
+	\item Look at how the temperature profile responds to the imposed profiles 
+		and compare to ocean profiles.
+	\item Test if changes in lapse rate with warmer/colder SSTs corresponds to 
+		predicted changes according to Joshi or O'Gorman theory.
+	\item Findings:
+		\begin{itemize}
+			\item Variations in ocean column lapse rate with warming/cooling 
+				insignificant, doesn't fit with O'Gorman theory
+			\item Changing height of LCL in land column with warming and cooling 
+				corresponds to amplified land surface temperatures.
+		\end{itemize}
+	\end{itemize}
 
-Parameter testing was discussed in Chapter \ref{methods} in relation to the 
-stability of the model. Here we will discuss parameters affecting physical 
-processes, with some results shown in Table \ref{tab:scmrlo}. The simplicity of 
-the model means the properties of the land surface are primarily controlled by 
-the evaporative fraction. By considering the evaporative fraction as a measure 
-of soil moisture the results can be related back to observations and GCM 
-results.  The evaporative fraction was found to be the strongest controlling 
-factor of the value of $R_{l/o}$, in all scenarios a decrease in evaporative 
-fraction lead to an increase in $R_{l/o}$. When using the model in WTG mode it 
-is possible to adjust the pressure at which the temperature profile remains 
-fixed (PFixT).  It would seem likely that this would influence the value of 
-$R_{l/o}$; as the pressure at which the profile remains fixed increases there is 
-more potential for the temperature below this to vary.  However it was found 
-that PFixT had no clear influence on $R_{l/o}$, implying the variation in 
-temperature below the level of the fixed temperature profile is not being 
-significantly impacted by the specifics of the model setup. This is a positive 
-outcome, as a dependance of $R_{l/o}$ on PFixT would indicate a dependance on a 
-non-physical model parameter. Instead we see that we can simulate control of the 
-tropical troposphere by tropical oceans and get robust values of $R_{l/o}$.
-
-Overall the values of $R_{l/o}$ are within a realistic range, from 1.1 to 1.6.
-Even for the very moist surface -- an evaporative fraction on 0.7 -- the values 
-are similar the tropical values from observations ($R_{l/o, obs} =1.19$), and 
-the ENSO-Slab run ($R_{l/o, enso} =1.17$), while the CMIP5 ($R_{l/o,cmip} 
-=1.35$) and the AMIP run ($R_{l/o, amip} =1.26$) tropical values are closer to 
-corresponding values for an evaporative fraction of 0.5. We can compare the 
-comparitave variability and co-variability of the land and ocean columns by 
-looking at the ratio of standard deviation and the correlation between the 
-columns. It is primarily the ratio of standard deviation which is causing the 
-increase in $R_{l/o}$ with decreasing evaporative fraction, as the correlation 
-between the land and ocean columns, which is around 0.7, doesn't change 
-significantly. Although we can't measure changes in the observation and GCM 
-values of the ratio of standard deviation or correlation with changing surface 
-moisture, we can see that the tropical values are similar to the single column 
-model, with correlation of around 0.8 and ratio of standard deviation of around 
-1.4, see Table \ref{tab:rlo}.  The consistency of these statistics between the 
-  single column model and observations and GCMs are at least an indication that 
-  aspects of the relationship between the land and ocean are well represented by 
-  the single column model. The single column model results also indicate a 
-  strong dependance of the magnitude of $R_{l/o}$ on surface moisture 
-  availability.
-
-
-\begin{center}
-	\begin{table}[ht]
-		\caption{Land/Ocean contrast, as measured by $R_{l/o}$, in single column 
-		model using the WTG approximation over land surfaces. The correlation 
-	and Ratio of standard deviations are calculated with the SSTs used to create 
-the forcing temperature profiles, and the resulting land surface temperature  
-from that profile}
-
-		\label{tab:scmrlo}
-		\scriptsize
-	\begin{tabular}{ l  c  c  c }
-		\textit{Evap Fraction}		& 0.3   & 0.5  & 0.7 \\ \hline
-		\textbf{PFixT 800hPa}\\%\hline
-		$R_{l/o}$  							& 1.41  & 1.43 & 1.18\\ %\hline
-	Corr.							& 0.57  & 0.78 & 0.64\\ %\hline
-	Ratio STD           			& 2.48  & 1.84 & 1.60\\ \hline
-		\textbf{PFixT 700hPa}\\%\hline
-		$R_{l/o}$  							& 1.39  & 1.30 & 1.15\\ %\hline
-	Corr.							& 0.50  & 0.77 & 0.76\\ %\hline
-	Ratio STD           			& 2.76  & 1.68 & 1.52\\ \hline
-		\textbf{PFixT 600hPa}\\%\hline
-		$R_{l/o}$  							& 1.63  & 1.25 & 1.11\\ %\hline
-	Corr.							& 0.70  & 0.79 & 0.78\\ %\hline
-	Ratio STD           			& 2.35  & 1.58 & 1.42\\ \hline
-	\end{tabular}
-	\end{table}
-\end{center}
-
-% \clearpage
-
-\subsubsection{Atmospheric profiles}
 We will now look at the atmospheric temperature profiles, focusing on one set of 
 runs from the single column model. The run with a PFixT (pressure above which 
 the temperature profile remains fixed) of \SI{600}{\hecto\pascal} and 
@@ -551,18 +569,35 @@ The SST values range from \SI{25.00}{\degreeCelsius} to
 
 \clearpage
 
-\subsubsection{Surface Temperature Relationships}
-To understand the factors controlling the land surface temperature $T_{land}$ of 
-the single column model we will look at relationships between $T_{land}$ and a 
-number of variables, beginning with $T_{land}$ verse the SST used to generate 
-the imposed temperature profile, shown in Figure \ref{fig:scm_tlandsst}. The 
-regression lines represent $R_{l/o}$ and show the increase of $R_{l/o}$ with 
-decreasing evaporative fraction. A large amount of variability is also evident 
-in the response of $T_{land}$ to the imposed temperature profile, this is a due 
-to the interaction between clouds and radiation and is discussed further in 
-Chapter \ref{instability}.  Despite the variability, model runs with different 
-values of PFixT, domain size, vertical resolution and other parameters show 
-similar relationships between $T_{land}$, SST and evaporative fraction.
+\subsection{Values of land sea contrast modelled with a single column model}
+
+\begin{itemize}
+	\item How do we generate $R_{l/o}$ values?
+	\item Demonstrated in Figure \ref{fig:scm_tlandsst}
+	\item What is controlling values?
+	\item Surface moisture, controlled through evaporative fraction
+	\item Pressure at which profile is fixed does not control $R_{l/o}$
+\end{itemize}
+
+Parameter testing was discussed in Chapter \ref{methods} in relation to the 
+stability of the model. Here we will discuss parameters affecting physical 
+processes, with some results shown in Table \ref{tab:scmrlo}. The simplicity of 
+the model means the properties of the land surface are primarily controlled by 
+the evaporative fraction. By considering the evaporative fraction as a measure 
+of soil moisture the results can be related back to observations and GCM 
+results.  The evaporative fraction was found to be the strongest controlling 
+factor of the value of $R_{l/o}$, in all scenarios a decrease in evaporative 
+fraction lead to an increase in $R_{l/o}$. When using the model in WTG mode it 
+is possible to adjust the pressure at which the temperature profile remains 
+fixed (PFixT).  It would seem likely that this would influence the value of 
+$R_{l/o}$; as the pressure at which the profile remains fixed increases there is 
+more potential for the temperature below this to vary.  However it was found 
+that PFixT had no clear influence on $R_{l/o}$, implying the variation in 
+temperature below the level of the fixed temperature profile is not being 
+significantly impacted by the specifics of the model setup. This is a positive 
+outcome, as a dependance of $R_{l/o}$ on PFixT would indicate a dependance on a 
+non-physical model parameter. Instead we see that we can simulate control of the 
+tropical troposphere by tropical oceans and get robust values of $R_{l/o}$.
 
 \begin{figure}[ht]
 \includegraphics[width=0.6\textwidth]{{land_anom_intvar_tsurf_p600}.eps}
@@ -570,6 +605,127 @@ similar relationships between $T_{land}$, SST and evaporative fraction.
 three evaporative fractions of 0.3, 0.5, and 0.7.}
 \label{fig:scm_tlandsst}
 \end{figure}
+
+
+Overall the values of $R_{l/o}$ are within a realistic range, from 1.1 to 1.6.
+Even for the very moist surface -- an evaporative fraction on 0.7 -- the values 
+are similar the tropical values from observations ($R_{l/o, obs} =1.19$), and 
+the ENSO-Slab run ($R_{l/o, enso} =1.17$), while the CMIP5 ($R_{l/o,cmip} 
+=1.35$) and the AMIP run ($R_{l/o, amip} =1.26$) tropical values are closer to 
+corresponding values for an evaporative fraction of 0.5. We can compare the 
+comparitave variability and co-variability of the land and ocean columns by 
+looking at the ratio of standard deviation and the correlation between the 
+columns. It is primarily the ratio of standard deviation which is causing the 
+increase in $R_{l/o}$ with decreasing evaporative fraction, as the correlation 
+between the land and ocean columns, which is around 0.7, doesn't change 
+significantly. Although we can't measure changes in the observation and GCM 
+values of the ratio of standard deviation or correlation with changing surface 
+moisture, we can see that the tropical values are similar to the single column 
+model, with correlation of around 0.8 and ratio of standard deviation of around 
+1.4, see Table \ref{tab:rlo}.  The consistency of these statistics between the 
+  single column model and observations and GCMs are at least an indication that 
+  aspects of the relationship between the land and ocean are well represented by 
+  the single column model. The single column model results also indicate a 
+  strong dependance of the magnitude of $R_{l/o}$ on surface moisture 
+  availability.
+
+
+\begin{center}
+	\begin{table}[ht]
+		\caption{Land/Ocean contrast, as measured by $R_{l/o}$, in single column 
+		model using the WTG approximation over land surfaces. The correlation 
+	and Ratio of standard deviations are calculated with the SSTs used to create 
+the forcing temperature profiles, and the resulting land surface temperature  
+from that profile}
+
+		\label{tab:scmrlo}
+		\scriptsize
+	\begin{tabular}{ l  c  c  c }
+		\textit{Evap Fraction}		& 0.3   & 0.5  & 0.7 \\ \hline
+		\textbf{PFixT 800hPa}\\%\hline
+		$R_{l/o}$  							& 1.41  & 1.43 & 1.18\\ %\hline
+	Corr.							& 0.57  & 0.78 & 0.64\\ %\hline
+	Ratio STD           			& 2.48  & 1.84 & 1.60\\ \hline
+		\textbf{PFixT 700hPa}\\%\hline
+		$R_{l/o}$  							& 1.39  & 1.30 & 1.15\\ %\hline
+	Corr.							& 0.50  & 0.77 & 0.76\\ %\hline
+	Ratio STD           			& 2.76  & 1.68 & 1.52\\ \hline
+		\textbf{PFixT 600hPa}\\%\hline
+		$R_{l/o}$  							& 1.63  & 1.25 & 1.11\\ %\hline
+	Corr.							& 0.70  & 0.79 & 0.78\\ %\hline
+	Ratio STD           			& 2.35  & 1.58 & 1.42\\ \hline
+	\end{tabular}
+	\end{table}
+\end{center}
+
+% \clearpage
+\subsection{Variability and instability - Role of convection}
+\label{instability}
+
+\begin{itemize}
+	\item We see large variability in surface temperature response
+	\item Timeseries of surface temperatures over land is chaotic
+	\item Most likely due to interaction of radiation and convection schemes, 
+		demonstrated by showing timeseries with that interaction turned off.
+\end{itemize}
+
+
+Given the large variability in $T_{tropos}$ and the weak connection between the 
+imposed temperature profile and variables associated with convection such as 
+cloud fraction, a discussion of the stability of the model is in order. The 
+timeseries in Figure \ref{fig:scmts} a)-c) demonstrate a range of chaotic 
+behaviours in surface temperature. For many runs forced with a cooler 
+temperature profile we see regular oscillations, it should be noted their is no 
+diurnal cycle in the model.  For forcing with higher temperatures we see a 
+decoupling of the surface temperatures and the imposed temperature profile which 
+results in a lower surface temperature from a higher forcing temperature.  The 
+oscillations and the instability are due to the interaction of clouds and 
+radiation. This is demonstrated as the interaction between the convection and 
+radiation schemes in the model can be turned off. The resultant timeseries, 
+shown in Figure \ref{fig:scmts} d), quickly reaches a stable equilibrium 
+temperature and don't demonstrate the instability see in a)-c).
+
+\begin{figure}[ht]
+\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m1_h850.eps}
+\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m2_h850.eps}\\
+\includegraphics[width=0.4\textwidth]{land_Tsurf_02_m2_h850.eps}
+\includegraphics[width=0.4\textwidth]{land_nir_Tsurf.eps}\\
+\caption{Timeseries of Tsurf in SCM forced with tropospheric temperature 
+profile. a), b) and c) all have the interaction between the convection and 
+radiation schemes turned on, it is turned off for d). a) and b) only vary in the 
+mixed layer depth of the surface, a) and c) vary in the evaporative fraction.}
+\label{fig:scmts}
+\end{figure}
+
+
+
+\clearpage
+
+
+\subsection{Surface Temperature Relationships}
+
+\begin{itemize}
+	\item How is the ocean column (via the imposed profile) controlling the land 
+		surface temperature?
+	\item Look at relationship between SST in the ocean column and variables in 
+		the land column.
+	\item SST has only a very weak relationship with RH, no relationship with 
+		SW, LW, cloud fraction.
+	\item In contrast, RH, LW, SW related to surface temperature in land column, 
+cloud fraction weakly related.
+\end{itemize}
+
+To understand the factors controlling the land surface temperature $T_{land}$ of 
+the single column model we will look at relationships between $T_{land}$ and a 
+number of variables, beginning with $T_{land}$ verse the SST used to generate 
+the imposed temperature profile, shown in Figure \ref{fig:scm_tlandsst}. The 
+regression lines represent $R_{l/o}$ and show the increase of $R_{l/o}$ with 
+decreasing evaporative fraction.  A large amount of variability is also evident 
+in the response of $T_{land}$ to the imposed temperature profile, this is a due 
+to the interaction between clouds and radiation and is discussed further in 
+Chapter \ref{instability}.  Despite the variability, model runs with different 
+values of PFixT, domain size, vertical resolution and other parameters show 
+similar relationships between $T_{land}$, SST and evaporative fraction.
 
 Looking now at how the SST generated temperature profiles influence variables in 
 the land column, and how those variables correlate with $T_{land}$; Figure 
@@ -622,40 +778,8 @@ radiation and cloud fraction, and land surface response and forcing SST.}
 \clearpage
 
 
-\subsubsection{Variability and instability - Role of convection}
-\label{instability}
-Given the large variability in $T_{tropos}$ and the weak connection between the 
-imposed temperature profile and variables associated with convection such as 
-cloud fraction, a discussion of the stability of the model is in order. The 
-timeseries in Figure \ref{fig:scmts} a)-c) demonstrate a range of chaotic 
-behaviours in surface temperature. For many runs forced with a cooler 
-temperature profile we see regular oscillations, it should be noted their is no 
-diurnal cycle in the model.  For forcing with higher temperatures we see a 
-decoupling of the surface temperatures and the imposed temperature profile which 
-results in a lower surface temperature from a higher forcing temperature.  The 
-oscillations and the instability are due to the interaction of clouds and 
-radiation. This is demonstrated as the interaction between the convection and 
-radiation schemes in the model can be turned off. The resultant timeseries, 
-shown in Figure \ref{fig:scmts} d), quickly reaches a stable equilibrium 
-temperature and don't demonstrate the instability see in a)-c).
 
-\begin{figure}[ht]
-\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m1_h850.eps}
-\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m2_h850.eps}\\
-\includegraphics[width=0.4\textwidth]{land_Tsurf_02_m2_h850.eps}
-\includegraphics[width=0.4\textwidth]{land_nir_Tsurf.eps}\\
-\caption{Timeseries of Tsurf in SCM forced with tropospheric temperature 
-profile. a), b) and c) all have the interaction between the convection and 
-radiation schemes turned on, it is turned off for d). a) and b) only vary in the 
-mixed layer depth of the surface, a) and c) vary in the evaporative fraction.}
-\label{fig:scmts}
-\end{figure}
-
-
-
-\clearpage
-
-\subsection{Experiments with a Two-Dimensional Model}
+\section{Experiments with a Two-Dimensional Model}
 
 The single column model in weak temperature gradient mode offered a promising 
 and novel approach to investigating the land/sea contrast and the role of ocean 
@@ -666,6 +790,9 @@ any land response. In addition, the assumptions of the WTG approximation are
 only valid in the tropics, a limiting factor when attempting to explain the 
 regional differences in the land response. In order to continue using the column 
 model while avoiding these issues a multi column setup was used.\\
+
+\subsection{Values of land sea contrast modelled with a two-dimensional model}
+
 The full description of the setup is outlined in Chapter \ref{methods}. To 
 reiterate, the model can be run with one or more ocean and one or more land 
 columns. A number of different geometries of land and ocean columns were tested, 
@@ -746,7 +873,7 @@ forcing.
 \end{figure}
 
 
-\subsubsection{Atmospheric profiles in temperature and relative humidity}
+\subsection{Atmospheric profiles in temperature and relative humidity}
 
 The atmospheric profiles of $\theta$ for the single column indicated that a 
 changing LCL over land as well as a deviation between land and ocean lapse rates 
@@ -817,7 +944,7 @@ in the dry region is at most 5\%.
 \label{fig:tdm_rhprof}
 \end{figure}
 
-\subsubsection{Circulation response}
+\subsection{Circulation response}
 To see what is causing the drying in the ocean columns we look at the vertical 
 velocity, $\omega$ and circulation using the streamfunction $\psi$ of vertical 
 and zonal velocities.  For these variables we use the mean across a range of 
@@ -872,7 +999,8 @@ contrast.
 
 \clearpage
 
-\subsubsection{Values of l/s contrast for varying land parameters}
+\subsection{Values of land sea contrast for varying land parameters}
+
 We have seen that while the two-dimensional model has a low level circulation 
 that dries the ocean column, it is still able to simulate aspects of the 
 land/ocean contrast we see in GCMs (i.e. Figure \ref{fig:tdm_regprof}), and it's 
@@ -923,7 +1051,7 @@ areal mean across all columns.}
 \label{fig:tdm_Rlo}
 \end{figure}
 
-\subsection{Comparison of Simplified Models and GCM results}
+\section{Comparison of Simplified Models and GCM results}
 The large range of $R_{l/o}$ values allows for a direct comparison to GCM 
 results. Using the pacemaker experiment we can calculate an $R_{l/o}$ value for 
 each individual land grid box, see Figure \ref{fig:tdm_gcm_compare} a). We do 
