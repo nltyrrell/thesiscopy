@@ -413,7 +413,22 @@ O'Gorman theories.\\
 			\item Vary SSTs above and below the mean value and run to 
 				equilibrium
 			\item Each SST value equivalent to an anomalous annual temperature
-			\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+There are two main parts to the experimental setup; i) the ocean forcing of the 
+troposphere, and ii) the tropospheric forcing of a land surface. For part i) we	 
+generate temperature profiles in an ocean column which are to be used in part 
+ii). To generate the profiles we begin with a mean SST suitable for the tropical 
+band, generally around \SI{26}{\degreeCelsius}. We vary the SST above and below 
+the chosen mean value, and for each SST value we run the model to equilibrium, 
+in this way we end up with a range of temperature profiles varying around a mean 
+value, and when comparing the results to observations or GCMs we consider each 
+SST value to be equivalent to a yearly temperature. A full discussion of the 
+generation of tropospheric temperature profiles in the ocean column is in 
+section \ref{trop_response_ocean}.
+
+\begin{itemize}
 		\item Use the weak temp gradient to impose generated profiles above land
 		\begin{itemize}
 			\item Fix the free tropospheric temperature profile above a set 
@@ -422,6 +437,17 @@ O'Gorman theories.\\
 		\item Allow near surface profile, and surface temperature, to 
 			respond to free tropospheric profile
 		\end{itemize}
+\end{itemize}
+
+Once we have generated the tropospheric temperature profiles above an ocean the 
+next step is to use them as a forcing above a land surface. For this we utilise 
+the Weak Temperature Gradient approximation, both in terms of the theoritcal 
+basis for imposing a tropospheric profile, and in practical terms. The 
+single-column model has a weak temperature gradient mode, which allows the 
+tropopsheric temperature profile to be imposed above a certain height.
+
+
+\begin{itemize}
 	\item Compare the land and ocean columns to calculate the land ocean 
 		temperature contrast.
 		\begin{itemize}
@@ -430,11 +456,6 @@ O'Gorman theories.\\
 				above it.
 		\end{itemize}
 \end{itemize}
-
-There are two main parts to the experimental setup; i) the ocean forcing of the 
-troposphere, and ii) the tropospheric forcing of a land surface.
-
-
 
 \begin{figure}[ht]
 \includegraphics[width=0.9\textwidth,trim={1cm 8cm 3cm 
@@ -459,6 +480,7 @@ thereby simulating the control of the free tropospheric temperatures by, for
 example, Pacific ocean anomalies.
 
 \subsection{Tropospheric response to imposed SSTs in a single column}
+\label{trop_response_ocean}
 \begin{itemize}
 	\item Look at ocean column temperature profiles
 	\item Does model show upper tropospheric amplification due to moist 
