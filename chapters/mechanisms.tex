@@ -271,20 +271,15 @@ process by which SST variability leads to amplified $T_{land}$ variability.
 
 \section{The Lapse Rate Mechanism}
 
-\begin{itemize}
-	\item Intro
-	\item Detailed explanation of theory
-	\item ACCESS Pacemaker vertical structure
-	\item single column experiments
-	\item two column experiments
-\end{itemize}
-
-We are now going to investigate the relationship between tropospheric anomalies 
-and the surface temperature response. We begin by looking at the warming lapse 
-rate mechanism described by \citet{Joshi2007} and \citet{Byrne2013a}. These 
-theories were originally devised to explain the land/ocean warming contrast that 
-exists in global warming scenarios, and we will be testing the validity of the 
-theories in interannual variability. 
+In section ..., there was an indication that there might be similarities between 
+the global warming and interannual land/ocean contrast. Figure ...  showed 
+homogenous temperature response in the troposphere, and no land/ocean contrast 
+at higher levels, with an amplified response at the land surface. This is 
+similar to the warming lapse rate mechanism described by \citet{Joshi2007} and 
+\citet{Byrne2013a}. These theories were originally devised to explain the 
+land/ocean warming contrast that exists in global warming scenarios. However, 
+the observed similarities justify testing the validity of the lapse rate 
+theories in interannul variability.
 
 We will begin by explaining the two theories, their similarities and 
 differences. Then we look at the vertical structure of the atmospheric resposne 
@@ -295,33 +290,40 @@ and the surface, finally we put the simplified model results into context by
 comparing them to ACCESS.
 
 \subsection{The Lapse rate mechanism in global warming scenarios}
+
 \begin{itemize}
+	\item Ref explanation (intro)
 	\item explain Joshi theory
 	\item explain Byrne O'Gorman theory
 	\item Explain differences
+	\item why is the difference between the theories important (allows us to 
+		test relevance)
+	\item Lead in to pacemaker experiments:
+	\item Reason: we've seen similarites, want to explore those in more detail
 \end{itemize}
 
 
 \subsection{The tropopheric response in the Pacemaker Experiments}
 
-We first take a look at the vertical structure of the atmosphere in ACCESS and 
-the relationship between land and ocean temperatures by comparing the Pacemaker 
-experiment with a climatology run (i.e. no SST variability).  Using tropical 
-averages, Figure \ref{fig:linreg_plev} shows regression values for the 
-$T_{tropos}$ at different pressure levels as a function of the surface 
-temperature $T_{land}$ (a) and $T_{ocean}$ (b), with the green line for the 
-column of air above tropical land, blue for the column of air above tropical 
-ocean, and the black line is the column above the remote tropical ocean, 
-essentially the tropical oceans with the area of forcing removed.  Looking first 
-at Figure \ref{fig:linreg_plev} a), in the simulation without any SST 
-variability (dashed lines) the higher level tropical temperatures over land 
-areas are not related to $T_{land}$ as the regression values between the surface 
-and tropospheric temperatures falls to zero above \SI{800}{\hecto\pascal}, 
-indicating that the atmospheric internal $T_{land}$ variability (independent of 
-SST variability) is limited to the near surface layers and is not strongly 
-related to the upper free $T_{tropos}$. In the simulation with SST variability 
-the tropospheric temperature shows a strong relationship with the surface 
-$T_{land}$ variability at all levels. 
+We are going to use the Pacemaker experiments to test the relationship between 
+the land and ocean surfaces and the troposphere above them. We first take a look 
+at the vertical structure of the atmosphere in ACCESS and the relationship 
+between land and ocean temperatures by comparing the Pacemaker experiment with a 
+climatology run (i.e. no SST variability).  Using tropical averages, Figure 
+\ref{fig:linreg_plev} shows regression values for the $T_{tropos}$ at different 
+pressure levels as a function of the surface temperature $T_{land}$ (a) and 
+$T_{ocean}$ (b), with the green line for the column of air above tropical land, 
+blue for the column of air above tropical ocean, and the black line is the 
+column above the remote tropical ocean, essentially the tropical oceans with the 
+area of forcing removed.  Looking first at Figure \ref{fig:linreg_plev} a), in 
+the simulation without any SST variability (dashed lines) the higher level 
+tropical temperatures over land areas are not related to $T_{land}$ as the 
+regression values between the surface and tropospheric temperatures falls to 
+zero above \SI{800}{\hecto\pascal}, indicating that the atmospheric internal 
+$T_{land}$ variability (independent of SST variability) is limited to the near 
+surface layers and is not strongly related to the upper free $T_{tropos}$. In 
+the simulation with SST variability the tropospheric temperature shows a strong 
+relationship with the surface $T_{land}$ variability at all levels. 
 
 Now focusing on Figure \ref{fig:linreg_plev} b), a distinctive feature for the 
 troposphere above oceans (blue line) is the large increase in the regression 
@@ -379,6 +381,13 @@ $T_{plv,land} = a T_{sfc,land} + b$, and $T_{plv,ocean} = a T_{sfc,land} + b$}
 \label{fig:linreg_plev}
 \end{figure}
 
+We have a seen a similarity between the Joshi theory and the interannua 
+response. This shows the mechanism appears active in the statistics of the 
+Pacemaker experiment, now we want to explore this further. To investigate this 
+the physical mechanisms we will use a simpler model, one that we can limit the 
+variables to discern the important physical mechanisms that control the response 
+we have seen.
+
 \section{Tropospheric and surface response to ocean forcing in a Single-Column 
 Model}
 \label{mech_scm}
@@ -395,9 +404,13 @@ Model}
 We have seen in the pacemaker experiments a distinctive response in the 
 troposphere above land and ocean areas. The temperature profiles above land and 
 ocean appear consistent with the lapse rate mechanism outlined by 
-\citet{Joshi2007} and \citet{Byrne2013}. For the next section we will use a 
+\citet{Joshi2007} and \citet{Byrne2013}. For this section we will use a 
 single-column model to analyse the tropospheric response to an SST forcing, and 
 the land surface response to a tropospheric forcing.\\
+To understand how the physical processes occur we first look at how the 
+atmosphere responds in the ocean column to SST variations, and then investigate 
+the impact of tropospheric temperature changes on the land surface 
+temperature.\\
 We use a single-column model for three main reasons: the idealised nature of the 
 model allows us to impose a tropospheric temperature profile, thus simulating a 
 tropospheric temperature forcing; we can control the land surface properties; 
@@ -464,25 +477,21 @@ tropopsheric temperature profile to be imposed above a certain height.
 \label{fig:scmschem}
 \end{figure}
 
-
-\subsection{The Weak Temperature Gradient Approximation}
-If we consider the tropical tropospheric temperature to be largely controlled by 
-the ocean surface temperature then we can use a single column model to study the 
-land/ocean temperature contrast by utilising the Weak Temperature Gradient (WTG) 
-Approximation. The WTG approximation was introduced in Chapter \ref{intro_wtg}, 
-and it is use in the single column model as a way to parametize the large scale 
-circulation.
-Initially a range of temperature profiles are generated in an ocean column with 
-varying SSTs, then those profile can be imposed above a land surface.  In a 
-single column with a land surface the temperature profile is relaxed towards the 
-imposed profile in the free troposphere and allowed to vary near the surface, 
-thereby simulating the control of the free tropospheric temperatures by, for 
-example, Pacific ocean anomalies.
+Now we will look in detail at the response of the atmosphere in the ocean 
+column.
 
 \subsection{Tropospheric response to imposed SSTs in a single column}
 \label{trop_response_ocean}
+
+For each bit:
+Ask yourself Qs
+How does it relate to the introduction?
+How do I explain this to past Nick?
+How does it relate, reinforce the conclusions?
+
 \begin{itemize}
-	\item Look at ocean column temperature profiles
+	\item What are we doing: Examine at ocean column temperature profiles
+	\item Why: See how well they align to theory, large/small anomalies
 	\item Does model show upper tropospheric amplification due to moist 
 		convection (i.e. moist adiabat)
 	\item Compare small and large anomalies
@@ -495,6 +504,10 @@ example, Pacific ocean anomalies.
 		due to moist convection (i.e. profiles are moist adiabatic), but show 
 		variability for small difference in SST.
 \end{itemize}
+
+Before we begin our land surface response experiments we must generate the 
+tropospheric temperature profiles above an ocean surface. As we do this we will 
+test the model response against the expected theoretical response.
 
 In order to study the land surface temperature response to a tropospheric 
 forcing a single column model allows us to vary parameters of the land surface 
@@ -544,6 +557,20 @@ uniform heating rate throughout the troposphere.
 rates, anomaly from the mean profile.}
 \label{fig:scmsstprof}
 \end{figure}
+
+\subsection{The Weak Temperature Gradient Approximation}
+If we consider the tropical tropospheric temperature to be largely controlled by 
+the ocean surface temperature then we can use a single column model to study the 
+land/ocean temperature contrast by utilising the Weak Temperature Gradient (WTG) 
+Approximation. The WTG approximation was introduced in Chapter \ref{intro_wtg}, 
+and it is use in the single column model as a way to parametize the large scale 
+circulation.
+Initially a range of temperature profiles are generated in an ocean column with 
+varying SSTs, then those profile can be imposed above a land surface.  In a 
+single column with a land surface the temperature profile is relaxed towards the 
+imposed profile in the free troposphere and allowed to vary near the surface, 
+thereby simulating the control of the free tropospheric temperatures by, for 
+example, Pacific ocean anomalies.
 
 \subsection{Lower atmospheric response to a free tropospheric forcing}
 \begin{itemize}
