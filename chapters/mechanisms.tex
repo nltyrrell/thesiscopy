@@ -506,12 +506,31 @@ How does it relate, reinforce the conclusions?
 \end{itemize}
 
 Before we begin our land surface response experiments we must generate the 
-tropospheric temperature profiles above an ocean surface. As we do this we will 
-test the model response against the expected theoretical response by looking at 
-temperature profiles as we vary the SST about a mean tropical value.
-By using both small and large variations in SST above and below the chosen mean 
-value allow we can test the response of the model to anomalies of a magnitude 
-similar to that seen in interannual SST variability.
+tropospheric temperature profiles above an ocean surface. By looking at 
+temperature profiles as we vary the SST about an average tropical value we can 
+test the model response against the expected theoretical response. We chose an 
+SST value of \SI{26}{\degreeCelsius} as the average profile, which is 
+appropriate for the tropics. For this section we look at both small and large 
+anomalies from a chosen mean value; large anomalies test the robustness of the 
+model and small anomalies are more appropriate for modelling interannual 
+variability.
+
+In Figure \ref{fig:scmsstprof_large} a) we see the temperature profile for a 
+wide range of SST values. For each profile the model has been run to 
+equilibrium, and an average of the last 100 days is taken. The difference 
+between the profiles with increasing and decreasing SST values is more clearly 
+shown in Figure \ref{fig:scmsstprof_large} b). For this plot the mean profile 
+was calculated using all values from \SIrange{19}{33}{\degreeCelsius}, and then 
+the mean profile was subtracted from each individual profile to give the change 
+relative to the mean. For example, with the run forced with 
+\SI{33}{\degreeCelsius}, at the surface the temperature is \SI{7}{\kelvin} 
+warmer than the mean, and at \SI{200}{\hecto\pascal} the profile is 
+approximately \SI{14}{\kelvin} warmer. This amplification of surface anomalies 
+with height is the consequence of the profile being close to moist abiabatic, as 
+expected in convecting regions of the tropics. The amplification above the ocean 
+surface is also important in the communication of SST anomalies from oceans to 
+land. From this plot it appears the model is behaving according to theory, but 
+we can confirm that by plotting the moist adiabats.
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_tempprof_abs.eps}
@@ -520,8 +539,13 @@ similar to that seen in interannual SST variability.
 \SI{19}{\degreeCelsius} to \SI{34}{\degreeCelsius} b) Amplification relative to 
 the mean profile c) Temperature anomalies relative to mean profile d) Moist 
 convective heating rates, anomaly from the mean profile.}
-\label{fig:scmsstprof}
+\label{fig:scmsstprof_large}
 \end{figure}
+
+We can compare the model response with theory by including the moist adiabat, as 
+seen in Figure \ref{fig:scmsstprof_ma}. The moist adiabat is calculated for each 
+SST, then as with the model response the anomalies are taken relative to the 
+mean of all SSTs. 
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_prof_temp_anom_ma.eps}
@@ -529,6 +553,28 @@ convective heating rates, anomaly from the mean profile.}
 \SI{19}{\degreeCelsius} to \SI{34}{\degreeCelsius} b) Amplification relative to 
 the mean profile c) Temperature anomalies relative to mean profile d) Moist 
 convective heating rates, anomaly from the mean profile.}
+\label{fig:scmsstprof_ma}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=0.5\textwidth]{sstinc_prof_temp_abs.eps}
+\includegraphics[width=0.5\textwidth]{sstinc_prof_temp_mean_ma.eps}
+\caption{Heating and temperature profiles for the SCM. a) Temperature anomaly 
+	relative to mean profile for SSTs from \SI{19}{\degreeCelsius} to 
+	\SI{34}{\degreeCelsius} b) Amplification relative to the mean profile c) 
+	Temperature anomalies relative to mean profile d) Moist convective heating 
+rates, anomaly from the mean profile.}
+\label{fig:scmsstprof}
+\end{figure}
+
+\begin{figure}[ht]
+\includegraphics[width=0.5\textwidth]{enso_prof_ampratio_mean.eps}
+\includegraphics[width=0.5\textwidth]{sstinc_prof_ampratio_mean.eps}\\
+\caption{Heating and temperature profiles for the SCM. a) Temperature anomaly 
+	relative to mean profile for SSTs from \SI{19}{\degreeCelsius} to 
+	\SI{34}{\degreeCelsius} b) Amplification relative to the mean profile c) 
+	Temperature anomalies relative to mean profile d) Moist convective heating 
+rates, anomaly from the mean profile.}
 \label{fig:scmsstprof}
 \end{figure}
 
@@ -569,9 +615,6 @@ moist convection. Plots of the heating due to dry convection (not shown) show
 uniform heating rate throughout the troposphere.
 
 \begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{enso_prof_temp_mean.eps}
-\includegraphics[width=0.5\textwidth]{enso_prof_ampratio_mean.eps}\\
-\includegraphics[width=0.5\textwidth]{sstinc_prof_temp_mean.eps}
 \includegraphics[width=0.5\textwidth]{enso_prof_cq_meananom.eps}
 \caption{Heating and temperature profiles for the SCM. a) Temperature anomaly 
 	relative to mean profile for SSTs from \SI{19}{\degreeCelsius} to 
