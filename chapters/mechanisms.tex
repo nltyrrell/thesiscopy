@@ -545,7 +545,13 @@ convective heating rates, anomaly from the mean profile.}
 We can compare the model response with theory by including the moist adiabat, as 
 seen in Figure \ref{fig:scmsstprof_ma}. The moist adiabat is calculated for each 
 SST, then as with the model response the anomalies are taken relative to the 
-mean of all SSTs. 
+mean of the mosit adiabats for all SSTs. We see that that model follows the 
+moist adiabat closely from \SIrange{1000}{600}{\hecto\pascal}, after which they 
+diverge slightly with the model showing less amplification. From this we can 
+conclude that for a wide range of SST values, and for large differences in SST 
+of \SI{1}{\kelvin}, the troposphere in the ocean column is largely moist 
+adiabitic.  We can now compare this to the smaller variations in SST used to 
+model interannual variability.
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_prof_temp_anom_ma.eps}
@@ -556,6 +562,29 @@ convective heating rates, anomaly from the mean profile.}
 \label{fig:scmsstprof_ma}
 \end{figure}
 
+The temperature profiles in Figure \ref{fig:scmsstinc_prof} showing small 
+changes in SST values don't reveal anything unexpected, as any differences are 
+too small to discern at this scale. The profiles are similar to 
+\ref{fig:scmsstprof_large}a) with the exception that there is little change in 
+the height of the tropopause for small SSt changes. As with Figure 
+\ref{fig:scmsstprof_large} b) the anomalous profiles were calculated using the 
+mean of all SSTs, the result is Figure \ref{fig:scmsstinc_prof} b). For 
+reference the moist adiabat for the warmest and coldest SST anomalies are 
+included as dashed lines. The plot shows that relative amplification in the 
+upper troposphere still occurs but with greatly increased variance relative to 
+the mean. The plotted moist adiabats show that the profiles are still largely 
+moist adiabatic, although for individual runs they can be up to 
+\SI{0.5}{\kelvin} warmer or cooler than the moist adiabat. The increased 
+variance also mostly occurs above \SI{600}{\hecto\pascal}. The variability in 
+the temperature profiles may have consequences for the modelled interannual 
+value of the land/ocean contrast. The control of tropospheric temperatures by 
+the ocean surface is necessary for temperature anomalies to be communicted to 
+land surfaces, and demonstrates that variations in SST may not directly 
+correspond to tropospheric anomalies. We can look closer at the tropospheric 
+amplification to determine the significance of the variations in the temperature 
+profiles for small and large anomalies.
+
+
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{sstinc_prof_temp_abs.eps}
 \includegraphics[width=0.5\textwidth]{sstinc_prof_temp_mean_ma.eps}
@@ -564,8 +593,17 @@ convective heating rates, anomaly from the mean profile.}
 	\SI{34}{\degreeCelsius} b) Amplification relative to the mean profile c) 
 	Temperature anomalies relative to mean profile d) Moist convective heating 
 rates, anomaly from the mean profile.}
-\label{fig:scmsstprof}
+\label{fig:scmsstinc_prof}
 \end{figure}
+
+The magnitude of the tropospheric amplification is more clearly shown in Figure 
+\ref{fig:scmsstamp}, which measures the amplification of the SST anomaly with 
+height relative to the mean value.  For example, a value of 2 at 
+\SI{300}{\hecto\pascal} indicates that a surface anomoly of \SI{1.5}{\kelvin} 
+would lead to a \SI{3}{\kelvin} anomaly at that height.  It shows that positive 
+and negative anomalies are amplified to a similar extant, although the 
+tropopause is higher for the positive anomalies leading to a difference at 
+\SI{200}{\hecto\pascal}.
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_prof_ampratio_mean.eps}
@@ -575,7 +613,7 @@ rates, anomaly from the mean profile.}
 	\SI{34}{\degreeCelsius} b) Amplification relative to the mean profile c) 
 	Temperature anomalies relative to mean profile d) Moist convective heating 
 rates, anomaly from the mean profile.}
-\label{fig:scmsstprof}
+\label{fig:scmsstamp}
 \end{figure}
 
 In order to study the land surface temperature response to a tropospheric 
@@ -602,17 +640,10 @@ SST anomalies for small increments and 1K changes in SST. Comparing a) and c)
 also demonstrates the difference between small increment changes in SST (c) 
 which are relative in magnitude to interannual variability, and \SI{1}{\kelvin} 
 increments, and while the former shows much greater variation between the 
-profiles the general pattern is still clear and similar to a).  The magnitude of 
-the amplification is more clearly shown in Fig.\ref{fig:scmsstprof} b), which 
-measures the amplification of the SST anomaly with height relative to the mean 
-value.  For example, a value of 2 at \SI{300}{\hecto\pascal} indicates that a 
-surface anomoly of \SI{1.5}{\kelvin} would lead to a \SI{3}{\kelvin} anomaly at 
-that height.  It shows that positive and negative anomalies are amplified to a 
-similar extant, although the tropopause is higher for the positive anomalies 
-leading to a difference at \SI{200}{\hecto\pascal}.  Figure \ref{fig:scmsstprof} 
-c) demonstrates that the upper tropospheric anomalies are a result of heating by 
-moist convection. Plots of the heating due to dry convection (not shown) show 
-uniform heating rate throughout the troposphere.
+profiles the general pattern is still clear and similar to a).  .  Figure 
+\ref{fig:scmsstprof} c) demonstrates that the upper tropospheric anomalies are a 
+result of heating by moist convection. Plots of the heating due to dry 
+convection (not shown) show uniform heating rate throughout the troposphere.
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_prof_cq_meananom.eps}
