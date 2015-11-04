@@ -597,13 +597,29 @@ rates, anomaly from the mean profile.}
 \end{figure}
 
 The magnitude of the tropospheric amplification is more clearly shown in Figure 
-\ref{fig:scmsstamp}, which measures the amplification of the SST anomaly with 
-height relative to the mean value.  For example, a value of 2 at 
-\SI{300}{\hecto\pascal} indicates that a surface anomoly of \SI{1.5}{\kelvin} 
-would lead to a \SI{3}{\kelvin} anomaly at that height.  It shows that positive 
-and negative anomalies are amplified to a similar extant, although the 
-tropopause is higher for the positive anomalies leading to a difference at 
-\SI{200}{\hecto\pascal}.
+\ref{fig:scmsstamp}. For this plot each anomalous temperature profile was 
+divided by the SST anomaly used to create it. For example; taking the 
+temperature profile created with an SST of \SI{30}{\degreeCelsius}, first the 
+anomalous profile was created by minusing the median profile 
+(\SI{26}{\degreeCelsius} profile), then the anomalous profile was divided by the 
+anomalous SST, in this case the mean SST is \SI{26}{\celsius} so the anomalous 
+SST value is \SI{4}{\celsius}.  This gives a ratio of amplification at each 
+level, starting at unity at the surface and increasing to above 2 at 
+\SI{300}{\hecto\pascal}.  In this way we get a measure of the amplification of 
+the SST anomaly with height relative to the mean value.  A value of 2 at 
+\SI{300}{\hecto\pascal} would indicates that a surface anomaly of 
+\SI{1.5}{\kelvin} would lead to a \SI{3}{\kelvin} anomaly at that height.  
+
+From Figure \ref{fig:scmsstamp} (a) we see that for large SST changes the 
+positive anomalies (reds) show a larger amplification than the negative 
+anomalies (blues), in addition the tropopause is higher for the positive 
+anomalies leading to a difference at \SI{200}{\hecto\pascal}. The picture is 
+much less clear in \ref{fig:scmsstamp} (b). There doesn't appear to be a 
+significant difference between the positive and negative anomalies, however the 
+overall values do seem to be similar at around 2-3. From these plots we can 
+conlude that the amplification of surface temperature is fairly robust for a 
+range of scenarios, for large SST anomalies there is greater amplification for 
+warm anomalies, and there's a high level of variability for small SST anomalies.
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_prof_ampratio_mean.eps}
@@ -632,28 +648,6 @@ model was run with \SI{1}{\degreeCelsius} increments from
 \SI{19}{\degreeCelsius} to \SI{34}{\degreeCelsius}, to test the response of the 
 model over a wide range of SSTs.
 
-The tropospheric response and the amplification of surface anomalies due to 
-moist convection is shown in Figure \ref{fig:scmsstprof}.  In 
-Fig.\ref{fig:scmsstprof} a) and c) the temperature anomalies relative to the 
-mean profile show the amplification with height of both positive and negative 
-SST anomalies for small increments and 1K changes in SST. Comparing a) and c) 
-also demonstrates the difference between small increment changes in SST (c) 
-which are relative in magnitude to interannual variability, and \SI{1}{\kelvin} 
-increments, and while the former shows much greater variation between the 
-profiles the general pattern is still clear and similar to a).  .  Figure 
-\ref{fig:scmsstprof} c) demonstrates that the upper tropospheric anomalies are a 
-result of heating by moist convection. Plots of the heating due to dry 
-convection (not shown) show uniform heating rate throughout the troposphere.
-
-\begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{enso_prof_cq_meananom.eps}
-\caption{Heating and temperature profiles for the SCM. a) Temperature anomaly 
-	relative to mean profile for SSTs from \SI{19}{\degreeCelsius} to 
-	\SI{34}{\degreeCelsius} b) Amplification relative to the mean profile c) 
-	Temperature anomalies relative to mean profile d) Moist convective heating 
-rates, anomaly from the mean profile.}
-\label{fig:scmsstprof}
-\end{figure}
 
 \subsection{The Weak Temperature Gradient Approximation}
 If we consider the tropical tropospheric temperature to be largely controlled by 
