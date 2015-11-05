@@ -483,28 +483,6 @@ column.
 \subsection{Tropospheric response to imposed SSTs in a single column}
 \label{trop_response_ocean}
 
-For each bit:
-Ask yourself Qs
-How does it relate to the introduction?
-How do I explain this to past Nick?
-How does it relate, reinforce the conclusions?
-
-\begin{itemize}
-	\item What are we doing: Examine at ocean column temperature profiles
-	\item Why: See how well they align to theory, large/small anomalies
-	\item Does model show upper tropospheric amplification due to moist 
-		convection (i.e. moist adiabat)
-	\item Compare small and large anomalies
-	\item Large anomalies follow moist adiabat
-	\item Small anomalies show more variability in profiles
-	\item Quantify upper tropospheric amplification
-	\item Look at convective heating profile, which confirms upper trop 
-		amplification due to convective heating.
-	\item Summary: Single column model shows upper atmospheric amplification, 
-		due to moist convection (i.e. profiles are moist adiabatic), but show 
-		variability for small difference in SST.
-\end{itemize}
-
 Before we begin our land surface response experiments we must generate the 
 tropospheric temperature profiles above an ocean surface. By looking at 
 temperature profiles as we vary the SST about an average tropical value we can 
@@ -648,14 +626,27 @@ model was run with \SI{1}{\degreeCelsius} increments from
 \SI{19}{\degreeCelsius} to \SI{34}{\degreeCelsius}, to test the response of the 
 model over a wide range of SSTs.
 
+We have looked at the tropospheric temperature response to imposed SSTs in the 
+single-column model. The model largely follows changes in the moist adiabat for 
+relatively large SST changes, and for small difference that are comparable to 
+interannual variability we see a large amount of variance but a similar 
+tendency. The next step is to use these profiles above a land surface, and to do 
+that we are going to utilise the Weak Temperature Gradient approximation.
 
 \subsection{The Weak Temperature Gradient Approximation}
-If we consider the tropical tropospheric temperature to be largely controlled by 
-the ocean surface temperature then we can use a single column model to study the 
-land/ocean temperature contrast by utilising the Weak Temperature Gradient (WTG) 
-Approximation. The WTG approximation was introduced in Chapter \ref{intro_wtg}, 
-and it is use in the single column model as a way to parametize the large scale 
-circulation.
+The Weak Temperature Gradient (WTG) approximation is used to parametize the 
+large scale tropical circulation. Due the small coriolis force near the equator 
+the tropical troposphere is unable to maintain strong temperature gradients, 
+allowing areas of strong convection to control the tropical tropospheric 
+temperatures.  When the single-column model is run in WTG mode a temperature 
+profile is imposed in the free troposphere at a specified height, with the 
+temperature below able to adjust.
+
+largely controlled by the ocean surface temperature then we can use a single 
+column model to study the land/ocean temperature contrast by utilising the Weak 
+Temperature Gradient (WTG) Approximation. The WTG approximation was introduced 
+in Chapter \ref{intro_wtg}, and it is use in the single column model as a way to 
+parametize the large scale circulation.
 Initially a range of temperature profiles are generated in an ocean column with 
 varying SSTs, then those profile can be imposed above a land surface.  In a 
 single column with a land surface the temperature profile is relaxed towards the 
