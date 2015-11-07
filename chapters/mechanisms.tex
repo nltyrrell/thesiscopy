@@ -638,9 +638,13 @@ The Weak Temperature Gradient (WTG) approximation is used to parametize the
 large scale tropical circulation. Due the small coriolis force near the equator 
 the tropical troposphere is unable to maintain strong temperature gradients, 
 allowing areas of strong convection to control the tropical tropospheric 
-temperatures.  When the single-column model is run in WTG mode a temperature 
-profile is imposed in the free troposphere at a specified height, with the 
-temperature below able to adjust.
+temperatures.  The assumption we use is that tropospheric temperatures above 
+land and ocean are controlled by convecting regions of the ocean.
+
+The single-column model can be run in WTG mode. In this mode a temperature 
+profile is imposed in the free troposphere above a specified height, and the 
+temperature below able to adjust. Similar model setups have been used in many 
+previous studies (\citet{Ramsay2011},
 
 largely controlled by the ocean surface temperature then we can use a single 
 column model to study the land/ocean temperature contrast by utilising the Weak 
@@ -862,7 +866,7 @@ mixed layer depth of the surface, a) and c) vary in the evaporative fraction.}
 \clearpage
 
 
-\subsection{Surface Temperature Relationships}
+\subsubsection{Surface Temperature Relationships}
 
 \begin{itemize}
 	\item How is the ocean column (via the imposed profile) controlling the land 
