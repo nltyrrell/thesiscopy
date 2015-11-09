@@ -638,100 +638,17 @@ The Weak Temperature Gradient (WTG) approximation is used to parametize the
 large scale tropical circulation. Due the small coriolis force near the equator 
 the tropical troposphere is unable to maintain strong temperature gradients, 
 allowing areas of strong convection to control the tropical tropospheric 
-temperatures.  The assumption we use is that tropospheric temperatures above 
-land and ocean are controlled by convecting regions of the ocean.
+temperatures.  The assumption we use is that the uniformity of tropospheric 
+temperatures in the tropical band means that temperature profiles above land and 
+ocean are controlled by convecting regions of the ocean. This allows us to use 
+the profiles from an ocean column above land.
 
 The single-column model can be run in WTG mode. In this mode a temperature 
 profile is imposed in the free troposphere above a specified height, and the 
-temperature below able to adjust. Similar model setups have been used in many 
-previous studies (\citet{Ramsay2011},
-
-largely controlled by the ocean surface temperature then we can use a single 
-column model to study the land/ocean temperature contrast by utilising the Weak 
-Temperature Gradient (WTG) Approximation. The WTG approximation was introduced 
-in Chapter \ref{intro_wtg}, and it is use in the single column model as a way to 
-parametize the large scale circulation.
-Initially a range of temperature profiles are generated in an ocean column with 
-varying SSTs, then those profile can be imposed above a land surface.  In a 
-single column with a land surface the temperature profile is relaxed towards the 
-imposed profile in the free troposphere and allowed to vary near the surface, 
-thereby simulating the control of the free tropospheric temperatures by, for 
-example, Pacific ocean anomalies.
-
-\subsection{Lower atmospheric response to a free tropospheric forcing}
-\begin{itemize}
-	\item Look at how the temperature profile responds to the imposed profiles 
-		and compare to ocean profiles.
-	\item Test if changes in lapse rate with warmer/colder SSTs corresponds to 
-		predicted changes according to Joshi or O'Gorman theory.
-	\item Findings:
-		\begin{itemize}
-			\item Variations in ocean column lapse rate with warming/cooling 
-				insignificant, doesn't fit with O'Gorman theory
-			\item Changing height of LCL in land column with warming and cooling 
-				corresponds to amplified land surface temperatures.
-		\end{itemize}
-	\end{itemize}
-
-We will now look at the atmospheric temperature profiles, focusing on one set of 
-runs from the single column model. The run with a PFixT (pressure above which 
-the temperature profile remains fixed) of \SI{600}{\hecto\pascal} and 
-evaporative fraction of 0.3 was chosen because the low evaporative fraction 
-resulted in larger deviations between the temperature profiles of the land and 
-ocean columns allowing for easier comparison. The results from other runs were 
-similar but of different magnitude. \\
-\citet{Byrne2013a} outline a mechanism for the global warming land/ocean 
-contrast based on the height of the lifting condensation level (LCL), as 
-discussed in Chapter \ref{sec:logw}. A schematic of the potential temperature 
-($\theta$) profile is shown in the Figure \ref{fig:bo_fig1}. It demonstrates 
-that due to a difference in LCL heights the temperature difference between land 
-and ocean is dependent on the saturated moist adiabatic lapse rate 
-($\Gamma_m^*$), and as $\Gamma_m^*$ reduces with warming, the difference between 
-land and ocean increases.
-
-\begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{{byrne_ogorman_fig1}.png}\\
-\caption{Figure 1 from \citet{Byrne2013a}. A schematic of the potential 
-temperature}
-\label{fig:bo_fig1}
-\end{figure}
-
-Comparing this to the profile of $\theta$ in Figure \ref{fig:scmthprof} a) we 
-see some similarity in the mean profile (the black line), due the different LCL 
-heights, but it is clear that the land profile diverges from the ocean column 
-$\Gamma_m^*$ above the LCL.  According to the Byrne and O'Gorman theory there 
-should be a change in the ocean column $\Gamma_m^*$ between the land and ocean 
-LCL levels as the profile warms and cools, but no significant change is shown. 
-The changes are more easily seen in Figure \ref{fig:scmthprof} c) and d). For 
-this figure the SST values were grouped into five mean values with the intention 
-of showing the evolution of the change away from the mean value. If $\Gamma_m^*$ 
-between the land and ocean LCLs were controlling the land/sea contrast then the 
-warmest and coolest anomalous ocean column (dashed) profiles in 
-\ref{fig:scmthprof} d) would be seen to flatten from \SI{950}{\hecto\pascal} to 
-\SI{900}{\hecto\pascal}, instead they are mostly vertical. The land (solid) 
-profiles show where the amplification is occuring.  The largest change in the 
-warmest and coolest profile is occuring around \SI{950}{\hecto\pascal} to 
-\SI{900}{\hecto\pascal}. This is due to an increase (decrease) in the height of 
-the LCL with warming (cooling). The contrasting $\Gamma_m^*$ and dry adiabatic 
-lapse rate ($\Gamma_d$) gradients means that a small change in the LCL over land 
-leads to large change in the surface temperature. The warmest and coolest land 
-profiles also show a significant deviation from the mean above the LCL, around 
-\SI{900}{\hecto\pascal} to \SI{800}{\hecto\pascal}.  
-
-
-\begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{{land_thetaprof_e3_p600}.eps}
-\includegraphics[width=0.5\textwidth]{{land_deltatheta_e3_p600}.eps}\\
-\includegraphics[width=0.5\textwidth]{{land_thetaprof_fifth_e3_p600}.eps}
-\includegraphics[width=0.5\textwidth]{{land_deltatheta_fifth_e3_p600}.eps}
-\caption{Single column model profiles of theta (a), change in theta from mean 
-theta value (b). For c) and d) the profiles have been grouped into five bins.  
-The SST values range from \SI{25.00}{\degreeCelsius} to 
-\SI{26.50}{\degreeCelsius} and the land has an evaporative fraction of 0.3}
-\label{fig:scmthprof}
-\end{figure}
-
-\clearpage
+temperature below is able to adjust. Similar model setups have been used in a 
+number of previous studies (e.g. \citet{Sobel2000}, \citet{Lintner2005}, 
+\citet{Ramsay2011}), although none have specifically looked at the land/ocean 
+contrast.
 
 \subsection{Values of land sea contrast modelled with a single column model}
 
@@ -743,25 +660,59 @@ The SST values range from \SI{25.00}{\degreeCelsius} to
 	\item Pressure at which profile is fixed does not control $R_{l/o}$
 \end{itemize}
 
-Parameter testing was discussed in Chapter \ref{methods} in relation to the 
-stability of the model. Here we will discuss parameters affecting physical 
-processes, with some results shown in Table \ref{tab:scmrlo}. The simplicity of 
-the model means the properties of the land surface are primarily controlled by 
-the evaporative fraction. By considering the evaporative fraction as a measure 
-of soil moisture the results can be related back to observations and GCM 
-results.  The evaporative fraction was found to be the strongest controlling 
-factor of the value of $R_{l/o}$, in all scenarios a decrease in evaporative 
-fraction lead to an increase in $R_{l/o}$. When using the model in WTG mode it 
-is possible to adjust the pressure at which the temperature profile remains 
-fixed (PFixT).  It would seem likely that this would influence the value of 
-$R_{l/o}$; as the pressure at which the profile remains fixed increases there is 
-more potential for the temperature below this to vary.  However it was found 
-that PFixT had no clear influence on $R_{l/o}$, implying the variation in 
-temperature below the level of the fixed temperature profile is not being 
-significantly impacted by the specifics of the model setup. This is a positive 
-outcome, as a dependance of $R_{l/o}$ on PFixT would indicate a dependance on a 
-non-physical model parameter. Instead we see that we can simulate control of the 
-tropical troposphere by tropical oceans and get robust values of $R_{l/o}$.
+We have discussed the temperature profiles above an ocean surface and introduced 
+the WTG approximation which allows us to use these profiles above a land 
+surface.  We can now look at the response of a land surface to the imposed 
+temperature profiles, and subsequently calculate the modelled land/ocean 
+contrast.  For the tropospheric forcing we will be using the temperature 
+profiles created with SSTs that were centred on \SI{25.75}{\celsius} and varied 
+in \SI{0.05}{\celsius} increments from \SIrange{25.00}{26.50}{\celsius}. These 
+values were used to represent interannual variability. As mentioned, the height 
+above which the temperature profile is fixed can be assigned, and is designated 
+as PFixT (Pressure above which to Fix the Temperature profile).  The land 
+surface is represented very simply by changing the evaporative fraction and 
+using a small mixed layer depth.
+
+Figure \ref{fig:scm_tlandsst} shows the SST anomalies (from the mean value of 
+\SI{25.75}{\celsius}) plotted against the resulting $T_{land}$ anomalies 
+(calculated from the mean value of $T_{land}$ for all SSTs) for three 
+evaporative fractions and a PFitxT value of \SI{600}{\hecto\pascal}. The lines 
+are the linear regressions between the SST and $T_{land}$. The regression lines 
+are a useful visual representation of the regression coefficient, $R_{l/o}$, 
+used to measure the interannual land/ocean contrast. The black dotted line is 
+the one-to-one line; any regression line that is steeper implies an $R_{l/o}>1$.  
+What we see are $R_{l/o}$ values greater than one, i.e. the land ocean contrast 
+exists, and the steepness increases with decreasing evaporative fraction (drier 
+surface). It should be noted for absolute temperatures we would also see the 
+$T_{land}$ values increasing for drier surfaces, but we are concerned here with 
+deviations around the mean. 
+
+We now have a measure of the land/ocean contrast in the single column model, 
+$R_{l/o}$, that we can compare with observations and GCM results, and we can use 
+the simplified model to see what factors are controlling $R_{l/o}$. In Table 
+\ref{tab:scmrlo} are values of $R_{l/o}$ for different evaporative fractions and 
+PFixT values. Firstly, we note that the magnitudes of $R_{l/o}$ are comparable 
+to the observational and GCM values seen in Table \ref{tab:allstats}. The 
+single-column model's values range from 1.11 to 1.63, compared to observation 
+and GCM tropical values of 1.19 to 1.35, or global values of 1.26 to 1.50.  
+Deconstructing the value of $R_{l/o}$ somewhat, we can look at the values of the 
+correlation of land/ocean temperatures and the ratio of standard deviations.  
+The single-column model results compare reasonably well to the observations and 
+GCM tropical values, with correlation of around
+
+The evaporative fraction was found to be the strongest controlling factor of the 
+value of $R_{l/o}$, in all scenarios a decrease in evaporative fraction lead to 
+an increase in $R_{l/o}$. When using the model in WTG mode it is possible to 
+adjust the pressure at which the temperature profile remains fixed (PFixT).  It 
+would seem likely that this would influence the value of $R_{l/o}$; as the 
+pressure at which the profile remains fixed increases there is more potential 
+for the temperature below this to vary.  However it was found that PFixT had no 
+clear influence on $R_{l/o}$, implying the variation in temperature below the 
+level of the fixed temperature profile is not being significantly impacted by 
+the specifics of the model setup. This is a positive outcome, as a dependance of 
+$R_{l/o}$ on PFixT would indicate a dependance on a non-physical model 
+parameter. Instead we see that we can simulate control of the tropical 
+troposphere by tropical oceans and get robust values of $R_{l/o}$.
 
 \begin{figure}[ht]
 \includegraphics[width=0.6\textwidth]{{land_anom_intvar_tsurf_p600}.eps}
@@ -821,6 +772,84 @@ from that profile}
 	\end{tabular}
 	\end{table}
 \end{center}
+
+\subsection{Lower atmospheric response to a free tropospheric forcing}
+\begin{itemize}
+	\item Look at how the temperature profile responds to the imposed profiles 
+		and compare to ocean profiles.
+	\item Test if changes in lapse rate with warmer/colder SSTs corresponds to 
+		predicted changes according to Joshi or O'Gorman theory.
+	\item Findings:
+		\begin{itemize}
+			\item Variations in ocean column lapse rate with warming/cooling 
+				insignificant, doesn't fit with O'Gorman theory
+			\item Changing height of LCL in land column with warming and cooling 
+				corresponds to amplified land surface temperatures.
+		\end{itemize}
+	\end{itemize}
+
+beginning with the the atmospheric temperature profiles and focusing on one set 
+of runs. The results below use a PFixT of \SI{600}{\hecto\pascal}.    An 
+evaporative fraction of 0.3 was chosen for the results discussed below as the 
+low evaporative (relative to say, 0.5 or 0.7) fraction resulted in larger 
+deviations between the temperature profiles of the land and ocean columns, 
+allowing for easier comparison. The results from other runs with different 
+evaporative fractions and PFixT values were similar but of different magnitude, 
+and will be discussed later.\\
+
+\citet{Byrne2013a} outline a mechanism for the global warming land/ocean 
+contrast based on the height of the lifting condensation level (LCL), as 
+discussed in Chapter \ref{sec:logw}. A schematic of the potential temperature 
+($\theta$) profile is shown in the Figure \ref{fig:bo_fig1}. It demonstrates 
+that due to a difference in LCL heights the temperature difference between land 
+and ocean is dependent on the saturated moist adiabatic lapse rate 
+($\Gamma_m^*$), and as $\Gamma_m^*$ reduces with warming, the difference between 
+land and ocean increases.
+
+\begin{figure}[ht]
+\includegraphics[width=0.5\textwidth]{{byrne_ogorman_fig1}.png}\\
+\caption{Figure 1 from \citet{Byrne2013a}. A schematic of the potential 
+temperature}
+\label{fig:bo_fig1}
+\end{figure}
+
+Comparing this to the profile of $\theta$ in Figure \ref{fig:scmthprof} a) we 
+see some similarity in the mean profile (the black line), due the different LCL 
+heights, but it is clear that the land profile diverges from the ocean column 
+$\Gamma_m^*$ above the LCL.  According to the Byrne and O'Gorman theory there 
+should be a change in the ocean column $\Gamma_m^*$ between the land and ocean 
+LCL levels as the profile warms and cools, but no significant change is shown. 
+The changes are more easily seen in Figure \ref{fig:scmthprof} c) and d). For 
+this figure the SST values were grouped into five mean values with the intention 
+of showing the evolution of the change away from the mean value. If $\Gamma_m^*$ 
+between the land and ocean LCLs were controlling the land/sea contrast then the 
+warmest and coolest anomalous ocean column (dashed) profiles in 
+\ref{fig:scmthprof} d) would be seen to flatten from \SI{950}{\hecto\pascal} to 
+\SI{900}{\hecto\pascal}, instead they are mostly vertical. The land (solid) 
+profiles show where the amplification is occuring.  The largest change in the 
+warmest and coolest profile is occuring around \SI{950}{\hecto\pascal} to 
+\SI{900}{\hecto\pascal}. This is due to an increase (decrease) in the height of 
+the LCL with warming (cooling). The contrasting $\Gamma_m^*$ and dry adiabatic 
+lapse rate ($\Gamma_d$) gradients means that a small change in the LCL over land 
+leads to large change in the surface temperature. The warmest and coolest land 
+profiles also show a significant deviation from the mean above the LCL, around 
+\SI{900}{\hecto\pascal} to \SI{800}{\hecto\pascal}.  
+
+
+\begin{figure}[ht]
+\includegraphics[width=0.5\textwidth]{{land_thetaprof_e3_p600}.eps}
+\includegraphics[width=0.5\textwidth]{{land_deltatheta_e3_p600}.eps}\\
+\includegraphics[width=0.5\textwidth]{{land_thetaprof_fifth_e3_p600}.eps}
+\includegraphics[width=0.5\textwidth]{{land_deltatheta_fifth_e3_p600}.eps}
+\caption{Single column model profiles of theta (a), change in theta from mean 
+theta value (b). For c) and d) the profiles have been grouped into five bins.  
+The SST values range from \SI{25.00}{\degreeCelsius} to 
+\SI{26.50}{\degreeCelsius} and the land has an evaporative fraction of 0.3}
+\label{fig:scmthprof}
+\end{figure}
+
+\clearpage
+
 
 % \clearpage
 \subsection{Variability and instability - Role of convection}
