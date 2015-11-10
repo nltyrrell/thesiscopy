@@ -687,6 +687,14 @@ surface). It should be noted for absolute temperatures we would also see the
 $T_{land}$ values increasing for drier surfaces, but we are concerned here with 
 deviations around the mean. 
 
+\begin{figure}[ht]
+\includegraphics[width=0.6\textwidth]{{land_anom_intvar_tsurf_p600}.eps}
+\caption{The relationship between $T_{land}$ and SSTs, using anomalies, for 
+three evaporative fractions of 0.3, 0.5, and 0.7.}
+\label{fig:scm_tlandsst}
+\end{figure}
+
+
 We now have a measure of the land/ocean contrast in the single column model, 
 $R_{l/o}$, that we can compare with observations and GCM results, and we can use 
 the simplified model to see what factors are controlling $R_{l/o}$. In Table 
@@ -697,53 +705,13 @@ single-column model's values range from 1.11 to 1.63, compared to observation
 and GCM tropical values of 1.19 to 1.35, or global values of 1.26 to 1.50.  
 Deconstructing the value of $R_{l/o}$ somewhat, we can look at the values of the 
 correlation of land/ocean temperatures and the ratio of standard deviations.  
-The single-column model results compare reasonably well to the observations and 
-GCM tropical values, with correlation of around
-
-The evaporative fraction was found to be the strongest controlling factor of the 
-value of $R_{l/o}$, in all scenarios a decrease in evaporative fraction lead to 
-an increase in $R_{l/o}$. When using the model in WTG mode it is possible to 
-adjust the pressure at which the temperature profile remains fixed (PFixT).  It 
-would seem likely that this would influence the value of $R_{l/o}$; as the 
-pressure at which the profile remains fixed increases there is more potential 
-for the temperature below this to vary.  However it was found that PFixT had no 
-clear influence on $R_{l/o}$, implying the variation in temperature below the 
-level of the fixed temperature profile is not being significantly impacted by 
-the specifics of the model setup. This is a positive outcome, as a dependance of 
-$R_{l/o}$ on PFixT would indicate a dependance on a non-physical model 
-parameter. Instead we see that we can simulate control of the tropical 
-troposphere by tropical oceans and get robust values of $R_{l/o}$.
-
-\begin{figure}[ht]
-\includegraphics[width=0.6\textwidth]{{land_anom_intvar_tsurf_p600}.eps}
-\caption{The relationship between $T_{land}$ and SSTs, using anomalies, for 
-three evaporative fractions of 0.3, 0.5, and 0.7.}
-\label{fig:scm_tlandsst}
-\end{figure}
-
-
-Overall the values of $R_{l/o}$ are within a realistic range, from 1.1 to 1.6.
-Even for the very moist surface -- an evaporative fraction on 0.7 -- the values 
-are similar the tropical values from observations ($R_{l/o, obs} =1.19$), and 
-the ENSO-Slab run ($R_{l/o, enso} =1.17$), while the CMIP5 ($R_{l/o,cmip} 
-=1.35$) and the AMIP run ($R_{l/o, amip} =1.26$) tropical values are closer to 
-corresponding values for an evaporative fraction of 0.5. We can compare the 
-comparitave variability and co-variability of the land and ocean columns by 
-looking at the ratio of standard deviation and the correlation between the 
-columns. It is primarily the ratio of standard deviation which is causing the 
-increase in $R_{l/o}$ with decreasing evaporative fraction, as the correlation 
-between the land and ocean columns, which is around 0.7, doesn't change 
-significantly. Although we can't measure changes in the observation and GCM 
-values of the ratio of standard deviation or correlation with changing surface 
-moisture, we can see that the tropical values are similar to the single column 
-model, with correlation of around 0.8 and ratio of standard deviation of around 
-1.4, see Table \ref{tab:rlo}.  The consistency of these statistics between the 
-  single column model and observations and GCMs are at least an indication that 
-  aspects of the relationship between the land and ocean are well represented by 
-  the single column model. The single column model results also indicate a 
-  strong dependance of the magnitude of $R_{l/o}$ on surface moisture 
-  availability.
-
+Some of the single-column model results compare well to the observations and GCM 
+tropical values, such as for an evaporative fractions of 0.5 the correlations 
+are 0.77 to 0.79 and ratio standard deviations are 1.58 to 1.84, compare to 
+obs/GCM correlations of 0.81 to 0.85 and ratio of standard deviations of 1.37 to 
+1.48. This tells us that single-column model exhibits slightly higher difference 
+  in the land/ocean variance, but overall the $R_{l/o}$ is a metric that is 
+  comparable between the simple models and the observations and GCM results.
 
 \begin{center}
 	\begin{table}[ht]
@@ -772,6 +740,49 @@ from that profile}
 	\end{tabular}
 	\end{table}
 \end{center}
+
+Now that we have a metric to compare our simplified model with previous results 
+we can begin to investigate the factors controlling the land/ocean contrast. In 
+Table \ref{tab:scmrlo} two parameters have been tested; the evaporative fraction 
+and PFixtT. In contrast the value of PFixT does not show a consistent influence 
+on $R_{l/o}$. It is possible that PFixT could influence the value of $R_{l/o}$; 
+as the pressure at which the profile remains fixed decreases there is more 
+potential for the temperature below this to vary.  That PFixT had no clear 
+influence on $R_{l/o}$ implies the variation in temperature below the level of 
+the fixed temperature profile is not being significantly impacted by the 
+specifics of the model setup.  This is a positive outcome, as a dependance of 
+$R_{l/o}$ on PFixT would indicate a dependance on a non-physical model 
+parameter. Instead we see that we can simulate control of the tropical 
+troposphere by tropical oceans and get robust values of $R_{l/o}$.
+The evaporative fraction was found to be the strongest controlling factor of the 
+value of $R_{l/o}$, in all scenarios a decrease in evaporative fraction lead to 
+an increase in $R_{l/o}$.  
+
+
+Overall the values of $R_{l/o}$ are within a realistic range, from 1.1 to 1.6.
+Even for the very moist surface -- an evaporative fraction on 0.7 -- the values 
+are similar the tropical values from observations ($R_{l/o, obs} =1.19$), and 
+the ENSO-Slab run ($R_{l/o, enso} =1.17$), while the CMIP5 ($R_{l/o,cmip} 
+=1.35$) and the AMIP run ($R_{l/o, amip} =1.26$) tropical values are closer to 
+corresponding values for an evaporative fraction of 0.5. Looking at how the 
+evaporative fraction is controlling the $R_{l/o}$ values we again deconstruct 
+$R_{l/o}$ into correlation and ratio of standard deviation. It is primarily the 
+ratio of standard deviation which is causing the increase in $R_{l/o}$ with 
+decreasing evaporative fraction, as the correlation between the land and ocean 
+columns doesn't change significantly.  Although we can't measure changes in the 
+observation and GCM values of the ratio of standard deviation or correlation 
+with changing surface moisture, we have seen that the tropical values are 
+similar to the single column model, with correlation of around 0.8 and ratio of 
+standard deviation of around 1.4.  The consistency of these statistics between 
+the single column model and observations and GCMs are at least an indication 
+that aspects of the relationship between the land and ocean are well represented 
+by the single column model. 
+
+The single column model results indicate a strong dependance of the magnitude of 
+$R_{l/o}$ on surface moisture availability, modelled with evaporative fraction.  
+This will be further explored by comparing the atmospheric profiles of 
+temperature above ocean and land surfaces.
+
 
 \subsection{Lower atmospheric response to a free tropospheric forcing}
 \begin{itemize}
