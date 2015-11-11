@@ -799,23 +799,32 @@ temperature above ocean and land surfaces.
 		\end{itemize}
 	\end{itemize}
 
-beginning with the the atmospheric temperature profiles and focusing on one set 
-of runs. The results below use a PFixT of \SI{600}{\hecto\pascal}.    An 
-evaporative fraction of 0.3 was chosen for the results discussed below as the 
-low evaporative (relative to say, 0.5 or 0.7) fraction resulted in larger 
-deviations between the temperature profiles of the land and ocean columns, 
-allowing for easier comparison. The results from other runs with different 
-evaporative fractions and PFixT values were similar but of different magnitude, 
-and will be discussed later.\\
+We have seen that by forcing a single-column model with tropospheric temperature 
+profiles using WTG mode we can model a land/ocean contrast, and it's magnitude 
+is comparable to observations and GCMs and dependent on the dryness of the land 
+surface.  We will now look at the atmospheric temperature profiles above land 
+and ocean and compare the results to existing theories concerning the role of 
+atmospheric lapse rates and the land/ocean contrast. The results below use a 
+PFixT of \SI{600}{\hecto\pascal} and an evaporative fraction of 0.3. The low 
+evaporative fraction (relative to 0.5 or 0.7) resulted in larger deviations 
+between the temperature profiles of the land and ocean columns, allowing for 
+easier comparison. The results from other runs with different evaporative 
+fractions and PFixT values were similar but of different magnitude.\\
 
-\citet{Byrne2013a} outline a mechanism for the global warming land/ocean 
-contrast based on the height of the lifting condensation level (LCL), as 
-discussed in Chapter \ref{sec:logw}. A schematic of the potential temperature 
-($\theta$) profile is shown in the Figure \ref{fig:bo_fig1}. It demonstrates 
-that due to a difference in LCL heights the temperature difference between land 
-and ocean is dependent on the saturated moist adiabatic lapse rate 
-($\Gamma_m^*$), and as $\Gamma_m^*$ reduces with warming, the difference between 
-land and ocean increases.
+\citet{Byrne2013a} outlined a mechanism for the global warming land/ocean 
+contrast based on the height of the lifting condensation level (LCL). A 
+schematic of the potential temperature ($\theta$) profile above land and ocean 
+is shown in the Figure \ref{fig:bo_fig1}.  It demonstrates that in the free 
+troposphere the temperature profiles above land and ocean follow the same moist 
+adiabatic profile ($\Gamma_m^*$), and then a difference in LCL heights (i.e. the 
+point where the profile flattens) results in a temperature difference between 
+land and ocean. The difference is dependent on the saturated moist adiabatic 
+lapse rate between the ocean and land LCLs. When warming occurs $\Gamma_m^*$ 
+reduces, which increases the temperature difference between land and ocean and 
+creates a land/ocean contrast that exists in transient and equilibrium global 
+warming scenarios. We can test the potential suitability of this theory for the 
+warming and cooling of interannual variability by looking at profiles of 
+potential temperature in the single column model.
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{{byrne_ogorman_fig1}.png}\\
@@ -824,26 +833,40 @@ temperature}
 \label{fig:bo_fig1}
 \end{figure}
 
-Comparing this to the profile of $\theta$ in Figure \ref{fig:scmthprof} a) we 
-see some similarity in the mean profile (the black line), due the different LCL 
-heights, but it is clear that the land profile diverges from the ocean column 
-$\Gamma_m^*$ above the LCL.  According to the Byrne and O'Gorman theory there 
-should be a change in the ocean column $\Gamma_m^*$ between the land and ocean 
-LCL levels as the profile warms and cools, but no significant change is shown. 
-The changes are more easily seen in Figure \ref{fig:scmthprof} c) and d). For 
-this figure the SST values were grouped into five mean values with the intention 
-of showing the evolution of the change away from the mean value. If $\Gamma_m^*$ 
-between the land and ocean LCLs were controlling the land/sea contrast then the 
-warmest and coolest anomalous ocean column (dashed) profiles in 
-\ref{fig:scmthprof} d) would be seen to flatten from \SI{950}{\hecto\pascal} to 
-\SI{900}{\hecto\pascal}, instead they are mostly vertical. The land (solid) 
-profiles show where the amplification is occuring.  The largest change in the 
-warmest and coolest profile is occuring around \SI{950}{\hecto\pascal} to 
-\SI{900}{\hecto\pascal}. This is due to an increase (decrease) in the height of 
-the LCL with warming (cooling). The contrasting $\Gamma_m^*$ and dry adiabatic 
-lapse rate ($\Gamma_d$) gradients means that a small change in the LCL over land 
-leads to large change in the surface temperature. The warmest and coolest land 
-profiles also show a significant deviation from the mean above the LCL, around 
+Looking now to the results of the single-column model, profiles of $\theta$ are 
+shown in Figure \ref{fig:scmthprof} (a). The dashed lines are the profiles from 
+the ocean column and the solid lines are the land column, and the colours 
+correspond to the SST forcing. In the case of the land column, the colours 
+represent which profile was imposed in the free troposphere. There is a fairly 
+clear difference in the LCL height (\SI{950}{\hecto\pascal} for ocean, 
+\SI{925}{\hecto\pascal} for land) over land and ocean which contributes to the 
+absolute temperature difference between land and ocean, although we also see the 
+land profiles diverging from the ocean above the LCL. However the absolute 
+difference in temperature is not what we are interested in, we are interested in 
+how the change with warming and cooling is amplified over land. The important 
+features are more clearly shown in Figure \ref{fig:scmthprof} (b), (c) and (d).
+
+In order to see the change in the profiles, Figure \ref{fig:scmthprof} (b) shows 
+the anomalous profiles, relative to the mean of either all ocean or land 
+columns.
+
+According to the Byrne and O'Gorman theory there should be a change in the ocean 
+column $\Gamma_m^*$ between the land and ocean LCL levels as the profile warms 
+and cools, but no significant change is shown.  The changes are more easily seen 
+in Figure \ref{fig:scmthprof} c) and d). For this figure the SST values were 
+grouped into five mean values with the intention of showing the evolution of the 
+change away from the mean value. If $\Gamma_m^*$ between the land and ocean LCLs 
+were controlling the land/sea contrast then the warmest and coolest anomalous 
+ocean column (dashed) profiles in \ref{fig:scmthprof} d) would be seen to 
+flatten from \SI{950}{\hecto\pascal} to \SI{900}{\hecto\pascal}, instead they 
+are mostly vertical. The land (solid) profiles show where the amplification is 
+occuring.  The largest change in the warmest and coolest profile is occuring 
+around \SI{950}{\hecto\pascal} to \SI{900}{\hecto\pascal}.  This is due to an 
+increase (decrease) in the height of the LCL with warming (cooling). The 
+contrasting $\Gamma_m^*$ and dry adiabatic lapse rate ($\Gamma_d$) gradients 
+means that a small change in the LCL over land leads to large change in the 
+surface temperature. The warmest and coolest land profiles also show a 
+significant deviation from the mean above the LCL, around 
 \SI{900}{\hecto\pascal} to \SI{800}{\hecto\pascal}.  
 
 
