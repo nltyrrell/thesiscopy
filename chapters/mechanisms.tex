@@ -651,7 +651,7 @@ number of previous studies (e.g. \citet{Sobel2000}, \citet{Lintner2005},
 contrast.
 
 \subsection{Values of land sea contrast modelled with a single column model}
-
+\label{sec:scmrlo}
 \begin{itemize}
 	\item How do we generate $R_{l/o}$ values?
 	\item Demonstrated in Figure \ref{fig:scm_tlandsst}
@@ -799,17 +799,18 @@ temperature above ocean and land surfaces.
 		\end{itemize}
 	\end{itemize}
 
-We have seen that by forcing a single-column model with tropospheric temperature 
-profiles using WTG mode we can model a land/ocean contrast, and it's magnitude 
-is comparable to observations and GCMs and dependent on the dryness of the land 
-surface.  We will now look at the atmospheric temperature profiles above land 
-and ocean and compare the results to existing theories concerning the role of 
-atmospheric lapse rates and the land/ocean contrast. The results below use a 
-PFixT of \SI{600}{\hecto\pascal} and an evaporative fraction of 0.3. The low 
-evaporative fraction (relative to 0.5 or 0.7) resulted in larger deviations 
-between the temperature profiles of the land and ocean columns, allowing for 
-easier comparison. The results from other runs with different evaporative 
-fractions and PFixT values were similar but of different magnitude.\\
+We have seen that by using the WTG mode we can force a single-column model with 
+tropospheric temperature profiles and model a land/ocean contrast, and it's 
+magnitude is comparable to observations and GCMs and dependent on the dryness of 
+the land surface.  We will now look at the atmospheric temperature profiles 
+above land and ocean and compare the results to existing theories concerning the 
+role of atmospheric lapse rates and the land/ocean contrast. The results below 
+use a PFixT of \SI{600}{\hecto\pascal} and an evaporative fraction of 0.3. The 
+low evaporative fraction (relative to 
+0.5 or 0.7) resulted in larger deviations between the temperature profiles of 
+the land and ocean columns, allowing for easier comparison. The results from 
+other runs with different evaporative fractions and PFixT values were similar 
+but of different magnitude.\\
 
 \citet{Byrne2013a} outlined a mechanism for the global warming land/ocean 
 contrast based on the height of the lifting condensation level (LCL). A 
@@ -819,11 +820,11 @@ troposphere the temperature profiles above land and ocean follow the same moist
 adiabatic profile ($\Gamma_m^*$), and then a difference in LCL heights (i.e. the 
 point where the profile flattens) results in a temperature difference between 
 land and ocean. The difference is dependent on the saturated moist adiabatic 
-lapse rate between the ocean and land LCLs. When warming occurs $\Gamma_m^*$ 
-reduces, which increases the temperature difference between land and ocean and 
-creates a land/ocean contrast that exists in transient and equilibrium global 
-warming scenarios. We can test the potential suitability of this theory for the 
-warming and cooling of interannual variability by looking at profiles of 
+lapse rate between the ocean and land LCLs. $\Gamma_m^*$ reduces when warming 
+occurs, which \textit{increases} the temperature difference between land and 
+ocean and creates a land/ocean contrast that exists in transient and equilibrium 
+global warming scenarios. We can test the potential suitability of this theory 
+for the warming and cooling of interannual variability by looking at profiles of 
 potential temperature in the single column model.
 
 \begin{figure}[ht]
@@ -841,33 +842,45 @@ represent which profile was imposed in the free troposphere. There is a fairly
 clear difference in the LCL height (\SI{950}{\hecto\pascal} for ocean, 
 \SI{925}{\hecto\pascal} for land) over land and ocean which contributes to the 
 absolute temperature difference between land and ocean, although we also see the 
-land profiles diverging from the ocean above the LCL. However the absolute 
-difference in temperature is not what we are interested in, we are interested in 
-how the change with warming and cooling is amplified over land. The important 
-features are more clearly shown in Figure \ref{fig:scmthprof} (b), (c) and (d).
+land profiles diverging from the ocean \textit{above} the LCL. However the 
+absolute difference in temperature is not what we are interested in, we are 
+interested in how the change with warming and cooling is amplified over land.  
+The important features are more clearly shown in Figure \ref{fig:scmthprof} (b), 
+(c) and (d).
 
 In order to see the change in the profiles, Figure \ref{fig:scmthprof} (b) shows 
-the anomalous profiles, relative to the mean of either all ocean or land 
-columns.
+the anomalous profiles, with the anomalies calculated relative to the mean of 
+either all ocean or land columns. Once again the dashed lines are from the ocean 
+column and the solid lines are from the land column. It would be expected that 
+for the higher and lower land temperatures the profiles have larger anomalies 
+than the ocean (i.e. it's comparable to the ratio of standard deviations seen in 
+Table \ref{tab:scmrlo}) and plotting the anomalous profiles in this way allows 
+us to see at which level the largest amplification is occuring.  The amount of 
+variability between each individual run makes it difficult to see any clear 
+tendencies, but there are dark blue (red) land profiles that are clearly more 
+negative (positive) than the ocean column profiles used to force them. To 
+clarify the picture all profiles were grouped in to five bins and the same 
+analysis was done, as seen in Figure \ref{fig:scmthprof} (c) and (d). We 
+essentially have a large positive/negative anomaly, small positive/negative 
+anomaly and no anomaly. 
 
 According to the Byrne and O'Gorman theory there should be a change in the ocean 
 column $\Gamma_m^*$ between the land and ocean LCL levels as the profile warms 
-and cools, but no significant change is shown.  The changes are more easily seen 
-in Figure \ref{fig:scmthprof} c) and d). For this figure the SST values were 
-grouped into five mean values with the intention of showing the evolution of the 
-change away from the mean value. If $\Gamma_m^*$ between the land and ocean LCLs 
-were controlling the land/sea contrast then the warmest and coolest anomalous 
-ocean column (dashed) profiles in \ref{fig:scmthprof} d) would be seen to 
-flatten from \SI{950}{\hecto\pascal} to \SI{900}{\hecto\pascal}, instead they 
-are mostly vertical. The land (solid) profiles show where the amplification is 
-occuring.  The largest change in the warmest and coolest profile is occuring 
-around \SI{950}{\hecto\pascal} to \SI{900}{\hecto\pascal}.  This is due to an 
-increase (decrease) in the height of the LCL with warming (cooling). The 
-contrasting $\Gamma_m^*$ and dry adiabatic lapse rate ($\Gamma_d$) gradients 
-means that a small change in the LCL over land leads to large change in the 
-surface temperature. The warmest and coolest land profiles also show a 
-significant deviation from the mean above the LCL, around 
-\SI{900}{\hecto\pascal} to \SI{800}{\hecto\pascal}.  
+and cools. If this process was driving the change in the single column model the 
+dashed ocean profiles in Figure \ref{fig:scmthprof} (d) would slope away from 
+the zero point, i.e. the anomalies would increase with height, and the larger 
+anomalies would slope more than the smaller anomalies. Importantly this would 
+occur in between the land and ocean LCL levels, around \SI{950}{\hecto\pascal} 
+to \SI{900}{\hecto\pascal}. Ths ocean profiles do slope away from zero, but not 
+enough to explain the land/ocean contrast. The land (solid) profiles show where 
+the amplification is occuring.  The largest change in the warmest and coolest 
+profiles is occuring around \SI{950}{\hecto\pascal} to \SI{900}{\hecto\pascal}.  
+This is due to an increase (decrease) in the height of the LCL with warming 
+(cooling). The contrasting $\Gamma_m^*$ and dry adiabatic lapse rate 
+($\Gamma_d$) gradients means that a small change in the LCL over land leads to 
+large change in the surface temperature. The warmest and coolest land profiles 
+also show a deviation from the mean above the LCL, around 
+\SI{900}{\hecto\pascal} to \SI{800}{\hecto\pascal}. 
 
 
 \begin{figure}[ht]
@@ -884,52 +897,7 @@ The SST values range from \SI{25.00}{\degreeCelsius} to
 
 \clearpage
 
-
-% \clearpage
-\subsection{Variability and instability - Role of convection}
-\label{instability}
-
-\begin{itemize}
-	\item We see large variability in surface temperature response
-	\item Timeseries of surface temperatures over land is chaotic
-	\item Most likely due to interaction of radiation and convection schemes, 
-		demonstrated by showing timeseries with that interaction turned off.
-\end{itemize}
-
-
-Given the large variability in $T_{tropos}$ and the weak connection between the 
-imposed temperature profile and variables associated with convection such as 
-cloud fraction, a discussion of the stability of the model is in order. The 
-timeseries in Figure \ref{fig:scmts} a)-c) demonstrate a range of chaotic 
-behaviours in surface temperature. For many runs forced with a cooler 
-temperature profile we see regular oscillations, it should be noted their is no 
-diurnal cycle in the model.  For forcing with higher temperatures we see a 
-decoupling of the surface temperatures and the imposed temperature profile which 
-results in a lower surface temperature from a higher forcing temperature.  The 
-oscillations and the instability are due to the interaction of clouds and 
-radiation. This is demonstrated as the interaction between the convection and 
-radiation schemes in the model can be turned off. The resultant timeseries, 
-shown in Figure \ref{fig:scmts} d), quickly reaches a stable equilibrium 
-temperature and don't demonstrate the instability see in a)-c).
-
-\begin{figure}[ht]
-\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m1_h850.eps}
-\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m2_h850.eps}\\
-\includegraphics[width=0.4\textwidth]{land_Tsurf_02_m2_h850.eps}
-\includegraphics[width=0.4\textwidth]{land_nir_Tsurf.eps}\\
-\caption{Timeseries of Tsurf in SCM forced with tropospheric temperature 
-profile. a), b) and c) all have the interaction between the convection and 
-radiation schemes turned on, it is turned off for d). a) and b) only vary in the 
-mixed layer depth of the surface, a) and c) vary in the evaporative fraction.}
-\label{fig:scmts}
-\end{figure}
-
-
-
-\clearpage
-
-
-\subsubsection{Surface Temperature Relationships}
+\subsection{Surface Temperature Relationships}
 
 \begin{itemize}
 	\item How is the ocean column (via the imposed profile) controlling the land 
@@ -942,28 +910,38 @@ mixed layer depth of the surface, a) and c) vary in the evaporative fraction.}
 cloud fraction weakly related.
 \end{itemize}
 
-To understand the factors controlling the land surface temperature $T_{land}$ of 
+We have seen that while the atmospheric profile of the single column model show 
+some similarities to the global warming lapse rate theory described by 
+\citet{Byrne2013a} but ultimately the mechanism appears to be different.  To 
+understand the factors controlling the land surface temperature ($T_{land}$) of 
 the single column model we will look at relationships between $T_{land}$ and a 
-number of variables, beginning with $T_{land}$ verse the SST used to generate 
-the imposed temperature profile, shown in Figure \ref{fig:scm_tlandsst}. The 
-regression lines represent $R_{l/o}$ and show the increase of $R_{l/o}$ with 
-decreasing evaporative fraction.  A large amount of variability is also evident 
-in the response of $T_{land}$ to the imposed temperature profile, this is a due 
-to the interaction between clouds and radiation and is discussed further in 
-Chapter \ref{instability}.  Despite the variability, model runs with different 
-values of PFixT, domain size, vertical resolution and other parameters show 
-similar relationships between $T_{land}$, SST and evaporative fraction.
+number of variables. In section \ref{sec:scmrlo} and Figure 
+\ref{fig:scm_tlandsst} we saw the relationship between $T_{land}$ and the SSTs, 
+where the SSTs were used in an ocean column to generate temperature profiles and 
+the profiles were imposed in the free troposphere of a land column. The 
+regression lines represented $R_{l/o}$ and showed the increase of $R_{l/o}$ with 
+decreasing evaporative fraction.  A large amount of variability was also evident 
+in the response of $T_{land}$ to the imposed temperature profile, this is 
+discussed further in section \ref{instability}.  Despite the variability,
+when using different values of PFixT, domain size, vertical resolution and other 
+parameters the model shows very similar relationships between $T_{land}$, SST 
+and evaporative fraction. It is evident then that the SSTs are able to 
+consistently influence $T_{land}$.
 
-Looking now at how the SST generated temperature profiles influence variables in 
-the land column, and how those variables correlate with $T_{land}$; Figure 
-\ref{fig:scm_SSTVar} shows the anomalous SST plotted against the anomalous 
-values of relative humidity, longwave and shortwave radiation and cloud 
-fraction.  The SST is that used to generate the imposed temperature profile and 
-the variables are from the land column. The correlation values are listed in 
-Table \ref{tab:scm_SSTVar} and there are few significant relationships between 
-the forcing SSTs and the land column variables. Table \ref{tab:scm_SSTVar} shows 
-that the relative humidity is partially related to the SST forcing, although the 
-highest correlation is still only -0.41, and no other correlations are above 
+We will now look at how the SST generated temperature profiles influence other 
+variables in the land column, and how these variables relate to $T_{land}$.  We 
+will be using anomalies for all variables and for the purposes of calculating 
+the mean each evaporative fraction was treated as a seperate run. The SST is 
+from the ocean column, all other variables are from the land column, forced with 
+free tropospheric temperature profiles. Figure \ref{fig:scm_SSTVar} (a) shows 
+the SST plotted against the relative humidity, longwave and shortwave radiation 
+and cloud fraction.  The SST is that used to generate the imposed temperature 
+profile and the variables are from the land column. The correlation values are 
+listed in Table \ref{tab:scm_SSTVar} and there are few significant relationships 
+between the forcing SSTs and the land column variables. Table 
+\ref{tab:scm_SSTVar} shows that the relative humidity is partially related to 
+the SST forcing, although the highest correlation is still only -0.41, and no 
+other correlations are above 
 0.30. In contrast there are clear relationships between the relative humidity, 
 longwave and shortwave radiation and cloud fraction and $T_{land}$. So we see 
 that while the imposed temperature profiles have a high correlation with the 
@@ -971,6 +949,16 @@ resultant surface temperatures in the mean values, as shown in Table
 \ref{tab:scm_rlo}, variability in the land column has a large influence on 
 surface temperatures leading to the variability shown in Figure 
 \ref{fig:scm_tlandsst}.
+
+\begin{figure}[ht]
+\includegraphics[width=0.5\textwidth]{{land_anom_intvar_rh_p600}.eps}
+\includegraphics[width=0.5\textwidth]{{land_anom_intvar_lw_p600}.eps}
+\includegraphics[width=0.5\textwidth]{{land_anom_intvar_sw_p600}.eps}
+\includegraphics[width=0.5\textwidth]{{land_anom_intvar_clf_p600}.eps}
+\caption{Relationship between; relative humidity, longwave radiation, shortwave 
+radiation and cloud fraction, and land surface response and forcing SST.}
+\label{fig:scm_SSTVar}
+\end{figure}
 
 \begin{center}
 	\begin{table}[ht]
@@ -992,17 +980,52 @@ surface temperatures leading to the variability shown in Figure
 	\end{table}
 \end{center}
 
+\clearpage
+
+
+% \clearpage
+\subsection{Variability and instability - Role of convection}
+\label{instability}
+
+\begin{itemize}
+	\item We see large variability in surface temperature response
+	\item Timeseries of surface temperatures over land is chaotic
+	\item Most likely due to interaction of radiation and convection schemes, 
+		demonstrated by showing timeseries with that interaction turned off.
+\end{itemize}
+
+A defining feature in the results in Figures \ref{fig:scm_tlandsst} and 
+\ref{fig:scmthprof} is the large amount of variability in the response of the 
+land column, for this reason a discussion of the stability of the model is in 
+order. A timeseries of the surface temperature response for a range of 
+tropospheric forcings and parameters is shown in Figures \ref{fig:scmts} 
+(a)-(c). The timeseries demonstrates chaotic behaviour in surface temperature.  
+Many runs forced with cooler temperature profiles show regular oscillations, it 
+should be noted their is no diurnal cycle in the model.  For forcing with higher 
+temperatures we see a decoupling of the surface temperatures and the imposed 
+temperature profile which results in a significant cooling of the surface 
+temperature. The oscillations and the instability are due to the interaction of 
+clouds and radiation. This can be demonstrated as the interaction between the 
+convection and radiation schemes in the model can be turned off. The resultant 
+timeseries, shown in Figure \ref{fig:scmts} d), quickly reaches a stable 
+equilibrium temperature and doesn't demonstrate the instability seen in a)-c).
+
 \begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{{land_anom_intvar_rh_p600}.eps}
-\includegraphics[width=0.5\textwidth]{{land_anom_intvar_lw_p600}.eps}
-\includegraphics[width=0.5\textwidth]{{land_anom_intvar_sw_p600}.eps}
-\includegraphics[width=0.5\textwidth]{{land_anom_intvar_clf_p600}.eps}
-\caption{Relationship between; relative humidity, longwave radiation, shortwave 
-radiation and cloud fraction, and land surface response and forcing SST.}
-\label{fig:scm_SSTVar}
+\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m1_h850.eps}
+\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m2_h850.eps}\\
+\includegraphics[width=0.4\textwidth]{land_Tsurf_02_m2_h850.eps}
+\includegraphics[width=0.4\textwidth]{land_nir_Tsurf.eps}\\
+\caption{Timeseries of Tsurf in SCM forced with tropospheric temperature 
+profile. a), b) and c) all have the interaction between the convection and 
+radiation schemes turned on, it is turned off for d). a) and b) only vary in the 
+mixed layer depth of the surface, a) and c) vary in the evaporative fraction.}
+\label{fig:scmts}
 \end{figure}
 
+
+
 \clearpage
+
 
 
 
