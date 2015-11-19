@@ -197,6 +197,7 @@ pattern forcing.
 \end{figure}
 
 \subsection{Delayed Response}
+\label{xcor}
 Figure \ref{fig:xcor} (i-l) shows cross-correlations from the ENSO-FIXSST and 
 ENSO-Slab forcing experiments. In i) and j) we see that for the fixed SST 
 experiment the global and tropical land responds to the ENSO-like forcing (red 
@@ -1400,6 +1401,8 @@ column. This will reduce the transport of heat and moisture from the ocean
 columns to the land columns, resulting in the reduced relative humidity and 
 reduced values of $R_{l/o}$ seen with increasing latitude.
 
+\clearpage
+
 \begin{figure}[ht]
 	\includegraphics[width=0.3\textwidth]{{psi_lats_0.0}.eps}
 	\includegraphics[width=0.3\textwidth]{{psi_lats_10.0}.eps}
@@ -1407,7 +1410,7 @@ reduced values of $R_{l/o}$ seen with increasing latitude.
 	\includegraphics[width=0.3\textwidth]{{psi_lats_30.0}.eps}
 	\includegraphics[width=0.3\textwidth]{{psi_lats_40.0}.eps}
 	\includegraphics[width=0.3\textwidth]{{psi_lats_50.0}.eps}\\
-	\caption{Circulation response, Psi, with changing latitude.}
+	\caption{circulation response, psi, with changing latitude.}
 	\label{fig:tdm_psi_lat}
 \end{figure}
 
@@ -1435,55 +1438,123 @@ reduced values of $R_{l/o}$ seen with increasing latitude.
 In our investigations with the single column and multi column models we found 
 that the modelled land/ocean contrast compared well to the mean global and 
 tropical values from observations and GCMs, in terms of both the statistics and 
-the vertical structure.  However, when the column model results were compared to 
-regional values from a GCM there were large discrepancies. In the column model 
-there was a robust dependancy of the value of $R_{l/o}$ on the dryness of the 
-land surface, controlled through the evaporative fraction. The value of 
-$R_{l/o}$ in the multi column model also had a dependence on latitude.  
+the vertical structure. In the column model there was a robust dependancy of the 
+value of $R_{l/o}$ on the dryness of the land surface, controlled through the 
+evaporative fraction. The value of $R_{l/o}$ in the multi column model also had 
+a dependence on latitude. However, when the column model results were compared 
+to regional values from a GCM there were large discrepancies. While the dryness 
+of the surface certainly contributes to the land/ocean contrast in the GCM 
+results, it does not control the magnitude of the regional response.  
 
+In this section we are going to investigate the land/ocean contrast by focusing 
+on the regional response of land to an ocean forcing, first using time-mean 
+composites from the enso-pacemaker experiments and then reconstructing the 
+regional response using the GREB model. 
 \newpage
 
 \subsection{Pacemaker Composite Response}
 
+The regular and repetitive forcing in the experiment allows for composites of 
+the maximum and minimum land response to be easily made. In Figures 
+\ref{fig:comp_temp} to \ref{fig:comp_pres} many variables that control or 
+respond to surface temperatures have been plotted. As we are interested in the 
+land surface response, the composites consist of six months of the maximum (or 
+minimum) response over land. The land response is delayed from the ocean forcing 
+(as outlined in section \ref{xcor}) so the composite is the mean of months 0 to 
+6 after the peak ocean forcing.
+
+The maximum and minimum temperature response at three levels is shown in figure 
+\ref{fig:comp_temp}. We show both the maximum and minimum to demonstrate the 
+linearity in the response, the minimum forcing is plotted with the colour bar 
+reversed for comparison. In figures \ref{fig:comp_temp} the magnitude of maximum 
+temperature response is slightly larger than the mimimum response at the surface 
+and very similar at high levels. Overall the response remarkably linear, and 
+that linearity extends across all the variables. 
+
+\begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{{comp_Tmax_sfc}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_Tmin_sfc}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_Tmax_700}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_Tmin_700}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_Tmax_300}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_Tmin_300}.eps}
+\caption{temperature response}
+\label{fig:comp_temp}
+\end{figure}
+
+
+\begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{{comp_dlwr_max}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_dlwr_min}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_dswr_max}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_dswr_min}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_lwclsky_max}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_lwclsky_min}.eps}
+\caption{Radiation response}
+\label{fig:comp_rad}
+\end{figure}
+
+   
+\begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{{comp_RHmax_1000}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_RHmin_1000}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_RHmax_700}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_RHmin_700}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_RHmax_300}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_RHmin_300}.eps}
+\caption{Relative Humidity response}
+\label{fig:comp_rh}
+\end{figure}
+
+\begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{{comp_cldfull_max}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_cldfull_min}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_precip_max}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_precip_min}.eps}
+\caption{Cloud and precipitation response}
+\label{fig:comp_cld}
+\end{figure}
+
+\begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{{comp_smc_max}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_smc_min}.eps}
+\caption{Soil Mositure response}
+\label{fig:comp_smc}
+\end{figure}
+
+\begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{{comp_Pmax_sfc}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_Pmin_sfc}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_GPHTmax_700}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_GPHTmin_700}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_GPHTmax_300}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_GPHTmin_300}.eps}
+\caption{Pressure and geopotential height response}
+\label{fig:comp_pres}
+\end{figure}
 
 
-\subsection{GREB Model - Deconstructing the GCM response}
+\subsection{GREB Model - Deconstructing the regional response}
 \begin{itemize}
 	\item{motivation}
 	\item{Discuss variables used/available}
 	\item{Response of pacemaker exp.}
 	\item{Response of amip exp.}
 \end{itemize}
+
+With the column model we were able to model a process by which SST variability 
+became amplified over land, leading to a land/ocean contrast. The column model 
+also showed that the magnitude of the land/ocean contrast can be controlled by 
+the evaporative fraction of the land surface. A comparison of the results with a 
+GCM showed that for many continental regions SST signals can become amplified 
+but cannot be explained by the column model.  Instead we used another simplified 
+atmospheric model -- the GREB (Globally Resolved Energy Balance) model -- to 
+deconstruct the land response to an SST forcing.  The boundary conditions of the 
+GREB model include SSTs, winds, soil moisture, and clouds. Starting with a 
+climatology, these variables can be changed individually and in combination to 
+recreate
+
+
 
 \subsection{GREB Results - Pacemaker}
 \subsubsection{u, v winds}
