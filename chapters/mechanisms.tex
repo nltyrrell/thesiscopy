@@ -1415,6 +1415,7 @@ reduced values of $R_{l/o}$ seen with increasing latitude.
 \end{figure}
 
 
+\newpage
 
 %----------------------------------------------------------------------------------------
 %	Regional Response / GREB
@@ -1437,122 +1438,105 @@ reduced values of $R_{l/o}$ seen with increasing latitude.
 
 In our investigations with the single column and multi column models we found 
 that the modelled land/ocean contrast compared well to the mean global and 
-tropical values from observations and GCMs, in terms of both the statistics and 
+tropical values from observations and GCMs in terms of both the statistics and 
 the vertical structure. In the column model there was a robust dependancy of the 
 value of $R_{l/o}$ on the dryness of the land surface, controlled through the 
 evaporative fraction. The value of $R_{l/o}$ in the multi column model also had 
 a dependence on latitude. However, when the column model results were compared 
 to regional values from a GCM there were large discrepancies. While the dryness 
 of the surface certainly contributes to the land/ocean contrast in the GCM 
-results, it does not control the magnitude of the regional response.  
+results, it does not control the magnitude of the regional response. There are 
+many continental regions where SST signals become amplified that cannot be 
+explained by the column model.
 
-In this section we are going to investigate the land/ocean contrast by focusing 
-on the regional response of land to an ocean forcing, first using time-mean 
-composites from the enso-pacemaker experiments and then reconstructing the 
-regional response using the GREB model. 
-\newpage
+In this section we are going to continue to investigate the land/ocean contrast 
+by focusing on the regional response of land to an ocean forcing. We define the 
+regional scale as continental to sub-continental, with different regions loosely 
+defined by a pattern or similarity of response in a certain area. To investigate 
+this regional response we use the GREB model (Globally Resolved Energy Balance 
+model) to recreate the patterns of temperature response seen in the 
+ENSO-Pacemaker experiments.  
 
-\subsection{Pacemaker Composite Response}
+\subsection{GREB Model - Deconstructing the regional response}
+\begin{itemize}
+	\item motivation 
+	\item Discuss variables used/available 
+	\item Response of pacemaker exp. 
+	\item Response of amip exp. 
+\end{itemize}
 
-The regular and repetitive forcing in the experiment allows for composites of 
-the maximum and minimum land response to be easily made. In Figures 
-\ref{fig:comp_temp} to \ref{fig:comp_pres} many variables that control or 
-respond to surface temperatures have been plotted. As we are interested in the 
-land surface response, the composites consist of six months of the maximum (or 
-minimum) response over land. The land response is delayed from the ocean forcing 
-(as outlined in section \ref{xcor}) so the composite is the mean of months 0 to 
-6 after the peak ocean forcing.
+The GREB model and the ENSO-Pacemaker experiments were chosen for a few specific 
+attributes. In the GREB model the prognostic variables are the surface 
+temperature, atmospheric temperature, upper ocean temperature and atmospheric 
+water vapour, all calculated on a global grid \citep{Dommenget2011}.  However, 
+the important aspect of the GREB model is that the boundary conditions include 
+SSTs, meridional and zonal winds, soil moisture, and cloud cover.  Starting with 
+climatological values, anomalies can be added to these variables to recreate, 
+for example, the atmospheric conditions during the time of the peak land 
+response to an ocean forcing. In addition, the anomalies can be added to one 
+variable individually, or in any combination to build a picture of the response, 
+and determine the important factors for each region.
 
-The maximum and minimum temperature response at three levels is shown in figure 
-\ref{fig:comp_temp}. We show both the maximum and minimum to demonstrate the 
-linearity in the response, the minimum forcing is plotted with the colour bar 
-reversed for comparison. In figures \ref{fig:comp_temp} the magnitude of maximum 
-temperature response is slightly larger than the mimimum response at the surface 
-and very similar at high levels. Overall the response remarkably linear, and 
-that linearity extends across all the variables. 
+We have a versatile, globally resolved model that we can use to build a picture 
+of the regional response of land surface, but we need a suitable way to force 
+the model. For this, we used the ENSO-Pacemaker experiments. The regular and 
+repetitive forcing in the ENSO-Pacemaker experiment allows for composites to be 
+easily made for the period of maximum and minimum land response.  As we are 
+interested in the land surface response, the composites consist of six months of 
+the maximum (or minimum) response over land. The land response is delayed by 
+around 3 months from the peak ocean forcing (as outlined in section \ref{xcor}) 
+so the composite is the mean of months 0 to 6 after the peak ocean forcing in 
+the Pacific Ocean. 
+
+The GREB model setup has three key parts; a) Composites of anomalies of soil 
+moisture, SSTs, meridional winds, zonal winds, and cloud cover are created from 
+the ENSO-Pacemaker experiments, using months 0 to 6 after the peak forcing. A 
+composite of land surface temperature is also generated to compare to the GREB 
+results, b) The anomalies from these composite are applied to the climatology 
+boundary conditions in the GREB model. Anomalies for each of the variables 
+listed above are added individually then in combination, and for each anomaly or 
+combination of anomalies the GREB model is run to equilibrium, c) The surface 
+temperatures from each GREB equilibrium run are compared against the composite 
+surface temperature from the ENSO-Pacemkare run, in order to determine which 
+variables are the important on regional or global scales.
+
+Before the experiments with the GREB model we will look at the surface 
+temperature response in the ENSO-Pacemaker experiment, essentially the response 
+we wish to recreate with the GREB model.  Figure \ref{fig:comp_temp} are the 
+composites of months 0 to 6 after the maximum warming (a) and maximum cooling 
+(b) Pacific Ocean forcing. The colourbar for the cooling is reversed to allow 
+comparison of the two figures. Both the response patterns and the magnitude of 
+warming and cooling are similar, implying the response is quite linear, although 
+the in some regions the warming forcing warms more than the cooling forcing 
+cools.  The area with the greatest discrepancy and a difference in the sign of 
+the surface temperature response are the high northern latitudes of Europe and 
+Asia, which is also the region most removed from the area of forcing. Other 
+features true to both plots include a positive (i.e.  warming or cooling in smae 
+direction as forcing) of tropical South America, with a strong amplification in 
+the Amazon basin, a distinctive pattern across Africa, with positive everywhere 
+except the north eastern corner. High latitude North America has a strongly 
+amplified positive response in both plots. The negative responses in the 
+subtropical regions of South America and north eastern Africa are similar but 
+weaker in the cooling scenario. Overall we see a positive response over most 
+land surfaces, with some specific patterns of negative reponse, and some areas 
+show a significantly increased amplification to the ocean forcing.
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{{comp_Tmax_sfc}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_Tmin_sfc}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_Tmax_700}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_Tmin_700}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_Tmax_300}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_Tmin_300}.eps}
 \caption{temperature response}
 \label{fig:comp_temp}
 \end{figure}
 
+Figure \ref{fig:comp_5var} shows the composite anomalies from the ENSO-Pacemaker 
+experiments 
 
 \begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{{comp_dlwr_max}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_dlwr_min}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_dswr_max}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_dswr_min}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_lwclsky_max}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_lwclsky_min}.eps}
-\caption{Radiation response}
-\label{fig:comp_rad}
+\includegraphics[width=0.9\textwidth]{{anom.input.4ycomp}.pdf}
+\caption{Anomalous cloud cover, meridional and zonal wind, soil moisture and 
+SSTs used to force the GREB model.}
+\label{fig:comp_5var}
 \end{figure}
-
-   
-\begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{{comp_RHmax_1000}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_RHmin_1000}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_RHmax_700}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_RHmin_700}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_RHmax_300}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_RHmin_300}.eps}
-\caption{Relative Humidity response}
-\label{fig:comp_rh}
-\end{figure}
-
-\begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{{comp_cldfull_max}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_cldfull_min}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_precip_max}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_precip_min}.eps}
-\caption{Cloud and precipitation response}
-\label{fig:comp_cld}
-\end{figure}
-
-\begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{{comp_smc_max}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_smc_min}.eps}
-\caption{Soil Mositure response}
-\label{fig:comp_smc}
-\end{figure}
-
-\begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{{comp_Pmax_sfc}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_Pmin_sfc}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_GPHTmax_700}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_GPHTmin_700}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_GPHTmax_300}.eps}
-\includegraphics[width=0.5\textwidth]{{comp_GPHTmin_300}.eps}
-\caption{Pressure and geopotential height response}
-\label{fig:comp_pres}
-\end{figure}
-
-
-\subsection{GREB Model - Deconstructing the regional response}
-\begin{itemize}
-	\item{motivation}
-	\item{Discuss variables used/available}
-	\item{Response of pacemaker exp.}
-	\item{Response of amip exp.}
-\end{itemize}
-
-With the column model we were able to model a process by which SST variability 
-became amplified over land, leading to a land/ocean contrast. The column model 
-also showed that the magnitude of the land/ocean contrast can be controlled by 
-the evaporative fraction of the land surface. A comparison of the results with a 
-GCM showed that for many continental regions SST signals can become amplified 
-but cannot be explained by the column model.  Instead we used another simplified 
-atmospheric model -- the GREB (Globally Resolved Energy Balance) model -- to 
-deconstruct the land response to an SST forcing.  The boundary conditions of the 
-GREB model include SSTs, winds, soil moisture, and clouds. Starting with a 
-climatology, these variables can be changed individually and in combination to 
-recreate
 
 
 
@@ -1602,6 +1586,89 @@ recreate
 
 Based on results from the GREB model, we will now re-examine the ACCESS model, 
 with a focus on surface fluxes and their regional differences.
+
+% \subsection{Pacemaker Composite Response}
+% 
+% The regular and repetitive forcing in the experiment allows for composites of 
+% the maximum and minimum land response to be easily made. In Figures 
+% \ref{fig:comp_temp} to \ref{fig:comp_pres} many variables that control or 
+% respond to surface temperatures have been plotted. As we are interested in the 
+% land surface response, the composites consist of six months of the maximum (or 
+% minimum) response over land. The land response is delayed from the ocean forcing 
+% (as outlined in section \ref{xcor}) so the composite is the mean of months 0 to 
+% 6 after the peak ocean forcing.
+% 
+% The maximum and minimum temperature response at three levels is shown in figure 
+% \ref{fig:comp_temp}. We show both the maximum and minimum to demonstrate the 
+% linearity in the response, the minimum forcing is plotted with the colour bar 
+% reversed for comparison. In figures \ref{fig:comp_temp} the magnitude of maximum 
+% temperature response is slightly larger than the mimimum response at the surface 
+% and very similar at high levels. Overall the response remarkably linear, and 
+% that linearity extends across all the variables. 
+% 
+% \begin{figure}[ht]
+% \includegraphics[width=0.5\textwidth]{{comp_Tmax_sfc}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_Tmin_sfc}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_Tmax_700}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_Tmin_700}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_Tmax_300}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_Tmin_300}.eps}
+% \caption{temperature response}
+% \label{fig:comp_temp}
+% \end{figure}
+% 
+% 
+% \begin{figure}[ht]
+% \includegraphics[width=0.5\textwidth]{{comp_dlwr_max}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_dlwr_min}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_dswr_max}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_dswr_min}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_lwclsky_max}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_lwclsky_min}.eps}
+% \caption{Radiation response}
+% \label{fig:comp_rad}
+% \end{figure}
+% 
+%    
+% \begin{figure}[ht]
+% \includegraphics[width=0.5\textwidth]{{comp_RHmax_1000}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_RHmin_1000}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_RHmax_700}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_RHmin_700}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_RHmax_300}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_RHmin_300}.eps}
+% \caption{Relative Humidity response}
+% \label{fig:comp_rh}
+% \end{figure}
+% 
+% \begin{figure}[ht]
+% \includegraphics[width=0.5\textwidth]{{comp_cldfull_max}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_cldfull_min}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_precip_max}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_precip_min}.eps}
+% \caption{Cloud and precipitation response}
+% \label{fig:comp_cld}
+% \end{figure}
+% 
+% \begin{figure}[ht]
+% \includegraphics[width=0.5\textwidth]{{comp_smc_max}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_smc_min}.eps}
+% \caption{Soil Mositure response}
+% \label{fig:comp_smc}
+% \end{figure}
+% 
+% \begin{figure}[ht]
+% \includegraphics[width=0.5\textwidth]{{comp_Pmax_sfc}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_Pmin_sfc}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_GPHTmax_700}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_GPHTmin_700}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_GPHTmax_300}.eps}
+% \includegraphics[width=0.5\textwidth]{{comp_GPHTmin_300}.eps}
+% \caption{Pressure and geopotential height response}
+% \label{fig:comp_pres}
+% \end{figure}
+% 
+
 
 \subsubsection{Regressions with Surface Temperature}
 
