@@ -1453,7 +1453,7 @@ temperature, atmospheric temperature, upper ocean temperature and atmospheric
 water vapour, all calculated on a global grid \citep{Dommenget2011}. The aspect 
 of the GREB model that is most useful for this work is that the boundary 
 conditions include meridional and zonal winds, surface wetness fraction, and 
-cloud cover.  The ocean surface temeperature can either be assigned, or a 
+cloud cover.  The ocean surface temperature can either be assigned, or a 
 responsive slab ocean can be used.  Starting with climatological values, 
 anomalies can be added to these variables to recreate, for example, the 
 atmospheric conditions during the time of the peak land response to an ocean 
@@ -1481,7 +1481,7 @@ are applied to the climatological boundary conditions in the GREB model.
 Anomalies for each of the variables listed above are added individually then in 
 combination, and for each anomaly or combination of anomalies the GREB model is 
 run to equilibrium, c) The surface temperatures from each GREB equilibrium run 
-are compared against the composite surface temperature from the ENSO-Pacemkare 
+are compared against the composite surface temperature from the ENSO-Pacemaker 
 run, in order to determine which variables are the important on regional or 
 global scales.
 
@@ -1513,7 +1513,8 @@ to the ocean forcing.
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{{comp_Tmax_sfc}.eps}
 \includegraphics[width=0.5\textwidth]{{comp_Tmin_sfc}.eps}
-\caption{temperature response}
+\caption{ENSO-Pacemaker surface temperature for composite of months 0 to 6 after 
+peak forcing. Positive forcing on left (a), negative on right (b).}
 \label{fig:comp_temp}
 \end{figure}
 
@@ -1538,20 +1539,20 @@ associated with increased cloud cover. However the opposite is seen in North
 America, where an increase in soil moisture is associated with a decrease in 
 cloud cover. 
 
-The meridional wind anomalies, in Figure \ref{fig:comp_5var} (b), show very 
-distinct wave patterns in the midlatitudes, indicated by alternating positive 
-(southerly) and negative (northerly) anomalies. Although the dynamic 
-extra-tropical response is not a focus of this study, the distinctive 
+The meridional wind anomalies, in Figure \ref{fig:comp_5var} (b), show distinct 
+wave patterns in the extra-tropics and high latitudes, indicated by alternating 
+positive (southerly) and negative (northerly) anomalies. Although the dynamics 
+of the extra-tropical response is not a focus of this study, the distinctive 
 extra-tropical wave pattern concurs with theory on the atmospheric response to a 
 tropical heat source (e.g. \citet{Hoskins1981}, \citet{Sardeshmukh1988}, 
-\citet{Held1989}). There is convergence in the tropical Pacific, with northerly 
+\citet{Held1989}).  There is convergence in the tropical Pacific, with northerly 
 anomalies to the north of the forcing region and southerly anomalies to the 
-south. The largest reponse is in the north-eastern Pacific Ocean, with a strong 
-southerly anomaly.  Figure \ref{fig:comp_5var} (d) shows that the zonal wind 
+south. The largest response is in the north-eastern Pacific Ocean, with a strong 
+northerly anomaly.  Figure \ref{fig:comp_5var} (d) shows that the zonal wind 
 anomalies are strongest in the Pacific Ocean basin, and there is a strong 
 positive (westerly) anomaly in the tropical Pacific on the equator, which is 
 what would be expected for an El Ni\~no like forcing.  Moving away from the 
-equator, there are altenating bands of westerly and easterly wind anomalies.
+equator, there are alternating bands of westerly and easterly wind anomalies.
 
 The tropical Pacific Ocean forcing is clearly seen in the SST anomalies, in 
 Figure \ref{fig:comp_5var} (e). Away from the forcing region there is a 
@@ -1565,8 +1566,10 @@ will be used in the GREB model.
 
 \begin{figure}[ht]
 \includegraphics[width=0.9\textwidth]{{anom_input_4ycomp}.pdf}
-\caption{Anomalous cloud cover, meridional and zonal wind, surface wetness fraction and 
-SSTs used to force the GREB model.}
+\caption{Anomalous cloud cover (top left (a)), meridional (top right (b)) and 
+zonal wind (middle right (d), surface wetness fraction (middle left (c)) and 
+SSTs (bottom left (e)) used to force the GREB model. Generated from 
+ENSO-Pacemaker composites.}
 \label{fig:comp_5var}
 \end{figure}
 
@@ -1582,34 +1585,35 @@ SSTs used to force the GREB model.}
 
 We begin the GREB experiments by looking at the land surface temperature 
 response to imposed SSTs, as shown in Figure \ref{fig:greb_sst}. The anomalous 
-SSTs field is applied to the climatological SSTs, and is a composite from the 
-ENSO-Pacemaker experiment. The SST field includes the forcing region in the 
-tropical Pacific, and the response of the slab ocean in the other oceans. The 
-first thing we note is that the amplification of SST signal in the land surface 
-temperatures is not present, as it is in the ACCESS model in Figure 
-\ref{fig:comp_temp}.  The regionality of the land response is similar to ACCESS, 
-with the majority of warming in the tropical band, following the SST anomalies.  
-There are a number of atmospheric processes not present in the GREB model, which 
-we will explore these further by imposing other anomalous fields, but from our 
-previous work we know the importance of the tropospheric structure and 
-convection. These are not directly modelled in GREB but are represented through 
-an imposed cloud climatology. There are also no changes to the circulation, the 
-effect of which we will explore by imposing wind anomalies.
-
-
+SSTs field -- the composite from the ENSO-Pacemaker experiment -- is applied to 
+the climatological SSTs and the model is run to equilibrium. The SST field 
+includes the forcing region in the tropical Pacific and the response of the 
+ACCESS slab ocean in the other oceans.  The first thing we note is that the 
+amplification of SST signal in the land surface temperatures is not present, as 
+it is in the ACCESS model in Figure \ref{fig:comp_temp}, yet the regionality of 
+the land response is similar to ACCESS. The majority of warming is in the 
+tropical band, following the SST anomalies.  Regarding the lack of amplification 
+over land; there are a number of atmospheric processes not present in the GREB 
+model which we will explore these further by imposing other anomalous fields, 
+but from our previous work we know the importance of the tropospheric structure 
+and convection. These are not directly modelled in GREB but are represented 
+through an imposed cloud climatology. There are also no changes to the 
+circulation, the effect of which we will explore by imposing wind anomalies. So 
+we see imposing SST anomalies without  adjusting other factors influencing the 
+climate leads to warming over land, but not the amplification we see in ACCESS.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.9\textwidth]{{t_surf.sst_anom.pos.4ycomp.response.thesis}.eps}
-	\caption{GREB TSurf response to imposed SSTs}
+	\caption{Surface temperature response in GREB to imposed SST anomalies.}
 \label{fig:greb_sst}
 \end{figure}
 
 \subsubsection{Imposing zonal and meridional winds anomalies}
 
 In Figure \ref{fig:greb_uv} we see the surface temperature response to imposed 
-zonal (a), meridional (b) and combined (c) \SI{850}{\hecto\pascal} wind 
+zonal (a), meridional (b) and combined (c), \SI{850}{\hecto\pascal} wind 
 anomalies. These runs used climatological values for clouds and surface wetness 
-fraction with a responsive slab ocean then anomalous winds were added to the 
+fraction with a responsive slab ocean. The anomalous winds were added to the 
 climatological winds and the model was run to equilibrium.  Figure 
 \ref{fig:greb_uv} (a) shows the zonal wind anomalies lead to a small but 
 consistent warming in many areas, with the only large region of cooling in the 
@@ -1618,40 +1622,45 @@ response in Figure \ref{fig:comp_temp}.  The surface temperature response to
 meridional wind anomalies in Figure \ref{fig:greb_uv} (b) shows some more 
 interesting response patterns. Anomalous poleward winds in the northern Indian 
 Ocean and South China Sea increase heat transport to continental Asia, resulting 
-in a large warming. Similarily, in the south-eastern Pacific Ocean and the high 
+in a large warming. Similarly , in the south-eastern Pacific Ocean and the high 
 latitudes of North America, anomalous poleward winds lead to warmer 
 temperatures. There is warming across much of the tropics, land and ocean, with 
 the exception of the western Pacific where there is a large cooling from the 
 tropics to both poles.  Most of the temperature response can be explained by 
-considering the heat transport by the anomalous winds, Figure 
-\ref{fig:comp_5var} (b), and the mean climatology of the model, Figure 
-\ref{fig:greb_clim}.  In Figure \ref{fig:greb_uv} (c) the meridional and zonal 
-wind anomalies are both applied to the climatological winds, then the model is 
-run to equilibrium. The areas with a strong positive response to the meridional 
-winds still show a warming, such as the south-eastern Pacific and North America, 
-however there is a much finer structure to the response.
+considering the heat transport of the anomalous winds (i.e. Figure 
+\ref{fig:comp_5var} (b)), and the mean surface temperature climatology of the 
+model, Figure \ref{fig:greb_clim}.  In Figure \ref{fig:greb_uv} (c) the 
+meridional and zonal wind anomalies are both applied to the climatological 
+winds, then the model is run to equilibrium. The areas with a strong positive 
+response to the meridional winds still show a warming, such as the south-eastern 
+Pacific and North America, however there is a much finer structure to the 
+response.
 
 With Figures \ref{fig:greb_uv} (a), (b) and (c) we can begin to explain features 
 of the surface temperature response of ACCESS in Figure \ref{fig:comp_temp} (a).  
-The response patterns which the anomalous winds succesfully recreate include the 
+The response patterns which the anomalous winds successfully recreate include the 
 curved pattern in north-east Pacific and large North American warming, as well 
 as the band of cooling just north of the forcing area in the Pacific. There is 
 an indication of warming and cooling pattern over northern Africa. It is more 
 evident in the run with only meridional wind anomalies, as the zonal anomalies 
-reduce the cooling, but certainly the shape of the pattern is similar. The 
-surface temperature response in the ACCESS model over Asia is more complicated, 
-with a mix of warming and cooling, whereas in the GREB model there is a uniform 
-warming. The GREB model response over Australia for the meridional winds is a 
-cooling instead of a warming. The cooling is reduced for the combined meridional 
-and zonal wind anomalies but it is still incorrect. Overall, applying only the 
-anomalous winds from ACCESS to the GREB model results in many areas showing 
-similarities in the surface temperature response.
+reduce the cooling in north east Africa, but certainly the shape of the pattern 
+is similar.  The surface temperature response in the ACCESS model over Asia is 
+more complicated, with a mix of warming and cooling, whereas in the GREB model 
+there is a uniform warming. The GREB model response over Australia for the 
+meridional winds is a cooling instead of a warming. The cooling is reduced for 
+the combined meridional and zonal wind anomalies but it is still incorrect.  
+Overall, applying only the anomalous winds from ACCESS to the GREB model results 
+in many areas showing similarities in the surface temperature response. It is 
+important to remember that no additional heating was used in these runs, the 
+surface temperature response is due to a redistribution of heat within the mean 
+climate.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.9\textwidth]{{t_surf.u_anom.pos.4ycomp.response.thesis}.eps}\\
 	\includegraphics[width=0.9\textwidth]{{t_surf.v_anom.pos.4ycomp.response.thesis}.eps}\\
 	\includegraphics[width=0.9\textwidth]{{t_surf.uv_anom.pos.4ycomp.response.thesis}.eps}
-	\caption{GREB TSurf response }
+	\caption{Surface temperature response in GREB to imposed wind anomalies.  
+	Zonal, top (a), Meridional, middle (b) and both, bottom (c).}
 \label{fig:greb_uv}
 \end{figure}
 \clearpage
@@ -1660,20 +1669,22 @@ similarities in the surface temperature response.
 For the next experiment, composites of anomalous cloud cover from the 
 ENSO-Pacemaker experiments were applied to the cloud climatology in the GREB 
 model, with the resulting surface temperature response shown in Figure 
-\ref{fig:greb_cld}. Firstly we note the that the anomalous cloud cover elicits a 
-large surface temperature response over both land and ocean. Applying the cloud 
+\ref{fig:greb_cld}. Climatological winds and surface wetness, and a slab ocean 
+were used. Firstly we note the that the anomalous cloud cover elicits a large 
+surface temperature response over both land and ocean.  Applying the cloud 
 anomalies over the ocean is likely to result in very different SST values than 
-those seen in the ENSO-Pacemaker, especially over the forcing area. The tropical 
-Pacific Ocean forcing resulted in an increase in convection, and hence clouds, 
-over the warmest SSTs. In the GREB model an increase in clouds primarily leads 
-to a cooling due to decreased incoming shortwave radiation. This can be seen 
-most clearly in the tropical Pacific where there is a large amount of cooling, 
-compared to Figure \ref{fig:comp_temp} (a) which shows warming.  Likewise at 
-latitude 30S and longitude 180W-120W a warming in the GREB model due to 
-decreased cloud corresponds to a cooling in the ENSO-Pacemaker experiment.  
-However this is not a constistent feature and oceans such as the tropical 
-Atlantic from latitudes 30S to 30N show warming and cooling in the GREB model in 
-an area of constistent warming in the ENSO-Pacemaker experiment.
+those seen in the ENSO-Pacemaker, especially over the forcing area.  The 
+tropical Pacific Ocean forcing resulted in an increase in convection, and hence 
+clouds, over the warmest SSTs. In the GREB model an increase in clouds primarily 
+leads to a cooling due to decreased incoming shortwave radiation. This can be 
+seen most clearly in the forcing region in the tropical Pacific where there is a 
+large amount of cooling in the GREB model, compared to Figure 
+\ref{fig:comp_temp} (a) which shows warming.  Likewise at latitude 30S and 
+longitude 180W-120W a warming in the GREB model due to decreased cloud 
+corresponds to a cooling in the ENSO-Pacemaker experiment.  However, this is not 
+a consistent feature and oceans such as the tropical Atlantic from latitudes 
+30S to 30N show warming and cooling in the GREB model in an area of consistent 
+warming in the ENSO-Pacemaker experiment.
 
 Our main interest is the response over land areas and how it compares to Figure 
 \ref{fig:comp_temp}. The response in the GREB model over South America is 
@@ -1683,25 +1694,29 @@ continent which isn't present in GREB, however the cooling there is much weaker
 than at 30S.  Both models show a large scale warming in tropical South America, 
 however the pattern of warming is different. The peak warming in the GREB model 
 is in the west, whereas the ENSO-Pacemaker experiment is more uniform except for 
-a small region on the equator in the east. Over North America the GREB model 
-captures the regions of warming (north) and cooling (south) with a reduced 
-magnitude of warming compared to ACCESS. In the GREB model there is a warming 
-response over Australia with a gradient from north to south that is similar to 
-ACCESS, except that the GREB response has a cooling across southern Australia.  
-There are large descrepancies across northern Africa, Europe and Asia, as the 
-GREB model has a large scale cooling that is not seen in ACCESS. An exception is 
-in South East Asia and eastern China, where, to the east of the Tibetan Plateau 
-both models show a similar warming pattern. 
+a small region on the equator in the east with increased warming not seen in 
+GREB.  Over North America the GREB model captures the regions of warming (north) 
+and cooling (south) with a reduced magnitude of warming compared to ACCESS. In 
+the GREB model there is a warming response over Australia with a gradient from 
+north to south that is similar to ACCESS, except that the GREB response has a 
+cooling across southern Australia.  There are large discrepancies across 
+northern Africa, Europe and Asia, as the GREB model has a large scale cooling 
+that is not seen in ACCESS. An exception is in South East Asia and eastern 
+China, where to the east of the Tibetan Plateau both models show a similar 
+warming pattern. 
 
 On a global scale the response of the GREB model to the anomalous clouds doesn't 
 show an obvious land/ocean contrast. Some regions respond with the opposite sign 
 to the ENSO-Pacemaker experiment that the cloud forcing is from, yet others 
-regions show similarities with distinctive patterns of warming and cooling.
+regions show similarities with distinctive patterns of surface warming and 
+cooling.  Compared to the response to imposed winds, imposed clouds also explain 
+many of hte regional patterns but often with a greater magnitude.
 
 
 \begin{figure}[ht]
 	\includegraphics[width=0.9\textwidth]{{t_surf.cld.pos.4ycomp.response.thesis}.eps}
-	\caption{GREB TSurf response }
+	\caption{Surface temperature response in GREB to imposed cloud cover 
+	anomalies.}
 	\label{fig:greb_cld}
 \end{figure}
 
@@ -1712,19 +1727,20 @@ ENSO-Pacemaker experiments, as shown in Figure \ref{fig:greb_smc}. As expected a
 reduction in surface wetness leads to an increase in surface temperature, 
 however we note that the surface temperature response is small compared to the 
 clouds and wind anomalies.  The largest response is on the Tibetan Plateau, this 
-is most likely due unreastic model behaviour for this area of unusual 
+is most likely due unrealistic model behaviour for this area of unusually high 
 topography. It is in South America where we see similarities between the GREB 
-and ACCESS surface temperature response (Figure \ref{fig:comp_temp}), not in the 
-magnitude but in the shape of the response.  On the equator in the east is the 
-area that shows the strongest temperature response in the ENSO-Pacemaker 
-experiments in ACCESS, it doesn't show up in the GREB cloud or wind response 
-experiments but can be seen to warm in the surface wetness fraction response 
-experiment.  Likewise the GREB model exhibits a cooling to the south at 
-longitude 60W which is similar to that seen in ACCESS. Away from South America 
-there's no obvious similarities between the response of the two models.
+and ACCESS surface temperature response (Figure \ref{fig:comp_temp}), not 
+necessarily in the magnitude but in the shape of the response.  On the equator 
+in the east of tropical South America is the area that shows the strongest 
+temperature response in the ENSO-Pacemaker experiments in ACCESS, it doesn't 
+show up in the GREB cloud or wind response experiments, but can be seen to warm 
+in the surface wetness fraction response experiment.  Likewise the GREB model 
+exhibits a cooling to the south at latitude 30S, longitude 60W which is similar 
+to that seen in ACCESS.  Away from South America there's no obvious similarities 
+between the response of the two models.
 
 The magnitude of the surface temperature response depends on the magnitude of 
-the surface wetness anomalies, which themselves are a calculated value that are 
+the surface wetness anomalies, which themselves are a calculated value that is 
 open to interpretation. The surface wetness fraction in each gridbox is 
 calculated from the soil moisture, for both the GREB climatology and the 
 anomalous forcing.  To calculate the surface wetness fraction from the soil 
@@ -1738,11 +1754,13 @@ maximum values were looked at, as well as different methods of aggregating the
 months used to create the composite of soil moisture (i.e. using maximum or 
 minimum gridbox values). It was found that the magnitude of the response in GREB 
 changed, but the sign and the patterns of response were robust to different 
-methods of the calculating surface wetness fraction.
+methods of the calculating surface wetness fraction. This should be considered 
+when interpreting the results seen in Figure \ref{fig:greb_smc}.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.9\textwidth]{{t_surf.smc.pos.4ycomp.response.thesis}.eps}
-	\caption{GREB TSurf response }
+	\caption{Surface temperature response in GREB to imposed surface wetness	
+	anomalies.}
 	\label{fig:greb_smc}
 \end{figure}
 
@@ -1763,11 +1781,17 @@ with the wind anomalies the errors over Australia and South America are
 corrected.  The anomalous winds resulted in a cooling over Australia, then with 
 the addition of SSTs this changed to a warming. South America had a uniform 
 warming, the SSTs resulted in a cooling at 30S. Central Asia still shows a large 
-warming which is not seen in ACCESS.
+warming which is not seen in ACCESS. So while in many regions, such as Africa 
+and North and South America, some of the response seen in ACCESS can be 
+explained by the redistribution of heat, whereas over Australia the anomalous 
+winds are distributing heat from the anomalous SSTs. Similarly, the run with 
+only SST anomalies (Figure \ref{fig:greb_sst}) requires circulation changes to 
+distribute the surface temperature anomalies.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.9\textwidth]{{t_surf.uv_sst.pos.4ycomp.response.thesis}.eps}
-	\caption{GREB TSurf response to wind and SSTs}
+	\caption{Surface temperature response in GREB to imposed wind and SST 
+	anomalies.}
 \label{fig:greb_uv_sst}
 \end{figure}
 
@@ -1791,7 +1815,8 @@ to a ENSO-like forcing can lead to remote tropical warming.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.9\textwidth]{{t_surf.all.pos.4ycomp.response.thesis}.eps}\\
-	\caption{GREB TSurf response }
+	\caption{Surface temperature response in GREB to imposed wind, cloud cover 
+	and surface wetness anomalies.}
 \label{fig:greb_allnosst}
 \end{figure}
 
@@ -1804,7 +1829,7 @@ warmed with the meridional and zonal wind anomalies and including anomalous SSTs
 made the pattern closer to that seen in ACCESS, so in the GREB model the cooling 
 due to clouds and warming due to advection cancel each other out. It is 
 interesting to note that the Sahara region of Africa is the area where the 
-multi-column model succesfully predicts the response of ACCESS yet the GREB 
+multi-column model successfully predicts the response of ACCESS yet the GREB 
 model does not. We can incorporate large scale dynamics into the GREB model by 
 imposing anomalous fields from the ENSO-Pacemaker experiment and simulate the 
 response seen in ACCESS in many areas, but the GREB model doesn't have the 
@@ -1815,7 +1840,8 @@ scale dynamics dominate in other regions.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.9\textwidth]{{t_surf.all_sst.pos.4ycomp.response.thesis}.eps}
-	\caption{GREB TSurf response }
+	\caption{Surface temperature response in GREB to imposed wind, cloud cover, 
+	surface wetness and SST anomalies.}
 \label{fig:greb_all}
 \end{figure}
 
@@ -1829,13 +1855,15 @@ scale dynamics dominate in other regions.
 % 	\item{SST}
 % 	\item{Combined response}
 % \end{itemize}
-\clearpage
-
-\subsection{Regional Analysis of the ACCESS Model}
-
-Based on results from the GREB model, we will now re-examine the ACCESS model, 
-with a focus on surface fluxes and their regional differences.
-
+% \clearpage
+% 
+% \subsection{Regional Analysis of the ACCESS Model}
+% 
+% ---NOTE--- This section
+% 
+% Based on results from the GREB model, we will now re-examine the ACCESS model, 
+% with a focus on surface fluxes and their regional differences.
+% 
 % \subsection{Pacemaker Composite Response}
 % 
 % The regular and repetitive forcing in the experiment allows for composites of 
@@ -1919,53 +1947,54 @@ with a focus on surface fluxes and their regional differences.
 % 
 
 
-\subsubsection{Regressions with Surface Temperature}
+% \subsubsection{Regressions with Surface Temperature}
+% 
+% \begin{figure*}
+% 		\includegraphics[width=\textwidth, trim={5cm 2cm 3.5cm 
+% 		0.7cm},clip=true]{{linreg.temp.plv}.eps}
+% 		\includegraphics[width=\textwidth, trim={5cm 2cm 3.5cm 
+% 		0.7cm},clip=true]{{linreg.dlwr.sfc}.eps}
+% 		\includegraphics[width=\textwidth, trim={5cm 2cm 3.5cm 
+% 		0.7cm},clip=true]{{linreg.dswr.sfc}.eps}
+% 		\includegraphics[width=\textwidth, trim={5cm 2cm 3.5cm 
+% 		0.7cm},clip=true]{{linreg.sphm.15m}.eps}
+% 		\includegraphics[width=\textwidth, trim={5cm 2cm 3.5cm 
+% 		0.7cm},clip=true]{{linreg.pres.sfc}.eps}
+% 
+% 	\caption{Regression values between surface and variable averaged over regions.
+% 	Control run (left), forced run (middle), difference (right). (a-c) Upper
+% 	Tropospheric temperature (500-100hPa), (d-f) Downward longwave radiation, 
+% 	(g-i) Downward Shortwave radionation, (j-l) Specific Humidity 1.5m, (m-o) sea 
+% 	level pressure.	Dotted regions indicate significance levels above 95\%}
+% \label{fig:rgn_reg}
+% \end{figure*}
+% 
+% \subsubsection{Zonal Flux reponse}
+% 
+% \begin{figure}[ht]
+% 	\includegraphics[width=0.5\textwidth, trim={0cm -0cm 0cm 
+% 	-0cm},clip=true]{{zon_temp}.eps}
+% 	\includegraphics[width=0.5\textwidth, trim={0cm -0cm 0cm 
+% 	-0cm},clip=true]{{zon_rh}.eps}
+% 	\includegraphics[width=0.5\textwidth, trim={0cm -0cm 0cm 
+% 	-0cm},clip=true]{{zon_cldprc}.eps}
+% 	\includegraphics[width=0.5\textwidth, trim={0cm -0cm 0cm 
+% 	-0cm},clip=true]{{zon_rad}.eps}
+% 	\includegraphics[width=0.5\textwidth, trim={0cm -0cm 0cm 
+% 	-0cm},clip=true]{{zon_flux}.eps}
+% \caption{}
+% 	\label{fig:zon_flux}
+% \end{figure}
+% 
+% \begin{figure}[ht]
+% 	\includegraphics[width=\textwidth, trim={0cm -0cm 0cm 
+% 	-0cm},clip=true]{{zon_compare}.eps}
+% \caption{}
+% 	\label{fig:zon_flux_compare}
+% \end{figure}
+% 
+% \clearpage
 
-\begin{figure*}
-		\includegraphics[width=\textwidth, trim={5cm 2cm 3.5cm 
-		0.7cm},clip=true]{{linreg.temp.plv}.eps}
-		\includegraphics[width=\textwidth, trim={5cm 2cm 3.5cm 
-		0.7cm},clip=true]{{linreg.dlwr.sfc}.eps}
-		\includegraphics[width=\textwidth, trim={5cm 2cm 3.5cm 
-		0.7cm},clip=true]{{linreg.dswr.sfc}.eps}
-		\includegraphics[width=\textwidth, trim={5cm 2cm 3.5cm 
-		0.7cm},clip=true]{{linreg.sphm.15m}.eps}
-		\includegraphics[width=\textwidth, trim={5cm 2cm 3.5cm 
-		0.7cm},clip=true]{{linreg.pres.sfc}.eps}
-
-	\caption{Regression values between surface and variable averaged over regions.
-	Control run (left), forced run (middle), difference (right). (a-c) Upper
-	Tropospheric temperature (500-100hPa), (d-f) Downward longwave radiation, 
-	(g-i) Downward Shortwave radionation, (j-l) Specific Humidity 1.5m, (m-o) sea 
-	level pressure.	Dotted regions indicate significance levels above 95\%}
-\label{fig:rgn_reg}
-\end{figure*}
-
-\subsubsection{Zonal Flux reponse}
-
-\begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth, trim={0cm -0cm 0cm 
-	-0cm},clip=true]{{zon_temp}.eps}
-	\includegraphics[width=0.5\textwidth, trim={0cm -0cm 0cm 
-	-0cm},clip=true]{{zon_rh}.eps}
-	\includegraphics[width=0.5\textwidth, trim={0cm -0cm 0cm 
-	-0cm},clip=true]{{zon_cldprc}.eps}
-	\includegraphics[width=0.5\textwidth, trim={0cm -0cm 0cm 
-	-0cm},clip=true]{{zon_rad}.eps}
-	\includegraphics[width=0.5\textwidth, trim={0cm -0cm 0cm 
-	-0cm},clip=true]{{zon_flux}.eps}
-\caption{}
-	\label{fig:zon_flux}
-\end{figure}
-
-\begin{figure}[ht]
-	\includegraphics[width=\textwidth, trim={0cm -0cm 0cm 
-	-0cm},clip=true]{{zon_compare}.eps}
-\caption{}
-	\label{fig:zon_flux_compare}
-\end{figure}
-
-\clearpage
 %----------------------------------------------------------------------------------------
 %	Extra-Tropics
 %----------------------------------------------------------------------------------------
