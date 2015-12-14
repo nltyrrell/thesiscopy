@@ -27,7 +27,7 @@ East Anglia Climatic Research Unit were used as surface temperatures
 observations; Climatic Research Unit land Temperature data set, version 
 4 (CRUTEM4) \citep{Brohan2006}, the Hadley Centre SST data set,
 version 2 (HadSST2) \citep{Rayner2006} and the Hadley Centre global sea ice and 
-SST, version 1 (HadISST) (ref).
+SST, version 1 (HadISST) \citep{Rayner2003}. 
 
 HadSST2 is global gridded SST dataset based on observations, with the data 
 coverage decreasing with time. Prior to 1950 data coverage is too sparse to 
@@ -222,19 +222,19 @@ described by ~\citealt{Alexander1992}, ~\citealt{Alexander1992a},
 
 
 \subsubsection{AMIP-Type experiments}\label{methods:amip}
-AMIP (Atmosphere-only Model Inter-comparison Project, (ref)), much like CMIP, is 
-a project to compare results from many modelling centres, except instead of the 
-coupled ocean-atmosphere models from CMIP the models are forced with 
-observational SSTs.  Therefore we consider an AMIP-type experiment one where a 
-model is forced with observational, or similar to observational SSTs. There are 
-a few benefits to this setup; it allows us to test the effect of a range of SST 
-anomalies on continental temperatures, it is computationally much cheaper than a 
-coupled run and doesn't require long spin up times, and the contained boundary 
-conditions stabilise the model and prevent drift. The key limitation of AMIP 
-runs is the loss of atmosphere to ocean feedbacks which are potentially 
-important for the evolution of both systems. This downside is partially 
-addressed with the use of a mixed-layer slab ocean, discussed in section 
-\ref{methods:pacemaker}.
+AMIP (Atmosphere-only Model Inter-comparison Project, \citep{Gates1999}), much 
+like CMIP, is a project to compare results from many modelling centres, except 
+instead of the coupled ocean-atmosphere models from CMIP the models are forced 
+with observational SSTs.  Therefore we consider an AMIP-type experiment one 
+where a model is forced with observational, or similar to observational SSTs.  
+There are a few benefits to this setup; it allows us to test the effect of a 
+range of SST anomalies on continental temperatures, it is computationally much 
+cheaper than a coupled run and doesn't require long spin up times, and the 
+contained boundary conditions stabilise the model and prevent drift. The key 
+limitation of AMIP runs is the loss of atmosphere to ocean feedbacks which are 
+potentially important for the evolution of both systems. This downside is 
+partially addressed with the use of a mixed-layer slab ocean, discussed in 
+section \ref{methods:pacemaker}.
 
 The AMIP type runs used HadISST from 1870 to 2010. While it was determined that 
 HadSST2 data was only suitable from 1950 for calculating statistics relating to 
