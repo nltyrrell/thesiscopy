@@ -32,7 +32,7 @@ SST, version 1 (HadISST) \citep{Rayner2003}.
 HadSST2 is global gridded SST dataset based on observations, with the data 
 coverage decreasing with time. Prior to 1950 data coverage is too sparse to 
 allow strong statistical conclusions \citep{Dommenget2009}, and measuring the 
-land/sea interactions by comparison with CRUTEM4 can lead to errors. This 
+land/ocean interactions by comparison with CRUTEM4 can lead to errors. This 
 dataset, along with CRUTEM4, was used for observations as it was considered the 
 truest representation, as there is no interpolation or processing done on the 
 data; other than that to correct inconsistencies. (Data coverage discussion?)
@@ -44,7 +44,7 @@ model experiments show that these areas may be important in terms of the land
 response to tropical SST perturbations, as such the effect of this missing data 
 is investigated further in Chapter \ref{evidence} by masking the model results 
 to simulate the data coverage of the observations and testing the robustness of 
-the statistics used to measure the land/sea contrast. It is found the data 
+the statistics used to measure the land/ocean contrast. It is found the data 
 coverage issues may effect the magnitude of some results but not the 
 conclusions.
 
@@ -89,7 +89,7 @@ anomalies defined separately for each model relative to its own climatology.
 
 
 \begin{center}
-	\begin{table}[h]
+	\begin{table}[ht]
 	\caption{CMIP5 models used in this study. 100 years of the piControl run was 
 	used from each model.}
 		\label{tab:cmip5}
@@ -178,7 +178,7 @@ described by ~\citealt{Alexander1992}, ~\citealt{Alexander1992a},
 ~\citealt{Lau2000} and ~\citealt{Lu2011}. 
 
 \begin{center}
-	\begin{table}[h]
+	\begin{table}[ht]
 		\caption{Idealised model simulations discussed in this study. Atmospheric 
 		component was HadGEM2 at N48 resolution.}
 		\label{tab:senseexp}
@@ -238,7 +238,7 @@ section \ref{methods:pacemaker}.
 
 The AMIP type runs used HadISST from 1870 to 2010. While it was determined that 
 HadSST2 data was only suitable from 1950 for calculating statistics relating to 
-the observational value of the land/sea contrast, the HadISST data was used from 
+the observational value of the land/ocean contrast, the HadISST data was used from 
 1870. The reason is that the HadISST SSTs were primarily used as a 
 representation of realistic interannual variability with which to force the 
 atmospheric model.  In the AMIP runs the SST and $T_{land}$ are consistent 
@@ -263,41 +263,42 @@ extra-tropics.
 \subsubsection{Pacemaker experiment}\label{methods:pacemaker}
 For the El Ni{\~n}o pattern forcing experiments a canonical El Ni{\~n}o pattern 
 was generated using HadISST monthly mean data from a linear regression between 
-NINO3 and SSTs, as shown in Figure 1. This pattern was imposed in the tropical 
-Pacific between $30^{\circ}$N/S and $155^{\circ}$E to the eastern boundary of 
-the Pacific, on to monthly climatological SSTs (i.e. a repeating 12 month 
-seasonal cycle).  The values of the anomaly was based on the regression values, 
-with a maximum temperature anomaly of 1.41K.  The pattern was oscillated with a 
-period of 4 years, peaking in January.  Outside of the tropical Pacific there 
-were two scenarios; fixed SSTs using the HadISST 1950-2010 climatology, and the 
-slab ocean.  
+NINO3 and SSTs, as shown in Figure \ref{fig:regpst}. This pattern was imposed in 
+the tropical Pacific between $30^{\circ}$N/S and $155^{\circ}$E to the eastern 
+boundary of the Pacific, on to monthly climatological SSTs (i.e. a repeating 12 
+month seasonal cycle).  The values of the anomaly was based on the regression 
+values, with a maximum temperature anomaly of 1.41K.  The pattern was oscillated 
+with a period of 4 years, peaking in January.  Outside of the tropical Pacific 
+there were two scenarios; fixed SSTs using the HadISST 1950-2010 climatology, 
+and the slab ocean.  
 
-The slab ocean is essentially a series of 1D ocean columns and assumes a 
-constant mixed layer depth of 50 metres. It is forced by flux correction terms 
-to have on average the HadISST 1950--2010 SST climatology \citep{Wang2014}. A 
-constant mixed layer was chosen in part for simplicity as this model setup is 
-intended to be of intermediate complexity, between a simple prescribed SST run 
-and a fully coupled dynamic ocean. We use a slab ocean as simple way of 
-modelling SST variability, and while we would expect that the response time of 
-the remote oceans to an external forcing would scale with mixed layer depth 
-(\citealt{Su2005a}, \citealt{Lintner2007}), the constant 50 metre assumption 
-gives a first order but realistic response.  
+The slab ocean is essentially a series of zero-dimensional ocean columns and 
+assumes a constant mixed layer depth of 50 metres. It is forced by flux 
+correction terms to have on average the HadISST 1950--2010 SST climatology 
+\citep{Wang2014}. A constant mixed layer was chosen in part for simplicity as 
+this model setup is intended to be of intermediate complexity, between a simple 
+prescribed SST run and a fully coupled dynamic ocean. We use a slab ocean as 
+simple way of modelling SST variability, and while we would expect that the 
+response time of the remote oceans to an external forcing would scale with mixed 
+layer depth (\citealt{Su2005a}, \citealt{Lintner2007}), the constant 50 metre 
+assumption gives a first order but realistic response.  
 
 
 \subsection{One and Two-Dimensional Radiative-Convective Model}
 Simplified atmospheric models have long been used to elucidate the underlying 
-mechanisms of otherwise complicated problems (ref). To understand the 
-relationship between SSTs, tropospheric temperatures and $T_{land}$ response we 
-used a radiative-convective column model. A radiative-convective model is one 
-where the atmospheric heating by convection is balanced with radiative cooling 
-(\citet{Manabe1964}, \citet{Manabe1965}) and have been used in a myriad of 
+mechanisms of otherwise complicated problems. To understand the relationship 
+between SSTs, tropospheric temperatures and $T_{land}$ response we used a 
+radiative-convective column model. A radiative-convective model uses the 
+assumption of Radiative-Convective Equilibrium (RCE), where the atmospheric 
+heating by convection is balanced with radiative cooling (\citet{Manabe1964}, 
+\citet{Manabe1965}). Radiative convective models have been used in a myriad of 
 studies, such as climate sensitivity and the equilibrium response to CO$_2$ 
 (\citet{Manabe1975}, \citet{Augustsson1977}) and solar forcings 
-(\citet{Wetherald1975}, \citet{Renno1994}), and the atmospheric structural 
-response to SSTs and boundary layer humidity (\citet{Ramsay2011}).  There have 
-been studies using RCE over simple land surfaces (\citet{Renno1997}, 
-\citet{Abbot2007}) and more recently with more realistic land representations 
-\citep{Rochetin2014}.
+(\citet{Wetherald1975}, \citet{Renno1994}), and the atmospheric response to SSTs 
+and boundary layer humidity \citep{Ramsay2011}. Most studies of RCE focus on the 
+atmospheric response over ocean surfaces, however, there have been studies using 
+RCE over simple land surfaces (\citet{Renno1997}, \citet{Abbot2007}) and more 
+recently with more realistic land representations \citep{Rochetin2014}.
 
 \subsubsection{Model details}
 We utilised the Massachusetts Institute of Technology (MIT) radiative-convective 
@@ -318,7 +319,7 @@ directions. The model can also be run in Weak Temperature Gradient mode (WTG
 mode) as described in \citet{Sobel2000}. For this setup, which relies on the WTG 
 approximation as discussed in section \ref{intro:wtg}, the free tropospheric 
 temperature profile is specified and remains fixed, allowing the vertical 
-velocity and, hence precipation to be prognostic variables.
+velocity and, hence precipitation to be prognostic variables.
 The 2D model uses the same schemes for radiation and convection as the 1D model 
 with an additional linear dynamical scheme that is hydrostatic and non-rotating.  
 First described in \citet{Nilsson1999} the model we used was closer to the one 
@@ -359,19 +360,18 @@ For these experiments the model was aligned zonally or meridionally with various
 numbers of land and ocean columns, the simplest being two columns; one land, one 
 ocean. These runs were forced by varying the SSTs around a mean value suitable 
 for the chosen latitude. The model was run to equilibrium, and the SST values 
-compared with the resulting land surface temperatures.
+were compared with the resulting land surface temperatures.
 
 \subsubsection{2D CO$_2$ forced land-ocean experiment}
-The geometry of these experiments were similar to the 2D prescribed SST 
+The geometry of these experiments were the same as the 2D prescribed SST 
 experiments, but instead of forcing with SST changes the model was forced 
-through changes in CO$_2$. Both the land and ocean columns able to respond to 
-the forcing. As this study primarily deals with natural variability a CO$_2$ 
-forced experiment may seem unusual but it was useful as it allowed us to test 
-our assumptions about comparisons between global warming land/ocean thermal 
-contrast, and an understanding of the sensitivity of the modelled land and ocean 
-surfaces to an external forcing puts the other results in context.
-
-
+through changes in CO$_2$. The surface temperature of both the land and ocean 
+columns were responsive, instead of the SST being prescribed. Although this 
+study primarily deals with natural variability the CO$_2$ forced experiments 
+were useful as they allowed us to test our assumptions about comparisons between 
+global warming land/ocean thermal contrast, and an understanding of the 
+sensitivity of the modelled land and ocean surfaces to a radiative forcing puts 
+the other results in context.
 
 \subsection{Globally Resolved Energy Balance Model}
 
@@ -380,20 +380,20 @@ Balance (GREB) model \citep{Dommenget2011}. Energy balance models have long been
 used to measure global surface temperatures in equilibrium (ref) and the 
 response to external forcings (ref, ref). Early energy balance models were often 
 one dimensional and lacking many important processes, but despite this the 
-resutls were often realistic. For example, initial estimates of climate 
+results were often realistic. For example, initial estimates of climate 
 sensitivity have proven remarkably robust - Arrhenius' estimation a global 
 temperature change of around \SI{5}{\celsius} for a doubling of CO$_2$ (ref) is 
 within the uncertainty limits of studies in the recent literature (ref).  From 
 the starting point of simple energy balance models, processes and feedbacks were 
 added and the models became more realistic, but the potential for non-linear 
-interaction between sytems increase.  This can inhibit our understanding of the 
+interaction between systems increase.  This can inhibit our understanding of the 
 mechanisms causing a response in the model and hence, the climate 
 \citep{Dommenget2015}. 
 
 \subsubsection{Model Details}
 The GREB model is intended as a low complexity model to bridge the gap between 
 simple one-dimensional models and coupled-GCMs. It allows testing of the global 
-and regional response to external forcings and sensivity to changes in the mean 
+and regional response to external forcings and sensitivity to changes in the mean 
 climate \citep{Dommenget2015}. The GREB model has a resolution of 
 \SI{3.75}{\degree} x \SI{3.75}{\degree} and three vertical levels; atmosphere, 
 surface and subsurface ocean. The circulation, clouds, soil moisture and ocean 
@@ -405,7 +405,7 @@ atmospheric water vapour) to climatological values. The schematic in Figure
 \ref{fig:schemgreb}, taken from \citet{Dommenget2011}, demonstrates which 
 physical processes are included in GREB. Despite its simplicity, GREB does a 
 good job of modelling key features of the regional response to CO$_2$ 
-\citep{Dommenget2015} including arctic amplification and the land/sea warming 
+\citep{Dommenget2015} including arctic amplification and the land/ocean warming 
 contrast.
 
 \begin{figure}[ht]
@@ -436,33 +436,28 @@ this is not so for the AMIP experiments, as the realistic SST forcing is highly
 variable in space and time.  In order to create anomalous fields from this 
 experiment we use regressions between continental surface temperatures and the 
 variable we are testing. Once again meridional and zonal winds, soil moisture, 
-cloud response and anomolous SSTs are used to perturb the GREB model.
+cloud response and anomalous SSTs are used to perturb the GREB model.
 
 
 %----------------------------------------------------------------------------------------
 %	SECTION STATS
 %----------------------------------------------------------------------------------------
 
-\section{Statistical methods}
+\section{Statistical methods: Regression of land/ocean}\label{ssec:rlo}
 
-This section will describe the statistical methods applied to the data and used 
-in the analysis.
-
-
-\subsection{Regression of land/ocean}\label{ssec:rlo}
-
-
-The majority of the analysis is based on annual mean anomalies with the main 
-exception in Section \ref{pacemaker}, which is based on monthly mean anomalies 
-for monthly mean lag-lead correlations. The land/sea contrast, $R_{L/S}$, is 
-defined by the following regression model;
+To measure the land/ocean contrast in global warming a simple ratio of land to 
+ocean warming is sufficient, i.e. $\Delta T_{land}/\Delta T_{ocean}$. This is 
+unsuitable as a measure of the interannual land/ocean contrast as we are dealing 
+with anomalies varying around zero; a value of $T_{ocean}$ close to zero would 
+result in the ratio becoming unrealistically large. Instead, the land/ocean 
+contrast, $R_{l/o}$, is defined by the following regression model;
 
 \begin{equation}
-T_{land} = R_{L/S} \cdot T_{ocean}
+T_{land} = R_{l/o} \cdot T_{ocean}
 \end{equation}
 where
 \begin{equation}
-	R_{L/S} = \rho_{land,ocean}\cdot \frac{\sigma_{land}}{\sigma_{ocean}}
+	R_{l/o} = \rho_{land,ocean}\cdot \frac{\sigma_{land}}{\sigma_{ocean}}
 \end{equation}
 
 With $T_{land}$ and $T_{ocean}$ as the annual mean surface temperature anomalies 
@@ -470,12 +465,14 @@ of areal-averaged land and ice-free oceans (global or zonal average),
 respectively, $\rho_{land,ocean}$ is the correlation coefficient between 
 $T_{land}$ and $T_{ocean}$, and $\sigma_{land}, \sigma_{ocean}$ are the standard 
 deviations of $T_{land}, T_{ocean}$. While regression coefficients are often 
-used to measure co-variability, $R_{L/S}$ can also be thought of as an 
+used to measure co-variability, $R_{l/o}$ can also be thought of as an 
 amplification factor; how much is the temperature of land amplified compared to 
-the SST. A simple ratio, as for the land/sea contrast in global warming, is 
-unsuitable as we are dealing with anomalies varying around zero. As a simple 
-example, if the anomalous SSTs are +1K the first year and -1K the second, and 
-the land temperature is +1.5K then -1.5K respectively, we have a value of 
-$R_{L/S} = 1.5$. In this way we consider the regression coefficient an 
-appropriate measure of the land/sea temperature contrast in interannual 
-variability.
+the SST.  As a simple example, if the anomalous SSTs are +1K the first year and 
+-1K the second, and the land temperature is +1.5K then -1.5K respectively, we 
+have a value of $R_{l/o} = 
+1.5$. In this way we consider the regression coefficient an appropriate measure 
+of the land/ocean temperature contrast in interannual variability.
+
+The majority of the analysis is based on annual mean anomalies with the main 
+exception in Section \ref{pacemaker}, which is based on monthly mean anomalies 
+for monthly mean lag-lead correlations. 
