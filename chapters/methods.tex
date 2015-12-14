@@ -27,7 +27,7 @@ East Anglia Climatic Research Unit were used as surface temperatures
 observations; Climatic Research Unit land Temperature data set, version 
 4 (CRUTEM4) \citep{Brohan2006}, the Hadley Centre SST data set,
 version 2 (HadSST2) \citep{Rayner2006} and the Hadley Centre global sea ice and 
-and SST, version 1 (HadISST) (ref).
+SST, version 1 (HadISST) (ref).
 
 HadSST2 is global gridded SST dataset based on observations, with the data 
 coverage decreasing with time. Prior to 1950 data coverage is too sparse to 
@@ -67,26 +67,26 @@ simple linear detrend would be sufficient to remove the long-term variability
 most affecting any correlations and regressions with the least amount of 
 processing.
 
-\subsection{Reanalysis Data}
-
-The NCEP-Reanalysis dataset uses a forecast model (ref, details) that 
-assimilates past observational data as boundary conditions. The result is a high 
-spatial and temporal resolution gridded dataset of surface and tropospheric 
-variables, as close to observations as possible.  Only satellite data is used 
-which mean the length is limited to satellite era, post 1979. The NCEP data was 
-Used in initial investigations as alternative to Hadley Centre observations.
+% \subsection{Reanalysis Data}
+% 
+% The NCEP-Reanalysis dataset uses a forecast model (ref, details) that 
+% assimilates past observational data as boundary conditions. The result is a high 
+% spatial and temporal resolution gridded dataset of surface and tropospheric 
+% variables, as close to observations as possible.  Only satellite data is used 
+% which mean the length is limited to satellite era, post 1979. The NCEP data was 
+% Used in initial investigations as alternative to Hadley Centre observations.
 
 \subsection{Coupled Model Data}
 
 For the analysis of CGCMs we used all available pre-industrial control runs from 
 the CMIP5 datasets \citep{Taylor2012}, see Table \ref{tab:cmip5} for the full 
 list. The pre-industrial control runs, which lack any anthropogenic or natural 
-radiative forcings (i.e. no changes in CO$_2$, volcanoes, etc)  were chosen in 
-order to study the unforced internal variability. 100 years from each of the 35 
-models was used, and anomalies were defined seperately for each model relative 
-to its climatology. The multi-model mean of the CMIP5 data was calculated using 
-the anomalous (relative to each model’s climatology) timeseries from each model, 
-these were combined end-to-end to generate a 3500 year timeseries. 
+radiative forcing or aerosol changes (i.e. no changes in CO$_2$, volcanoes, etc.)  
+were chosen in order to study the unforced internal variability. To calculate 
+multi-model statistics a 'super-model' was created by combining 100 years from 
+each of the 35 models end-to-end to generate a 3500 year timeseries, with 
+anomalies defined separately for each model relative to its own climatology.  
+
 
 \begin{center}
 	\begin{table}[h]
@@ -163,10 +163,11 @@ performed with each model.
 The Australian Community Climate and Earth System Simulator (ACCESS) model 
 \citep{Bi2013} uses the UK Meteorological Office Unified Model with HadGEM2 
 atmospheric physics (\citet{Davies2005}; \citet{Martin2010}; 
-\citet{Bellouin2011}). We used a lo-res version with an atmospheric resolution 
-of N48 ($3.75^{\circ} \times 2.5^{\circ}$) as described in \citet{Frauen2014}.  
-The model was either forced with prescribed SSTs or coupled to a slab ocean (the 
-slab ocean is described in section \ref{methods:pacemaker}).
+\citet{Bellouin2011}). We used a low resolution version with an atmospheric 
+resolution of N48 ($3.75^{\circ} \times 2.5^{\circ}$) as described in 
+\citet{Frauen2014}.  The model was either forced with prescribed SSTs or coupled 
+to a slab ocean (the slab ocean is described in section 
+\ref{methods:pacemaker}).
 
 Three primary types of experiments were conducted: AMIP-type; sensitivity to 
 mean SST increases or decreases; and El Ni{\~n}o pattern forcing experiments, 
@@ -224,14 +225,14 @@ described by ~\citealt{Alexander1992}, ~\citealt{Alexander1992a},
 AMIP (Atmosphere-only Model Inter-comparison Project, (ref)), much like CMIP, is 
 a project to compare results from many modelling centres, except instead of the 
 coupled ocean-atmosphere models from CMIP the models are forced with 
-observational SSTs.  Therefore an we consider an AMIP-type experiment one where 
-a model is forced with observational, or similar to observational SSTs. There 
-are a few benefits to this setup; it allows us to test the effect of a range of 
-SST anomalies on continental temperatures, it is computationally much cheaper 
-than a coupled run and doesn't require long spin up times, and the contained 
-boundary conditions stabilise the model and prevent drift. The key limitation of 
-AMIP runs is the loss of atmosphere to ocean feedbacks which are potentially 
-important for the eveolution of both systems. This downside is partially 
+observational SSTs.  Therefore we consider an AMIP-type experiment one where a 
+model is forced with observational, or similar to observational SSTs. There are 
+a few benefits to this setup; it allows us to test the effect of a range of SST 
+anomalies on continental temperatures, it is computationally much cheaper than a 
+coupled run and doesn't require long spin up times, and the contained boundary 
+conditions stabilise the model and prevent drift. The key limitation of AMIP 
+runs is the loss of atmosphere to ocean feedbacks which are potentially 
+important for the evolution of both systems. This downside is partially 
 addressed with the use of a mixed-layer slab ocean, discussed in section 
 \ref{methods:pacemaker}.
 
@@ -289,7 +290,7 @@ mechanisms of otherwise complicated problems (ref). To understand the
 relationship between SSTs, tropospheric temperatures and $T_{land}$ response we 
 used a radiative-convective column model. A radiative-convective model is one 
 where the atmospheric heating by convection is balanced with radiative cooling 
-(ref Manabe, Wetherald 1967 etc) and have been used in a myriad of studies, such 
+(ref Manabe, Wetherald 1967 etc.) and have been used in a myriad of studies, such 
 as the equilibrium response to CO$_2$ (ref) and solar forcings (ref), climate 
 sensitivity (ref), the organisation of deep convection (ref) and the atmospheric 
 sctuctural response to SSTs and boundary layer humidity (hamish and adam, ref).  
