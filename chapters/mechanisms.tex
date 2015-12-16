@@ -1,6 +1,6 @@
 \chapter{Mechanisms Controlling the Land/Sea Contrast} 
 
-\tableofcontents % Write out the Table of Contents
+% \tableofcontents % Write out the Table of Contents
 
 \label{mechanisms} 
 
@@ -11,24 +11,41 @@
 In chapter \ref{evidence} we showed evidence for the interannual land/ocean 
 temperature contrast in observations and models, and discussed its magnitude and 
 spatial extent. Through AMIP simulations it was shown that an $R_{l/o}>1$ can 
-exist in a model forced only with SST variability. The implication is that the 
-variability from the ocean is being amplified over the continents. By 
-prescribing SSTs we remove the effect of ocean heat capacity - and it's ability 
-to cause $R_{l/o}>1$ by damping the ocean's response relative to the land 
-response for a uniform forcing. In this chapter we will attempt to determine the 
+exist in a model forced only with SST variability. By prescribing SSTs we remove 
+the effect of ocean heat capacity - and it's ability to cause $R_{l/o}>1$ by 
+damping the ocean's response relative to the land response for a uniform 
+forcing. The implication is that the variability from the ocean is being 
+amplified over the continents. In this chapter we will attempt to determine the 
 underlying mechanisms responsible for the amplification of ocean surface 
-temperature anomalies over land. A range of sensitivity experiments using the 
-ACCESS, MIT RCE and GREB models will be presented.  The analysis of observations 
-and models from chapter \ref{evidence} also demonstrated that the ability of the 
-ocean to influence land temperatures is geographically inhomogeneous. There is a  
-latitudinal dependence, and this will guide the initial investigations of this 
-chapter.
+temperature anomalies over land. 
+
+We begin in Section \ref{mech_inftrop} with a range of sensitivity experiments 
+using the ACCESS AGCM forced with SSTs or coupled to a slab ocean to look at the 
+ability of the tropical and extra-tropical oceans to influence continental 
+tempratures. In Section \ref{mech_lapse} there is a discussion of the importance 
+of the lapse rates above land and ocean and their relationship to the land/ocean 
+contrast in both global warming and interannual scenarios. This leads in to 
+experiments with a single-column and multi-column atmospheric model, which are 
+presented in Section \ref{mech_scm} and Section \ref{mech_mcm}. In these 
+sections we use the simplified model to understand the importance of the 
+vertical structure of the atmosphere and surface properties while controlling 
+for large scale circulation effects. These simplified models are compared to GCM 
+results in Section \ref{mech_compare}, where it is found that the column models 
+are unable to explain the temperature response in many continental regions.
+
+Finally, in Section \ref{mech_greb} we use the Globally Resolved Energy Balance 
+(GREB) model to explain the regional response that were not explained by the 
+column model results. Aspects of the large scale circulation can be controlled 
+in the GREB model, thus allowing us to test the importance of circulation 
+changes to the continental surface temperature response to an ocean forcing.
+
 
 %----------------------------------------------------------------------------------------
 %	influence of SSTs on Continental temps
 %----------------------------------------------------------------------------------------
 
 \section{The Influence of Tropical Oceans on Land}
+\label{mech_inftrop}
 
 When looking at the relationship between $T_{land}$ and SSTs there is an 
 asymmetry between the response of $T_{land}$ to tropical and extra-tropical SST 
@@ -41,7 +58,10 @@ imposed using observed SST anomalies. The Pacemaker experiments are forced with
 an idealised ENSO in the tropical Pacific and a slab ocean or fixed SSTs 
 elsewhere.
 
-\subsection{1K Experiments}
+\subsection{Comparison of Tropical and Extra-Tropical forcing of Continental 
+Temperatures.}
+
+\subsubsection{1K Experiments}
 
 Figure \ref{fig:1K} shows the surface temperature response (control removed) 
 from the 1K experiments; where 1K was added to the oceans in the tropics, 
@@ -92,7 +112,7 @@ extra-tropical SST forcing does lead to a significant land response.
 
 
 
-\subsection{Half-AMIP Experiments}
+\subsubsection{Half-AMIP Experiments}
 
 In Figure \ref{fig:ftest} f-tests are used to measure the increase in annual 
 temperature variability due to SST variability at the surface and at the 300hPa 
@@ -272,6 +292,7 @@ process by which SST variability leads to amplified $T_{land}$ variability.
 \clearpage
 
 \section{The Lapse Rate Mechanism}
+\label{mech_lapse}
 
 The Figure \ref{fig:ftest} in section \ref{troptrop} indicates that there are 
 similarities between the global warming and interannual land/ocean contrast.  
@@ -989,6 +1010,7 @@ mixed layer depth of the surface, a) and c) vary in the evaporative fraction.}
 \clearpage
 
 \section{Zonally aligned rows of ocean and land columns}
+\label{mech_mcm}
 
 The single column model in weak temperature gradient mode offered a promising 
 and novel approach to investigating the land/ocean contrast and the role of 
@@ -1001,7 +1023,7 @@ regional differences in the land response. In order to continue using the column
 model while avoiding these issues a multi column setup was used. Multiple 
 columns can be coupled to each other in a zonal or meridional direction. In this 
 section we primarily use a zonal alignment, a meridional alignment is discussed 
-in section \ref{zonmercol}.\\
+in section \ref{mech_compare}.\\
 In the single-column model tropospheric profiles were generated with a range of 
 SSTs in an ocean column, then used to force the free troposphere of a land 
 column. For the zonal and meridional column rows the model is forced directly 
@@ -1307,7 +1329,8 @@ the areal mean across all columns.}
 \end{figure}
 
 \section{Comparison of Simplified Models and GCM results}
-\label{zonmercol}
+\label{mech_compare}
+
 The large range of $R_{l/o}$ values allows for a direct comparison to GCM 
 results. Using the pacemaker experiment we can calculate an $R_{l/o}$ value for 
 each individual land grid box, see Figure \ref{fig:tdm_gcm_compare} a). We do 
@@ -1422,7 +1445,7 @@ reduced values of $R_{l/o}$ seen with increasing latitude.
 %----------------------------------------------------------------------------------------
 
 \section{Mechanisms of the Regional Response}
-
+\label{mech_greb}
 
 In our investigations with the single column and multi column models we found 
 that the modelled land/ocean contrast compared well to the mean global and 
