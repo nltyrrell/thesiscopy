@@ -51,12 +51,25 @@ When looking at the relationship between $T_{land}$ and SSTs there is an
 asymmetry between the response of $T_{land}$ to tropical and extra-tropical SST 
 forcing. We investigate this asymmetry and the importance of the tropical oceans 
 in regulating regional and global land surface temperatures using modelling 
-experiments. In the 1K experiments a constant +/-1K SST anomaly is applied to 
-tropical or extra-tropical regions, in the Half-AMIP experiments the same 
-regional restrictions are used but instead of a constant forcing, variability is 
-imposed using observed SST anomalies. The Pacemaker experiments are forced with 
-an idealised ENSO in the tropical Pacific and a slab ocean or fixed SSTs 
-elsewhere.
+experiments. For our initial SST perturbation experiments we divide global 
+oceans into tropics and extra-tropics, with each area being approximately equal.  
+In the 1K experiments a constant +/-1K SST anomaly is applied to tropical or 
+extra-tropical regions, as well as globally. This is more similar to a global 
+warming experiment and while the overarching focus of this study is on 
+variability it is useful to see the response to a uniform warming or cooling.  
+Variability is then introduced in the Half-AMIP experiments. The oceans are 
+divided into tropical and extra-tropical regions, as with the 1K experiments, 
+but instead of a constant forcing, variability is imposed using observed SST 
+anomalies. The ``half ocean" experiments will show the importance of the 
+tropical oceans, then the regional importance of SSTs is further clarified in 
+the Pacemaker experiments. The only region of active forcing in the Pacemaker 
+experiments is in the tropical Pacific, where a canonical ENSO pattern is 
+oscillated with a period of four years, peaking in January. Outside of the 
+tropical Pacific a slab ocean or a fixed climatology of SSTs are used. In some 
+sense this is a simplification of all ocean dynamics to what we see as the key 
+components involved in the ocean's ability to force continental temperatures, at 
+least on the timescales we are interested in, and this simplification will help 
+to elucidate the mechanisms controlling the land/ocean contrast.
 
 \subsection{Comparison of Tropical and Extra-Tropical forcing of Continental 
 Temperatures.}
@@ -291,51 +304,57 @@ process by which SST variability leads to amplified $T_{land}$ variability.
 %----------------------------------------------------------------------------------------
 \clearpage
 
-\section{The Lapse Rate Mechanism}
+\subsection{The Lapse Rate Mechanism}
 \label{mech_lapse}
 
-The Figure \ref{fig:ftest} in section \ref{troptrop} indicates that there are 
-similarities between the global warming and interannual land/ocean contrast.  
-Figure \ref{fig:ftest}  shows homogenous temperature response throughout the 
-free troposphere, hence no land/ocean contrast at higher levels in the 
-atmosphere, with an amplified response at the land surface.  This is similar to 
-the warming lapse rate mechanism described by \citet{Joshi2007} and 
-\citet{Byrne2013a}.  These theories were originally devised to explain the 
-land/ocean warming contrast that exists in global warming scenarios.  However, 
-the observed similarities justify testing the validity of the lapse rate 
-theories in interannul variability.
+The Figure \ref{fig:ftest} (d) and (e) in section \ref{troptrop} the 
+tropospheric temperature response to imposed SST variability shows a zonally 
+homogenous temperature response throughout the free troposphere with a larger 
+signal in the tropics, hence no land/ocean contrast at higher levels in the 
+atmosphere and an amplified response at the land surface.  A known feature of 
+the land/ocean contrast in global warming is that the land and ocean temperature 
+difference dissappears at a certain height in the free troposphere 
+(\citealt{Joshi2007}, \citealt{Dommenget2009}, \citealt{Byrne2013a}). A lapse rate 
+mechanism was described by \citet{Joshi2007} and \citet{Byrne2013a} to explain 
+the land/ocean warming contrast that exists in global warming scenarios, and  
+the homogenous free tropospheric temperatures are an important feature of the 
+theories. Although the theories were devised for the global warming scenario, 
+the homogenous tropospheric response in Figure \ref{fig:ftest} indicates that 
+there are similarities between the global warming and interannual land/ocean 
+contrast, which we believe justifies testing the validity of the lapse rate 
+theories in explaining the interannual land/ocean contrast. 
 
-We will begin by explaining the two theories, their similarities and 
-differences. Then we look at the vertical structure of the atmospheric response 
-in ACCESS, using the Pacemaker experiments. These results then motivate the use 
-of a single-column and zonally or meridionally aligned multi-column model. The 
-simplified models allow a greater control of the properties of the troposphere 
-and the surface, finally we put the simplified model results into context by 
-comparing them to ACCESS.
+The usefulness of the lapse rate theory in interannual variability will be 
+explored by looking at the tropospheric structure in the ENSO-Pacemaker 
+experiment. This experiment is uniquely suitable for this analysis as it has  
+distinct regions of ocean forcing in the Tropical Pacifc, ocean response in the 
+remote oceans and land response. The ability to seperate the forcing and 
+response of land and ocean is useful when comparing their atmospheri profiles.
 
-\subsection{The Lapse rate mechanism in global warming scenarios}
 
-\begin{itemize}
-	\item Ref explanation (intro)
-	\item explain Joshi theory
-	\item explain Byrne O'Gorman theory
-	\item Explain differences
-	\item why is the difference between the theories important (allows us to 
-		test relevance)
-	\item Lead in to pacemaker experiments:
-	\item Reason: we've seen similarities, want to explore those in more detail
-\end{itemize}
+% \subsection{The Lapse rate mechanism in global warming scenarios}
+% 
+% \begin{itemize}
+% 	\item Ref explanation (intro)
+% 	\item explain Joshi theory
+% 	\item explain Byrne O'Gorman theory
+% 	\item Explain differences
+% 	\item why is the difference between the theories important (allows us to 
+% 		test relevance)
+% 	\item Lead in to pacemaker experiments:
+% 	\item Reason: we've seen similarities, want to explore those in more detail
+% \end{itemize}
 
 
 \subsection{The tropospheric response in the Pacemaker Experiments}
 
 We are going to use the Pacemaker experiments to test the relationship between 
-the land and ocean surfaces and the troposphere above them. The advantage of 
-using the Pacemaker experimental design is the area of ocean forcing is very 
-well constrained, allowing us to separate forced and responding regions.  We 
-first compare the Pacemaker experiment with a climatology run (i.e. no SST 
-variability) to investigate the vertical structure of the atmosphere in ACCESS 
-and the relationship between land and ocean temperatures.
+the land and ocean surfaces and the troposphere above them. As mentioned the 
+advantage of using the Pacemaker experimental design is the ability to separate 
+forced and responding regions.  We first compare the Pacemaker experiment with a 
+climatology run (i.e. no SST variability) to investigate the vertical structure 
+of the atmosphere in ACCESS and the relationship between land and ocean 
+temperatures.
 
 Using tropical averages of SSTs and land temperatures, Figure 
 \ref{fig:linreg_plev} shows regression values for the $T_{tropos}$ at different 
@@ -362,8 +381,8 @@ troposphere above oceans (blue line) is the large increase in the regression
 values in the upper troposphere. This is a well known signature of moist
 convection; a \SI{1}{\kelvin} anomaly at the surface corresponds to a 
 \SI{2}{\kelvin} anomaly in the upper level temperatures due to the latent heat 
-release by moist convection (\citet{Joshi2007}, \citet{Byrne2013}, 
-\citet{Dommenget2009}, etc.). The regression coefficient over the ocean has a 
+release by moist convection (\citealt{Joshi2007}, \citealt{Dommenget2009}, 
+\citealt{Byrne2013}, etc.).  The regression coefficient over the ocean has a 
 larger peak than over the land in the upper troposphere --  
 \SIrange{500}{200}{\hecto\pascal}.  However, in the middle troposphere -- around 
 the \SIrange{700}{500}{\hecto\pascal} level -- the two lines coincide, similar 
@@ -380,27 +399,28 @@ Pacemaker experimental design is that the area of ocean forcing is very well
 constrained.  In contrast, when using observations or coupled models to look at 
 the response to an ENSO forcing the remote tropical oceans will also have their 
 own, potentially considerable, internal variability due to ocean dynamics.  In 
-the Pacemaker experiment the remote slab oceans have no dynamics or internal 
-variability.  Therefore, we can consider the Pacific Ocean an external forcing 
-to both the continental regions and the remote oceans, and measure the separate 
-response of land and ocean.  In Figure \ref{fig:linreg_plev} b) the black line 
-is a measurement of the atmospheric response above remote oceans, the only 
-variability for this region is imposed via the Pacific ocean forcing.  The 
-remote tropical response is similar to the land response in shape; it also lacks 
-the large amplification in the upper troposphere indicating that the upper 
-levels are responding to the Pacific forcing and not being driven by their own 
-moist convection.  At all levels the response above the remote tropical oceans 
-is damped when compared to the land response which means there is no clear level 
-where there is no land/ocean contrast however the two lines diverge more near 
-the surface, with the largest difference between the gradients of the 
-temperature profiles below \SI{800}{\hecto\pascal}.  In the global warming lapse 
-rate theory, the steeper near-surface continental lapse rate is due to reduced 
-moisture availability and thus lower relative humidities. It would appear that a 
-similar process is active on interannual timescales with an additional factor; 
-the tropospheric profile above a region of the ocean that is responding to an 
-external forcing -- or a forcing from a separate ocean basin -- will be 
-potentially be damped throughout the entire troposphere.  The vertical structure 
-above land and ocean is further explored with a one and two-dimensional model.
+the Pacemaker experiment the remote slab oceans have no dynamics, hence 
+variability results only from the atmospheric fluxes.  Therefore, we can 
+consider the Pacific Ocean an external forcing to both the continental regions 
+and the remote oceans, and measure the separate response of land and ocean.  In 
+Figure \ref{fig:linreg_plev} b) the black line is a measurement of the 
+atmospheric response above remote oceans, the only variability for this region 
+is imposed via the Pacific ocean forcing.  The remote tropical response is 
+similar to the land response in shape; it also lacks the large amplification in 
+the upper troposphere indicating that the upper levels are responding to the 
+Pacific forcing and not being driven by their own moist convection.  At all 
+levels the response above the remote tropical oceans is damped when compared to 
+the land response which means there is no clear level where there is no 
+land/ocean contrast however the two lines diverge more near the surface, with 
+the largest difference between the gradients of the temperature profiles below 
+\SI{800}{\hecto\pascal}.  In the global warming lapse rate theory, the steeper 
+near-surface continental lapse rate is due to reduced moisture availability and 
+thus lower relative humidities. It would appear that a similar process is active 
+on interannual timescales with an additional factor; the tropospheric profile 
+above a region of the ocean that is responding to an external forcing -- or a 
+forcing from a separate ocean basin -- will be potentially be damped throughout 
+the entire troposphere.  The vertical structure above land and ocean is further 
+explored with a one and two-dimensional model.
 % NOTE: further lapse rate analysis on pacemake in 
 % ~/project/pacemaker/figures/*profile*
 
@@ -426,10 +446,11 @@ Model}
 \label{mech_scm}
 
 
-We have seen in the pacemaker experiments a distinctive response in the 
-troposphere above land and ocean areas. The temperature profiles above land and 
-ocean appear consistent with the lapse rate mechanism outlined by 
-\citet{Joshi2007} and \citet{Byrne2013}. For this section we will use a 
+The ENSO-Pacemaker experiments have a distinctive response in the troposphere 
+above land and ocean areas. The temperature profiles above land and ocean appear
+consistent with the lapse rate mechanism outlined by \citet{Joshi2007} and 
+\citet{Byrne2013}, and therefor warrant further investigation. This will be 
+acheived with simplified atmospheric models. In this section we will use a 
 single-column model to analyse the tropospheric response to an SST forcing, and 
 the land surface response to a tropospheric forcing.\\
 To understand how the physical processes occur we first look at how the 
@@ -443,7 +464,6 @@ and we can increase the vertical resolution of the model which will prove useful
 when testing the finer details of the differences between the Joshi and Byrne \& 
 O'Gorman theories.\\
 
-
 There are two main parts to the experimental setup; i) the ocean forcing of the 
 troposphere, and ii) the tropospheric forcing of a land surface. For part i) we	 
 generate temperature profiles in an ocean column which are to be used in part 
@@ -452,10 +472,9 @@ band, generally around \SI{26}{\degreeCelsius}. We vary the SST above and below
 the chosen mean value, and for each SST value we run the model to equilibrium, 
 in this way we end up with a range of temperature profiles varying around a mean 
 value, and when comparing the results to observations or GCMs we consider each 
-SST value to be equivalent to a yearly temperature. A full discussion of the 
+SST value to be equivalent to an annual temperature. A full discussion of the 
 generation of tropospheric temperature profiles in the ocean column is in 
 section \ref{trop_response_ocean}.
-
 
 Once we have generated the tropospheric temperature profiles above an ocean the 
 next step is to use them as a forcing above a land surface. For this we utilise 
@@ -464,7 +483,6 @@ basis for imposing a tropospheric profile, and in practical terms. The
 single-column model has a weak temperature gradient mode, which allows the 
 tropospheric temperature profile to be imposed above a certain height.
 
-
 \begin{figure}[ht]
 \includegraphics[width=0.9\textwidth,trim={1cm 8cm 3cm 
 1cm},clip=true]{scm_schematic.pdf}
@@ -472,8 +490,18 @@ tropospheric temperature profile to be imposed above a certain height.
 \label{fig:scmschem}
 \end{figure}
 
-Now we will look in detail at the response of the atmosphere in the ocean 
-column.
+As we will see this model setup offers some useful insights into the problem, 
+but the idealized nature of the model does lead to a number of problems.  From a 
+more theoretical viewpoint, RCE models have not been studied extensively over 
+land surfaces. Although not in the scope of this study, further work on the 
+validity of RCE over a surface with restricted water would be of interest. For 
+this study many of the experiments involved small changes in temperatures, to 
+simulate those seen in interannual variability.  The model often responded with 
+large variability, bringing in to question the stability of the model. It will 
+be shown that timeseries of the surface temperatures exhibit chaotic bevavhiour, 
+arising from the interaction of the convection and radiation schemes. It remains 
+unclear how realistic some of this behaviour is, and leads to inconclusive 
+results.
 
 \subsection{Tropospheric response to imposed SSTs in a single column}
 \label{trop_response_ocean}
@@ -641,8 +669,8 @@ the profiles from an ocean column above land.
 The single-column model can be run in WTG mode. In this mode a temperature 
 profile is imposed in the free troposphere above a specified height, and the 
 temperature below is able to adjust. Similar model setups have been used in a 
-number of previous studies (e.g. \citet{Sobel2000}, \citet{Lintner2005}, 
-\citet{Ramsay2011}), although none have specifically looked at the land/ocean 
+number of previous studies (e.g. \citealt{Sobel2000}, \citealt{Lintner2005}, 
+\citealt{Ramsay2011}), although none have specifically looked at the land/ocean 
 contrast.
 
 \subsection{Values of land ocean contrast modelled with a single column model}
@@ -1567,8 +1595,8 @@ wave patterns in the extra-tropics and high latitudes, indicated by alternating
 positive (southerly) and negative (northerly) anomalies. Although the dynamics 
 of the extra-tropical response is not a focus of this study, the distinctive 
 extra-tropical wave pattern concurs with theory on the atmospheric response to a 
-tropical heat source (e.g. \citet{Hoskins1981}, \citet{Sardeshmukh1988}, 
-\citet{Held1989}).  There is convergence in the tropical Pacific, with northerly 
+tropical heat source (e.g. \citealt{Hoskins1981}, \citealt{Sardeshmukh1988}, 
+\citealt{Held1989}).  There is convergence in the tropical Pacific, with northerly 
 anomalies to the north of the forcing region and southerly anomalies to the 
 south. The largest response is in the north-eastern Pacific Ocean, with a strong 
 northerly anomaly.  Figure \ref{fig:comp_5var} (d) shows that the zonal wind 
