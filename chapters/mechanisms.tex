@@ -516,22 +516,21 @@ anomalies from a chosen mean value; large anomalies test the robustness of the
 model and small anomalies are more appropriate for modelling interannual 
 variability.
 
-In Figure \ref{fig:scmsstprof_large} a) we see the temperature profile for a 
+In Figure \ref{fig:scmsstprof_large} (a) we see the temperature profile for a 
 wide range of SST values. For each profile the model has been run to 
 equilibrium, and an average of the last 100 days is taken. The difference 
 between the profiles with increasing and decreasing SST values is more clearly 
-shown in Figure \ref{fig:scmsstprof_large} b). For this plot the mean profile 
+shown in Figure \ref{fig:scmsstprof_large} (b). For this plot the mean profile 
 was calculated using all values from \SIrange{19}{33}{\degreeCelsius}, and then 
 the mean profile was subtracted from each individual profile to give the change 
-relative to the mean. For example, with the run forced with 
-\SI{33}{\degreeCelsius}, at the surface the temperature is \SI{7}{\kelvin} 
-warmer than the mean, and at \SI{200}{\hecto\pascal} the profile is 
-approximately \SI{14}{\kelvin} warmer. This amplification of surface anomalies 
-with height is the consequence of the profile being close to moist adiabatic, as 
-expected in convecting regions of the tropics. The amplification above the ocean 
-surface is also important in the communication of SST anomalies from oceans to 
-land. From this plot it appears the model is behaving according to theory, but 
-we can confirm that by plotting the moist adiabats.
+relative to the mean. This shows the amplification of the anomaly with height.  
+For example, with the run forced with \SI{33}{\degreeCelsius}, at the surface 
+the temperature is \SI{7}{\kelvin} warmer than the mean, and at 
+\SI{200}{\hecto\pascal} the profile is approximately \SI{14}{\kelvin} warmer.  
+This amplification of surface anomalies with height is the consequence of the 
+profile being close to moist adiabatic, as expected in convecting regions of the 
+tropics. The amplification above the ocean surface is also important in the 
+communication of SST anomalies from oceans to land. 
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_tempprof_abs.eps}
@@ -543,14 +542,15 @@ convective heating rates, anomaly from the mean profile.}
 \label{fig:scmsstprof_large}
 \end{figure}
 
-We can compare the model response with theory by including the moist adiabat, as 
-seen in Figure \ref{fig:scmsstprof_ma}. The moist adiabat is calculated for each 
-SST, then as with the model response the anomalies are taken relative to the 
-mean of the moist adiabats for all SSTs. We see that that model follows the 
-moist adiabat closely from \SIrange{1000}{600}{\hecto\pascal}, after which they 
-diverge slightly with the model showing less amplification. From this we can 
-conclude that for a wide range of SST values, and for large differences in SST 
-of \SI{1}{\kelvin}, the troposphere in the ocean column is largely moist 
+From Figure \ref{fig:scmsstprof_large} (b) it appears the temperature profiles 
+are largely moist adiabatic, but we can confirm that by plotting the moist 
+adiabats, see Figure \ref{fig:scmsstprof_ma}. The moist adiabat is calculated 
+for each SST, then as with the model response the anomalies are taken relative 
+to the mean of the moist adiabats for all SSTs. We see that that model follows 
+the moist adiabat closely from \SIrange{1000}{600}{\hecto\pascal}, after which 
+they diverge slightly with the model showing less amplification. From this we 
+can conclude that for a wide range of SST values, and for large differences in 
+SST of \SI{1}{\kelvin}, the troposphere in the ocean column is largely moist 
 adiabatic.  We can now compare this to the smaller variations in SST used to 
 model interannual variability.
 
