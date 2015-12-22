@@ -454,8 +454,8 @@ acheived with simplified atmospheric models. In this section we will use a
 single-column model to analyse the tropospheric response to an SST forcing, and 
 the land surface response to a tropospheric forcing.\\
 To understand how the physical processes occur we first look at how the 
-atmosphere responds in the ocean column to SST variations, and then investigate 
-the impact of tropospheric temperature changes on the land surface 
+atmosphere responds in the ocean forced column to SST variations, and then 
+investigate the impact of tropospheric temperature changes on the land surface 
 temperature.\\
 We use a single-column model for three main reasons: the idealised nature of the 
 model allows us to impose a tropospheric temperature profile, thus simulating a 
@@ -464,29 +464,34 @@ and we can increase the vertical resolution of the model which will prove useful
 when testing the finer details of the differences between the Joshi and Byrne \& 
 O'Gorman theories.\\
 
-There are two main parts to the experimental setup; i) the ocean forcing of the 
-troposphere, and ii) the tropospheric forcing of a land surface. For part i) we	 
-generate temperature profiles in an ocean column which are to be used in part 
-ii). To generate the profiles we begin with a mean SST suitable for the tropical 
-band, generally around \SI{26}{\degreeCelsius}. We vary the SST above and below 
-the chosen mean value, and for each SST value we run the model to equilibrium, 
-in this way we end up with a range of temperature profiles varying around a mean 
-value, and when comparing the results to observations or GCMs we consider each 
-SST value to be equivalent to an annual temperature. A full discussion of the 
-generation of tropospheric temperature profiles in the ocean column is in 
-section \ref{trop_response_ocean}.
+There are two main parts to the experimental setup as shown in the schematic in 
+Figure \ref{fig:scmschem}; i) the ocean forcing of the troposphere, and ii) the 
+tropospheric forcing of a land surface.  For part i) we	 generate temperature 
+profiles in an ocean forced column which are to be used in part ii). To generate 
+the profiles we begin with a mean SST suitable for the tropical band, generally 
+around \SI{26}{\degreeCelsius}. We vary the SST above and below the chosen mean 
+value, and for each SST value we run the model to equilibrium, in this way we 
+end up with a range of temperature profiles varying around a mean value, and 
+when comparing the results to observations or GCMs we consider each SST value to 
+be equivalent to an annual temperature. A full discussion of the generation of 
+tropospheric temperature profiles in the ocean forced column is in section 
+\ref{trop_response_ocean}.
 
 Once we have generated the tropospheric temperature profiles above an ocean the 
 next step is to use them as a forcing above a land surface. For this we utilise 
-the Weak Temperature Gradient approximation, both in terms of the theoretical 
-basis for imposing a tropospheric profile, and in practical terms. The 
-single-column model has a weak temperature gradient mode, which allows the 
-tropospheric temperature profile to be imposed above a certain height.
+the Weak Temperature Gradient (WTG) approximation, both in terms of the 
+theoretical basis for imposing a tropospheric profile, and in practical terms.  
+The single-column model has a weak temperature gradient mode, which allows the 
+tropospheric temperature profile to be imposed above a certain height, PFixT 
+(the Pressure above which to Fix the Temperature), and below the atmosphere and 
+surface responds, see Figure \ref{fig:scmschem}.
 
 \begin{figure}[ht]
-\includegraphics[width=0.9\textwidth,trim={1cm 8cm 3cm 
-1cm},clip=true]{scm_schematic.pdf}
-\caption{Schematic of Single Column Model experimental setup}
+\includegraphics[width=0.9\textwidth,trim={0cm 0cm 0cm 
+0cm},clip=true]{scm_wtg_schem.eps}
+\caption{Schematic of the Single Column Model Weak Temperature Gradient mode 
+experimental setup, showing how the generated temperature profiles are imposed 
+above the height PFixT, and the lower atmosphere and surface respond.}
 \label{fig:scmschem}
 \end{figure}
 
@@ -535,10 +540,9 @@ communication of SST anomalies from oceans to land.
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_tempprof_abs.eps}
 \includegraphics[width=0.5\textwidth]{enso_prof_temp_anom.eps}
-\caption{a) Temperature anomaly relative to mean profile for SSTs from 
-\SI{19}{\degreeCelsius} to \SI{34}{\degreeCelsius} b) Amplification relative to 
-the mean profile c) Temperature anomalies relative to mean profile d) Moist 
-convective heating rates, anomaly from the mean profile.}
+\caption{(a) Temperature profiles in the single column model above an ocean 
+	surface, for SSTs from \SI{19}{\degreeCelsius} to \SI{34}{\degreeCelsius}, 
+(b) Temperature anomalies relative to the mean profile.}
 \label{fig:scmsstprof_large}
 \end{figure}
 
@@ -550,16 +554,17 @@ to the mean of the moist adiabats for all SSTs. We see that that model follows
 the moist adiabat closely from \SIrange{1000}{600}{\hecto\pascal}, after which 
 they diverge slightly with the model showing less amplification. From this we 
 can conclude that for a wide range of SST values, and for large differences in 
-SST of \SI{1}{\kelvin}, the troposphere in the ocean column is largely moist 
-adiabatic.  We can now compare this to the smaller variations in SST used to 
-model interannual variability.
+SST of up to \SI{8}{\kelvin}, the troposphere in the ocean forced column is 
+largely moist adiabatic.  We can now compare this to the smaller SST variations 
+used to model interannual variability.
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_prof_temp_anom_ma.eps}
-\caption{a) Temperature anomaly relative to mean profile for SSTs from 
-\SI{19}{\degreeCelsius} to \SI{34}{\degreeCelsius} b) Amplification relative to 
-the mean profile c) Temperature anomalies relative to mean profile d) Moist 
-convective heating rates, anomaly from the mean profile.}
+\caption{Solid lines; Temperature anomalies relative to mean profile for SSTs 
+from \SI{19}{\degreeCelsius} to \SI{34}{\degreeCelsius}. Dashed lines; moist 
+adiabat anomalies, the adiabats are calculated for each surface temperature 
+(from \SI{19}{\degreeCelsius} to \SI{34}{\degreeCelsius}) and anomalies 
+calculated relative to all SSTs.}
 \label{fig:scmsstprof_ma}
 \end{figure}
 
@@ -581,19 +586,21 @@ the temperature profiles may have consequences for the modelled interannual
 value of the land/ocean contrast. The control of tropospheric temperatures by 
 the ocean surface is necessary for temperature anomalies to be communicated to 
 land surfaces, and demonstrates that variations in SST may not directly 
-correspond to tropospheric anomalies. We can look closer at the tropospheric 
-amplification to determine the significance of the variations in the temperature 
-profiles for small and large anomalies.
+correspond to tropospheric anomalies.\\
+We can look closer at the tropospheric amplification to determine the 
+significance of the variations in the temperature profiles for small and large 
+anomalies.
 
 
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{sstinc_prof_temp_abs.eps}
 \includegraphics[width=0.5\textwidth]{sstinc_prof_temp_mean_ma.eps}
-\caption{Heating and temperature profiles for the SCM. a) Temperature anomaly 
-	relative to mean profile for SSTs from \SI{19}{\degreeCelsius} to 
-	\SI{34}{\degreeCelsius} b) Amplification relative to the mean profile c) 
-	Temperature anomalies relative to mean profile d) Moist convective heating 
-rates, anomaly from the mean profile.}
+\caption{(a) Temperature profiles in the single column model above an ocean 
+surface, for SSTs from \SI{25.00}{\degreeCelsius} to \SI{26.50}{\degreeCelsius}, 
+(b) Temperature anomalies relative to the mean profile. As with Figure 
+\ref{fig:scmsstprof_large} the moist adiabat anomalies were calculated for each 
+SST, the dashed lines in (b) show the moist adiabat anomalies for the highest 
+and lowest SST.}
 \label{fig:scmsstinc_prof}
 \end{figure}
 
@@ -606,10 +613,11 @@ anomalous profile was created by minusing the median profile
 anomalous SST, in this case the mean SST is \SI{26}{\celsius} so the anomalous 
 SST value is \SI{4}{\celsius}.  This gives a ratio of amplification at each 
 level, starting at unity at the surface and increasing to above 2 at 
-\SI{300}{\hecto\pascal}.  In this way we get a measure of the amplification of 
-the SST anomaly with height relative to the mean value.  A value of 2 at 
-\SI{300}{\hecto\pascal} would indicates that a surface anomaly of 
-\SI{1.5}{\kelvin} would lead to a \SI{3}{\kelvin} anomaly at that height.  
+\SI{300}{\hecto\pascal}, as shown in Figure \ref{fig:scmsstamp}.  In this way we 
+get a measure of the amplification of the SST anomaly with height relative to 
+the mean value.  A value of 2 at \SI{300}{\hecto\pascal} would indicates that a 
+surface anomaly of \SI{1.5}{\kelvin} would lead to a \SI{3}{\kelvin} anomaly at 
+that height.  
 
 From Figure \ref{fig:scmsstamp} (a) we see that for large SST changes the 
 positive anomalies (reds) show a larger amplification than the negative 
@@ -625,18 +633,18 @@ warm anomalies, and there's a high level of variability for small SST anomalies.
 \begin{figure}[ht]
 \includegraphics[width=0.5\textwidth]{enso_prof_ampratio_mean.eps}
 \includegraphics[width=0.5\textwidth]{sstinc_prof_ampratio_mean.eps}\\
-\caption{Heating and temperature profiles for the SCM. a) Temperature anomaly 
-	relative to mean profile for SSTs from \SI{19}{\degreeCelsius} to 
-	\SI{34}{\degreeCelsius} b) Amplification relative to the mean profile c) 
-	Temperature anomalies relative to mean profile d) Moist convective heating 
-rates, anomaly from the mean profile.}
+\caption{Amplification of the temperature profile relative to the mean profile 
+	for SSTs from (a) \SI{19.00}{\degreeCelsius} to \SI{34.00}{\degreeCelsius} 
+and (b) \SI{25.00}{\degreeCelsius} to \SI{26.50}{\degreeCelsius}. To calculate 
+the amplification each anomalous profile was divided by the SST anomaly used to 
+generate that profile.}
 \label{fig:scmsstamp}
 \end{figure}
 
 In order to study the land surface temperature response to a tropospheric 
 forcing a single column model allows us to vary parameters of the land surface 
 properties while controlling the tropospheric forcing.  We begin by generating 
-the temperature profiles above an ocean column by prescribing a range of SSTs 
+the temperature profiles above an ocean forced column by prescribing a range of SSTs 
 and running the model to equilibrium.  The focus of our study is interannual 
 variability, so we chose an SST value of \SI{26}{\degreeCelsius} as the mean 
 profile -- which is appropriate for a tropical profile -- then the SST was 
@@ -664,7 +672,7 @@ allowing areas of strong convection to control the tropical tropospheric
 temperatures.  The assumption we use is that the uniformity of tropospheric 
 temperatures in the tropical band means that temperature profiles above land and 
 ocean are controlled by convecting regions of the ocean. This allows us to use 
-the profiles from an ocean column above land.
+the profiles from an ocean forced column above land.
 
 The single-column model can be run in WTG mode. In this mode a temperature 
 profile is imposed in the free troposphere above a specified height, and the 
@@ -677,17 +685,18 @@ contrast.
 \label{sec:scmrlo}
 
 We have discussed the temperature profiles above an ocean surface and introduced 
-the WTG approximation which allows us to use these profiles above a land 
-surface.  We can now look at the response of a land surface to the imposed 
-temperature profiles, and subsequently calculate the modelled land/ocean 
-contrast.  For the tropospheric forcing we will be using the temperature 
-profiles created with SSTs that were centred on \SI{25.75}{\celsius} and varied 
-in \SI{0.05}{\celsius} increments from \SIrange{25.00}{26.50}{\celsius}. These 
-values were used to represent interannual variability. As mentioned, the height 
-above which the temperature profile is fixed can be assigned, and is designated 
-as PFixT (Pressure above which to Fix the Temperature profile).  The land 
-surface is represented very simply by changing the evaporative fraction and 
-using a small mixed layer depth.
+the WTG approximation which allows us to use upper level profiles as boundary 
+conditions above a land surface.  We can now look at the response of a land 
+surface to the imposed upper level temperature profiles, and subsequently 
+calculate the modelled land/ocean contrast.  For the tropospheric forcing we 
+will be using the temperature profiles created with SSTs that were centred on 
+\SI{25.75}{\celsius} and varied in \SI{0.05}{\celsius} increments from 
+\SIrange{25.00}{26.50}{\celsius}. These values were used to represent 
+interannual variability. As mentioned, the height above which the temperature 
+profile is fixed can be assigned, and is designated as PFixT (Pressure above 
+which to Fix the Temperature profile). Surface soil moisture is a boundary 
+condition, with the land surface is represented simply by changing the 
+evaporative fraction and using a small mixed layer depth.
 
 Figure \ref{fig:scm_tlandsst} shows the SST anomalies (from the mean value of 
 \SI{25.75}{\celsius}) plotted against the resulting $T_{land}$ anomalies 
@@ -811,7 +820,7 @@ role of atmospheric lapse rates and the land/ocean contrast. The results below
 use a PFixT of \SI{600}{\hecto\pascal} and an evaporative fraction of 0.3. The 
 low evaporative fraction (relative to 
 0.5 or 0.7) resulted in larger deviations between the temperature profiles of 
-the land and ocean columns, allowing for easier comparison. The results from 
+the land and ocean forced columns, allowing for easier comparison. The results from 
 other runs with different evaporative fractions and PFixT values were similar 
 but of different magnitude.\\
 
@@ -839,7 +848,7 @@ temperature}
 
 Looking now to the results of the single-column model, profiles of $\theta$ are 
 shown in Figure \ref{fig:scmthprof} (a). The dashed lines are the profiles from 
-the ocean column and the solid lines are the land column, and the colours 
+the ocean forced column and the solid lines are the land column, and the colours 
 correspond to the SST forcing. In the case of the land column, the colours 
 represent which profile was imposed in the free troposphere. There is a fairly 
 clear difference in the LCL height (\SI{950}{\hecto\pascal} for ocean, 
@@ -861,7 +870,7 @@ Table \ref{tab:scmrlo}) and plotting the anomalous profiles in this way allows
 us to see at which level the largest amplification is occurring.  The amount of 
 variability between each individual run makes it difficult to see any clear 
 tendencies, but there are dark blue (red) land profiles that are clearly more 
-negative (positive) than the ocean column profiles used to force them. To 
+negative (positive) than the ocean forced column profiles used to force them. To 
 clarify the picture all profiles were grouped in to five bins and the same 
 analysis was done, as seen in Figure \ref{fig:scmthprof} (c) and (d). We 
 essentially have a large positive/negative anomaly, small positive/negative 
@@ -918,7 +927,7 @@ number of variables.
 
 In section \ref{sec:scmrlo} and Figure \ref{fig:scm_tlandsst} we saw the 
 relationship between $T_{land}$ and the SSTs, where the SSTs were used in an 
-ocean column to generate temperature profiles and the profiles were imposed in 
+ocean forced column to generate temperature profiles and the profiles were imposed in 
 the free troposphere of a land column to force the surface temperatures.  The 
 regression lines represented $R_{l/o}$ and showed the increase of $R_{l/o}$ with 
 decreasing evaporative fraction.  A large amount of variability was evident in 
@@ -933,7 +942,7 @@ We will now look at how the SST-generated temperature profiles influence other
 variables in the land column, and how these variables relate to $T_{land}$.  We 
 will be using anomalies for all variables and for the purposes of calculating 
 the mean each evaporative fraction in the land column was treated as a separate 
-run.  The SST is from the ocean column, all other variables are from the land 
+run.  The SST is from the ocean forced column, all other variables are from the land 
 column, forced with free tropospheric temperature profiles. Figure 
 \ref{fig:scm_SSTVar} shows the relative humidity, longwave and shortwave 
 radiation and precipitation plotted against the SST and $T_{land}$, with the 
@@ -1021,7 +1030,7 @@ convection and radiation, may seem undesirable it does result in realistic
 values of the land/ocean contrast. Removing the interaction severely damped the 
 land column response, indicating a weakness in the ocean to land connection when 
 using the WTG mode. This weakness is dealt with by directly coupling land and 
-ocean columns in the following section.
+ocean forced columns in the following section.
 
 \begin{figure}[ht]
 \includegraphics[width=0.4\textwidth]{land_Tsurf_05_m1_h850.eps}
@@ -1053,9 +1062,9 @@ columns can be coupled to each other in a zonal or meridional direction. In this
 section we primarily use a zonal alignment, a meridional alignment is discussed 
 in section \ref{mech_compare}.\\
 In the single-column model tropospheric profiles were generated with a range of 
-SSTs in an ocean column, then used to force the free troposphere of a land 
+SSTs in an ocean forced column, then used to force the free troposphere of a land 
 column. For the zonal and meridional column rows the model is forced directly 
-with SSTs in the ocean columns, and the troposphere and land surface responds to 
+with SSTs in the ocean forced columns, and the troposphere and land surface responds to 
 that. 
 
 \subsection{Robust values of land/ocean contrast with varying model geometries}
@@ -1121,7 +1130,7 @@ with results from the ENSO-Pacemaker experiments.
 
 Figure \ref{fig:tdm_regprof} uses the same technique as in Figure 
 \ref{fig:linreg_plev}; the blue line is the regression coefficient between the 
-temperature at each model level in the ocean column and the SSTs, the green line 
+temperature at each model level in the ocean forced column and the SSTs, the green line 
 is the regression coefficient between the temperature at each model level in the 
 land column and the SSTs. Figures \ref{fig:tdm_regprof} a) -- the multi column 
 model and b) -- the GCM, have some key similarities and differences; the ocean 
@@ -1170,7 +1179,7 @@ fine resolution preventing step changes in the height of the LCL.  Figure
 evaporative fraction of 0.05 and an $R_{l/o}$ of 1.13. The three profiles are 
 the maximum, minimum and median SST forcing. The full profile is shown in (a) 
 with a close up in (b). There are two features to look for; a change in the 
-gradient of $\theta$ in the ocean column between the ocean LCL and land LCL as 
+gradient of $\theta$ in the ocean forced column between the ocean LCL and land LCL as 
 per the \citet{Byrne2013a} theory, and any significant change in the height of 
 the LCL as seen in the single column model. There is some indication in the 
 figure of a small change in the LCL over land and ocean but a change in gradient 
@@ -1200,7 +1209,7 @@ of relative humidity
 	\includegraphics[width=0.5\textwidth]{{l3o1_prof_dthetadp_ef0.05_close}.eps}
 	\caption{Profiles of $D\theta/Dp$ in the multi model in the land (solid) and 
 	ocean (dashed) columns, showing the decrease in gradient (more negative) in 
-the ocean column with warmer SST values} \label{fig:tdm_dthdp}
+the ocean forced column with warmer SST values} \label{fig:tdm_dthdp}
 \end{figure}
 
 Regarding the warmer ocean/cooler land profile from 
@@ -1209,24 +1218,24 @@ telling. The relative humidity profile in Figure \ref{fig:tdm_rhprof} a) is from
 the same run as Figure \ref{fig:tdm_prof}, it has one ocean and three land 
 columns. Two SSTs are plotted, the warmest and coolest of the runs, as the 
 results are similar for a range of SSTs.  From the surface we see the much 
-higher relative humidity over the ocean column then a sudden drop at around 
-\SI{970}{\hecto\pascal}, to the extent that the ocean column becomes drier than 
+higher relative humidity over the ocean forced column then a sudden drop at around 
+\SI{970}{\hecto\pascal}, to the extent that the ocean forced column becomes drier than 
 the land columns. The dry region, from \SIrange{940}{800}{\hecto\pascal} 
 coincides with the steeper $\theta$ lapse rate. As this run only has one ocean 
 column and three land columns the region may be related to the model geometry.  
 To test if the geometry is responsible for the dry region, we look at a run with 
 three ocean and three land columns.  Figures \ref{fig:tdm_rhprof} (b)-(d) all 
-show a similar drying in the ocean column, these are also focusing on the 
+show a similar drying in the ocean forced column, these are also focusing on the 
 atmosphere below \SI{800}{\hecto\pascal}. There is a robust response with the 
 three ocean and three lands, implying the drying is not a function of the 
 geometry.  Figures \ref{fig:tdm_rhprof} (b), (c) and (d) show three difference
 evaporative fractions, 0.05, 0.10 and 0.20. The evaporative fraction has a clear 
 effect on the relative humidity in the land column, but the amount of drying in 
-the ocean columns is largely insensitive to the evaporative fraction or relative 
+the ocean forced columns is largely insensitive to the evaporative fraction or relative 
 humidity of the land columns. For example comparing Figure \ref{fig:tdm_rhprof} 
 b), c) and d) which have evaporative fractions of 0.05, 0.10 and 0.20  
 respectively, the near surface humidity in the land columns changes from 45\% to 
-60\%, however the response of the ocean columns is very similar.  The difference 
+60\%, however the response of the ocean forced columns is very similar.  The difference 
 in the dry region is at most 5\%.
 To summarise, the atmospheric profiles of $\theta$ indicate the possibility that 
 a change in the $\Gamma_m^*$ between the land and ocean LCL heights, as per 
@@ -1248,17 +1257,17 @@ circulation response in the model to further explore this.
 \end{figure}
 
 \subsection{Circulation response in a row of columns}
-To see what is causing the drying in the ocean columns we look at the vertical 
-velocity, $\omega$ and circulation using the streamfunction $\psi$ of vertical 
-and zonal velocities. There weren't any significant changes in the circulation 
-for varying SSTs so for these variables we use the mean across a range of SSTs.  
-The profiles of $\omega$ clearly shows the convection in the ocean columns -- 
-positive values of $\omega$ -- which are balanced with sinking motion in the 
-land columns.  The $\psi$ profile better demonstrates the flow in the model, and 
-shows a low level circulation response. Positive values of $\psi$ indicate 
-clockwise flow centered at \SI{850}{\hecto\pascal} in the ocean column nearest 
-the land.  This circulation is responsible for transporting dry air from the 
-land columns.
+To see what is causing the drying in the ocean forced columns we look at the 
+vertical velocity, $\omega$ and circulation using the streamfunction $\psi$ of 
+vertical and zonal velocities. There weren't any significant changes in the 
+circulation for varying SSTs so for these variables we use the mean across a 
+range of SSTs.  The profiles of $\omega$ clearly shows the convection in the 
+ocean forced columns -- positive values of $\omega$ -- which are balanced with 
+sinking motion in the land columns.  The $\psi$ profile better demonstrates the 
+flow in the model, and shows a low level circulation response. Positive values 
+of $\psi$ indicate clockwise flow centered at \SI{850}{\hecto\pascal} in the 
+ocean forced column nearest the land.  This circulation is responsible for 
+transporting dry air from the land columns.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{l3o3_omegal_ef0.05_meansst}.eps}
@@ -1268,25 +1277,26 @@ land columns.
 	\label{fig:tdm_circ}
 \end{figure}
 
-This circulation is influencing the atmospheric structure in the ocean column, 
-but is it affecting the ocean's influence of the land column, and thus the value 
-of $R_{l/o}$? This drying of the atmosphere above the ocean is not present in a 
-large scale across the globe and therefore could be of concern when determining 
-the suitability of this simplified model when comparing the results to GCMs or 
-observations.  Figure \ref{fig:tdm_psi} (a)-(d) shows how the low level 
-circulation scales with evaporative fraction. A drier land surface results in a  
-stronger low level circulation.  Referring back to Table \ref{tab:tdm_Rlo}, 
-$R_{l/o}$ increases with decreasing evaporative fraction. If the value of 
-$R_{l/o}$ is related to the difference in lapse rates above land and ocean, 
-which in turn is related to the difference in humidity, then a drying of the 
-ocean column may lead to a smaller difference between the ocean and land 
-columns.  Instead, we see that the magnitude of the reduction in humidity in the 
-ocean columns is largely insensitive to the evaporative fraction (Figure 
-\ref{fig:tdm_rhprof}) and while the strength of the low level circulation 
-driving the reduced humidity increases with evaporative fraction, the value of 
-$R_{l/o}$ still increases, implying that the drying of the ocean column is not 
-significantly affecting the value of $R_{l/o}$, or more importantly, the ability 
-of the simplified model to simulate the land/ocean contrast.
+This circulation is influencing the atmospheric structure in the ocean forced 
+column, but is it affecting the ocean's influence of the land column, and thus 
+the value of $R_{l/o}$? This drying of the atmosphere above the ocean is not 
+present in a large scale across the globe and therefore could be of concern when 
+determining the suitability of this simplified model when comparing the results 
+to GCMs or observations.  Figure \ref{fig:tdm_psi} (a)-(d) shows how the low 
+level circulation scales with evaporative fraction. A drier land surface results 
+in a  stronger low level circulation.  Referring back to Table 
+\ref{tab:tdm_Rlo}, $R_{l/o}$ increases with decreasing evaporative fraction. If 
+the value of $R_{l/o}$ is related to the difference in lapse rates above land 
+and ocean, which in turn is related to the difference in humidity, then a drying 
+of the ocean forced column may lead to a smaller difference between the ocean 
+and land columns.  Instead, we see that the magnitude of the reduction in 
+humidity in the ocean forced columns is largely insensitive to the evaporative 
+fraction (Figure \ref{fig:tdm_rhprof}) and while the strength of the low level 
+circulation driving the reduced humidity increases with evaporative fraction, 
+the value of $R_{l/o}$ still increases, implying that the drying of the ocean 
+forced column is not significantly affecting the value of $R_{l/o}$, or more 
+importantly, the ability of the simplified model to simulate the land/ocean 
+contrast.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.05_meansst}.eps}
@@ -1306,7 +1316,7 @@ decreases.}
 and latitudes}
 
 We have seen that while the two-dimensional model has a low level circulation 
-that dries the ocean column, it is still able to simulate aspects of the 
+that dries the ocean forced column, it is still able to simulate aspects of the 
 land/ocean contrast we see in GCMs (i.e. Figure \ref{fig:tdm_regprof}), and it's 
 response to surface properties is expected from the lapse rate of theories of 
 \cite{Joshi2007} and \cite{Byrne2013a}. We now extend the range of evaporative 
@@ -1335,12 +1345,12 @@ shows the mean relative humidity in the land columns. The gradient of relative
 humidity along a constant latitude due to varying evaporative fraction is clear, 
 and increasing relative humidity corresponds to decreasing $R_{l/o}$ as 
 expected.  The relative humidity also decreases with increasing latitude, due to 
-reduced transport of moisture from the ocean columns, further discussed below.  
-For the gradient of relative humidity across latitudes, decreasing relative 
-humidity is associated with decreasing $R_{l/o}$, the inverse of the 
+reduced transport of moisture from the ocean forced columns, further discussed 
+below.  For the gradient of relative humidity across latitudes, decreasing 
+relative humidity is associated with decreasing $R_{l/o}$, the inverse of the 
 relationship with a constant latitude.  This indicates that the value of 
 $R_{l/o}$ is a not only a function of evaporative fraction but is also dependent 
-on transport from ocean columns to land columns.\\
+on transport from ocean forced columns to land columns.\\
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{isstcosz}.eps}
@@ -1446,11 +1456,11 @@ transport from the ocean to the land columns, which then resulted in a lower
 $R_{l/o}$. We will now look at the circulation response with latitude to 
 understand the changes. As the latitude increases there is clear change in the 
 circulation. At low latitudes the model is essentially one cell, with rising air 
-over the ocean columns and sinking over the land. This begins to break down at 
-\SI{20}{\degree} and by \SI{30}{\degree} smaller cells have formed between each 
-column. This will reduce the transport of heat and moisture from the ocean 
-columns to the land columns, resulting in the reduced relative humidity and 
-reduced values of $R_{l/o}$ seen with increasing latitude.
+over the ocean forced columns and sinking over the land. This begins to break 
+down at \SI{20}{\degree} and by \SI{30}{\degree} smaller cells have formed 
+between each column. This will reduce the transport of heat and moisture from 
+the ocean forced columns to the land columns, resulting in the reduced relative 
+humidity and reduced values of $R_{l/o}$ seen with increasing latitude.
 
 \clearpage
 
