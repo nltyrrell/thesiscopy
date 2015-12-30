@@ -970,8 +970,8 @@ contrast will be investigated in the following section.
 \includegraphics[width=0.5\textwidth]{{land_anom_intvar_sw_p600}.eps}
 \includegraphics[width=0.5\textwidth]{{land_anom_intvar_precip_p600}.eps}
 \caption{Relationship between; relative humidity (a,b), longwave radiation 
-	(c,d), shortwave radiation (e,f) and precipitation (g,h), and land surface 
-response and forcing SST.}
+(c,d), shortwave radiation (e,f), precipitation (g,h), and land surface 
+temperature response and forcing SST.}
 \label{fig:scm_SSTVar}
 \end{figure}
 
@@ -1033,11 +1033,11 @@ using the WTG mode. This weakness is dealt with by directly coupling land and
 ocean forced columns in the following section.
 
 \begin{figure}[ht]
-\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m1_h850.eps}
-\includegraphics[width=0.4\textwidth]{land_Tsurf_05_m2_h850.eps}\\
-\includegraphics[width=0.4\textwidth]{land_Tsurf_02_m2_h850.eps}
-\includegraphics[width=0.4\textwidth]{land_nir_Tsurf.eps}\\
-\caption{Timeseries of Tsurf in SCM forced with tropospheric temperature 
+\includegraphics[width=1.0\textwidth]{thesis_instab_Tsurf.eps}
+% \includegraphics[width=0.4\textwidth]{land_Tsurf_05_m2_h850.eps}\\
+% \includegraphics[width=0.4\textwidth]{land_Tsurf_02_m2_h850.eps}
+% \includegraphics[width=0.4\textwidth]{land_nir_Tsurf.eps}\\
+\caption{Timeseries of $T_{surf}$ in SCM forced with tropospheric temperature 
 profile. a), b) and c) all have the interaction between the convection and 
 radiation schemes turned on, it is turned off for d). a) and b) only vary in the 
 mixed layer depth of the surface, a) and c) vary in the evaporative fraction.}
@@ -1155,8 +1155,8 @@ ocean forcing.
 
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{presub_fsstreg_prof_ocensfc_e0.05}.eps}
-	\includegraphics[width=0.5\textwidth]{{linreg_ocean_profile}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_fsstreg_prof_ocensfc_e0.05}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_linreg_ocean_profile}.eps}
 	\caption{Linear regression coefficients for temperature above tropical ocean 
 		(blue line) and land (green line) as linear model of $T_{ocean}$ for the 
 	two dimensional column model (a) and the ENSO-Pacemaker experiment (b).}
@@ -1197,8 +1197,8 @@ expected feature.  To understand what is happening we will look at the profiles
 of relative humidity
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{l3o1_prof_theta_ef0.05}.eps}
-	\includegraphics[width=0.5\textwidth]{{l3o1_prof_theta_ef0.05_close}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l3o1_prof_theta_ef0.05}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l3o1_prof_theta_ef0.05_close}.eps}
 	\caption{Atmospheric profiles of theta in the multi model for forcing SST 
 	values of \SI{24}{\degreeCelsius}, \SI{26}{\degreeCelsius and 
 \SI{28}{\degreeCelsius}}}
@@ -1206,7 +1206,7 @@ of relative humidity
 \end{figure}
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{l3o1_prof_dthetadp_ef0.05_close}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l3o1_prof_dthetadp_ef0.05_close}.eps}
 	\caption{Profiles of $D\theta/Dp$ in the multi model in the land (solid) and 
 	ocean (dashed) columns, showing the decrease in gradient (more negative) in 
 the ocean forced column with warmer SST values} \label{fig:tdm_dthdp}
@@ -1245,10 +1245,10 @@ column, indicated in the relative humidity profiles. We will look at the
 circulation response in the model to further explore this.
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{l3o1_prof_rh_ef0.05}.eps}
-	\includegraphics[width=0.5\textwidth]{{l3o3_prof_rh_ef0.05_close}.eps}
-	\includegraphics[width=0.5\textwidth]{{l3o3_prof_rh_ef0.10_close}.eps}
-	\includegraphics[width=0.5\textwidth]{{l3o3_prof_rh_ef0.20_close}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l3o3_prof_rh_ef0.05}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l3o3_prof_rh_ef0.05_close}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l3o3_prof_rh_ef0.10_close}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l3o3_prof_rh_ef0.20_close}.eps}
 	\caption{Atmospheric profiles of relative humidity in the multi column model, a) has 
 		one ocean and three land columns, b)-d) have three ocean and land 
 		columns (mean values shown), land surface has evaporative fractions of 
@@ -1270,10 +1270,9 @@ ocean forced column nearest the land.  This circulation is responsible for
 transporting dry air from the land columns.
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{l3o3_omegal_ef0.05_meansst}.eps}
-	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.05_meansst}.eps}
-	\caption{Circulation response in the multi column model, a) Omega (vertical velocity), 
-	b) Psi (streamfunction of vertical and horizontal velocity).}
+	\includegraphics[width=0.5\textwidth]{{thesis_l3o3_omegal_ef0.05_meansst}.eps}
+	\caption{Circulation response in the multi column model, a) Omega (vertical 
+	velocity).}
 	\label{fig:tdm_circ}
 \end{figure}
 
@@ -1299,10 +1298,10 @@ importantly, the ability of the simplified model to simulate the land/ocean
 contrast.
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.05_meansst}.eps}
-	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.10_meansst}.eps}
-	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.20_meansst}.eps}
-	\includegraphics[width=0.5\textwidth]{{l85co2_psi_ef0.30_meansst}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l85co2_psi_ef0.05_mean}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l85co2_psi_ef0.10_mean}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l85co2_psi_ef0.20_mean}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_l85co2_psi_ef0.30_mean}.eps}
 	\caption{Circulation response for the multi column model, Psi, for 
 	evaporative fractions on 0.05, 0.10, 0.20, 0.30. The low-level circulation 
 centred at \SI{850}{\hecto\pascal} strengthens as the evaporative fraction 
@@ -1626,10 +1625,9 @@ all have large regional differences. In the next section the composite anomalies
 will be used in the GREB model.
 
 \begin{figure}[ht]
-\includegraphics[width=0.9\textwidth]{{anom_input_4ycomp}.pdf}
-\caption{Anomalous cloud cover (top left (a)), meridional (top right (b)) and 
-zonal wind (middle right (d), surface wetness fraction (middle left (c)) and 
-SSTs (bottom left (e)) used to force the GREB model. Generated from 
+\includegraphics[width=1.0\textwidth]{{thesis_anom_input_4ycomp}.eps}
+\caption{Anomalous cloud cover (a), meridional (b) and zonal wind (d) surface 
+wetness fraction (c) used to force the GREB model.  Generated from 
 ENSO-Pacemaker composites.}
 \label{fig:comp_5var}
 \end{figure}
@@ -1717,11 +1715,11 @@ surface temperature response is due to a redistribution of heat within the mean
 climate.
 
 \begin{figure}[ht]
-	\includegraphics[width=0.9\textwidth]{{t_surf.u_anom.pos.4ycomp.response.thesis}.eps}\\
-	\includegraphics[width=0.9\textwidth]{{t_surf.v_anom.pos.4ycomp.response.thesis}.eps}\\
-	\includegraphics[width=0.9\textwidth]{{t_surf.uv_anom.pos.4ycomp.response.thesis}.eps}
+	\includegraphics[width=0.8\textwidth]{{t_surf.u_anom.pos.4ycomp.response.thesis}.eps}\\
+	\includegraphics[width=0.8\textwidth]{{t_surf.v_anom.pos.4ycomp.response.thesis}.eps}\\
+	\includegraphics[width=0.8\textwidth]{{t_surf.uv_anom.pos.4ycomp.response.thesis}.eps}
 	\caption{Surface temperature response in GREB to imposed wind anomalies.  
-	Zonal, top (a), Meridional, middle (b) and both, bottom (c).}
+	Zonal, (a), Meridional, (b) and both, (c).}
 \label{fig:greb_uv}
 \end{figure}
 \clearpage
