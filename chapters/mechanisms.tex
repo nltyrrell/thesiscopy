@@ -1339,8 +1339,8 @@ similar, i.e. Figure \ref{fig:tdm_Rlo} (d). When looking at the nearest
 corresponding latitudes in (a) and (d), e.g. \SI{40}{\degree} in (a) and 
 \SI{45}{\degree} in (d) the values of $R_{l/o}$ are very similar.  The reduction 
 in the $R_{l/o}$ with increasing latitude could be due to reduced transport 
-across the domain. The latter is evident in Figure \ref{fig:tdm_Rlo} c), which 
-shows the mean relative humidity in the land columns. The gradient of relative 
+across the domain. The latter is evident in Figure \ref{fig:tdm_rh} which shows 
+the mean relative humidity in the land columns. The gradient of relative 
 humidity along a constant latitude due to varying evaporative fraction is clear, 
 and increasing relative humidity corresponds to decreasing $R_{l/o}$ as 
 expected.  The relative humidity also decreases with increasing latitude, due to 
@@ -1352,17 +1352,21 @@ $R_{l/o}$ is a not only a function of evaporative fraction but is also dependent
 on transport from ocean forced columns to land columns.\\
 
 \begin{figure}[ht]
-	\includegraphics[width=0.5\textwidth]{{isstcosz}.eps}
-	\includegraphics[width=0.5\textwidth]{{coszmer_colall}.eps}\\
-	\includegraphics[width=0.5\textwidth]{{latbox_landrh}.eps}
-	\includegraphics[width=0.5\textwidth]{{coszmer_col1}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_isstcosz}.eps}
+	\includegraphics[width=0.5\textwidth]{{thesis_coszmer_col1}.eps}
 	\caption{Land/ocean contrast ($R_{l/o}$) in multi column model for a range 
 		of evaporative fractions and latitudes for a zonally aligned domain (a), 
-		meridionally aligned domain (b). (c) is the mean (over the forcing SSTs) 
-	relative humidity at each latitude and evaporative fraction, (d) uses the 
-first column of the meridionally aligned model to calculate $R_{l/o}$ instead of 
-the areal mean across all columns.}
+		meridionally aligned domain (b). (b) uses the first column of the 
+	meridionally aligned model to calculate $R_{l/o}$ instead of the areal mean 
+across all columns.}
 \label{fig:tdm_Rlo}
+\end{figure}
+
+\begin{figure}[ht]
+	\includegraphics[width=0.5\textwidth]{{thesis_latbox_landrh}.eps}
+	\caption{The mean (over the forcing SSTs and the three land columns) 
+	relative humidity at each latitude and evaporative fraction}
+\label{fig:tdm_rh}
 \end{figure}
 
 \section{Comparison of Simplified Models and GCM results}
@@ -1418,8 +1422,8 @@ land surface to an ocean forcing.
 \clearpage
 
 \begin{figure}[ht]
-	\includegraphics[width=0.9\textwidth]{{phi_trop_4ysl}.png}\\
-	\includegraphics[width=0.9\textwidth]{{phi_rcm_4ysl}.png}
+	\includegraphics[width=0.9\textwidth]{{thesis_phi_trop_4ysl}.eps}\\
+	\includegraphics[width=0.9\textwidth]{{thesis_phi_rcm_4ysl}.eps}
 	\caption{a) Values of $R_{l/o}$ for the ENSO-Pacemaker experiment calculated 
 	for each grid box and using mean tropical SSTs, b) $R_{l/o}$ taken from the 
 multi column model and matched to the latitude and evaporative fraction of the GCM.}
@@ -1716,8 +1720,11 @@ climate.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.8\textwidth]{{t_surf.u_anom.pos.4ycomp.response.thesis}.eps}\\
+\vspace{-0.5cm}
 	\includegraphics[width=0.8\textwidth]{{t_surf.v_anom.pos.4ycomp.response.thesis}.eps}\\
+\vspace{-0.5cm}
 	\includegraphics[width=0.8\textwidth]{{t_surf.uv_anom.pos.4ycomp.response.thesis}.eps}
+\vspace{-0.5cm}
 	\caption{Surface temperature response in GREB to imposed wind anomalies.  
 	Zonal, (a), Meridional, (b) and both, (c).}
 \label{fig:greb_uv}
