@@ -1039,20 +1039,31 @@ surface temperature response we see that it demonstrates chaotic behaviour in
 the surface temperature. Timeseries for a range of tropospheric forcings and 
 parameters are shown in Figures \ref{fig:scmts} (a)-(c). Some of runs forced 
 with cooler temperature profiles show regular oscillations, it should be noted 
-their is no diurnal cycle in the model.  For forcing with higher temperatures we 
-often see a decoupling of the surface temperatures and the imposed temperature 
-profile which results in a significant cooling of the surface temperature.  Both 
-the oscillations and the instability are due to the interaction of clouds and 
-radiation. This can be demonstrated as the interaction between the convection 
-and radiation schemes in the model can be turned off. The resultant timeseries, 
-shown in Figure \ref{fig:scmts} d), quickly reaches a stable equilibrium 
-temperature and doesn't demonstrate the instability seen in a)-c). While the 
-chaotic nature of this model setup, and the unpredictable interaction between 
-convection and radiation, may seem undesirable it does result in realistic 
-values of the land/ocean contrast. Removing the interaction severely damped the 
-land column response, indicating a weakness in the ocean to land connection when 
-using the WTG mode. This weakness is dealt with by directly coupling land and 
-ocean forced columns in the following section.
+their is no diurnal cycle in the model and the oscillations are related to the 
+convection scheme, with the period of the oscillations varying from 5 to 10 
+days. The factors influencing the periodicity were not investigated in this 
+study, however a similar model with a different setup was used in 
+\citet{Abbot2007}.  They used the two-column version of the model and they also 
+included a simple bucket model to simulate the land hydrology and they found 
+oscillations of soil moisture resulting from internal model dynamics.  An 
+investigation in the oscillations found that the period was influenced by 
+latitude and soil heat capacity, but overall the oscillations were robust to 
+parameter changes \citep{Abbot2007}.
+
+For forcing with higher temperatures we often see a decoupling of the surface 
+temperatures and the imposed temperature profile which results in a significant 
+cooling of the surface temperature.  Both the oscillations and the instability 
+are due to the interaction of clouds and radiation. This can be demonstrated as 
+the interaction between the convection and radiation schemes in the model can be 
+turned off. The resultant timeseries, shown in Figure \ref{fig:scmts} d), 
+quickly reaches a stable equilibrium temperature and doesn't demonstrate the 
+instability seen in a)-c). While the chaotic nature of this model setup, and the 
+unpredictable interaction between convection and radiation, may seem undesirable 
+it does result in realistic values of the land/ocean contrast.  Removing the 
+interaction severely damped the land column response, indicating a weakness in 
+the ocean to land connection when using the WTG mode.  This weakness is dealt 
+with by directly coupling land and ocean forced columns in the following 
+section.
 
 \begin{figure}[ht]
 \includegraphics[width=1.0\textwidth]{thesis_instab_Tsurf.eps}
@@ -1075,19 +1086,42 @@ The single column model in weak temperature gradient mode offered a promising
 and novel approach to investigating the land/ocean contrast and the role of 
 ocean forcing.  However, a few issues remained; the instability of the model 
 under certain conditions has the potential to lead to unrealistic results, and 
-disabling the interaction between the convection and radiation schemes damped  
-the land response. In addition, the assumptions of the WTG approximation are 
-only valid in the tropics, a limiting factor when attempting to explain the 
-regional differences in the land response. In order to continue using the column 
-model while avoiding these issues a multi column setup was used. Multiple 
-columns can be coupled to each other in a zonal or meridional direction. In this 
-section we primarily use a zonal alignment, a meridional alignment is discussed 
-in section \ref{mech_compare}.\\
+disabling the interaction between the convection and radiation schemes -- which 
+aided the stability of the model -- damped the land response to the ocean 
+forcing.  In addition, the assumptions of the WTG approximation are only valid 
+in the tropics, a limiting factor when attempting to explain the regional 
+differences in the land response.  In order to continue using the column model 
+while avoiding these issues a multi column setup was used. Multiple columns can 
+be coupled to each other in a zonal or meridional direction. In this section we 
+primarily use a zonal alignment of columns, a meridional alignment is discussed 
+in section \ref{mech_compare}.
+
 In the single-column model tropospheric profiles were generated with a range of 
-SSTs in an ocean forced column, then used to force the free troposphere of a land 
-column. For the zonal and meridional column rows the model is forced directly 
-with SSTs in the ocean forced columns, and the troposphere and land surface responds to 
-that. 
+SSTs in an ocean forced column, then the profiles were used to force the free 
+troposphere in a column with a land surface. For the zonally and meridionally 
+aligned columns the model is forced directly with SSTs, and the rest of the 
+model, i.e. the troposphere in the columns above land and ocean, and the land 
+surface, are all responsive. An example of one of the experimental setups is 
+shown in Figure \ref{fig:6colschem}, in this case there are three land and three 
+ocean columns. In a similar manner to the single column model a mean SST 
+appropriate for the given latitude is chosen and the SSTs are varied above and 
+below that, then for each SST value the model is run to equilibrium. When 
+calculating statistics such as $R_{l/o}$ each equilibrium value is considered as 
+being equivalent to an anomalous annual value. When the model setup involves 
+multiple land or multiple ocean columns, the statistics and profiles shown in 
+this section use the average of all land, or all ocean columns. The results for 
+individual columns were not found to significantly influence the conclusions.
+
+In this section we begin 
+
+\begin{figure}[ht]
+\includegraphics[width=0.9\textwidth,trim={0cm 0cm 0cm 
+0cm},clip=true]{6col_schem.eps}
+\caption{Schematic of the zonally or meridionally aligned Column Model 
+experimental setup, showing the SST forcing in the ocean forced columns and the 
+atmosphere and land surface responding.}
+\label{fig:6cmschem}
+\end{figure}
 
 \subsection{Robust values of land/ocean contrast with varying model geometries}
 
