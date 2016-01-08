@@ -35,7 +35,7 @@ allow strong statistical conclusions \citep{Dommenget2009}, and measuring the
 land/ocean interactions by comparison with CRUTEM4 can lead to errors. This 
 dataset, along with CRUTEM4, was used for observations as it was considered the 
 truest representation, as there is no interpolation or processing done on the 
-data; other than that to correct inconsistencies. (Data coverage discussion?)
+data; other than that to correct inconsistencies.
 
 CRUTEM4 is a global gridded land temperature dataset based on observations.  
 Regarding the data coverage; there are large areas without data in the tropics, 
@@ -316,10 +316,11 @@ layer ocean or a simple land surface, the latter by specifying the evaporative
 fraction and a shallow mixed layer depth. The model geometry can be set as a 
 single column (1D) or as a two dimensional (2D) model in a zonal or meridional 
 directions. The model can also be run in Weak Temperature Gradient mode (WTG 
-mode) as described in \citet{Sobel2000}. For this setup, which relies on the WTG 
-approximation as discussed in section \ref{intro:wtg}, the free tropospheric 
-temperature profile is specified and remains fixed, allowing the vertical 
-velocity and, hence precipitation to be prognostic variables.
+mode) as described in \citet{Sobel2000}, which relies on the WTG approximation 
+as discussed in section \ref{intro:wtg}. For this setup the free tropospheric 
+temperatures (i.e. the temperature above, say, 
+\SIrange{850}{700}{\hecto\pascal}) are specified and remain fixed, allowing the 
+vertical velocity and precipitation to be prognostic variables.
 The 2D model uses the same schemes for radiation and convection as the 1D model 
 with an additional linear dynamical scheme that is hydrostatic and non-rotating.  
 First described in \citet{Nilsson1999} the model we used was closer to the one 
@@ -379,34 +380,41 @@ The final model that was used in this study is the Globally Resolved Energy
 Balance (GREB) model \citep{Dommenget2011}. Energy balance models have long been 
 used to measure global surface temperatures in equilibrium (ref) and the 
 response to external forcings (ref, ref). Early energy balance models were often 
-one dimensional and lacking many important processes, but despite this the 
-results were often realistic. For example, initial estimates of climate 
-sensitivity have proven remarkably robust - Arrhenius' estimation a global 
-temperature change of around \SI{5}{\celsius} for a doubling of CO$_2$ (ref) is 
-within the uncertainty limits of studies in the recent literature (ref).  From 
-the starting point of simple energy balance models, processes and feedbacks were 
-added and the models became more realistic, but the potential for non-linear 
-interaction between systems increase.  This can inhibit our understanding of the 
-mechanisms causing a response in the model and hence, the climate 
-\citep{Dommenget2015}. 
+one dimensional and lacking many important processes, but despite this they were 
+able to model the atmosphere and it's response to forcing to an acceptable 
+degree. For example, initial estimates of climate sensitivity have proven 
+remarkably robust - Arrhenius' estimation a global temperature change of around 
+\SI{5}{\celsius} for a doubling of CO$_2$ (ref) is within the uncertainty limits 
+of studies in the recent literature (ref).  From the starting point of simple 
+energy balance models, processes and feedbacks were added and the models became 
+more realistic, but the potential for non-linear interaction between systems 
+increase. These interactions are not always well understood and can inhibit our 
+understanding of the mechanisms causing a response in the model and hence, the 
+climate \citep{Dommenget2015}. The GREB model is intended as a low complexity 
+model to bridge the gap between simple one-dimensional models and coupled-GCMs.  
+The lack of heat and water vapour transport by the global circulation in simple 
+energy balance models inhibit their use for study of regional climate, hence the 
+inclusion of the circulation in GREB allows it to be used for a wider range of 
+experiments. Yet the GREB model differs from GCMs in that it doesn't solve the 
+equations of motion for the atmosphere. Instead, the mean global circulation, as 
+well as cloud cover and soil moisture, are imposed from observational or model 
+climatologies. Control of this aspect of the model allows for testing of the 
+global and regional response to external forcings, and sensitivity to changes in 
+the mean climate \citep{Dommenget2015}. 
 
 \subsubsection{Model Details}
-The GREB model is intended as a low complexity model to bridge the gap between 
-simple one-dimensional models and coupled-GCMs. It allows testing of the global 
-and regional response to external forcings and sensitivity to changes in the mean 
-climate \citep{Dommenget2015}. The GREB model has a resolution of 
-\SI{3.75}{\degree} x \SI{3.75}{\degree} and three vertical levels; atmosphere, 
-surface and subsurface ocean. The circulation, clouds, soil moisture and ocean 
-mixed layer depth are all input as fixed boundary conditions using 12-month 
-climatologies.  The simplicity of the model means it cannot accurately represent 
-the mean climate without significant errors; hence the control climate has flux 
-corrections to push the mean $T_{land}$, $T_{ocean}$ and $q_{air}$ (the 
-atmospheric water vapour) to climatological values. The schematic in Figure 
-\ref{fig:schemgreb}, taken from \citet{Dommenget2011}, demonstrates which 
-physical processes are included in GREB. Despite its simplicity, GREB does a 
-good job of modelling key features of the regional response to CO$_2$ 
-\citep{Dommenget2015} including arctic amplification and the land/ocean warming 
-contrast.
+The GREB model has a resolution of \SI{3.75}{\degree} x \SI{3.75}{\degree} and 
+three vertical levels; atmosphere, surface and subsurface ocean. The 
+circulation, clouds, soil moisture and ocean mixed layer depth are all input as 
+fixed boundary conditions using 12-month climatologies.  The simplicity of the 
+model means it cannot accurately represent the mean climate without errors; 
+hence the control climate has flux corrections to push the mean $T_{land}$, 
+$T_{ocean}$ and $q_{air}$ (the atmospheric water vapour) to climatological 
+values. The schematic in Figure \ref{fig:schemgreb}, taken from 
+\citet{Dommenget2011}, demonstrates which physical processes are included in 
+GREB. Despite its simplicity, GREB does a good job of modelling key features of 
+the regional response to CO$_2$ \citep{Dommenget2015} including arctic 
+amplification and the land/ocean warming contrast.
 
 \begin{figure}[ht]
 	\includegraphics[width=1.0\textwidth]{{2011_DommengetFloter_Fig2}.pdf}

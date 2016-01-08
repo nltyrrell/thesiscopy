@@ -347,6 +347,7 @@ response of land and ocean is useful when comparing their atmospheri profiles.
 
 
 \subsection{The tropospheric response in the Pacemaker Experiments}
+\label{sec:pace_trop}
 
 We are going to use the Pacemaker experiments to test the relationship between 
 the land and ocean surfaces and the troposphere above them. As mentioned the 
@@ -1112,7 +1113,12 @@ multiple land or multiple ocean columns, the statistics and profiles shown in
 this section use the average of all land, or all ocean columns. The results for 
 individual columns were not found to significantly influence the conclusions.
 
-In this section we begin 
+In this section we begin by looking at the modelled values of $R_{l/o}$ over a 
+range of geometries and evaporative fractions in section \ref{sec:robust_rlo}, 
+then the atmospheric structure is compared with GCM results in 
+\ref{sec:mcm_linreg_plev}. Atmospheric profiles of temperature and humidity are 
+further investigated in section \ref{sec:mcm_prof_trh}, before a discussion of 
+the circulation in section \ref{sec:mcm_circ}.
 
 \begin{figure}[ht]
 \includegraphics[width=0.9\textwidth,trim={0cm 0cm 0cm 
@@ -1124,6 +1130,7 @@ atmosphere and land surface responding.}
 \end{figure}
 
 \subsection{Robust values of land/ocean contrast with varying model geometries}
+\label{sec:robust_rlo}
 
 The column model can be run with one or more ocean and one or more land columns 
 in a zonal or meridional alignment. In the single-column model the interaction 
@@ -1176,6 +1183,7 @@ correlation values are all very close to one.
 
 \subsection{Vertical structure and tropospheric response over land and ocean in 
 the column model}
+\label{sec:mcm_linreg_plev}
 
 The single and multi column model was used with the purpose of understanding the 
 vertical structure of the land/ocean temperature contrast. We can see from Table 
@@ -1184,13 +1192,16 @@ the magnitude of $R_{l/o}$ seen in GCMs and observation. We will now compare the
 vertical structure and response of the column model with a GCM, specifically 
 with results from the ENSO-Pacemaker experiments.  
 
-Figure \ref{fig:tdm_regprof} uses the same technique as in Figure 
-\ref{fig:linreg_plev}; the blue line is the regression coefficient between the 
-temperature at each model level in the ocean forced column and the SSTs, the green line 
-is the regression coefficient between the temperature at each model level in the 
-land column and the SSTs. Figures \ref{fig:tdm_regprof} a) -- the multi column 
-model and b) -- the GCM, have some key similarities and differences; the ocean 
-profiles are both very similar, they feature the large amplification around 
+Figure \ref{fig:tdm_regprof} reproduces Figure \ref{fig:linreg_plev} from 
+section \ref{sec:pace_trop}; the blue line is the regression coefficient between 
+the temperature at each model level in the ocean forced column and the SSTs, the 
+green line is the regression coefficient between the temperature at each model 
+level in the land column and the SSTs. The data for Figure \ref{fig:tdm_regprof} 
+a) comes from the zonally aligned column model with three land and three ocean 
+columns, and an evaporative fraction over land of 0.05. Figure 
+\ref{fig:tdm_regprof} b) uses ACCESS GCM data from the ENSO-Pacemaker run. The 
+two figures have some key similarities and differences; the ocean profiles are 
+both very similar, they feature the large amplification around 
 \SIrange{200}{400}{\hecto\pascal} due to moist convection, as well as a local 
 maximum at the freezing level at \SI{600}{\hecto\pascal}.  Comparing the 
 profiles above land we see a large difference above \SI{500}{\hecto\pascal}. In 
@@ -1221,6 +1232,7 @@ ocean forcing.
 
 
 \subsection{Atmospheric profiles of temperature and relative humidity}
+\label{sec:mcm_prof_trh}
 
 In section \ref{scm_prof} the atmospheric profiles of $\theta$ for the single 
 column indicated that a changing LCL height over land as well as a deviation 
@@ -1250,7 +1262,7 @@ also an unusual feature; from \SIrange{900}{800}{\hecto\pascal} the land profile
 is above, or cooler than, the ocean profile. This region of warmer ocean/cooler 
 land could have the effect of dampening the value of $R_{l/o}$ and is not an 
 expected feature.  To understand what is happening we will look at the profiles 
-of relative humidity
+of relative humidity.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{thesis_l3o1_prof_theta_ef0.05}.eps}
@@ -1272,19 +1284,20 @@ Regarding the warmer ocean/cooler land profile from
 \SIrange{980}{800}{\hecto\pascal}, the profiles of relative humidity are quite 
 telling. The relative humidity profile in Figure \ref{fig:tdm_rhprof} a) is from 
 the same run as Figure \ref{fig:tdm_prof}, it has one ocean and three land 
-columns. Two SSTs are plotted, the warmest and coolest of the runs, as the 
-results are similar for a range of SSTs.  From the surface we see the much 
-higher relative humidity over the ocean forced column then a sudden drop at around 
-\SI{970}{\hecto\pascal}, to the extent that the ocean forced column becomes drier than 
-the land columns. The dry region, from \SIrange{940}{800}{\hecto\pascal} 
-coincides with the steeper $\theta$ lapse rate. As this run only has one ocean 
-column and three land columns the region may be related to the model geometry.  
-To test if the geometry is responsible for the dry region, we look at a run with 
-three ocean and three land columns.  Figures \ref{fig:tdm_rhprof} (b)-(d) all 
-show a similar drying in the ocean forced column, these are also focusing on the 
-atmosphere below \SI{800}{\hecto\pascal}. There is a robust response with the 
-three ocean and three lands, implying the drying is not a function of the 
-geometry.  Figures \ref{fig:tdm_rhprof} (b), (c) and (d) show three difference
+columns. The profiles for two SSTs are plotted, the warmest and coolest of the 
+runs, as the results are similar for a range of SSTs.  From the surface we see 
+the much higher relative humidity over the ocean forced column then a sudden 
+drop at around \SI{970}{\hecto\pascal}, to the extent that the ocean forced 
+column becomes drier than the land columns. The dry region, from 
+\SIrange{940}{800}{\hecto\pascal} coincides with the steeper $\theta$ lapse 
+rate. As this run only has one ocean column and three land columns the drying 
+may be related to the model geometry.  To test if the geometry is responsible 
+for the dry region, we look at a run with three ocean and three land columns.  
+Figures \ref{fig:tdm_rhprof} (b)-(d) all show a similar drying in the ocean 
+forced column, these are also focusing on the atmosphere below 
+\SI{800}{\hecto\pascal}. There is a robust response with the three ocean and 
+three lands, implying the drying is not a function of the geometry.  Figures 
+\ref{fig:tdm_rhprof} (b), (c) and (d) show three difference
 evaporative fractions, 0.05, 0.10 and 0.20. The evaporative fraction has a clear 
 effect on the relative humidity in the land column, but the amount of drying in 
 the ocean forced columns is largely insensitive to the evaporative fraction or relative 
@@ -1313,17 +1326,18 @@ circulation response in the model to further explore this.
 \end{figure}
 
 \subsection{Circulation response in a row of columns}
+\label{sec:mcm_circ}
 To see what is causing the drying in the ocean forced columns we look at the 
 vertical velocity, $\omega$ and circulation using the streamfunction $\psi$ of 
-vertical and zonal velocities. There weren't any significant changes in the 
-circulation for varying SSTs so for these variables we use the mean across a 
-range of SSTs.  The profiles of $\omega$ clearly shows the convection in the 
-ocean forced columns -- positive values of $\omega$ -- which are balanced with 
-sinking motion in the land columns.  The $\psi$ profile better demonstrates the 
-flow in the model, and shows a low level circulation response. Positive values 
-of $\psi$ indicate clockwise flow centered at \SI{850}{\hecto\pascal} in the 
-ocean forced column nearest the land.  This circulation is responsible for 
-transporting dry air from the land columns.
+vertical and zonal velocities, as shown in Figure \ref{fig:tdm_circ}. There 
+weren't any significant changes in the circulation for varying SSTs so for these 
+variables we use the mean across a range of SSTs.  The profiles of $\omega$ 
+clearly shows the convection in the ocean forced columns -- positive values of 
+$\omega$ -- which are balanced with sinking motion in the land columns.  The 
+$\psi$ profile better demonstrates the flow in the model, and shows a low level 
+circulation response.  Positive values of $\psi$ indicate clockwise flow 
+centered at \SI{850}{\hecto\pascal} in the ocean forced column nearest the land.  
+This circulation is responsible for transporting dry air from the land columns.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{thesis_l3o3_omegal_ef0.05_meansst}.eps}
@@ -1369,6 +1383,7 @@ decreases.}
 
 \subsection{Values of land ocean contrast for different evaporative fractions 
 and latitudes}
+\label{sec:rlo_lat}
 
 We have seen that while the two-dimensional model has a low level circulation 
 that dries the ocean forced column, it is still able to simulate aspects of the 
