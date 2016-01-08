@@ -4,5 +4,6 @@ intro.pdf
 meth.pdf
 mech.pdf
 ignore/
+latex2rtf_files/
 *-eps-converted-to.pdf
 test_ignore.txt
