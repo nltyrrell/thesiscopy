@@ -99,7 +99,7 @@ for seasonal averages in the winter months of each hemisphere, the Northern
 Hemisphere winter response is shown in Figure \ref{fig:1K} (e).
 
 When looking at the annual mean response of $T_{land}$ to extra-tropical SST 
-perturbations there is little significant response, however for seasonal 
+perturbations there is little significant response, however, for seasonal 
 averages both hemispheres show a significant response in their respective winter 
 months, shown for the Northern Hemisphere in Figure \ref{fig:1K} e-g. The 
 response of $T_{land}$ is also amplified in some regions relative to the initial 
@@ -286,7 +286,7 @@ To summarise thus far; we see that tropical SSTs strongly influence tropical and
 - to a lesser extent - extra-tropical continental temperatures; SST anomalies 
 are amplified in the tropical troposphere and efficiently transported over land; 
 ENSO is the dominant source of interannual variability and can influence land 
-surface temperatures via the troposphere. However we now wish to investigate the 
+surface temperatures via the troposphere. However, we now wish to investigate the 
 process by which SST variability leads to amplified $T_{land}$ variability.  
 
 % \section{ENSO}
@@ -430,7 +430,7 @@ on interannual timescales with an additional factor; the tropospheric profile
 above a region of the ocean that is responding to an external forcing -- or a 
 forcing from a separate ocean basin -- will be potentially be damped throughout 
 the entire troposphere.  The vertical structure above land and ocean is further 
-explored with a one and two-dimensional model.
+explored with a singole and multi column model.
 % NOTE: further lapse rate analysis on pacemake in 
 % ~/project/pacemaker/figures/*profile*
 
@@ -637,7 +637,7 @@ positive anomalies (reds) show a larger amplification than the negative
 anomalies (blues), in addition the tropopause is higher for the positive 
 anomalies leading to a difference at \SI{200}{\hecto\pascal}. The picture is 
 much less clear in \ref{fig:scmsstamp} (b). There doesn't appear to be a 
-significant difference between the positive and negative anomalies, however the 
+significant difference between the positive and negative anomalies, however, the 
 overall values do seem to be similar at around 2-3. From these plots we can 
 conclude that the amplification of surface temperature is fairly robust for a 
 range of scenarios, for large SST anomalies there is greater amplification for 
@@ -694,7 +694,7 @@ number of previous studies (e.g. \citealt{Sobel2000}, \citealt{Lintner2005},
 \citealt{Ramsay2011}), although none have specifically looked at the land/ocean 
 contrast.
 
-\subsection{Values of land ocean contrast modelled with a single column model}
+\subsection{Values of land/ocean contrast modelled with a single column model}
 \label{sec:scmrlo}
 
 We have discussed the temperature profiles above an ocean surface and introduced 
@@ -823,6 +823,7 @@ temperature above ocean and land surfaces.
 
 
 \subsection{Lower atmospheric response to a free tropospheric forcing}
+\label{sec:scm_prof}
 
 In this section we will compare the results of the single-column model with the 
 lapse rate theory proposed by \citet{Byrne2013a}. It's important to note that 
@@ -889,7 +890,7 @@ in the LCL height in Figure \ref{fig:scmthprof} (a) (\SI{950}{\hecto\pascal} for
 ocean, \SI{925}{\hecto\pascal} for land) over land and ocean, and, as with the 
 schematic in Figure \ref{fig:bo_fig1}. This contributes to a warmer absolute 
 temperature over land than ocean, although we also see the land profiles 
-diverging from the ocean above the LCL.  However the absolute difference in 
+diverging from the ocean above the LCL.  However, the absolute difference in 
 temperature is not what we are interested in, we are interested in how the 
 change with warming and cooling is amplified over land.  The important features 
 are more clearly shown in Figure \ref{fig:scmthprof} (b), (c) and (d).
@@ -1040,7 +1041,7 @@ temperature response and forcing SST.}
 \end{center}
 
 % \clearpage
-\subsection{Variability and instability - Role of convection}
+\subsection{Variability and instability of the single column model}
 \label{instability}
 
 A defining feature in the results in Figures \ref{fig:scm_tlandsst} and 
@@ -1055,7 +1056,7 @@ with cooler temperature profiles show regular oscillations, it should be noted
 their is no diurnal cycle in the model and the oscillations are related to the 
 convection scheme, with the period of the oscillations varying from 5 to 10 
 days. The factors influencing the periodicity were not investigated in this 
-study, however a similar model with a different setup was used in 
+study, however, a similar model with a different setup was used in 
 \citet{Abbot2007}.  They used the two-column version of the model and they also 
 included a simple bucket model to simulate the land hydrology and they found 
 oscillations of soil moisture resulting from internal model dynamics.  An 
@@ -1144,30 +1145,41 @@ atmosphere and land surface responding.}
 \subsection{Robust values of land/ocean contrast with varying model geometries}
 \label{sec:robust_rlo}
 
-The column model can be run with one or more ocean and one or more land columns 
-in a zonal or meridional alignment. In the single-column model the interaction 
-between clouds and radiation lead to instabilities, yet disabling the 
-interaction caused a damping of the ocean signal over land and $R_{l/o}$ values 
-near to unity. The cloud/radiation interaction was switched off when running the 
-model as rows of ocean and land columns and in contrast to a single-column in 
-WTG mode, in the multi column model imposed SSTs still lead to an amplified 
-response over land. Overall the values of $R_{l/o}$ are lower than the single 
-column model but they also show an robust increase $R_{l/o}$ with decreasing 
-evaporative fraction.   
+We will now look at the land/ocean contrast, as measured by $R_{l/o}$, in the 
+column model and test it's response to changing model geometries and surface 
+properties. In the single-column model the interaction between clouds and 
+radiation lead to instabilities, yet disabling the interaction caused a damping 
+of the ocean signal over land and $R_{l/o}$ values near to unity. The 
+cloud/radiation interaction was switched off when running the model as rows of 
+ocean and land columns and -- in contrast to the single-column setup -- the 
+multi column setup still lead to an amplified response of the imposed SST 
+forcing over land.  Overall the values of $R_{l/o}$ are lower than the single 
+column model and it was necessary to use smaller evaporative fractions to model 
+realistic values of $R_{l/o}$.   
 
-A number of different geometries of land and ocean columns were tested, with the 
-resultant $R_{l/o}$ values shown in Table \ref{tab:tdm_Rlo}. The values of 
-$R_{l/o}$ were largely insensitive to the number of either ocean or land 
-columns, although a single ocean and single land column did produce a slightly 
-higher $R_{l/o}$. As with the single-column a drier surface increases the 
-amplification of the ocean signal over land. However the breakdown of $R_{l/o}$ 
-into correlations and ratio of standard deviations we see a difference. The 
-correlation values are all very close to one.
+The column model can be run with one or more ocean and one or more land columns 
+in a zonal or meridional alignment. A number of different geometries of land and 
+ocean columns were tested, with the resultant $R_{l/o}$ values shown in Table 
+\ref{tab:tdm_Rlo}. The values of $R_{l/o}$ were largely insensitive to the 
+number of either ocean or land columns, although a single ocean and single land 
+column did produce a slightly higher $R_{l/o}$. As with the single-column setup, 
+a drier surface increases the amplification of the ocean signal over land.  
+However, the breakdown of $R_{l/o}$ into correlation and ratio of standard 
+deviations we see a difference. The correlation values are all very close to one 
+and the amplification SST variability over land, as measured by the ratio of 
+standard deviations, ranges from 1.00 (no amplification) and 1.30.  In the 
+single-column model, and observations and GCMs, the breakdown of $R_{l/o}$ 
+showed lower correlations between land and ocean, but the ratio of standard 
+deviations were large, between 1.5 and 2.5 (see Table \ref{tab:allstats} and 
+Table \ref{tab:scmrlo}). 
 
 
 \begin{center}
 	\begin{table}[ht]
-		\caption{Land/Ocean contrast in two dimensional model}
+		\caption{Land/Ocean contrast in zonally aligned column model for a range 
+		of geometries and evaporative fractions. For setups with more than one 
+	land or ocean column, the values use the mean surface temperature across all 
+columns.}
 		\label{tab:tdm_Rlo}
 		\scriptsize
 	\begin{tabular}{ l  c  c  c  c  c }
@@ -1205,17 +1217,17 @@ vertical structure and response of the column model with a GCM, specifically
 with results from the ENSO-Pacemaker experiments.  
 
 Figure \ref{fig:tdm_regprof} reproduces Figure \ref{fig:linreg_plev} from 
-section \ref{sec:pace_trop}; the blue line is the regression coefficient between 
-the temperature at each model level in the ocean forced column and the SSTs, the 
-green line is the regression coefficient between the temperature at each model 
-level in the land column and the SSTs. The data for Figure \ref{fig:tdm_regprof} 
-a) comes from the zonally aligned column model with three land and three ocean 
-columns, and an evaporative fraction over land of 0.05. Figure 
-\ref{fig:tdm_regprof} b) uses ACCESS GCM data from the ENSO-Pacemaker run. The 
-two figures have some key similarities and differences; the ocean profiles are 
-both very similar, they feature the large amplification around 
-\SIrange{200}{400}{\hecto\pascal} due to moist convection, as well as a local 
-maximum at the freezing level at \SI{600}{\hecto\pascal}.  Comparing the 
+section \ref{sec:pace_trop} using column model data; the blue line is the 
+regression coefficient between the temperature at each model level in the ocean 
+forced column and the SSTs, the green line is the regression coefficient between 
+the temperature at each model level in the land column and the SSTs. The data 
+for Figure \ref{fig:tdm_regprof} a) comes from the zonally aligned column model 
+with three land and three ocean columns, and an evaporative fraction over land 
+of 0.05.  Figure \ref{fig:tdm_regprof} b) uses ACCESS GCM data from the 
+ENSO-Pacemaker run. The two figures have some key similarities and differences; 
+the ocean profiles are both very similar, they feature the large amplification 
+around \SIrange{200}{400}{\hecto\pascal} due to moist convection, as well as a 
+local maximum at the freezing level at \SI{600}{\hecto\pascal}.  Comparing the 
 profiles above land we see a large difference above \SI{500}{\hecto\pascal}. In 
 the GCM the moist convective amplification is communicated above land areas but 
 becomes damped whereas in the column model the two profiles follow each other 
@@ -1246,32 +1258,35 @@ ocean forcing.
 \subsection{Atmospheric profiles of temperature and relative humidity}
 \label{sec:mcm_prof_trh}
 
-In section \ref{scm_prof} the atmospheric profiles of $\theta$ for the single 
-column indicated that a changing LCL height over land as well as a deviation 
-between land and ocean lapse rates above the LCL can lead to $R_{l/o}>1$. We 
-will know look at profiles of $\theta$ in the multi column model. The potential 
-importance of a changing LCL height motivated an increase in the vertical 
-resolution of the model.  The grid was non-uniform with 85 levels, and a 
-resolution of \SI{5}{\hecto\pascal} between \SIrange{980}{800}{\hecto\pascal} 
-and \SI{10}{\hecto\pascal} between \SIrange{800}{650}{\hecto\pascal}, with the 
-fine resolution preventing step changes in the height of the LCL.  Figure 
-\ref{fig:tdm_prof} shows three temperature profiles from a run with an 
-evaporative fraction of 0.05 and an $R_{l/o}$ of 1.13. The three profiles are 
-the maximum, minimum and median SST forcing. The full profile is shown in (a) 
-with a close up in (b). There are two features to look for; a change in the 
-gradient of $\theta$ in the ocean forced column between the ocean LCL and land LCL as 
-per the \citet{Byrne2013a} theory, and any significant change in the height of 
-the LCL as seen in the single column model. There is some indication in the 
-figure of a small change in the LCL over land and ocean but a change in gradient 
-is difficult to determine.  Figure \ref{fig:tdm_dthdp} shows the vertical 
-gradient of $\theta$, $D\theta/Dp$, to determine any significant features.  An 
-increase in the magnitude of $D\theta/Dp$ (i.e. more negative) would indicate a 
-flatter profile, and the height of the local minimum can indicates the location 
-of the LCL. In Figure \ref{fig:tdm_dthdp}, the gradient of $\theta$ in the ocean 
-column above the LCL becomes more negative with increasing SST which is the 
-expected result according to the Byrne and O'Gorman theory.  However, there is 
-also an unusual feature; from \SIrange{900}{800}{\hecto\pascal} the land profile 
-is above, or cooler than, the ocean profile. This region of warmer ocean/cooler 
+In section \ref{sec:scm_prof} the atmospheric profiles of $\theta$ for the 
+single column indicated that a changing LCL height over land as well as a 
+deviation between land and ocean lapse rates above the LCL can lead to 
+$R_{l/o}>1$. We will know look at profiles of $\theta$ in the multi column 
+model. The potential importance of a changing LCL height motivated an increase 
+in the vertical resolution of the model. The vertical resolution was increased 
+from 42 to 85 levels, and a non-uniform grid with a resolution of 
+\SI{5}{\hecto\pascal} between \SIrange{980}{800}{\hecto\pascal} and 
+\SI{10}{\hecto\pascal} between \SIrange{800}{650}{\hecto\pascal}. A fine 
+resolution grid around the height of the LCL was intended to prevent step 
+changes in the height of the LCL.  Figure \ref{fig:tdm_prof} shows three 
+temperature profiles from a run with an evaporative fraction of 0.05 and an 
+$R_{l/o}$ of 1.13. The three profiles are the maximum, minimum and median SST 
+forcing. The full profile is shown in (a) with a close up in (b). There are two 
+features to look for; a change in the gradient of $\theta$ in the ocean forced 
+column between the ocean LCL and land LCL as per the \citet{Byrne2013a} theory, 
+and any significant change in the height of the LCL as seen in the single column 
+model. There is some indication in the figure of a small change in the LCL over 
+land but it is not as pronounced as in the single-column, and a change in 
+gradient of $\theta$ is difficult to determine in Figure \ref{fig:tdm_prof}.  
+Instead we look at Figure \ref{fig:tdm_dthdp}, which shows the vertical gradient 
+of $\theta$, $D\theta/Dp$, to determine any significant features.  An increase 
+in the magnitude of $D\theta/Dp$ (i.e. more negative) would indicate a flatter 
+profile, and the height of the local minimum can indicates the location of the 
+LCL. In Figure \ref{fig:tdm_dthdp}, the gradient of $\theta$ in the ocean column 
+above the LCL becomes more negative with increasing SST which is the expected 
+result according to the Byrne and O'Gorman theory.  However, there is also an 
+unusual feature; from \SIrange{900}{800}{\hecto\pascal} the land profile is 
+above, or cooler than, the ocean profile. This region of warmer ocean/cooler 
 land could have the effect of dampening the value of $R_{l/o}$ and is not an 
 expected feature.  To understand what is happening we will look at the profiles 
 of relative humidity.
@@ -1302,28 +1317,35 @@ the much higher relative humidity over the ocean forced column then a sudden
 drop at around \SI{970}{\hecto\pascal}, to the extent that the ocean forced 
 column becomes drier than the land columns. The dry region, from 
 \SIrange{940}{800}{\hecto\pascal} coincides with the steeper $\theta$ lapse 
-rate. As this run only has one ocean column and three land columns the drying 
+rate. As this run has only one ocean column and three land columns the drying 
 may be related to the model geometry.  To test if the geometry is responsible 
 for the dry region, we look at a run with three ocean and three land columns.  
 Figures \ref{fig:tdm_rhprof} (b)-(d) all show a similar drying in the ocean 
-forced column, these are also focusing on the atmosphere below 
-\SI{800}{\hecto\pascal}. There is a robust response with the three ocean and 
-three lands, implying the drying is not a function of the geometry.  Figures 
-\ref{fig:tdm_rhprof} (b), (c) and (d) show three difference
-evaporative fractions, 0.05, 0.10 and 0.20. The evaporative fraction has a clear 
-effect on the relative humidity in the land column, but the amount of drying in 
-the ocean forced columns is largely insensitive to the evaporative fraction or relative 
-humidity of the land columns. For example comparing Figure \ref{fig:tdm_rhprof} 
-b), c) and d) which have evaporative fractions of 0.05, 0.10 and 0.20  
-respectively, the near surface humidity in the land columns changes from 45\% to 
-60\%, however the response of the ocean forced columns is very similar.  The difference 
-in the dry region is at most 5\%.
+forced column, these plots are also focusing on the atmosphere below 
+\SI{800}{\hecto\pascal}.  There is a robust response with the three ocean and 
+three lands, implying the drying is not a function of the geometry or due to the 
+number of ocean forced columns.  Figures \ref{fig:tdm_rhprof} (b), (c) and (d) 
+show three difference evaporative fractions, 0.05, 0.10 and 0.20. The 
+evaporative fraction has a clear effect on the relative humidity in the land 
+column, but the amount of drying in the ocean forced columns is largely 
+insensitive to the evaporative fraction or relative humidity of the land 
+columns. For example comparing Figure \ref{fig:tdm_rhprof} b), c) and d) which 
+have evaporative fractions of 0.05, 0.10 and 0.20  respectively, the near 
+surface humidity in the land columns changes from 45\% to 60\%, however, the 
+response of the ocean forced columns is very similar.  The difference in the dry 
+region is at most 5\%.
+
 To summarise, the atmospheric profiles of $\theta$ indicate the possibility that 
 a change in the $\Gamma_m^*$ between the land and ocean LCL heights, as per 
-\citet{Byrne2013a}, could contribute to the land/ocean contrast. However the 
-lapse rate over the ocean is being affected by a strong drying from the land 
-column, indicated in the relative humidity profiles. We will look at the 
-circulation response in the model to further explore this.
+\citet{Byrne2013a}, could contribute to the land/ocean contrast. Figure 
+\ref{fig:tdm_dthdp} shows a decrease in the gradient of $\theta$ profiles with 
+warmer SSTs.  However, the lapse rate over the ocean is being affected by a 
+strong drying, indicated in the relative humidity profiles in Figure 
+\ref{fig:tdm_rhprof}. The dryness of the surface, and hence the near surface 
+layers, was shown to influence the magnitude of $R_{l/o}$ in section 
+\ref{sec:robust_rlo}, so a drying signal in the ocean columns may also effect 
+the values of $R_{l/o}$. Next we investigate the drying in the ocean columns by 
+looking at the circulation response in the column model.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{thesis_l3o3_prof_rh_ef0.05}.eps}
@@ -1340,16 +1362,21 @@ circulation response in the model to further explore this.
 \subsection{Circulation response in a row of columns}
 \label{sec:mcm_circ}
 To see what is causing the drying in the ocean forced columns we look at the 
-vertical velocity, $\omega$ and circulation using the streamfunction $\psi$ of 
-vertical and zonal velocities, as shown in Figure \ref{fig:tdm_circ}. There 
-weren't any significant changes in the circulation for varying SSTs so for these 
-variables we use the mean across a range of SSTs.  The profiles of $\omega$ 
-clearly shows the convection in the ocean forced columns -- positive values of 
-$\omega$ -- which are balanced with sinking motion in the land columns.  The 
-$\psi$ profile better demonstrates the flow in the model, and shows a low level 
-circulation response.  Positive values of $\psi$ indicate clockwise flow 
+vertical velocity, $\omega$ as shown in Figure \ref{fig:tdm_circ}, and 
+circulation using the streamfunction $\psi$ of vertical and zonal velocities, in 
+Figure \ref{fig:tdm_psi}.  There weren't any significant changes in the strength 
+or patterns of the circulation as SSTs were increased and decreased around a 
+mean value, so for these variables we use the mean across a range of SSTs.  The 
+profile of $\omega$ in Figure \ref{fig:tdm_psi} shows convection in the ocean 
+forced columns -- positive values of $\omega$ -- which is balanced with sinking 
+motion in the land columns.  Large values of $\omega$ occur in the ocean forced 
+columns in the area where the drying occurs, around 
+\SIrange{970}{800}{\hecto\pascal}, but the cause of the drying is not clear from 
+this figure.  The $\psi$ profile in Figure \ref{fig:tdm_psi} better demonstrates 
+the flow in the model. Positive values of $\psi$ indicate clockwise flow 
 centered at \SI{850}{\hecto\pascal} in the ocean forced column nearest the land.  
-This circulation is responsible for transporting dry air from the land columns.
+This low-level circulation is responsible for transporting dry air from the land 
+columns over the ocean.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{thesis_l3o3_omegal_ef0.05_meansst}.eps}
@@ -1397,42 +1424,36 @@ decreases.}
 and latitudes}
 \label{sec:rlo_lat}
 
-We have seen that while the two-dimensional model has a low level circulation 
-that dries the ocean forced column, it is still able to simulate aspects of the 
+We have seen that while the multi column model has a low level circulation that 
+dries the ocean forced column, it is still able to simulate aspects of the 
 land/ocean contrast we see in GCMs (i.e. Figure \ref{fig:tdm_regprof}), and it's 
 response to surface properties is expected from the lapse rate of theories of 
 \cite{Joshi2007} and \cite{Byrne2013a}. We now extend the range of evaporative 
-fractions and vary the latitudes to build a picture of the range of $R_{l/o}$ 
-values.\\
-The model had 3 ocean and 3 land columns and initially was run in a zonally 
-orientated domain. At each latitude an appropriate mean SST value, solar zenith 
-angle and Coriolis parameter were used.  The model was forced with a range of 
-SSTs values which varied around the mean value for each latitude, and $R_{l/o}$ 
-was calculated for each parameter.	The results, in Figure \ref{fig:tdm_Rlo} 
-show the dependence of $R_{l/o}$ on evaporative fraction, but also a decrease 
-with latitude, excepting the increase from \SI{0}{\degree} and \SI{10}{\degree}.  
-The same experiments were also performed using a meridionally orientated domain, 
-where the prescribed SST columns were nearer to the ``equator" and the land 
-columns extended towards the poles.  In the meridional domain the values of 
-$R_{l/o}$ show the same tendencies as in the zonal domain, but at first appear 
-lower than the zonal domain. However, as each column spans \SI{5}{\degree} of 
-latitude, if we take the $R_{l/o}$ values of a specific column and compare it to 
-the corresponding latitude of the zonally orientated model we see they are quite 
-similar, i.e. Figure \ref{fig:tdm_Rlo} (d). When looking at the nearest 
-corresponding latitudes in (a) and (d), e.g. \SI{40}{\degree} in (a) and 
-\SI{45}{\degree} in (d) the values of $R_{l/o}$ are very similar.  The reduction 
-in the $R_{l/o}$ with increasing latitude could be due to reduced transport 
-across the domain. The latter is evident in Figure \ref{fig:tdm_rh} which shows 
-the mean relative humidity in the land columns. The gradient of relative 
-humidity along a constant latitude due to varying evaporative fraction is clear, 
-and increasing relative humidity corresponds to decreasing $R_{l/o}$ as 
-expected.  The relative humidity also decreases with increasing latitude, due to 
-reduced transport of moisture from the ocean forced columns, further discussed 
-below.  For the gradient of relative humidity across latitudes, decreasing 
-relative humidity is associated with decreasing $R_{l/o}$, the inverse of the 
-relationship with a constant latitude.  This indicates that the value of 
-$R_{l/o}$ is a not only a function of evaporative fraction but is also dependent 
-on transport from ocean forced columns to land columns.\\
+fractions and also vary the latitude to build a picture of the range of 
+$R_{l/o}$ values.
+
+The model was setup with 3 ocean and 3 land columns and initially was run in a 
+zonally orientated domain, with each column spanning \SI{5}{\degree} of latitude 
+and longitude.  The change in latitude involved choosing an
+appropriate mean SST value, solar zenith angle and Coriolis parameter. This was 
+done for latitudes \SI{0}{\degree}, \SI{10}{\degree}, \SI{20}{\degree}, 
+\SI{30}{\degree}, \SI{40}{\degree}, \SI{50}{\degree} \& \SI{60}{\degree}.
+The model was forced by varying the SSTs by \SI{1.2}{\kelvin} in increments of 
+\SI{0.2}{\kelvin} above and below the SST appropriate each latitude, and for 
+each increment the model was run to equilibrium. This was repeated for 
+evaporative fractions from 0.02 to 1.0, and $R_{l/o}$ was calculated for each 
+latitude and evaporative fraction.	The results, in Figure \ref{fig:tdm_Rlo} (a) 
+show the dependence of $R_{l/o}$ on evaporative fraction, but also a largely 
+monotonic decrease with latitude, excepting the increase for some evaporative 
+fractions from \SI{0}{\degree} to \SI{10}{\degree}.  The same experiments were 
+also performed using a meridionally orientated domain, shown in Figure 
+\ref{fig:tdm_Rlo} (b).  For this geometry the columns with prescribed SSTs were 
+nearer to the equator and the land columns extended towards the poles. All 
+surface values for the zonal orientation are calculated as the mean of the three 
+ocean or land values.  However, as each column spans \SI{5}{\degree} of 
+latitude, in the meridional orientation we use the land column nearest to the 
+equator to calculate $R_{l/o}$. Figure \ref{fig:tdm_Rlo} (b) shows the same 
+tendencies as \ref{fig:tdm_Rlo} (a).
 
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{thesis_isstcosz}.eps}
@@ -1445,6 +1466,20 @@ across all columns.}
 \label{fig:tdm_Rlo}
 \end{figure}
 
+To understand the reduction in the $R_{l/o}$ with increasing latitude we will 
+look at the near surface (lowest model level) relative humidity over land, which 
+is shown in Figure \ref{fig:tdm_rh}. The gradient of relative humidity along a 
+constant latitude due to varying evaporative fraction is clear, and increasing 
+relative humidity corresponds to decreasing $R_{l/o}$ as expected.  The relative 
+humidity also decreases with increasing latitude, due to reduced transport of 
+moisture from the ocean forced columns, which will be further discussed in 
+section \ref{mech_compare}.  For the gradient of relative humidity across 
+latitudes at a constant evaporative fraction, decreasing relative humidity is 
+associated with decreasing $R_{l/o}$, which is the inverse of the relationship 
+with a constant latitude.  This indicates that the value of $R_{l/o}$ is a not 
+only a function of evaporative fraction but is also dependent on transport from 
+ocean forced columns to land columns.
+
 \begin{figure}[ht]
 	\includegraphics[width=0.5\textwidth]{{thesis_latbox_landrh}.eps}
 	\caption{The mean (over the forcing SSTs and the three land columns) 
@@ -1452,103 +1487,23 @@ across all columns.}
 \label{fig:tdm_rh}
 \end{figure}
 
-\section{Comparison of Simplified Models and GCM results}
-\label{mech_compare}
-
-The large range of $R_{l/o}$ values allows for a direct comparison to GCM 
-results. Using the pacemaker experiment we can calculate an $R_{l/o}$ value for 
-each individual land grid box, see Figure \ref{fig:tdm_gcm_compare} a). We do 
-this by comparing the grid box surface temperature of with either the mean 
-tropical SSTs, mean global SSTs or zonally averages SSTs corresponding to the 
-latitude of the grid box. The latter may seem most appropriate for comparing to 
-the zonally orientated multi column model, however the tropical Pacific forcing 
-of the pacemaker experiment meant that a grid box $R_{l/o}$ calculated using 
-mean tropical SSTs gave the most reasonable results.\\
-The next step is to generate a comparative map using the multi column column model 
-results. For each GCM grid box we find the latitude and evaporative fraction, 
-then we take the $R_{l/o}$ from the multi column model run with corresponding parameters, 
-see Figure \ref{fig:tdm_gcm_compare} b).  For example, for a point in central 
-Australia at a latitude of \SI{23}{\degree} and evaporative fraction of 0.2 we 
-use the $R_{l/o}$ from the multi column model at latitude \SI{20}{\degree} and evaporative 
-fraction 0.2 and assign that grid box a value of 1.12, thereby building a global 
-map of the expected land surface temperature response based on the results of 
-the two dimensional column model.\\
-The two-dimensional model required very low evaporative fractions to elicit an 
-$R_{l/o}>1$, lower than would be required from a GCM or expected from 
-observations. As such we wouldn't expect the magnitudes the generated $R_{l/o}$ 
-response map to perfectly match a similar GCM map. However, if the multi column model was 
-capturing a significant mechanism of the land/ocean temperature contrast, that 
-is, the oceans control the tropospheric temperature and the drier land surface 
-affects the mean lapse rate, then we might expect the broad patterns to be 
-similar between the multi column model and GCM results. It is clear that the two plots in 
-Figure \ref{fig:tdm_gcm_compare} share little resemblance in magnitude or 
-patterns.\\
-The only two large regions of the generated map with an $R_{l/o}>1$ are Saharan 
-Africa and central Australia, and yet in both these regions the pattern of the 
-land response differs from the GCM. For example, in Saharan Africa the generated 
-map shows a very consistent $R_{l/o}$ from western coast of Africa to the 
-Persian gulf, as this region is of a similar dryness. In contrast, the GCM 
-results only have an $R_{l/o}>1$ for the western half of the region. Likewise in 
-south-eastern Australia the GCM has a higher $R_{l/o}$ whereas the multi column model has 
-lower values for that region. Another area of interest is tropical South 
-America, here the GCM has high $R_{l/o}$ values and a distinctive pattern with a 
-very high "blob" over the Amazon basin, none of which is present in the multi column 
-model.\\
-This result may be seen as an indication that the simplified radiative 
-convective model is inadequate in modelling the land/ocean contrast, but the 
-model does capture some theoretical aspects as expected. Therefore if we 
-consider the differences between the two maps in Figure 
-\ref{fig:tdm_gcm_compare} as indicative of the processes missing from the simple 
-model, we can use this as a guide to understanding the regional response of the 
-land surface to an ocean forcing.
-
-\clearpage
-
-\begin{figure}[ht]
-	\includegraphics[width=0.9\textwidth]{{thesis_phi_trop_4ysl}.eps}\\
-	\includegraphics[width=0.9\textwidth]{{thesis_phi_rcm_4ysl}.eps}
-	\caption{a) Values of $R_{l/o}$ for the ENSO-Pacemaker experiment calculated 
-	for each grid box and using mean tropical SSTs, b) $R_{l/o}$ taken from the 
-multi column model and matched to the latitude and evaporative fraction of the GCM.}
-\label{fig:tdm_gcm_compare}
-\end{figure}
-
-An obvious process missing from the multi column model results in Figure 
-\ref{fig:tdm_gcm_compare} is the interaction between clouds and radiation. This 
-can lead to chaotic results but clearly might still be important. The plot from 
-Figure \ref{fig:tdm_Rlo} was repeated but with the interaction between clouds 
-and radiation turned on. The plot in Figure \ref{fig:tdm_Rlo_ic} is broadly 
-similar in terms of the evaporative fraction, in that a drier surface tends to 
-have a higher $R_{l/o}$.  The tendency of $R_{l/o}$ with latitude is different, 
-we don't see a reduction with increasing latitude.  The main feature, however, 
-is the randomness present in the results.  It seems at certain latitudes the 
-model behaves strangely, namely at \SI{10}{\degree} where values are very low 
-and \SI{40}{\degree} where they are very high. It is clear that a map created 
-using these results would contain inconsistencies.
-
-\begin{figure}[ht]
-	\includegraphics[width=0.6\textwidth]{{isstcosz_ic}.eps}
-	\caption{Land/ocean contrast ($R_{l/o}$) in multi column model for a range of 
-	evaporative fractions and latitudes for a zonally aligned domain, same as 
-Figure \ref{fig:tdm_Rlo} a) except with the interaction between clouds and 
-radiation turned on.}
-\label{fig:tdm_Rlo_ic}
-\end{figure}
-
-In Figure \ref{fig:tdm_Rlo} c) we saw that relative humidity decreased with 
+In Figure \ref{fig:tdm_rh} we saw that relative humidity decreased with 
 increasing latitude, and this was associated with a decreasing $R_{l/o}$. It was 
 theorized that the reduction in relative humidity coincided with decreased 
 transport from the ocean to the land columns, which then resulted in a lower 
 $R_{l/o}$. We will now look at the circulation response with latitude to 
-understand the changes. As the latitude increases there is clear change in the 
-circulation. At low latitudes the model is essentially one cell, with rising air 
-over the ocean forced columns and sinking over the land. This begins to break 
-down at \SI{20}{\degree} and by \SI{30}{\degree} smaller cells have formed 
-between each column. This will reduce the transport of heat and moisture from 
-the ocean forced columns to the land columns, resulting in the reduced relative 
-humidity and reduced values of $R_{l/o}$ seen with increasing latitude.
-
-\clearpage
+understand the changes. Figure \ref{fig:tdm_psi_lat} shows the circulation 
+response for the zonally orientated column model. The circulation is not 
+significantly affected by small SST changes, hence this figure shows the mean 
+across the range of SSTs. As the latitude increases there is a change in the 
+circulation.  At low latitudes the model is essentially one cell, with rising 
+air over the ocean forced columns and sinking over the land.  As the Coriolis 
+parameter increases with latitude the circulation is inhibited, and the single 
+overturing cell begins to break down at \SI{20}{\degree}. By \SI{30}{\degree} 
+smaller cells have formed between each column. This will reduce the transport of 
+heat and moisture from the ocean forced columns to the land columns, resulting 
+in the reduced relative humidity and reduced values of $R_{l/o}$ seen with 
+increasing latitude.
 
 \begin{figure}[ht]
 	\includegraphics[width=0.3\textwidth]{{psi_lats_0.0}.eps}
@@ -1561,14 +1516,129 @@ humidity and reduced values of $R_{l/o}$ seen with increasing latitude.
 	\label{fig:tdm_psi_lat}
 \end{figure}
 
+In the single-column model the interaction between the cloud and radiation 
+schemes lead to chaotic behaviour and instability in the model (section 
+\ref{instability}). However, as this interaction may still be an important 
+aspect of the land/ocean contrast we repeated the experiments used to create 
+Figure \ref{fig:tdm_Rlo} with the interaction between clouds and radiation 
+turned on. The plot in Figure \ref{fig:tdm_Rlo_ic} is broadly similar to Figure 
+\ref{fig:tdm_Rlo} in terms of the response of $R_{l/o}$ to the changing 
+evaporative fraction, in that a drier surface tends to have a higher $R_{l/o}$.  
+The tendency of $R_{l/o}$ with latitude is different, we don't see a reduction 
+with increasing latitude like in Figure \ref{fig:tdm_Rlo}.  The main feature, 
+however, is the randomness present in the results.  It seems at certain 
+latitudes the model behaves strangely, namely at \SI{10}{\degree} where 
+$R_{l/o}$ values are very low and \SI{40}{\degree} where they are very high.  
+While we expect that the cloud and radiation interaction is likely to be an 
+important process in the land/ocean contrast, this single or multi-column model 
+setup may not be a suitable method of investigating it.
 
-\newpage
+\begin{figure}[ht]
+	\includegraphics[width=0.6\textwidth]{{isstcosz_ic}.eps}
+	\caption{Land/ocean contrast ($R_{l/o}$) in multi column model for a range of 
+	evaporative fractions and latitudes for a zonally aligned domain, same as 
+Figure \ref{fig:tdm_Rlo} a) except with the interaction between clouds and 
+radiation turned on.}
+\label{fig:tdm_Rlo_ic}
+\end{figure}
+
+In this section we have studied the land/ocean contrast in a 
+radiative-convective model setup as rows of columns with ocean or land surface 
+boundary conditions. The multi column model produces values of $R_{l/o}$ similar 
+to observations and GCMs, albeit on the lower end and with small evaporative 
+fractions, and there similarities in the vertical structure. In the next section 
+the multi column model values of $R_{l/o}$ will be compared directly with the 
+ACCESS GCM.
+
+\section{Comparison of Simplified Models and GCM results}
+\label{mech_compare}
+
+In section \ref{sec:rlo_lat} a large range of $R_{l/o}$ values were generated by 
+by varying the latitude and evaporative fraction. These values allow for a 
+direct comparison to GCM results.  Using the ENSO-pacemaker experiment we can 
+calculate an $R_{l/o}$ value for each individual land grid box, see Figure 
+\ref{fig:tdm_gcm_compare} a). We do this by comparing the grid box surface 
+temperature of with either the mean tropical SSTs, mean global SSTs or zonally 
+averages SSTs corresponding to the latitude of the grid box. The latter may seem 
+most appropriate for comparing to the zonally orientated multi column model, 
+however, due to the tropical Pacific forcing of the pacemaker experiment, a grid 
+box $R_{l/o}$ calculated using mean tropical SSTs gave the most reasonable 
+results.
+
+The next step is to generate a comparative map using the multi column column 
+model results. For each GCM grid box we find the latitude and evaporative 
+fraction of the surface, the evaporative fractions used are from the 
+ENSO-Pacemaker experiment and are shown in Figure \ref{fig:gcm_ef}. For each 
+grid box we find the value of $R_{l/o}$ that was generated with the multi column 
+model for the corresponding latitude and evaporative fraction, and apply the 
+column model $R_{l/o}$ value to the GCM map.  The result is shown Figure 
+\ref{fig:tdm_gcm_compare} b).  For example, for a point in central Australia at 
+a latitude of \SI{23}{\degree} and evaporative fraction of 0.1 we use the 
+$R_{l/o}$ from the multi column model at latitude \SI{20}{\degree} and 
+evaporative fraction 0.1 and assign that grid box a value of 1.12, thereby 
+building a global map of the expected land surface temperature response based on 
+the results of the two dimensional column model.
+
+\begin{figure}[ht]
+	\includegraphics[width=0.9\textwidth]{{thesis_mean_ef}.eps}
+	\caption{Mean evaportive fraction for the ENSO-Pacemaker experiment.}
+\label{fig:gcm_ef}
+\end{figure}
+
+
+The multi column model required very low evaporative fractions to elicit an 
+$R_{l/o}>1$, lower than would be required from a GCM or expected from 
+observations. As such we wouldn't expect the magnitudes the generated $R_{l/o}$ 
+response map to perfectly match a similar GCM map. However, if the multi column model was 
+capturing a significant mechanism of the land/ocean temperature contrast, that 
+is, the oceans control the tropospheric temperature and the drier land surface 
+affects the mean lapse rate, then we might expect the broad patterns to be 
+similar between the multi column model and GCM results. The two plots in Figure 
+\ref{fig:tdm_gcm_compare} share some broad similarities in the regional changes 
+of $R_{l/o}$, but also have many difference in both the magnitude and patterns 
+of $R_{l/o}$.
+
+\begin{figure}[ht]
+	\includegraphics[width=0.9\textwidth]{{thesis_phi_trop_4ysl}.eps}\\
+	\includegraphics[width=0.9\textwidth]{{thesis_phi_rcm_4ysl}.eps}
+	\caption{a) Values of $R_{l/o}$ for the ENSO-Pacemaker experiment calculated 
+	for each grid box and using mean tropical SSTs, b) $R_{l/o}$ taken from the 
+multi column model and matched to the latitude and evaporative fraction of the GCM.}
+\label{fig:tdm_gcm_compare}
+\end{figure}
+
+It is evident that the values of $R_{l/o}$ generated by the multi column model 
+for a given evaporative fraction are too low. The only two large regions of the 
+generated map with an $R_{l/o}>1$ are Saharan Africa and central Australia, 
+although in both these regions the pattern of the land response differs from the 
+GCM.  For example, in Saharan Africa the generated map shows a very consistent 
+$R_{l/o}$ from western coast of Africa to the Persian gulf, as this region is of 
+a similar dryness. In contrast, the GCM results only have an $R_{l/o}>1$ for the 
+western half of the region.  Likewise in south-eastern Australia the GCM has a 
+higher $R_{l/o}$ whereas the multi column model has lower values for that 
+region.  Another area of interest is tropical South America, here the GCM has 
+high $R_{l/o}$ values and a distinctive pattern with a very high "blob" over the 
+Amazon basin, none of which is present in the multi column model.
+
+This result may be seen as an indication that the simplified radiative 
+convective model is inadequate in modelling the land/ocean contrast, but the 
+model does capture some theoretical aspects as expected. Therefore if we 
+consider the differences between the two maps in Figure 
+\ref{fig:tdm_gcm_compare} as indicative of the processes missing from the simple 
+model, we can use this as a guide to understanding the regional response of the 
+land surface to an ocean forcing.
+
+
+
+
+\clearpage
 
 %----------------------------------------------------------------------------------------
 %	Regional Response / GREB
 %----------------------------------------------------------------------------------------
 
-\section{Mechanisms of the Regional Response}
+\section{Mechanisms of the Regional Response of continental surface temperatures 
+to ocean forcing.}
 \label{mech_greb}
 
 In our investigations with the single column and multi column models we found 
@@ -1682,7 +1752,7 @@ response in most regions, with reduced cloud cover leading to drying (negative
 values) and increased cloud cover leading to moistening (positive values). This 
 is seen most clearly in South America, where drying in the Amazon basin 
 corresponds to reduced cloud, and moistening around \SI{30}{\degree} south is 
-associated with increased cloud cover. However the opposite is seen in North 
+associated with increased cloud cover. However, the opposite is seen in North 
 America, where an increase in soil moisture is associated with a decrease in 
 cloud cover. 
 
@@ -1779,7 +1849,7 @@ model, Figure \ref{fig:greb_clim}.  In Figure \ref{fig:greb_uv} (c) the
 meridional and zonal wind anomalies are both applied to the climatological 
 winds, then the model is run to equilibrium. The areas with a strong positive 
 response to the meridional winds still show a warming, such as the south-eastern 
-Pacific and North America, however there is a much finer structure to the 
+Pacific and North America, however, there is a much finer structure to the 
 response.
 
 With Figures \ref{fig:greb_uv} (a), (b) and (c) we can begin to explain features 
@@ -1839,9 +1909,9 @@ Our main interest is the response over land areas and how it compares to Figure
 \ref{fig:comp_temp}. The response in the GREB model over South America is 
 largely consistent. There is warming in the tropical regions and a cooling at 
 latitude 30S. The ACCESS model has a warming at the southern tip of the 
-continent which isn't present in GREB, however the cooling there is much weaker 
+continent which isn't present in GREB, however, the cooling there is much weaker 
 than at 30S.  Both models show a large scale warming in tropical South America, 
-however the pattern of warming is different. The peak warming in the GREB model 
+however, the pattern of warming is different. The peak warming in the GREB model 
 is in the west, whereas the ENSO-Pacemaker experiment is more uniform except for 
 a small region on the equator in the east with increased warming not seen in 
 GREB.  Over North America the GREB model captures the regions of warming (north) 
@@ -1874,7 +1944,7 @@ many of hte regional patterns but often with a greater magnitude.
 In our next experiment we use anomalies of surface wetness fraction from the 
 ENSO-Pacemaker experiments, as shown in Figure \ref{fig:greb_smc}. As expected a 
 reduction in surface wetness leads to an increase in surface temperature, 
-however we note that the surface temperature response is small compared to the 
+however, we note that the surface temperature response is small compared to the 
 clouds and wind anomalies.  The largest response is on the Tibetan Plateau, this 
 is most likely due unrealistic model behaviour for this area of unusually high 
 topography. It is in South America where we see similarities between the GREB 
